@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.ElasticSearch</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.ElasticSearch.ElasticSearchHelper">
+            <summary>
+            ES读取入库辅助类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.ElasticSearch.ElasticSearchHelper._IndexName">
+            <summary>
+            索引类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.ElasticSearch.ElasticSearchHelper._PageSize">
+            <summary>
+            每页条数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.ElasticSearch.ElasticSearchHelper._IsInit">
+            <summary>
+            是否完成配置初始化
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexName">
+            <summary>
+            当前的索引名称
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.#ctor(YQTrack.Backend.ElasticSearch.Settings.ESSetting)">
+            <summary>
+            构造函数：
+                异常：ArgumentNullException
+            </summary>
+            <param name="settings">配置参数</param>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Index``1(System.String,``0,System.String)">
+            <summary>
+            数据索引(新增或修改)
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>       
+            <param name="esId">ESID(为空或NULL时新增)</param>
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexAsync``1(System.String,``0,System.String)">
+            <summary>
+            数据索引(新增或修改)
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>       
+            <param name="esId">ESID(为空或NULL时新增)</param>
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Index``1(``0,System.String)">
+            <summary>
+            数据索引(新增)
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>       
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexAsync``1(``0,System.String)">
+            <summary>
+            数据索引(新增)
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>       
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Create``1(``0,System.String)">
+            <summary>
+            创建索引数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <typeparam name="T">索引数据类</typeparam>
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.CreateAsync``1(``0,System.String)">
+            <summary>
+            创建索引数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <typeparam name="T">索引数据类</typeparam>
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Update``1(System.String,``0,System.String)">
+            <summary>
+            修改索引数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <typeparam name="T">索引数据类</typeparam>
+            <param name="esId">ESID</param>
+            <param name="model">索引数据</param>
+            <param name="routing">路由值</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdateAsync``1(System.String,``0,System.String)">
+            <summary>
+            修改索引数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <typeparam name="T">索引数据类</typeparam>
+            <param name="esId">ESID</param>
+            <param name="model">索引数据</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdatePartial``1(System.String,System.Object,System.String)">
+            <summary>
+            修改索引数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <typeparam name="T">索引数据类</typeparam>
+            <param name="esId">ESID</param>
+            <param name="partialModel">部分更新字段Model，字段必须跟T类型定义的字段属性名称一致</param>
+            <param name="routing">路由值</param>
+            <returns>更新索引结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdateMany``1(System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            批量更新数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <param name="routing">路由信息</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdateManyAsync``1(System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            批量更新数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <param name="routing">路由信息</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Bulk``1(System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            批量添加数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.BulkAsync``1(System.Collections.Generic.ICollection{``0},System.String)">
+            <summary>
+            批量添加数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Bulk``1(System.Collections.Generic.IList{Nest.IBulkOperation},System.String)">
+            <summary>
+            批量操作Es数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="operations">修改内容</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexMany``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            批量添加数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexManyAsync``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            批量添加数据（数据最佳大小为5-15M）http://es.xiaoleilu.com/030_Data/55_Bulk.html
+            </summary>
+            <param name="listModel">数据列表</param>
+            <returns>批量结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Delete(System.String,System.String)">
+            <summary>
+            删除单挑数据
+            </summary>
+            <param name="esId">esId</param>
+            <param name="routing">路由，默认为null</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.DeleteAsync(System.String,System.String)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="esId">esId</param>
+            <param name="routing">路由，默认为null</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.DeleteByQuery(Nest.QueryContainer,System.String)">
+            <summary>
+            通过搜索条件删除数据
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.DeleteByQueryAsync(Nest.QueryContainer,System.String)">
+            <summary>
+            通过搜索条件异步删除数据
+            </summary>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Search``1(System.Int32,System.Int32,System.String)">
+            <summary>
+            全文检索
+                异常：AggregateException
+            </summary>
+            <param name="from">当前页（0为第一页）</param>
+            <param name="size">页大小</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引数据列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Search``1(Nest.SearchDescriptor{``0},System.Int32,System.Int32)">
+            <summary>
+            全文检索：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <param name="from">当前页（0为第一页）</param>
+            <param name="size">页大小</param>
+            <returns>索引数据列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.SearchAsync``1(Nest.SearchDescriptor{``0},System.Int32,System.Int32)">
+            <summary>
+            全文检索：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <param name="from">当前页（0为第一页）</param>
+            <param name="size">页大小</param>
+            <returns>索引数据列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Search``1(Nest.SearchDescriptor{``0})">
+            <summary>
+            全文检索原始结果：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <returns>搜索原始结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.SearchAsync``1(Nest.SearchDescriptor{``0})">
+            <summary>
+            全文检索原始结果：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <returns>搜索原始结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Scroll``1(Nest.Time,System.String,System.Func{Nest.ScrollDescriptor{``0},Nest.IScrollRequest})">
+            <summary>
+            全文检索原始结果,滚动翻页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="scrollTime">滚动时间</param>
+            <param name="scrollId"></param>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.ScrollAsync``1(Nest.Time,System.String,System.Func{Nest.ScrollDescriptor{``0},Nest.IScrollRequest})">
+            <summary>
+            全文检索原始结果,滚动翻页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="scrollTime">滚动时间</param>
+            <param name="scrollId"></param>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Search``1(System.String,System.String)">
+            <summary>
+            根据id搜索单条数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <param name="esId">索引文档id</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引数据</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.SearchAsync``1(System.String,System.String)">
+            <summary>
+            根据id搜索单条数据
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <param name="esId">索引文档id</param>
+            <param name="routing">路由，默认为null</param>
+            <returns>索引数据</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Search``1(System.Func{Nest.SearchDescriptor{``0},Nest.ISearchRequest},System.Threading.CancellationToken)">
+            <summary>
+            全文检索原始结果：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <param name="cancellationToken">搜索条件</param>
+            <returns>搜索原始结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.SearchAsync``1(System.Func{Nest.SearchDescriptor{``0},Nest.ISearchRequest},System.Threading.CancellationToken)">
+            <summary>
+            全文检索原始结果：自定义搜索条件
+                异常：AggregateException
+            </summary>
+            <param name="selector">搜索条件</param>
+            <param name="cancellationToken">搜索条件</param>
+            <returns>搜索原始结果</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.CreateIndex``1(System.String)">
+            <summary>
+            创建索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.DeleteIndex(System.String)">
+            <summary>
+            删除索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdateByQueryAsync(Nest.IUpdateByQueryRequest)">
+            <summary>
+             按条件批量更新
+             scripte脚本 ctx._source.FIsSyncNo=true    ctx._source.字段名
+            </summary>
+            <param name="request">更新请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.UpdateByQueryAsync``1(System.Func{Nest.UpdateByQueryDescriptor{``0},Nest.IUpdateByQueryRequest})">
+            <summary>
+            批量更新
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="selector">更新条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.DeleteByQueryAsync``1(System.Func{Nest.DeleteByQueryDescriptor{``0},Nest.IDeleteByQueryRequest})">
+            <summary>
+            按条件批量删除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.RefreshAsync">
+            <summary>
+             刷新当前的索引，保证数据能马上搜索到
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Refresh">
+            <summary>
+            刷新当前的索引，保证数据能马上搜索到
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.IndexExists(System.String)">
+            <summary>
+            检验索引是否存在
+                异常：AggregateException
+                      ArgumentNullException
+            </summary>
+            <param name="indexName">索引名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.ValidInit">
+            <summary>
+            验证是否初始化
+                异常：AggregateException
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.ElasticSearchHelper.Dispose">
+            <summary>
+            释放资源,关闭队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.ElasticSearch.Models.PageResultEs`1">
+            <summary>
+            分页查询结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.PageResultEs`1.Total">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.PageResultEs`1.Model">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.ElasticSearch.Models.ResultEs">
+            <summary>
+            执行结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.ResultEs.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.ResultEs.ESID">
+            <summary>
+            ESID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.ResultEs.Message">
+            <summary>
+            成功或失败说明
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Models.ResultEs.OriginalException">
+            <summary>
+            ES请求的原始异常信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.ElasticSearch.JsonNetSerializer">
+            <summary>
+            重写ES 6.x Json序列化
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.Deserialize(System.Type,System.IO.Stream)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type"></param>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.Deserialize``1(System.IO.Stream)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.DeserializeAsync(System.Type,System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type"></param>
+            <param name="stream"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.DeserializeAsync``1(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.Serialize``1(``0,System.IO.Stream,Elasticsearch.Net.SerializationFormatting)">
+            <summary>
+            序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <param name="stream"></param>
+            <param name="formatting"></param>
+        </member>
+        <member name="M:YQTrack.Backend.ElasticSearch.JsonNetSerializer.SerializeAsync``1(``0,System.IO.Stream,Elasticsearch.Net.SerializationFormatting,System.Threading.CancellationToken)">
+            <summary>
+            序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <param name="stream"></param>
+            <param name="formatting"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.ElasticSearch.Settings.ESSetting">
+            <summary>
+            ES配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Settings.ESSetting.IndexName">
+            <summary>
+            索引名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Settings.ESSetting.EsType">
+            <summary>
+            类别，为空则为默认类别message_log
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Settings.ESSetting.Address">
+            <summary>
+            ElasticSearch服务器地址
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Settings.ESSetting.User">
+            <summary>
+            ElasticSearch用户名
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.ElasticSearch.Settings.ESSetting.Password">
+            <summary>
+            ElasticSearch密码
+            </summary>
+        </member>
+    </members>
+</doc>

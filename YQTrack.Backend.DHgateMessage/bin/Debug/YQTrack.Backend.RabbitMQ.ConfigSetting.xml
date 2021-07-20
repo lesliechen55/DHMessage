@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.RabbitMQ.ConfigSetting</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault">
+            <summary>
+            默认配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault.CreateSample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault.Validate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefaultSetting">
+            <summary>
+            RabbitMQ-Default 的配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefaultSetting.RabbitMqConfig">
+            <summary>
+            RabbitMQ-Default RabbitMQ配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefaultRPCSetting">
+            <summary>
+            RabbitMQ-RPC 的配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefaultRPCSetting.RabbitMqConfig">
+            <summary>
+            RabbitMQ-RPC RabbitMQ配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper">
+            <summary>
+            RabbitMQ 配置加载帮助类处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.#ctor">
+            <summary>
+            私有构造
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper._instance">
+            <summary>
+             对象创建
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.Instance">
+            <summary>
+             模式实例对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.DefaultSetting">
+            <summary>
+            默认配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.DefaultRPCSetting">
+            <summary>
+            RPC的默认配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.Read``1">
+            <summary>
+            读取自定义的RabbitMQ的配置信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.Register(System.String)">
+            <summary>
+            注册默认的MQ配置信息
+            </summary>
+            <param name="instanceName"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.RegisterRpc(System.String)">
+            <summary>
+            注册默认的MQRPC配置信息
+            </summary>
+            <param name="instanceName"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.Register``1(System.String)">
+            <summary>
+            注册自定义的RabbitMQ配置信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instanceName"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.InitRabbitMqConfigDefault(YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault)">
+            <summary>
+            初始化RabbitMq默认配置
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigSettingHelper.InitRabbitMqConfigRpc(YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault)">
+            <summary>
+            初始化RabbitMq RPC的默认配置
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory">
+            <summary>
+             Rabbit队列管理工厂
+             根据QueueConfigAttribute标记，标记Model，来创建队列，并直接使用
+             关联 YQTrack.Backend.Sharding.DBShardingRouteFactory 可以获取集合DataRouteModel
+             QueueConfigAttribute 在 YQTrack.Backend.Models.dll
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory._dicQueueInfos">
+            <summary>
+            类型对应的队列配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.#ctor(YQTrack.RabbitMQ.Model.RabbitConfig)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Publish``1(``0)">
+            <summary>
+            根据配置默认队列名称
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="msgModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.PublishBusiness``2(``0)">
+            <summary>
+            限定特定业务模型发送到消息队列
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TData"></typeparam>
+            <param name="msgModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Publish``1(``0,System.Object)">
+            <summary>
+            根据枚举值区分队列名称，发送消息
+            根据配置的队列名称拼接队列名称.拼接队列：{queuename}.{enunName}
+            </summary>
+            <typeparam name="T">队列传输对象Model</typeparam>
+            <param name="msgModel">队列传输对象Model</param>
+            <param name="enumValue">枚举值，必须是枚举类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Publish``1(``0,YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据数据库分片的路由信息，拼接队列名称发送消息
+            根据数据库分片信息，获取DbNo和TableNo.拼接队列： {queuename}.{dbNo}.{tableNo}
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="msgModel">队列传输对象Model</param>
+            <param name="routeModel">数据库路由信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Publish``1(``0,YQTrack.Backend.Models.DataRouteModel,System.Object)">
+            <summary>
+            根据 枚举值和数据库分片的路由信息，拼接队列名称发送消息
+            根据 枚举值的枚举名称与数据库分片信息的DbNo和TableNo.拼接队列： {queuename}.{enumName}.{dbNo}.{tableNo}
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="msgModel">队列传输对象Model</param>
+            <param name="routeModel">数据库路由信息</param>
+            <param name="enumValue">枚举值，必须是枚举类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Subscribe``1(System.Func{``0,System.Boolean})">
+            <summary>
+             订阅消息
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Subscribe``1(System.Func{``0,System.Boolean},System.Collections.Generic.List{YQTrack.Backend.Models.DataRouteModel})">
+            <summary>
+             订阅消息
+             根据数据库分库的路由集合，拼接队列名称。创建消费队列
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <param name="routeModelList">数据库分库的路由集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.UnSubscribe``1">
+            <summary>
+             取消订阅消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.GetOrCreateRmq``1(YQTrack.RabbitMQ.Model.QueueInfo)">
+            <summary>
+            获取或创建队列对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="info">队列信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.GetQueueInfos(System.Type,System.Collections.Generic.List{YQTrack.Backend.Models.DataRouteModel})">
+            <summary>
+            获取当前类型的所有队列信息集合
+            </summary>
+            <param name="modelType">当前类型</param>
+            <param name="routeModelList">数据库路由信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitQueueServiceFactory.Dispose">
+            <summary>
+             是否队列资源
+            </summary>
+        </member>
+    </members>
+</doc>

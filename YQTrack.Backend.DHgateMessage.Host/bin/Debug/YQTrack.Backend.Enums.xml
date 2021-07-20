@@ -1,0 +1,693 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Enums</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Enums.AccessTokenType">
+            <summary>
+            OAuthToken类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.AccessTokenType.AccessToken">
+            <summary>
+            授权Token
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.AccessTokenType.AccessCode">
+            <summary>
+            授权Code
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.BusinessCommonCode">
+            <summary>
+            业务公用的Code
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TrackNoIsNull">
+            <summary>
+            输入单号不能为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TrackNoInvalid">
+            <summary>
+            单号存在非法字符，必须为字母或数字组成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TrackNoLengthInvalid">
+            <summary>
+            单号存在非法字符，必须为字母或数字组成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TrackNoAddLimit">
+            <summary>
+            输入单号超过40个
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TrackNoTodayAddLimit">
+            <summary>
+            追踪号数量添加超过今日1000个限制
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCommonCode.TextAntiSpamErrorCode">
+            <summary>
+            文本内容存在敏感词
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.BusinessCtrlType">
+            <summary>
+            业务控制服务类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.None">
+            <summary>
+            为止(未设置)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.BuyerTrack">
+            <summary>
+            BuyerTrack
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.SellerTrack">
+            <summary>
+            卖家跟踪数量
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.SellerEmail">
+            <summary>
+            卖家邮件数量
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.CarrierTrack">
+            <summary>
+            货代踪数量
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.BusinessCtrlType.ApiUserTrack">
+            <summary>
+            Api用户踪数量
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.CurrencyType">
+            <summary>
+            支持的货币
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.CurrencyType.None">
+            <summary>
+            未知或者不确定
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.CurrencyType.CNY">
+            <summary>
+            人民币
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.CurrencyType.USD">
+            <summary>
+            美金
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.EmailBusinessErrorState">
+            <summary>
+            邮件业务错误状态枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.None">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.FrequentlyLimit">
+            <summary>
+            发送请求太频繁
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.BlacklistLimit">
+            <summary>
+            暂时被禁用(黑名单限制)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.InvalidRecipient">
+            <summary>
+            收件人无效
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.SpamMessage">
+            <summary>
+            垃圾邮件
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.Rejected">
+            <summary>
+            服务商拒收
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.SendTimeout">
+            <summary>
+            发送超时处理
+            邮件服务（第三方服务）没有回调通知（超过两个小时，按发送失败处理。）
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailBusinessErrorState.SystemError">
+            <summary>
+            系统发生错误
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.EmailState">
+            <summary>
+            邮件发送结果状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.None">
+            <summary>
+                未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.SubmitSuccess">
+            <summary>
+                提交成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.SubmitError">
+            <summary>
+                提交失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.SendSuccess">
+            <summary>
+                已妥投
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.SendFailed">
+            <summary>
+                投递失败，包括Mailgun的Dropped
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.HardBounces">
+            <summary>
+                退件
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EmailState.SpamComplaints">
+            <summary>
+                垃圾投诉
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.EnumChannel">
+            <summary>
+            邮件发送通道
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EnumChannel.System">
+            <summary>
+                系统消息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EnumChannel.Seller">
+            <summary>
+                卖家消息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EnumChannel.Buyer">
+            <summary>
+                买家消息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.EnumChannel.Carrier">
+            <summary>
+                运输商消息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.LogType">
+            <summary>
+            日志记录类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.NoSessionId">
+            <summary>
+            找不到SessionId
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.ParamError">
+            <summary>
+            非法参数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.NoLogin">
+            <summary>
+            未登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.RoleNotSet">
+            <summary>
+            角色未登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.LogType.NoPermission">
+            <summary>
+            没有权限
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.OAuthResultType">
+            <summary>
+            授权类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.OAuthResultType.None">
+            <summary>
+                其他情况
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.OAuthResultType.Normal">
+            <summary>
+                正常 已注册
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.OAuthResultType.NoReg">
+            <summary>
+                未注册
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.OAuthSigninType">
+            <summary>
+                第三方登录命令
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.OAuthSigninType.Signin">
+            <summary>
+                登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.OAuthSigninType.Binding">
+            <summary>
+                改绑登录
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.PasswordLevel">
+            <summary>
+                密码等级
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.PasswordLevel.Unknown">
+            <summary>
+                未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.PasswordLevel.Low">
+            <summary>
+                低
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.PasswordLevel.Middle">
+            <summary>
+                中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.PasswordLevel.High">
+            <summary>
+                高
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.ResultCode">
+            <summary>
+                返回值状态码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.Success">
+            <summary>
+                成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.Unknown">
+            <summary>
+                未知错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.ParameterError">
+            <summary>
+                参数错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.NoPermission">
+            <summary>
+                没有权限
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.ApiLimitDataWrite">
+            <summary>
+             服务器维护中，限制写入数据
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.NoLogin">
+            <summary>
+                未登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.ApiCallTooFast">
+            <summary>
+                接口调用太频繁
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.ApiObsolete">
+            <summary>
+                API已过期
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.NotSupport">
+            <summary>
+                暂不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.FormatError">
+            <summary>
+                格式错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.ServerError">
+            <summary>
+                服务异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCode.NullContent">
+            <summary>
+                空内容
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.ResultCodeString">
+            <summary>
+            全局Code定义字符串形式
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCodeString.ParameterError">
+            <summary>
+                参数错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ResultCodeString.TrackNoInvalid">
+            <summary>
+                追踪号无效
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.SendCodeType">
+            <summary>
+            发送验证码类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.RegEmail">
+            <summary>
+            注册邮箱
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.OAuthBindEmail">
+            <summary>
+            绑定邮箱
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.ResetPwd">
+            <summary>
+            重置密码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.ModifyEmailOldCode">
+            <summary>
+            修改邮件，给老邮箱发送Code
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.ModifyEmailNewCode">
+            <summary>
+            修改邮件，给新邮箱发送Code
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.BuyerTrackEmailCode">
+            <summary>
+            Buyer追踪邮件地址验证码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SendCodeType.SellerSetEmailCode">
+            <summary>
+            Seller发送邮件设置Code
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.ShowCodeType">
+            <summary>
+                验证码类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ShowCodeType.Signin">
+            <summary>
+                登录验证码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ShowCodeType.Signup">
+            <summary>
+                注册验证码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.ShowCodeType.ResetPassword">
+            <summary>
+                重置密码验证码
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.SourceType">
+            <summary>
+            用户来源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.Web">
+            <summary>
+                网站
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.APP">
+            <summary>
+                APP
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.MiniProgram">
+            <summary>
+                小程序
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.Android">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.Apple">
+            <summary>
+             苹果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.MiniProgram_alipay">
+            <summary>
+             支付宝小程序
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.MiniProgram_weixin">
+            <summary>
+             微信小程序
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.SourceType.Shopify">
+            <summary>
+             Shopify
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserMemberLevel">
+            <summary>
+            会员等级枚举定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberLevel.FreeMember">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberLevel.BuyerOrdinaryMember">
+            <summary>
+            普通会员
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberLevel.BuyerSeniorMember">
+            <summary>
+            高级会员
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberLevel.SellerOrdinaryMember">
+            <summary>
+            普通会员
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberLevel.SellerSeniorMember">
+            <summary>
+            高级会员
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserMemberType">
+            <summary>
+             会员类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberType.SellerMemberType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserMemberType.BuyerMemberType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.AttUserMemberTypeAttribute">
+            <summary>
+            用户会员类型属性标记
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Enums.AttUserMemberTypeAttribute.#ctor(YQTrack.Backend.Enums.UserMemberType)">
+            <summary>
+            
+            </summary>
+            <param name="memberType"></param>
+        </member>
+        <member name="P:YQTrack.Backend.Enums.AttUserMemberTypeAttribute.MemberType">
+            <summary>
+            会员类型
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.AttUserMemberTypeHelper">
+            <summary>
+            用户会员类型属性标记 帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Enums.AttUserMemberTypeHelper.GetUserMemberTypeByAttribute(YQTrack.Backend.Enums.UserMemberLevel)">
+            <summary>
+            获取会员等级上标记属性（AttUserMemberTypeAttribute）的会员类型
+            </summary>
+            <param name="memberLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserPhotoCode">
+            <summary>
+                用户头像代码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPhotoCode.Default">
+            <summary>
+                默认
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPhotoCode.Man">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserPlatformType">
+            <summary>
+            用户平台类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.UNKNOWN">
+            <summary>未知</summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.WEB">
+            <summary>Web</summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.ANDROID">
+            <summary>Android</summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.IOS">
+            <summary>IOS</summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.Mobile">
+            <summary>
+            Mobile
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.Alipay">
+            <summary>
+            Alipay
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserPlatformType.Weixin">
+            <summary>
+            Weixin
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserRoleType">
+            <summary>
+                用户角色
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserRoleType.None">
+            <summary>
+                未指定
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserRoleType.Seller">
+            <summary>
+                卖家
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserRoleType.Buyer">
+            <summary>
+                买家
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserRoleType.Carrier">
+            <summary>
+                运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserRoleType.ApiUser">
+            <summary>
+             API接口用户
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Enums.UserState">
+            <summary>
+                用户状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserState.None">
+            <summary>
+                已注册未选择角色
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserState.Normal">
+            <summary>
+                正常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Enums.UserState.Disabled">
+            <summary>
+                禁用
+            </summary>
+        </member>
+    </members>
+</doc>

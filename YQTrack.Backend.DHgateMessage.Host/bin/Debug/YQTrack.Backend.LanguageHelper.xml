@@ -1,0 +1,2374 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.LanguageHelper</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini">
+            <summary>
+            全局常量定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.EN">
+            <summary>
+            英文区域代码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.ZHcn">
+            <summary>
+            中文区域代码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.ExtFileName">
+            <summary>
+            文件后缀名
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Global">
+            <summary>
+            资源文件中全局资源关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Items">
+            <summary>
+            资源文件中列表资源关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Key">
+            <summary>
+            资源文件中KEY的关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Order">
+            <summary>
+            排序关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Code">
+            <summary>
+            词条中code关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.KeyName">
+            <summary>
+            资源文件中_Name的关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.CodeZendesk">
+            <summary>
+            资源文件中_codeZendesk的关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.NameTran">
+            <summary>
+            资源文件中 _nameTran 的关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.Culture">
+            <summary>
+            多语言cookie标识
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.InvariantCulture">
+            <summary>
+            全局ToString区域设定
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.GlobalDefini.OrdinalIgnoreCase">
+            <summary>
+            全局字符串比较设定
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler">
+            <summary>
+            多语言资源处理类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.Default">
+            <summary>
+            默认实例
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler._ResGroup">
+            <summary>
+            资源文件组
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetText(YQTrack.Backend.LanguageHelper.LanguageType,System.String,System.String)">
+            <summary>
+            获取Item组全局翻译资源
+            </summary>
+            <param name="rt">资源组</param>
+            <param name="key">item的KEY值</param>
+            <param name="proName">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetText(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="langCode">语言类型</param>
+            <param name="rt">资源类型</param>
+            <param name="key">资源Kye</param>
+            <param name="proName">资源属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetText(YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="rt">资源组</param>
+            <param name="key">key值</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetText(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="langCode">语言类型</param>
+            <param name="rt">资源组</param>
+            <param name="key">key值</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetAllKey(YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            获取枚举资源的所有KEY（默认以_order排序）
+            </summary>
+            <param name="rt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetWebLang">
+            <summary>
+            获取asp.net 环境下 语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetLocadLang">
+            <summary>
+            获取本地app 环境下 语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetJObjects(System.String,YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            获取tems项所有翻译资源
+            </summary>
+            <param name="langCode">指定语言</param>
+            <param name="rt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResLanguageHandler.GetJObject(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取一个item项译资源
+            </summary>
+            <param name="langCode"></param>
+            <param name="rt"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.SysLogDefini">
+            <summary>
+            站点日志定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.SysLogDefini.LanguageInfo">
+            <summary>
+            概要日志
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.SysLogDefini.LanguageError">
+            <summary>
+            异常日志
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.SysLogDefini.LanguageWarn">
+            <summary>
+            警告日志
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.SysLogDefini.LanguageDebug">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResourceLanguageGroup">
+            <summary>
+            一个模块的资源文件组
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceLanguageGroup._LanguageGroup">
+            <summary>
+            一个模块的资源文件组
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceLanguageGroup._resType">
+            <summary>
+            所属资源组
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceLanguageGroup.#ctor(YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            
+            </summary>
+            <param name="resType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceLanguageGroup.GetResourceInfo(System.String)">
+            <summary>
+            获取一个语言下的资源文件信息
+            </summary>
+            <param name="languageCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo">
+            <summary>
+            一个json资源文件类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._fileName">
+            <summary>
+            资源文件地址
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._AllKey">
+            <summary>
+            Items的所有KEY
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._resType">
+            <summary>
+            资源所属类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._languageCode">
+            <summary>
+            资源语言
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.#ctor(YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rt">资源类型</param>
+            <param name="code">语言</param>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._DicGlobal">
+            <summary>
+            当前资源的全局键值对翻译
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo._DicItems">
+            <summary>
+            当前资源的KEY列表
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.GetText(System.String,System.String)">
+            <summary>
+            获取Item组翻译资源
+            </summary>
+            <param name="key"></param>
+            <param name="proName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.GetText(System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.GetJObject(System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.GetJObjects">
+            <summary>
+            获取Items组全局翻译资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.GetAllKeyName">
+            <summary>
+            获取items所有翻译的指定属性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceInfo.InitRes">
+            <summary>
+            初始化当前资源资源(自动已 _order 字段排序)
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResPathAttribute">
+            <summary>
+            目录组信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResPathAttribute.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <param name="dirName"></param>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.Internal.ResPathAttribute.DirName">
+             <summary>
+            目录名称
+             </summary>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.Internal.ResPathAttribute.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler">
+            <summary>
+            资源支持的语言处理类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler._ChineseLanguage">
+            <summary>
+            简体中文与繁体中文区域表
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler.SupportLanguages">
+            <summary>
+            目前支持的多语言列表
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler.InitChineseLanguage">
+            <summary>
+            初始化简繁体集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler.GetSystemSupportLang(System.String)">
+            <summary>
+            获取系统对应的语言
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResSupportLanguagesHandler.InitLanguages">
+            <summary>
+            初始化当前支持的语言集合
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResourceUtil">
+            <summary>
+            系统资源处理类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceUtil.GetResourceFileName(YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取资源完整的路径名称
+            </summary>
+            <param name="resType">资源类型</param>
+            <param name="languageCode">资源Code</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceUtil.GetResourceFileContent(YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取资源信息的内容
+            </summary>
+            <param name="resType">资源类型</param>
+            <param name="languageCode">资源Code</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResourceUtil.GetResourceFileContent(System.String)">
+            <summary>
+            获取资源信息的内容
+            </summary>
+            <param name="fileName">资源路径包括名字</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.Internal.ResPathExt">
+            <summary>
+            文件组枚举扩展
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.Internal.ResPathExt._CultureCodes">
+            <summary>
+            枚举与特性集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResPathExt.InitCultureCode">
+            <summary>
+            初始化
+            </summary>
+            <returns>字典</returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResPathExt.GetAttr(YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            获取指定枚举的特性
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.Internal.ResPathExt.GetAll">
+            <summary>
+            获取所有枚举
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.LanguageManage">
+            <summary>
+            多语言资源管理类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageManage.SupportLanguages">
+            <summary>
+            目前支持的多语言列表
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetSystemSupportLang(System.String)">
+            <summary>
+            获取系统对应的语言
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetSystemSupportLang(System.String,System.Boolean)">
+            <summary>
+            获取系统对应的语言
+            </summary>
+            <param name="code">区域代码</param>
+            <param name="isDefault">如果不支持是否返回默认语言</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetText(YQTrack.Backend.LanguageHelper.LanguageType,System.String,System.String)">
+            <summary>
+            获取Item组全局翻译资源
+            </summary>
+            <param name="rt">资源组</param>
+            <param name="key">item的KEY值</param>
+            <param name="proName">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetText(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="langCode">语言类型</param>
+            <param name="rt">资源类型</param>
+            <param name="key">资源Kye</param>
+            <param name="proName">资源属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetText(YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="rt">资源组</param>
+            <param name="key">key值</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetText(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取Global组全局翻译资源
+            </summary>
+            <param name="langCode">语言类型</param>
+            <param name="rt">资源组</param>
+            <param name="key">key值</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetAllKey(YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            获取枚举资源的所有KEY（默认以_order排序）
+            </summary>
+            <param name="rt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.NowLanguage">
+            <summary>
+            获取当前语言
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetJObjects(System.String,YQTrack.Backend.LanguageHelper.LanguageType)">
+            <summary>
+            获取tems项所有翻译资源
+            </summary>
+            <param name="langCode">指定语言</param>
+            <param name="rt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetJObject(System.String,YQTrack.Backend.LanguageHelper.LanguageType,System.String)">
+            <summary>
+            获取一个item项译资源
+            </summary>
+            <param name="langCode"></param>
+            <param name="rt"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetCarrierAndExpressJObjects(System.String)">
+            <summary>
+            获取所有运输商列表
+            </summary>
+            <param name="langCode">语言</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.LanguageHelper.LanguageManage.GetCarrierAndExpressText(System.String,System.Int32)">
+            <summary>
+            获取运输商ID对应的名称信息
+            </summary>
+            <param name="langCode">语言</param>
+            <param name="carrierType">运输商ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.LanguageType">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalBisSysLogType">
+            <summary>
+            国家
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalBisUserLevel">
+            <summary>
+            业务会员等级
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalCountry">
+            <summary>
+            国家
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalExpress">
+            <summary>
+            快递
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalCarrier">
+            <summary>
+            邮政
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalLanguage">
+            <summary>
+            多语言
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalPSSummary">
+            <summary>
+            包裹状态信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalWord">
+            <summary>
+            通用的此条信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalWDArea">
+            <summary>
+            WD地区
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalWDContinent">
+            <summary>
+            WD板块区域
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalWDCountry">
+            <summary>
+            WD国家
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalCNArea">
+            <summary>
+            CN地区
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalCNCity">
+            <summary>
+            CN城市
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalCNProvince">
+            <summary>
+            CN省份
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalBisPlatform">
+            <summary>
+            GlobalBisPlatform
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalWordForOrder">
+            <summary>
+            ResGWordForOrder
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerMsgTemplateType">
+            <summary>
+            卖家消息模板类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerMsgTemplateVars">
+            <summary>
+            卖家站内信模板变量枚举定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerMailSendResult">
+            <summary>
+            Seller 邮件发送结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerTrackStatus">
+            <summary>
+            SellerV2 SellerTrackStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerNotifySupport">
+            <summary>
+            SellerV2 SellerNotifySupport
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerNotifyStatus">
+            <summary>
+            SellerV2 SellerNotifyStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerNotifyMsgError">
+            <summary>
+            SellerV2 SellerNotifyMsgError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerNotifyMailError">
+            <summary>
+            SellerV2 SellerNotifyMailError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerShopFeatures">
+            <summary>
+            SellerV2 SellerShopFeatures
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerOrderImportError">
+            <summary>
+            SellerV2 SellerOrderImportError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerShopLogOpreateType">
+            <summary>
+            SellerV2 SellerShopLogOpreateType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEOrderLogOpreateType">
+            <summary>
+            SellerV2 SellerEOrderLogOpreateType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerETrackBatchTaskType">
+            <summary>
+            SellerV2 SellerETrackBatchTaskType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunAEExtendsAcceptError">
+            <summary>
+            SellerV2 SellerEFunAEExtendsAcceptError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunAEExtendsAcceptStatus">
+            <summary>
+            SellerV2 SellerEFunAEExtendsAcceptStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunDHApplyMoneyError">
+            <summary>
+            SellerV2 SellerEFunAEExtendsAcceptError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunDHApplyMoneyStatus">
+            <summary>
+            SellerV2 SellerEFunAEExtendsAcceptStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunReShipStatus">
+            <summary>
+            SellerV2 SellerEFunAEExtendsAcceptStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEQuotaError">
+            <summary>
+            SellerV2 SellerEQuotaError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEQuotaStatus">
+            <summary>
+            SellerV2 SellerEQuotaStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEQuotaType">
+            <summary>
+            SellerV2 SellerEQuotaType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerELabelColor">
+            <summary>
+            SellerV2 SellerELabelColor
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEMappingCarrierType">
+            <summary>
+            SellerV2 SellerEMappingCarrierType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunEbayMsgFolder">
+            <summary>
+            SellerV2 SellerEFunEbayMsgFolder
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunEbayMsgOperationError">
+            <summary>
+            SellerV2 SellerEFunEbayMsgOperationError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunEbayMsgSendError">
+            <summary>
+            SellerV2 SellerEFunEbayMsgSendError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFetchEbayEvaluationDataStatus">
+            <summary>
+            SellerV2 SellerEFetchEbayEvaluationDataStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFetchEbayEvaluationPlatformResult">
+            <summary>
+            SellerV2 SellerEFetchEbayEvaluationDataStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFetchEbayEvaluationResult">
+            <summary>
+            SellerV2 SellerEFetchEbayEvaluationDataStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEEvaluationStatus">
+            <summary>
+            SellerV2 SellerEEvaluationStatus 评价状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEEvaluationStyle">
+            <summary>
+            SellerV2 SellerEEvaluationStyle 评价等级
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunDHgateMsgFolder">
+            <summary>
+            SellerV2 SellerEFunDHgateMsgFolder
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunDHgateMsgSendError">
+            <summary>
+            SellerV2 SellerEFunDHgateMsgSendError
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEPaypalRelatedShopStatus">
+            <summary>
+            SellerV2 SellerEPaypalRelatedShopStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunPayPalPushTrackError">
+            <summary>
+            SellerV2 SellerEPaypalRelatedShopStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEFunPaypalPushTrackStatus">
+            <summary>
+            SellerV2 SellerEPaypalRelatedShopStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.SellerEOrdersState">
+            <summary>
+            SellerV2 SellerEOrdersState
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.DealStoreCategory">
+            <summary>
+            DealStoreCategory
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.DealStoreLevel">
+            <summary>
+            DealStoreLevel
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.DealArea">
+            <summary>
+            DealArea
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.DealCurrencyType">
+            <summary>
+            DealCurrencyType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightChannelInvalidatedReason">
+            <summary>
+            FreightChannelInvalidatedReason
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightChannelSubType">
+            <summary>
+            FreightChannelSubType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightChannelType">
+            <summary>
+            FreightChannelSubType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightOrderType">
+            <summary>
+            FreightOrderType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightProductType">
+            <summary>
+            FreightChannelSubType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightQuoteType">
+            <summary>
+            FreightChannelSubType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightRecordType">
+            <summary>
+            FreightRecordType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightTransportType">
+            <summary>
+            FreightTransportType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightType">
+            <summary>
+            FreightTransportType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightCorrectReason">
+            <summary>
+            FreightCorrectReason
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.BBLLabel">
+            <summary>
+            BBLLabel
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.BBLPlatform">
+            <summary>
+            BBLPlatform
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserREBTagGoods">
+            <summary>
+            UserREBTagGoods
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserRECArea">
+            <summary>
+            UserRECArea
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserRECChannel">
+            <summary>
+            UserRECChannel
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserRESOrderCount">
+            <summary>
+            UserRECChannel
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserRESPlatform">
+            <summary>
+            UserRESPlatform
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.UserRESTags">
+            <summary>
+            UserRESTags
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.CarrierCompanyAuditState">
+            <summary>
+            CarrierCompanyAuditState
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.CarrierCompanyBusinessState">
+            <summary>
+            CarrierCompanyBusinessState
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.PayCurrencyType">
+            <summary>
+            PayCurrencyType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.PayOrderStatus">
+            <summary>
+            PayOrderStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.PayOSType">
+            <summary>
+            PayOSType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.PayPaymentProvider">
+            <summary>
+            PayPaymentProvider
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.PayPaymentStatus">
+            <summary>
+            PayPaymentStatus
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.BuyerProductCategory">
+            <summary>
+            BuyerProductCategory
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.BuyerSourceType">
+            <summary>
+            BuyerSourceType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalDeductionEQ">
+            <summary>
+            GlobalDeductionEQ
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalDeductionTQ">
+            <summary>
+            GlobalDeductionTQ
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalSysRemarkEQ">
+            <summary>
+            GlobalSysRemarkEQ
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.GlobalSysRemarkTQ">
+            <summary>
+            GlobalSysRemarkTQ
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightInquiryBiddingFail">
+            <summary>
+            ResFreightInquiryBiddingFail
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightInquiryCancel">
+            <summary>
+            ResFreightInquiryCancel
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightInquiryOrderType">
+            <summary>
+            ResFreightInquiryOrderType
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightInquirySort">
+            <summary>
+            ResFreightInquirySort
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.LanguageHelper.LanguageType.FreightInquiryType">
+            <summary>
+            ResFreightInquiryType
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.LanguageHelper.LanguageInfo">
+            <summary>
+            目前支持的语言Json实体
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.LanguageInfo.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.LanguageInfo.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.LanguageInfo.CodeZendesk">
+            <summary>
+            CodeZendesk
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.LanguageHelper.LanguageInfo.NameTran">
+            <summary>
+            NameTran
+            </summary>
+        </member>
+        <member name="T:ResDefine.ResBBLLabel">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResBBLLabel._desc">
+            <summary>内容</summary>
+        </member>
+        <member name="T:ResDefine.ResBBLPlatform">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResBBLPlatform._name">
+            <summary>名称</summary>
+        </member>
+        <member name="F:ResDefine.ResBBLPlatform._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="T:ResDefine.ResBuyerProductCategory">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResBuyerProductCategory._level">
+            <summary>分类级别, 1和2</summary>
+        </member>
+        <member name="F:ResDefine.ResBuyerProductCategory._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="F:ResDefine.ResBuyerProductCategory._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResBuyerSourceType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResBuyerSourceType._name">
+            <summary>匹配名称</summary>
+        </member>
+        <member name="F:ResDefine.ResBuyerSourceType._tips">
+            <summary>扩展提示</summary>
+        </member>
+        <member name="T:ResDefine.ResCarrierCompanyAuditState">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResCarrierCompanyAuditState._act">
+            <summary>功能</summary>
+        </member>
+        <member name="F:ResDefine.ResCarrierCompanyAuditState._desc">
+            <summary>说明</summary>
+        </member>
+        <member name="F:ResDefine.ResCarrierCompanyAuditState._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResCarrierCompanyBusinessState">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResCarrierCompanyBusinessState._act">
+            <summary>功能</summary>
+        </member>
+        <member name="F:ResDefine.ResCarrierCompanyBusinessState._desc">
+            <summary>说明</summary>
+        </member>
+        <member name="T:ResDefine.ResConsoleETrackingListStopReason">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResConsoleETrackingListStopReason._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResConsoleETrackingPushStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResConsoleETrackingPushStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResConsolePTrackingFilter">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__lastTime">
+            <summary>最后一次查询时间</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__parcelStatus">
+            <summary>包裹状态</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__pushStatus">
+            <summary>推送状态</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__pushTime">
+            <summary>推送时间</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__resultClearAll">
+            <summary>清空结果</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__resultLabel">
+            <summary>结果</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__search">
+            <summary>单号前缀搜索</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__searcherror">
+            <summary>单号前缀验证，内容长度为{0}~{1}，其中占位符为{0}，{1}</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__submitTime">
+            <summary>提交时间</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__trackStatus">
+            <summary>查询状态</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__trackStatusStop">
+            <summary>停止跟踪</summary>
+        </member>
+        <member name="F:ResDefine.ResConsolePTrackingFilter.__trackStatusTracking">
+            <summary>自动跟踪</summary>
+        </member>
+        <member name="T:ResDefine.ResDealArea">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResDealArea._countryCode">
+            <summary>国家代码</summary>
+        </member>
+        <member name="F:ResDefine.ResDealArea._language">
+            <summary>语言</summary>
+        </member>
+        <member name="F:ResDefine.ResDealArea._order">
+            <summary>排序</summary>
+        </member>
+        <member name="F:ResDefine.ResDealArea._route">
+            <summary>路由</summary>
+        </member>
+        <member name="F:ResDefine.ResDealArea._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResDealCurrencyType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResDealCurrencyType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="F:ResDefine.ResDealCurrencyType._symbol">
+            <summary>符号</summary>
+        </member>
+        <member name="T:ResDefine.ResDealStoreCategory">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResDealStoreCategory._level">
+            <summary>分类级别, 1和2</summary>
+        </member>
+        <member name="F:ResDefine.ResDealStoreCategory._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="F:ResDefine.ResDealStoreCategory._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResDealStoreLevel">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResDealStoreLevel._code">
+            <summary>枚举代码</summary>
+        </member>
+        <member name="F:ResDefine.ResDealStoreLevel._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightInquiryBiddingFail">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryBiddingFail._parent">
+            <summary>父级</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryBiddingFail._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightInquiryCancel">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryCancel._isDisable">
+            <summary>禁用</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryCancel._order">
+            <summary>排序</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryCancel._parent">
+            <summary>父级</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryCancel._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightInquiryOrderType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryOrderType._carrierDesc">
+            <summary>运输商描述</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryOrderType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryOrderType._sellerDesc">
+            <summary>卖家描述</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightInquirySort">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquirySort._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightInquiryType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightInquiryType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightChannelInvalidatedReason">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelInvalidatedReason._desc">
+            <summary>说明</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightChannelSubType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelSubType._disable">
+            <summary>是否禁用</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelSubType._mapping">
+            <summary>派送国家</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelSubType._parent">
+            <summary>父级</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelSubType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightChannelType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelType._product">
+            <summary>产品类型</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightChannelType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightCorrectReason">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightCorrectReason._isDefault">
+            <summary>是否默认选中</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightCorrectReason._order">
+            <summary>排序</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightCorrectReason._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightOrderType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightOrderType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightProductType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightProductType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightQuoteType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightQuoteType._order">
+            <summary>排序</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightQuoteType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightQuoteType._namePrice">
+            <summary>价格名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightRecordType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightRecordType._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightTransportType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightTransportType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResFreightType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResFreightType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGDeductionEQ">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGDeductionEQ._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGDeductionTQ">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGDeductionTQ._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGSysRemarkEQ">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGSysRemarkEQ._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGSysRemarkTQ">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGSysRemarkTQ._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGBisPlatform">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._code">
+            <summary>枚举名</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._isOAuth">
+            <summary>是否OAuth</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._isSiteBuilder">
+            <summary>是否自建站</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._isSupport">
+            <summary>是否正式启用</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._name">
+            <summary>名称</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisPlatform._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="T:ResDefine.ResGBisSysLogType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisSysLogType._desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:ResDefine.ResGBisUserLevel">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGBisUserLevel._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGCNArea">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNArea._mnemonic">
+            <summary>简称</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNArea._parent">
+            <summary>名字</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNArea._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGCNCity">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNCity._isComm">
+            <summary>常用</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNCity._mnemonic">
+            <summary>简称</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNCity._parent">
+            <summary>上级</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNCity._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGCNProvince">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNProvince._mnemonic">
+            <summary>简称</summary>
+        </member>
+        <member name="F:ResDefine.ResGCNProvince._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGWDArea">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDArea._parent">
+            <summary>上级</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDArea._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGWDContinent">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDContinent._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGWDCountry">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._gArea">
+            <summary>区域</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._gContinent">
+            <summary>大洲</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._isComm">
+            <summary>常用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._mnemonic">
+            <summary>简称</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._firstCode">
+            <summary>首字母</summary>
+        </member>
+        <member name="F:ResDefine.ResGWDCountry._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGCarrier">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGCarrier._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResGCountry">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGCountry._firstCode">
+            <summary>首字母</summary>
+        </member>
+        <member name="F:ResDefine.ResGCountry._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResGExpress">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGExpress._expressGroup">
+            <summary>快递分组</summary>
+        </member>
+        <member name="F:ResDefine.ResGExpress._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="F:ResDefine.ResGExpress._name">
+            <summary>名称</summary>
+        </member>
+        <member name="T:ResDefine.ResGLanguage">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGLanguage._code">
+            <summary>区域代码</summary>
+        </member>
+        <member name="F:ResDefine.ResGLanguage._codeZendesk">
+            <summary>区域代码Zendesk</summary>
+        </member>
+        <member name="F:ResDefine.ResGLanguage._nameTran">
+            <summary>翻译名称</summary>
+        </member>
+        <member name="T:ResDefine.ResGPSSummary">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGPSSummary._name">
+            <summary>名字</summary>
+        </member>
+        <member name="F:ResDefine.ResGPSSummary._tips">
+            <summary>摘要提示</summary>
+        </member>
+        <member name="T:ResDefine.ResGWord">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__copyMsg_failure">
+            <summary>全局, 复制提示, 失败提示, Web使用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__copyMsg_nothing">
+            <summary>全局, 复制提示, 没有内容提示, 通用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__copyMsg_number">
+            <summary>全局, 复制提示, 单号复制成功提示, 通用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__copyMsg_success">
+            <summary>全局, 复制提示, 成功提示, Web使用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__orderBy_text">
+            <summary>全局, 排序, 字段文本</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_activated">
+            <summary>全局, 其它, 激活, 动词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_activation">
+            <summary>全局, 其它, 激活, 名词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_add">
+            <summary>全局, 其它, 添加</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_addLabel">
+            <summary>全局, 其它, 添加标签</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_addNumbers">
+            <summary>全局, 其它, 添加单号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_addRemark">
+            <summary>全局, 其它, 添加备注</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_all">
+            <summary>全局, 其它, 所有</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_announcement">
+            <summary>全局, 其它, 通知公告</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_apply">
+            <summary>全局, 其它, 应用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_archivation">
+            <summary>全局, 其它, 归档, 名词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_archived">
+            <summary>全局, 其它, 归档, 动词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_associatedPlatform">
+            <summary>全局, 其它, 更多产品</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_barcode">
+            <summary>全局, 其它, 二维码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_cache">
+            <summary>全局, 其它, 缓存</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_clear">
+            <summary>全局, 其它, 移除</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_clear2">
+            <summary>全局, 其它, 清空</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_clearAll">
+            <summary>全局, 其它, 移除所有</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_close">
+            <summary>全局, 其它, 关闭</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_common">
+            <summary>全局, 其它, 常用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_commonCity">
+            <summary>全局, 其它, 常用城市</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_commonFunctions">
+            <summary>全局, 其它, 常用功能</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_commonlyUsed">
+            <summary>全局, 其它, 常用运输商</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_commonProblems">
+            <summary>全局, 其它, 常见问题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_complete">
+            <summary>全局, 其它, 完成</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_compress">
+            <summary>全局, 其它, 收缩</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_confirm">
+            <summary>全局, 其它, 确定</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_contactNumber">
+            <summary>全局, 其它, 电话</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_continue">
+            <summary>全局, 其它, 继续</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_copy">
+            <summary>全局, 其它, 复制</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_current">
+            <summary>全局, 其它, 当前</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_custom">
+            <summary>全局, 其它, 自定义, 动词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_customization">
+            <summary>全局, 其它, 自定义, 名词</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_dataStatistics">
+            <summary>全局, 其它, 数据统计</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_default">
+            <summary>全局, 其它, 默认</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_delete">
+            <summary>全局, 其它, 删除</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_disabled">
+            <summary>全局, 其它, 停用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_edit">
+            <summary>全局, 其它, 编辑</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_editNumbers">
+            <summary>全局, 其它, 编辑单号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_editRemark">
+            <summary>全局, 其它, 编辑备注</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_enabled">
+            <summary>全局, 其它, 启用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_expand">
+            <summary>全局, 其它, 展开</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_export">
+            <summary>全局, 其它, 导出</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_favorite">
+            <summary>全局, 其它, 收藏</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_favoriteCancel">
+            <summary>全局, 其它, 取消收藏</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_features">
+            <summary>全局, 其它, 功能</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_filterNumber">
+            <summary>全局, 其它, 过滤单号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_filters">
+            <summary>全局, 其它, 筛选</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_freeTrial">
+            <summary>全局, 其它, 免费体验</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_globalPostal">
+            <summary>全局, 其它, 全球邮政</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_help">
+            <summary>全局, 其它, 帮助</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_home">
+            <summary>全局, 其它, 首页</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_immediately">
+            <summary>全局, 其它, 立即</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_import">
+            <summary>全局, 其它, 导入</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_joinFree">
+            <summary>全局, 其它, 加入我们</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_loadMore">
+            <summary>全局, 其它, 加载更多</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_mailbox">
+            <summary>全局, 其它, 邮箱</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_mailPreview">
+            <summary>全局, 其它, 邮件预览</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_manual">
+            <summary>全局, 其它, 操作说明</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_maxSelectCount">
+            <summary>全局, 其它, 最多选择数量</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_modify">
+            <summary>全局, 其它, 修改</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_more">
+            <summary>全局, 其它, 更多</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_nameAndSurname">
+            <summary>全局, 其它, 姓名</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_nationWide">
+            <summary>全局, 其它, 全国</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_nextStep">
+            <summary>全局, 其它, 下一步</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_noData">
+            <summary>全局, 其它, 没有任何内容或数据, 仅用于常规性无相关意义的显示, 慎用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_nothingSelected">
+            <summary>全局, 其它, 没有选中任何内容</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_noTrackingNumber">
+            <summary>全局, 其它, 暂无物流单号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_open">
+            <summary>全局, 其它, 开启</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_operation">
+            <summary>全局, 其它, 操作</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_optionl">
+            <summary>全局, 其它, 选填</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_other">
+            <summary>全局, 其它, 其它</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_otherExpress">
+            <summary>全局, 其它, 其它运输商</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_password">
+            <summary>全局, 其它, 密码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_passwordConfirm">
+            <summary>全局, 其它, 确认密码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_passwordNew">
+            <summary>全局, 其它, 新密码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_passwordNewConfirm">
+            <summary>全局, 其它, 确认新密码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_passwordOld">
+            <summary>全局, 其它, 原密码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_preview">
+            <summary>全局, 其它, 预览</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_publish">
+            <summary>全局, 其它, 发布</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_push">
+            <summary>全局, 其它, 推送</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_qqGroupService">
+            <summary>全局, 其它, QQ交流群</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_qrcode">
+            <summary>全局, 其它, 条形码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_rateUs">
+            <summary>全局, 其它, 评价我们</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_refresh">
+            <summary>全局, 其它, 刷新</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_remark">
+            <summary>全局, 其它, 备注</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_reportProblem">
+            <summary>全局, 其它, 报告问题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_required">
+            <summary>全局, 其它, 必填</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_requiredOne">
+            <summary>全局, 其它, 最少一项必填</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_reset">
+            <summary>全局, 其它, 重置</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_return">
+            <summary>全局, 其它, 返回</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_sample">
+            <summary>全局, 其它, 示例</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_save">
+            <summary>全局, 其它, 保存</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_search">
+            <summary>全局, 其它, 搜索</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_selectAll">
+            <summary>全局, 其它, 全选</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_selectInverse">
+            <summary>全局, 其它, 反选</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_selectNone">
+            <summary>全局, 其它, 全不选</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_selectTime">
+            <summary>全局, 其它, 时间选择</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_send">
+            <summary>全局, 其它, 发送</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_settingGuidelines">
+            <summary>全局, 其它, 设置指引</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_settings">
+            <summary>全局, 其它, 设置</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_shipments">
+            <summary>全局, 其它, 查询数</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_shippingTips">
+            <summary>全局, 其它, 邮寄知识</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_submit">
+            <summary>全局, 其它, 提交</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_suggestionFeedback">
+            <summary>全局, 其它, 意见反馈</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_support">
+            <summary>全局, 其它, 支持</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_switch">
+            <summary>全局, 其它, 切换</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_toTop">
+            <summary>全局, 其它, 置顶</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_track">
+            <summary>全局, 其它, 查询</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_uiLanguage">
+            <summary>全局, 其它, UI语言</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_unfilled">
+            <summary>全局, 其它, 未填写</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_unknown">
+            <summary>全局, 其它, 未知</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_upgradeNow">
+            <summary>全局, 其它, 立刻升级</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_uploadFile">
+            <summary>全局, 其它, 上传文件</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_verificationCode">
+            <summary>全局, 其它, 验证码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_version">
+            <summary>全局, 其它, 版本</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_viewAll">
+            <summary>全局, 其它, 查看全部</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_viewDetails">
+            <summary>全局, 其它, 查看详情</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_viewMore">
+            <summary>全局, 其它, 查看更多</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__other_worldWide">
+            <summary>全局, 其它, 全球</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__otherMsg_foundFormat">
+            <summary>全局, 通用提示, 搜索到结果格式化提示</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__otherMsg_noData">
+            <summary>全局, 通用提示, 暂无数据</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__otherMsg_notFound">
+            <summary>全局, 通用提示, 搜索不到任何结果</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__otherMsg_operationDone">
+            <summary>全局, 通用提示, 操作成功</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__otherMsg_searchNum">
+            <summary>全局, 通用提示, 搜索数量结果</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_buyNow">
+            <summary>全局, 购买相关, 立即购买</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_expireTime">
+            <summary>全局, 购买相关, 到期时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_freePrice">
+            <summary>全局, 购买相关, 免费价格</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_price">
+            <summary>全局, 购买相关, 购买相关</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_renewalFee">
+            <summary>全局, 购买相关, 续费</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__price_userLevel">
+            <summary>全局, 购买相关, 会员等级</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__privacy_agree">
+            <summary>全局, 隐私政策, 同意</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__privacy_desc">
+            <summary>全局, 隐私政策, 描述</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_addedTimeFull">
+            <summary>全局, , 添加时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_carrier">
+            <summary>全局, , 运输商</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_country">
+            <summary>全局, , 国家</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_createdTime">
+            <summary>全局, , 创建时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_createdTimeFull">
+            <summary>全局, , 创建时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_details">
+            <summary>全局, , 详细</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_event">
+            <summary>全局, , 事件</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_infoState">
+            <summary>全局, , 查询状态</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_lastEvent">
+            <summary>全局, , 最新事件</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_number">
+            <summary>全局, , 单号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_packageInfo">
+            <summary>全局, , 包裹信息</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_packageState">
+            <summary>全局, , 包裹状态</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_tracking">
+            <summary>全局, , 查询中文本, 写于包裹状态位置</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_trackState">
+            <summary>全局, , 跟踪状态，Buyer跟Seller使用</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_updatedTime">
+            <summary>全局, , 更新时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17_updatedTimeFull">
+            <summary>全局, , 更新时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_destCarrierTitle">
+            <summary>全局, , 目的运输商标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_destSimpleTitle">
+            <summary>全局, , 目的国家简要标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_destTitle">
+            <summary>全局, , 目的国家标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_originCarrierTitle">
+            <summary>全局, , 发件运输商标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_originSimpleTitle">
+            <summary>全局, , 发件国家简要标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Country_originTitle">
+            <summary>全局, , 发件国家标题</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_formatCacheTime">
+            <summary>全局, , 缓存时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_formatConsuming">
+            <summary>全局, , 查询耗时</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_formatDays">
+            <summary>全局, , 天数</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_formatSecond">
+            <summary>全局, , 秒数</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_lastDays">
+            <summary>全局, , 最近X天</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_month">
+            <summary>全局, , 月单位</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__stateFor17Format_pagination">
+            <summary>全局, , 翻页</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__trackSupport_no">
+            <summary>全局, 是否支持查询文本内容, 不支持查询</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__trackSupport_yes">
+            <summary>全局, 是否支持查询文本内容, 支持查询</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__viewOfficialWebSite_no">
+            <summary>全局, 查看官网文本内容, 没有官网</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__viewOfficialWebSite_noTips">
+            <summary>全局, 查看官网文本内容, 没有官方网站提示</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__viewOfficialWebSite_yes">
+            <summary>全局, 查看官网文本内容, 有官网</summary>
+        </member>
+        <member name="F:ResDefine.ResGWord.__viewOfficialWebSite_yesTips">
+            <summary>全局, 查看官网文本内容, 官方网站提示</summary>
+        </member>
+        <member name="T:ResDefine.ResGWordForOrder">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__buyer_email">
+            <summary>全局, 买家, Email</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__buyer_info">
+            <summary>全局, 买家, 信息</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__buyer_name">
+            <summary>全局, 买家, 名称</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__buyer_num">
+            <summary>全局, 买家, 联系号码</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__category_label">
+            <summary>全局, 类别, 类别</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__category_noSelected">
+            <summary>全局, 类别, 没有选择类别</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__category_remove">
+            <summary>全局, 类别, 类别移除</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__category_selection">
+            <summary>全局, 类别, 类别选择</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_createTime">
+            <summary>全局, 订单, 下单时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_info">
+            <summary>全局, 订单, 信息</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_num">
+            <summary>全局, 订单, 编号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_orderState">
+            <summary>全局, 订单, 订单状态</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_sendTime">
+            <summary>全局, 订单, 发货时间</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__order_shipping">
+            <summary>全局, 订单, 原始物流方式</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__other_label">
+            <summary>全局, 其它, 标签</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__other_parcel">
+            <summary>全局, 其它, 包裹</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__other_parcelCount">
+            <summary>全局, 其它, 单量</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__other_pencentage">
+            <summary>全局, 其它, 占比</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__platform_info">
+            <summary>全局, 平台, 信息</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__platform_shop">
+            <summary>全局, 平台, 店铺</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__platform_shopAlias">
+            <summary>全局, 平台, 别名</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__platform_shopName">
+            <summary>全局, 平台, 名称</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__platform_type">
+            <summary>全局, 平台, 类型</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__product_info">
+            <summary>全局, 商品, 信息</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__product_name">
+            <summary>全局, 商品, 名称</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__product_num">
+            <summary>全局, 商品, 编号</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__product_picture">
+            <summary>全局, 商品, 图片</summary>
+        </member>
+        <member name="F:ResDefine.ResGWordForOrder.__product_sku">
+            <summary>全局, 商品, SKU</summary>
+        </member>
+        <member name="T:ResDefine.ResPayCurrencyType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResPayCurrencyType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="F:ResDefine.ResPayCurrencyType._symbol">
+            <summary>符号</summary>
+        </member>
+        <member name="T:ResDefine.ResPayOrderStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResPayOrderStatus._isGroup">
+            <summary>控制订单状态合并后的类型显示，以类别组的最后数据作为优先显示。</summary>
+        </member>
+        <member name="F:ResDefine.ResPayOrderStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResPayOSType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResPayOSType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResPayPaymentProvider">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResPayPaymentProvider._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResPayPaymentStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResPayPaymentStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEFunAEExtendsAcceptError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunAEExtendsAcceptError._desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEFunAEExtendsAcceptStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunAEExtendsAcceptStatus._colorName">
+            <summary>颜色名字</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunAEExtendsAcceptStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEFunDHApplyMoneyError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunDHApplyMoneyError._desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEFunDHApplyMoneyStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunDHApplyMoneyStatus._colorName">
+            <summary>颜色名字</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunDHApplyMoneyStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEFunReShipStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunReShipStatus._colorName">
+            <summary>颜色名字</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEFunReShipStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerELabelColor">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerELabelColor._color">
+            <summary>颜色值</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEMappingCarrierType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEMappingCarrierType._name">
+            <summary>类型名称</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerENotifyMailError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerENotifyMailError._desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerENotifyMsgError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerENotifyMsgError._desc">
+            <summary>描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerENotifyStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerENotifyStatus._colorName">
+            <summary>颜色名字</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerENotifyStatus._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerENotifySupport">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerENotifySupport._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEOrderImportError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEOrderImportError._desc">
+            <summary>日志描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEOrderLogOpreateType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEOrderLogOpreateType._desc">
+            <summary>日志描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEQuotaError">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEQuotaError._desc">
+            <summary>失效原因</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEQuotaStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEQuotaStatus._name">
+            <summary>类型</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEQuotaType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEQuotaType._name">
+            <summary>状态</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEShopFeatures">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEShopFeatures._desc">
+            <summary>功能描述</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEShopFeatures._name">
+            <summary>功能名称</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerEShopLogOpreateType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerEShopLogOpreateType._desc">
+            <summary>日志描述</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerETrackBatchTaskType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerETrackBatchTaskType._name">
+            <summary>名称，仅用于任务列表显示使用</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerETrackStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerETrackStatus._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerETrackStatus._desc">
+            <summary>描述，说明此类别(非单条记录)包含的内容，与页面意义无关</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerETrackStatus._name">
+            <summary>名称，用于显示导航/菜单等地方</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerMailSendResult">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMailSendResult._code">
+            <summary>代码</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMailSendResult._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerMsgSendResult">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgSendResult._code">
+            <summary>代码</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgSendResult._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerMsgSendType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgSendType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerMsgTemplateType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgTemplateType._code">
+            <summary>代码</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgTemplateType._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResSellerMsgTemplateVars">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgTemplateVars._marker">
+            <summary>占位符</summary>
+        </member>
+        <member name="F:ResDefine.ResSellerMsgTemplateVars._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserEInvoiceAuditStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserEInvoiceAuditStatus._name">
+            <summary>状态名称</summary>
+        </member>
+        <member name="T:ResDefine.ResUserEInvoiceSendType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserEInvoiceSendType._name">
+            <summary>类型名称</summary>
+        </member>
+        <member name="T:ResDefine.ResUserEInvoiceType">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserEInvoiceType._name">
+            <summary>类型名称</summary>
+        </member>
+        <member name="T:ResDefine.ResUserEOfflineAuditStatus">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserEOfflineAuditStatus._name">
+            <summary>状态名称</summary>
+        </member>
+        <member name="T:ResDefine.ResUserREBTagGoods">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserREBTagGoods._order">
+            <summary>排序字段</summary>
+        </member>
+        <member name="F:ResDefine.ResUserREBTagGoods._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserRECArea">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRECArea._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserRECChannel">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRECChannel._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserRESOrderCount">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRESOrderCount._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserRESPlatform">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRESPlatform._name">
+            <summary>名字</summary>
+        </member>
+        <member name="T:ResDefine.ResUserRESTags">
+            <summary>资源定义类</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRESTags._name">
+            <summary>名字</summary>
+        </member>
+        <member name="F:ResDefine.ResUserRESTags._4_level">
+            <summary>食品保健品化妆品, </summary>
+        </member>
+        <member name="F:ResDefine.ResUserRESTags._4_order">
+            <summary>食品保健品化妆品, </summary>
+        </member>
+    </members>
+</doc>

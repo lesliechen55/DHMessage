@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Utility.DateTimeExtend">
+            <summary>
+            日期时间扩展
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.DateTimeExtend._START_TIME_">
+            <summary>
+            UNIX时间戳的起始时间点
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.UnixTimestamp2LocalTime(System.Int64)">
+            <summary>
+            转换Unix时间戳为本地时间（秒为时间戳单位）
+            </summary>
+            <param name="unixTimeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.UnixTimestamp2UtcTime(System.Int64)">
+            <summary>
+            转换Unix时间戳为Utc时间
+            </summary>
+            <param name="unixTimeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.DateTime2UnixTimestamp(System.DateTime)">
+            <summary>  
+            时间转换为Unix时间戳
+            </summary>  
+            <param name="dateTime">时间,如果时间类型未指定,则按照本地时间处理</param>  
+            <returns>Unix时间戳格式</returns>  
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.JavaScriptTimestamp2LocalTime(System.Int64)">
+            <summary>
+            转换JavaScript时间戳为本地时间（毫秒为时间戳单位）
+            </summary>
+            <param name="javaScriptTimeStamp">JavaScript时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.JavaScriptTimestamp2UtcTime(System.Int64)">
+            <summary>
+            转换JavaScript时间戳为Utc时间
+            </summary>
+            <param name="javaScriptTimeStamp">JavaScript时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.DateTimeExtend.DateTime2JavaScriptTimestamp(System.DateTime)">
+            <summary>  
+            时间转换为JavaScript时间戳,如果时间类型未指定,则按照本地时间处理
+            </summary>  
+            <param name="dateTime">时间</param>  
+            <returns>Unix时间戳格式</returns>  
+        </member>
+        <member name="T:YQTrack.Utility.EnumExtend">
+            <summary>
+            日期时间扩展
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.EnumExtend.GetEnumDisplayDescription(System.Enum)">
+            <summary>
+            获取枚举值Display特性的Description值
+            </summary>
+            <param name="value"></param>
+            <returns>有设置返回设置的值,没有设置返回null</returns>
+        </member>
+        <member name="M:YQTrack.Utility.EnumExtend.GetEnumDisplayName(System.Enum)">
+            <summary>
+            获取枚举值Display特性的Name值
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举值</param>
+            <returns>有设置返回设置的值,没有设置返回null</returns>
+        </member>
+        <member name="M:YQTrack.Utility.EnumExtend.GetEnumDisplayOrder``1(``0)">
+            <summary>
+            获取枚举值Display特性的Order值
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="value"></param>
+            <returns>返回排序值,若不存在则返回0</returns>
+        </member>
+        <member name="M:YQTrack.Utility.EnumExtend.GetEnumList``1(System.Type)">
+            <summary>
+            获取枚举类型的所有枚举
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Utility.NetExtend">
+            <summary>
+            网络辅助类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.NetExtend.reservedAddress">
+            <summary>
+            部分保留几私有地址集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.NetExtend.GetEthernetAddress">
+            <summary>
+            获取本机的所有网络IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.NetExtend.GetInternetAddress">
+            <summary>
+            获取本机的外网网络IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.NetExtend.GetIntranetAddress">
+            <summary>
+            获取本机的内网网络IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Utility.NetExtend.InitServicePoint">
+            <summary>
+            <para>初始化网络服务参数</para>
+            </summary>
+        </member>
+        <member name="T:YQTrack.Utility.NetIPAddressType">
+            <summary>
+            网络IP地址类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.NetIPAddressType.Reserved">
+            <summary>
+            保留地址(组播/dhcp私有)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.NetIPAddressType.Internet">
+            <summary>
+            因特网（公网IP地址）
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.NetIPAddressType.Intranet">
+            <summary>
+            内网（私有网络IP地址）
+            </summary>
+        </member>
+        <member name="T:YQTrack.Utility.EthernetAddress">
+            <summary>
+            网络接口地址类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Utility.EthernetAddress.AddressType">
+            <summary>
+            地址类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Utility.EthernetAddress.Address">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.EthernetAddress.#ctor(YQTrack.Utility.NetIPAddressType,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="addressType">地址类型</param>
+            <param name="address">IP地址</param>
+        </member>
+        <member name="T:YQTrack.Utility.PasswordExtend">
+            <summary>
+            密码辅助类
+            </summary>
+        </member>
+        <member name="F:YQTrack.Utility.PasswordExtend.PasswordFormatRegexPattern">
+            <summary>
+            密码格式正则表达式, "^([0-9]|[a-zA-Z]|((?=[\x21-\x7e]+)[^A-Za-z0-9])){6,16}$"
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.IsValidPasswordFormat(System.String)">
+            <summary>
+            验证密码是否符合格式
+            </summary>
+            <param name="password">密码</param>
+            <returns>是否符合</returns>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.GetPasswordStrength(System.String)">
+            <summary>
+            验证码密码强度等级, 1-低, 2-中, 3-高
+            </summary>
+            <param name="password">密码</param>
+            <returns>强度等级</returns>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.GeneratePasswordPair(System.String)">
+            <summary>
+            根据密码明文生成随机Salt和加密密文
+            </summary>
+            <param name="password">密码</param>
+            <returns>密码对模型</returns>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.IsPasswordMatch(System.String,YQTrack.Utility.PasswordPair)">
+            <summary>
+            检查用户密码和系统密码是否匹配
+            </summary>
+            <param name="password">密码</param>
+            <param name="pair">密码对模型</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.GenerateSalt">
+            <summary>
+            生成随机Salt
+            </summary>
+            <returns>随机Salt</returns>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordExtend.GeneratePasswordHash(System.String,System.Byte[])">
+            <summary>
+            将密码明文和Salt合并后加密
+            </summary>
+            <param name="password">密码</param>
+            <param name="salt">Salt</param>
+            <returns>加密后文本</returns>
+        </member>
+        <member name="T:YQTrack.Utility.PasswordPair">
+            <summary>
+            密码对模型，保存密码Hash和Salt
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.PasswordPair.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="hash">密码Hash</param>
+            <param name="salt">密码Salt</param>
+        </member>
+        <member name="P:YQTrack.Utility.PasswordPair.Hash">
+            <summary>
+            密码Hash
+            </summary>
+        </member>
+        <member name="P:YQTrack.Utility.PasswordPair.Salt">
+            <summary>
+            密码Salt
+            </summary>
+        </member>
+        <member name="T:YQTrack.Utility.SecurityExtend">
+            <summary>
+            加密辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.RsaEncrypt(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            加密流
+            </summary>
+            <param name="stream">流</param>
+            <param name="publicKeyXml">公钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>加密后的流</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.RsaEncrypt(System.String,System.String,System.Int32)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="text">字符串</param>
+            <param name="publicKeyXml">公钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.RsaDecrypt(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            解密流
+            </summary>
+            <param name="stream">流</param>
+            <param name="privateKeyXml">私钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>解密后的流</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.RsaDecrypt(System.String,System.String,System.Int32)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="text">字符串</param>
+            <param name="privateKeyXml">私钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.DesEncrypt(System.String,System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="text">要加密的文本</param> 
+            <param name="sKey">密钥</param>
+            <param name="sIV">向量</param>
+            <returns>加密后文本</returns> 
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.DesDecrypt(System.String,System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="text">要解密的文本</param> 
+            <param name="sKey">密钥</param> 
+            <param name="sIV">向量</param>
+            <returns>解密后文本</returns> 
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.TripleDesEncrypt(System.String,System.String,System.String)">
+            <summary>
+            3DES加密
+            </summary>
+            <param name="text">要加密的文本</param>
+            <param name="sKey">秘钥</param>
+            <param name="sIV">向量</param>
+            <returns>加密后文本</returns>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.TripleDesDecrypt(System.String,System.String,System.String)">
+            <summary>
+            3Des解密
+            </summary>
+            <param name="text">要解密的文本</param>
+            <param name="sKey">秘钥</param>
+            <param name="sIV">向量</param>
+            <returns>解密后文本</returns>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.MD5Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="text">要加密的文本</param>
+            <returns>加密后的文本</returns>
+        </member>
+        <member name="M:YQTrack.Utility.SecurityExtend.MD5Encrypt(System.Byte[])">
+            <summary>
+            加密
+            </summary>
+            <param name="value">要加密的内容本</param>
+            <returns>加密后的文本</returns>
+        </member>
+        <member name="T:YQTrack.Utility.SystemExtend">
+            <summary>
+            系统辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.SystemExtend.GetHashCode(System.String)">
+            <summary>
+            生成字符串的Hash代码,空字符串返回0
+            </summary>
+            <param name="value">需要生成Hash的字符串</param>
+            <returns>Hash代码</returns>
+        </member>
+        <member name="T:YQTrack.Utility.ThreadExtend">
+            <summary>
+            线程辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.ThreadExtend.SetMinApplicationThreads(System.Int32,System.Int32)">
+            <summary>
+            设置应用的默认最小线程数量
+            </summary>
+            <param name="workerThreads">工作线程,-1为不进行设置</param>
+            <param name="completionPortThreads">IO线程,-1为不进行设置</param>
+        </member>
+        <member name="M:YQTrack.Utility.ThreadExtend.SetMinApplicationThreads(System.AppDomain)">
+            <summary>
+            设置应用的默认最小线程数量（Work:1024, IO:512）
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.ThreadExtend.GetThreadInfo">
+            <summary>
+            获取线程信息
+            </summary>
+            <returns>线程信息</returns>
+        </member>
+        <member name="T:YQTrack.Utility.TrackNumberExtend">
+            <summary>
+            跟踪单号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Utility.TrackNumberExtend.TrackNumberRuleRegex">
+            <summary>
+            跟踪单号正则定义
+            </summary>
+        </member>
+        <member name="M:YQTrack.Utility.TrackNumberExtend.IsMatchTrackNumberRule(System.String)">
+            <summary>
+            单号是否满足单号规则
+            </summary>
+            <param name="trackNumber">跟踪单号</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

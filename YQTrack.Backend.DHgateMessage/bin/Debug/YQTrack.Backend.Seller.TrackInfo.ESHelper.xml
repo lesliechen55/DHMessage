@@ -1,0 +1,2735 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Seller.TrackInfo.ESHelper</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSetting">
+            <summary>
+            ElasticSearchSetting
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSetting.ESConfig">
+            <summary>
+            配置Model
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSetting.Register">
+            <summary>
+            注册读取配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSetting.Default">
+            <summary>
+            获取配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSetting.InitEsItemConfig(YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig)">
+            <summary>
+            初始化配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig">
+            <summary>
+            配置类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.IndexName">
+            <summary>
+            索引名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.Address">
+            <summary>
+            ElasticSearch服务器地址
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.User">
+            <summary>
+            ElasticSearch用户名
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.Password">
+            <summary>
+            ElasticSearch密码
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.CreateSample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig.Validate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel">
+            <summary>
+            单号Es数据结构的详细Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.Id">
+            <summary>
+            订单唯一Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrderNumber">
+            <summary>
+            平台订单编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrderCarrier">
+            <summary>
+            订单运输商
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrderCountry">
+            <summary>
+            订单国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrder_Total">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrder_CarrierName">
+            <summary>
+            运输商名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrder_State">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrder_Time">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FShip_Time">
+            <summary>
+            订单发货时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FRemark">
+            <summary>
+            单号备注信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FMarkIds">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FHasRemark">
+            <summary>
+            是否有备注
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FHasMark">
+            <summary>
+            是否有标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FItemSKU">
+            <summary>
+            订单SKU
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FOrderTitle">
+            <summary>
+            订单标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FBuyerEmail">
+            <summary>
+            买家邮箱
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FBuyerName">
+            <summary>
+            买家名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FBuyerNickName">
+            <summary>
+            买家昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel.FArchivedTime">
+            <summary>
+            归档时间
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerEsClientFactory">
+            <summary>
+            Es客户端工厂
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerEsClientFactory.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerEsClientFactory.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerEsClientFactory.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerEsClientFactory.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService">
+            <summary>
+            Seller 单号保存到Es的处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.AddTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel})">
+            <summary>
+             增加单号到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.UpdatePartialTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="operationType"></param>
+            <param name="trackInfos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.DeleteTrackInfoEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的单号操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="trackInfoids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.DeleteTrackInfoEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.ArchiveTrackInfoEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             归档操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="trackInfoids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.SearchTrackInfos(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.GetMustQueryContainers(YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.GetShouldQueryContainers(YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Es.SellerTrackToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.Internal.EsLanguageHelper.identifier">
+            <summary>
+            语言内容
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Internal.EsLanguageHelper.#cctor">
+            <summary>
+            初始化加载语言文件内容
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Internal.EsLanguageHelper.AnalysisLanguage(System.String)">
+            <summary>
+            检测语言：
+                得到固定前两种语言，如果没有则集合内容为空
+            </summary>
+            <param name="text">检测文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.Internal.EsLanguageHelper.ConvertToESLanguage(System.String)">
+            <summary>
+            转换成已有分词
+            </summary>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.LogDefine">
+            <summary>
+                日志信息定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.LogDefine.LogError">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.LogDefine.LogWarn">
+            <summary>
+            Warn
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.LogDefine.LogVerbose">
+            <summary>
+            Verbose
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel">
+            <summary>
+            单号Es数据结构的详细Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FOrderId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FOrderNumber">
+            <summary>
+            平台点单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.Id">
+            <summary>
+            单号Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FTrackNo">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FOrderTitle">
+            <summary>
+            订单标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FOrder_Time">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FShip_Time">
+            <summary>
+            订单发货时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FRemark">
+            <summary>
+            单号备注信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FBuyerEmail">
+            <summary>
+            买家邮箱
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMarkIds">
+            <summary>
+            标签信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FLastEventTime">
+            <summary>
+            最后事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FCompleteUpdate">
+            <summary>
+            最后采集完成时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FArchivedState">
+            <summary>
+            归档状态,0:未完成查询；1：已完成查询，2：已归档查询
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FIsSyncNo">
+            <summary>
+            是否同步的单号（true:同步单号）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FFirstCarrier">
+            <summary>
+            第一运输商
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FSecondCountry">
+            <summary>
+            第二国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FHasRemark">
+            <summary>
+            是否有备注
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FHasMark">
+            <summary>
+            是否有标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FTrackArchivedTime">
+            <summary>
+            归档时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMessageStatus">
+            <summary>
+            单号消息发信状态（-1：所有;0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMsgEmailStatus">
+            <summary>
+            消息发信状态（-1：所有;0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMessageSendTime">
+            <summary>
+            消息发送时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMsgEmailSentTime">
+            <summary>
+            邮件发送时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FIsSyncEmail">
+            <summary>
+            是否支持发送 0 or null:否[不支持发送];1:是【支持发送】
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FTrackStateType">
+            <summary>
+            追踪状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FOrder_Total">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FDHApplyStatus">
+            <summary>
+            请款结果成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FAEExtendStatus">
+            <summary>
+            延长时间成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FIsReShip">
+            <summary>
+            重新发货状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FMessageUnRead">
+            <summary>
+            是否有站内信未读消息
+            1：有未读消息；0：没有未读消息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FPackageStartTime">
+            <summary>
+            包裹开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FPackageLastTime">
+            <summary>
+            包裹最后事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FEbayMessageStatus">
+            <summary>
+            Ebay单号消息发信状态（-1：所有;0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.FEbayMessageSendTime">
+            <summary>
+            Ebay消息发送时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoDetailEsModel.EbayMsgIsSupperSend">
+            <summary>
+            Ebay是否支持发送 0:否[不支持发送];1:是【支持发送】
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde">
+            <summary>
+            单号Es查询Model
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.#ctor(System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="currentDBUTCTime"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.#ctor">
+            <summary>
+            系统的当前UTC时间，初始化
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FPlatformType">
+            <summary>
+            查询平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FShopIds">
+            <summary>
+            店铺Ids
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.TrackNos">
+            <summary>
+            搜索单号前缀
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FOrderIds">
+            <summary>
+            搜索OrderIds
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FTrackInfoIds">
+            <summary>
+            搜索TrackInfoIds
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FFirstCarriers">
+            <summary>
+            第一运输商信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FSecondCountrys">
+            <summary>
+            第二运输商国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FTrackStateType">
+            <summary>
+            追踪类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FArchivedState">
+            <summary>
+             归档状态,0:未完成查询；1：已完成查询，2：已归档查询
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.Days">
+            <summary>
+            查询天数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.CreateStartTime">
+            <summary>
+             创建开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.CreateEndTime">
+            <summary>
+             创建结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OrderStartTime">
+            <summary>
+             order开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OrderEndTime">
+            <summary>
+             order结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ShipStartTime">
+            <summary>
+             ship 开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ShipEndTime">
+            <summary>
+            ship 结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FMarkIds">
+            <summary>
+            搜索标记Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.Page">
+            <summary>
+            当前分页数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.PerPage">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OrderBy">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.Desc">
+            <summary>
+            是否降序排序
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.HasRemark">
+            <summary>
+            是否有备注
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.HasMark">
+            <summary>
+            是否有标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.StayTime">
+            <summary>
+            停留时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.IsDays">
+            <summary>
+            是否按60天导出,1:按60天导出
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.SellerExportMaxNum">
+            <summary>
+            卖家用户导出Excel最大数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FMessageStatus">
+            <summary>
+            单号消息发信状态（0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.EmailSendStatus">
+            <summary>
+            单号邮件状态（10：未发送；12：发信成功;13：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.MsgIsSupperSend">
+            <summary>
+            是否支持发送消息（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.EmailIsSupportSend">
+            <summary>
+            是否支持发送邮件（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.MsgSupperPlatformTypes">
+            <summary>
+            MsgIsSupperSend 配合使用
+            支持发送的平台集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.InTransitDay">
+            <summary>
+            运输多少天
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OrderPriceStart">
+            <summary>
+            订单金额开始
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OrderPriceEnd">
+            <summary>
+            订单金额结束
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.CurrentDBUTCTime">
+            <summary>
+            数据的当前UTC时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.TimeZoneOffset">
+            <summary>
+            时间偏移量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FAEExtendStatus">
+            <summary>
+            延长时间成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ExtendTimeIsSupport">
+            <summary>
+            是否支持延长收货（0:否[不支持];1:是【支持】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ExtendTimeSupportPTs">
+            <summary>
+            支持延长收货的平台集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FDHApplyStatus">
+            <summary>
+            请款结果成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ApplyMoneyIsSupport">
+            <summary>
+            是否支持请款（0:否[不支持];1:是【支持】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ApplyMoneySupportPTs">
+            <summary>
+            支持请款的平台集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ReShipStatus">
+            <summary>
+            请款结果成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ReShipIsSupport">
+            <summary>
+            是否支持请款（0:否[不支持];1:是【支持】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ReShipSupportPTs">
+            <summary>
+            支持重新发货的平台集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ArchivedStartTime">
+            <summary>
+             归档开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.ArchivedEndTime">
+            <summary>
+            归档结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FMessageIsRead">
+            <summary>
+            站内信是否已读
+            (0)：未读；(1)：已读
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.OnlineToDate">
+            <summary>
+            上网至今
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.LastEventToDate">
+            <summary>
+            最后事件时间至今
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FEbayMessageStatus">
+            <summary>
+            Ebay单号消息发信状态（-1：所有;0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.EbayMsgIsSupperSend">
+            <summary>
+            Ebay是否支持发送 0:否[不支持发送];1:是【支持发送】
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.FDHgateMessageStatus">
+            <summary>
+            Ebay单号消息发信状态（-1：所有;0：未发送；2：发信成功;3：发信失败;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde.DHgateMsgIsSupperSend">
+            <summary>
+            Ebay是否支持发送 0:否[不支持发送];1:是【支持发送】
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.ResourceEs">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ResourceEs.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ResourceEs.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.ResourceEs.Core14_profile">
+             <summary>
+               查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;!--Contains models for the following languages (by ISO 639-3): dan, deu, eng, fra, ita, jpn, kor, nld, nor, por, rus, spa, swe, zho--&gt;
+            &lt;LanguageIdentificationProfile&gt;
+              &lt;Parameters&gt;
+                &lt;MaximumSizeOfDistribution&gt;4000&lt;/MaximumSizeOfDistribution&gt;
+                &lt;MaxNGramLength&gt;5&lt;/MaxNGramLength&gt;
+              &lt;/Parameters&gt;
+              &lt;LanguageModels&gt;
+                &lt;LanguageModel&gt;
+                  &lt;Language ISO639-2T=&quot;&quot; ISO639-3=&quot;&quot; /&gt;
+                  &lt;metadata /&gt;
+                  &lt;ngrams totalNoiseCount=&quot;1&quot; distinctNoiseCount=&quot;1&quot;&gt;
+             [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper.Register">
+            <summary>
+            注册读取配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper.InitConfig(YQTrack.Backend.Seller.TrackInfo.ESHelper.ESItemConfig,YQTrack.Backend.RabbitMQ.ConfigSetting.RabbitMqConfigDefault)">
+            <summary>
+            配置key定义：
+            SellerESConfig
+            RabbitMQ
+            RabbitMQ-Default-Seller-Es
+            </summary>
+            <param name="esItemConfig">SellerESConfig</param>
+            <param name="mqTrackInfoConfig">RabbitMQ</param>
+            <param name="mqMessageConfigDefault">RabbitMQ-Default</param>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper._instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper.Instance">
+            <summary>
+             模式实例对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerElasticSearchSettingHelper.RabbitMqConfig">
+            <summary>
+            RabbitMQ配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerEsRabbitMqConfigDefaultSetting">
+            <summary>
+            RabbitMQ-Default 的配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerEsRabbitMqConfigDefaultSetting.RabbitMqConfig">
+            <summary>
+            RabbitMQ-RPC RabbitMQ配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerEsRabbitMqConfigDefault">
+            <summary>
+            新的配置类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerEsRabbitMqConfigDefault.RabbitMqConfig">
+            <summary>
+            RabbitMQ-RPC RabbitMQ配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper">
+            <summary>
+            单号Es操作帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.SaveTrackToEs(YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.AddTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.DelTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.DelTrackToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.ArchivedTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            归档单号处理，转移到归档Es
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsRemark(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,System.String)">
+            <summary>
+            更新单号的备注信息到Es
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="trackInfoId"></param>
+            <param name="remark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsMarkIds(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Int64[])">
+            <summary>
+            更新单号的标记信息到Es
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="trackInfoIds"></param>
+            <param name="markIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsArchivedComplete(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号已完成操作
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsMessageStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.MessageSendStatus,System.Nullable{System.DateTime})">
+            <summary>
+            更新单号站内信发送状态
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">发送状态</param>
+             <param name="msgSendTime">发送时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsMsgEmailStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.MessageSendStatus,System.Nullable{System.DateTime})">
+            <summary>
+            更新单号发送的邮件状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">发送状态</param>
+            <param name="msgEmailSendTime">发送时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.SearchTrackInfEs(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackInfoSearchEsMolde)">
+            <summary>
+            搜索TrackInfo信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.ExecuteTrackNoTransfer(YQTrack.Backend.Models.DataRouteModel,System.Int64)">
+            <summary>
+            执行了单号转移处理
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsExtendStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus)">
+            <summary>
+            更新单号的延长发货状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">延长发货状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsApplyStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus)">
+            <summary>
+            更新单号的请款状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">请款状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsReShipStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            更新单号的重新发货状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">重新发货状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsMessageUnRead(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            更新单号站内信的已读状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">订单状态ID</param>
+            <param name="messageUnRead">消息已读状态：1：有未读消息；0：没有未读消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackEsHelper.UpdateTrackToEsEbayMessageStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.MessageSendStatus,System.Nullable{System.DateTime})">
+            <summary>
+            Ebay更新单号站内信发送状态
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoId">单号ID</param>
+            <param name="status">发送状态</param>
+             <param name="msgSendTime">发送时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel">
+            <summary>
+            单号信息入库ES的队列Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel.FUserId">
+            <summary>       
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel.RouteModel">
+            <summary>
+            路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel.TarckInfos">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType">
+            <summary>
+            单号ES操作枚举类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.DeleteByShopId">
+            <summary>
+            DeleteByShopId
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.Archived">
+            <summary>
+            Archived
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.UpdateAll">
+            <summary>
+            UpdateAll
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.UpdatePartial">
+            <summary>
+            UpdatePartial
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.TrackEsOperationType.ExecuteTrackNoTransfer">
+            <summary>
+            执行了单号转移消费处理
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService">
+            <summary>
+            Seller站内信消息队列服务
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService._instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService.Instance">
+            <summary>
+             模式实例对象
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService._isSubscribe">
+            <summary>
+            是否已经订阅
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService.#ctor">
+            <summary>
+            构造消费者处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService.SubscribeDead(System.Func{YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel,System.Boolean})">
+            <summary>
+             订阅消息
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService.UnSubscribeDead">
+            <summary>
+             订阅消息
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQDeadService.PublishDead(YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel)">
+            <summary>
+            发送消息到消息队列服务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService">
+            <summary>
+            Seller站内信消息队列服务
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService._instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService.Instance">
+            <summary>
+             模式实例对象
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService._isSubscribe">
+            <summary>
+            是否已经订阅
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService.#ctor">
+            <summary>
+            构造消费者处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService.Subscribe(System.Func{YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel,System.Boolean},System.Collections.Generic.List{YQTrack.Backend.Models.DataRouteModel})">
+            <summary>
+             订阅消息
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService.UnSubscribe">
+            <summary>
+             订阅消息
+            </summary>
+            <param name="SubscribeFunc">委托方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackInfoESMQService.Publish(YQTrack.Backend.Seller.TrackInfo.ESHelper.SellerTrackDataEsModel)">
+            <summary>
+            发送消息到消息队列服务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService">
+            <summary>
+            DHgate 消息记录保存到Es处理类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel})">
+            <summary>
+             增加消息到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.UpdatePartialToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.DeleteEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的数据操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.DeleteEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetMustQueryContainers(YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateMessageToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService">
+            <summary>
+            Seller 单号保存到Es的处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel})">
+            <summary>
+             增加消息到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.UpdatePartialToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.DeleteEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的数据操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.DeleteEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetMustQueryContainers(YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Es.DHgateSendRecordToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel">
+            <summary>
+            DHgate 消息记录 Es Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FMessageId">
+            <summary>
+            平台消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FMessageType">
+            <summary>
+            平台消息类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FSubject">
+            <summary>
+            消息主题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FBody">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FTrackNo">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FOrderId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FOrder_Id">
+            <summary>
+            平台点单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FItemId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FItemTitle">
+            <summary>
+            产品标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FReceiveDate">
+            <summary>
+            接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FSellerNickName">
+            <summary>
+            卖家昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FBuyerNickName">
+            <summary>
+            买家昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FMessageFolder">
+            <summary>
+            文件夹Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FIsFlagged">
+            <summary>
+            是否标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FIsReplied">
+            <summary>
+            是否回复
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FIsRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateMessageEsModel.FIsSupportReply">
+            <summary>
+            是否允许回复
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel">
+            <summary>
+            单号Es数据结构的详细Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FTemplateId">
+            <summary>
+            模板Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FTrackNo">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FOrderId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FOrder_Id">
+            <summary>
+            平台点单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FItemId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FItemTitle">
+            <summary>
+            产品标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FSubject">
+            <summary>
+            消息主题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FBody">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FRecipientId">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FRecipientName">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FMessageStatus">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FPlatformResult">
+            <summary>
+            发送结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.DHgate.Model.DHgateSendRecordEsModel.FSendType">
+            <summary>
+            发送类型，自动或手动
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService">
+            <summary>
+            Seller 单号保存到Es的处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel})">
+            <summary>
+             增加消息到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.UpdatePartialToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.DeleteEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的数据操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.DeleteEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetMustQueryContainers(YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBaySendRecordToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService">
+            <summary>
+            Seller 单号保存到Es的处理服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel})">
+            <summary>
+             增加消息到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.UpdatePartialToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.DeleteEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的数据操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.DeleteEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetMustQueryContainers(YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Es.EBayMessageToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel">
+            <summary>
+            单号Es数据结构的详细Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FTemplateId">
+            <summary>
+            模板Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FTrackNo">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FOrderId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FOrder_Id">
+            <summary>
+            平台点单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FItemId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FItemTitle">
+            <summary>
+            产品标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FSubject">
+            <summary>
+            消息主题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FBody">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FRecipientId">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FRecipientName">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FMessageStatus">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FPlatformResult">
+            <summary>
+            发送结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FSendType">
+            <summary>
+            发送类型，自动或手动
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbaySendRecordEsModel.FIsWaitSend">
+            <summary>
+            是否等待发送，1：等待发送
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel">
+            <summary>
+            单号Es数据结构的详细Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.Id">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FShopId">
+            <summary>
+            店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FMessageId">
+            <summary>
+            平台消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FMessageType">
+            <summary>
+            平台消息类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FSubject">
+            <summary>
+            消息主题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FBody">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FTrackNo">
+            <summary>
+            单号信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FOrderId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FOrder_Id">
+            <summary>
+            平台点单ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FItemId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FItemTitle">
+            <summary>
+            产品标题
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FReceiveDate">
+            <summary>
+            接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FFrom">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FTo">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FMessageSource">
+            <summary>
+            消息来源
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FFolderId">
+            <summary>
+            文件夹Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FIsFlagged">
+            <summary>
+            是否同步的单号（true:同步单号）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FIsReplied">
+            <summary>
+            是否同步的单号（true:同步单号）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FIsRead">
+            <summary>
+            是否同步的单号（true:同步单号）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.EsHelper.Message.Ebay.Model.EbayMessageEsModel.FResponseEnabled">
+            <summary>
+            是否同步的单号（true:同步单号）
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService">
+            <summary>
+            DHgate 消息记录保存到Es处理类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetElasticSearHelper(System.String)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="indexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetElasticSearHelper(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据索引获取Es的Client连接
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetIndexName(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            根据路由信息，获取对应ES的索引名称
+            </summary>
+            <param name="route"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetRoutingValue(System.Int64)">
+            <summary>
+             转换路由值，ES路由分片处理。
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Collections.Generic.IEnumerable{YQTrack.Backend.Seller.TrackInfo.ESHelper.PlatformOrder.Models.PtOrderInfoDetailEsModel})">
+            <summary>
+             增加消息到Es存储
+            </summary>
+            <param name="route"></param>
+            <param name="modelList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.UpdatePartialToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.Dictionary{System.Int64,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.DeleteEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             删除Es里的数据操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.DeleteEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+             删除Es里的单号操作，根据店铺Id
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.ArchiveOrderInfoEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+             归档操作
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="trackInfoids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO)">
+            <summary>
+            查询单号处理
+            </summary>
+            <param name="route"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetPtOrderMustQueryContainers(YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO)">
+            <summary>
+            查询条件SQL语句组合处理
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.EsHelper.PlatformOrder.Es.PtOrderInfoToEsHandlerService.GetField(System.String[])">
+            <summary>
+            指定分词条件
+            </summary>
+            <param name="languages">语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsMQModel">
+            <summary>
+            DHgate队列消息数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsMQModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsMQModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsMQDeadModel">
+            <summary>
+            重试队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType">
+            <summary>
+            ES操作枚举类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType.DeleteByShopId">
+            <summary>
+            DeleteByShopId
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType.UpdateAll">
+            <summary>
+            UpdateAll
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsOperationType.UpdatePartial">
+            <summary>
+            UpdatePartial
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateSendRecordEsMQModel">
+            <summary>
+            DHgate 发送记录
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateSendRecordEsMQModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateSendRecordEsMQModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateSendRecordEsMQDeadModel">
+            <summary>
+            重试队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbaySendRecordEsMQModel">
+            <summary>
+            Ebay队列消息数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbaySendRecordEsMQModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbaySendRecordEsMQModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbaySendRecordEsMQDeadModel">
+            <summary>
+            重试队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsMQModel">
+            <summary>
+            Ebay队列消息数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsMQModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsMQModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsMQDeadModel">
+            <summary>
+            重试队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType">
+            <summary>
+            ES操作枚举类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType.DeleteByShopId">
+            <summary>
+            DeleteByShopId
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType.UpdateAll">
+            <summary>
+            UpdateAll
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsOperationType.UpdatePartial">
+            <summary>
+            UpdatePartial
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper">
+            <summary>
+            DHgate 消息 Es操作帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.SaveToEs(YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateMessageEsMQModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.DelToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.DelMessageToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.UpdateToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto)">
+            <summary>
+            搜索TrackInfo信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.UpdateMessageRead(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Boolean)">
+            <summary>
+            更新消息已读状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">ID集合</param>
+            <param name="isRead">已读状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateMessageEsHelper.UpdateMessageFlagged(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Boolean)">
+            <summary>
+            更新消息标记状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">ID集合</param>
+            <param name="isFlag">标记状态</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper">
+            <summary>
+            DHgate 的发送记录Es MQ封装的操作类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.SaveToEs(YQTrack.Backend.Seller.ESHelper.Message.DHgate.MQ.DHgateSendRecordEsMQModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.DelToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.DelMessageToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.UpdateToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO)">
+            <summary>
+            搜索信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerDHgateSendRecordEsHelper.UpdateToEsSendRecordStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.MessageSendStatus,YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult)">
+            <summary>
+            更新单号站内信发送状态
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="msgId">单号ID</param>
+            <param name="status">发送状态</param>
+             <param name="result">发送时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper">
+            <summary>
+            Ebay消息 Es操作帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.SaveToEs(YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbaySendRecordEsMQModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.DelToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.DelMessageToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.UpdateToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO)">
+            <summary>
+            搜索TrackInfo信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbaySendRecordEsHelper.UpdateToEsEbaySendRecordStatus(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64,YQTrack.Backend.Seller.Model.Enums.MessageSendStatus,YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult)">
+            <summary>
+            Ebay更新单号站内信发送状态
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="msgId">单号ID</param>
+            <param name="status">发送状态</param>
+             <param name="result">发送时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper">
+            <summary>
+            Ebay消息 Es操作帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.SaveToEs(YQTrack.Backend.Seller.ESHelper.Message.Ebay.MQ.EbayMessageEsMQModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.DelToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.DelMessageToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.UpdateToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto)">
+            <summary>
+            搜索TrackInfo信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.UpdateMessageRead(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Boolean)">
+            <summary>
+            更新消息已读状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">ID集合</param>
+            <param name="isRead">已读状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.UpdateMessageFlagged(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Boolean)">
+            <summary>
+            更新消息标记状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">ID集合</param>
+            <param name="isFlag">标记状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerEbayMessageEsHelper.UpdateMessageFolderId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64},System.Int64)">
+            <summary>
+            更新消息已读状态
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">ID集合</param>
+            <param name="folderId">文件夹Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsMQModel">
+            <summary>
+            DHgate队列消息数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsMQModel.FShopId">
+            <summary>     
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsMQModel.EsOperationType">
+            <summary>
+            Es局部更新操作
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsMQDeadModel">
+            <summary>
+            重试队列
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType">
+            <summary>
+            ES操作枚举类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.Add">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.DeleteByShopId">
+            <summary>
+            DeleteByShopId
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.Archived">
+            <summary>
+            Archived
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.UpdateAll">
+            <summary>
+            UpdateAll
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsOperationType.UpdatePartial">
+            <summary>
+            UpdatePartial
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper">
+            <summary>
+            平台订单 消息 Es操作帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.SaveToEs(YQTrack.Backend.Seller.ESHelper.PlatformOrder.MQ.PtOrderInfoEsMQModel)">
+            <summary>
+            保存单号信息到Es
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.AddToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            新增单号到Es
+            根据ID，去数据库查询写入
+            </summary>
+            <param name="route">路由信息</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">id集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.DelToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            删除Es单号处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.DelToEsByShopId(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Int64)">
+            <summary>
+            按店铺删除订单数据
+            </summary>
+            <param name="route"></param>
+            <param name="userId"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.UpdateToEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            更新单号处理
+            更新Es所有字段，根据ID，查询数据库更新到Es处理
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="ids">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.ArchivedOrderEs(YQTrack.Backend.Models.DataRouteModel,System.Int64,System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>
+            归档处理，转移到归档Es
+            </summary>
+            <param name="route">路由</param>
+            <param name="userId">用户ID</param>
+            <param name="trackInfoIds">单号集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.ESHelper.SellerPtOrderInfoEsHelper.Search(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO)">
+            <summary>
+            搜索TrackInfo信息
+            </summary>
+            <param name="route">当前路由信息</param>
+            <param name="model">查询Model</param>
+            <returns>返回ID集合</returns>
+        </member>
+    </members>
+</doc>

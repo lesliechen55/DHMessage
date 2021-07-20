@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.GlobalDefinitions</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.GlobalDefinitions.BuyerGlobalCacheKey">
+            <summary>
+            买家缓存key
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.BuyerGlobalCacheKey.ToDayLimitNum">
+            <summary>
+            今日添加订单数限制
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.BuyerGlobalCacheKey.TrackPackageNum">
+            <summary>
+            包裹状态分类统计
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.GlobalDefinitions.BuyerGlobalDefine">
+            <summary>
+            buyer全局变量定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.BuyerGlobalDefine.MaxRemarkLength">
+            <summary>
+            备注最大长度
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey">
+            <summary>
+            User中心的缓存Key
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UCPref">
+            <summary>
+            用户缓存的前缀定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.IPSendCode60SecondKey">
+            <summary>
+            ip限制60秒缓存Key
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.IPSendCodeTimeKey">
+            <summary>
+            ip发送code时间限制
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.SessionIdKey">
+            <summary>
+            SessionId缓存Key
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.Param">
+            <summary>
+                用户参数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.SystemParam">
+            <summary>
+                系统参数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.OAuth">
+            <summary>
+                用户第三方登录信息缓存KEY
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.ResetPwCaptcha">
+            <summary>
+                重置密码验证码有效期KEY
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.ResetPwCount">
+            <summary>
+                重置密码次数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.ResetPwImage">
+            <summary>
+                重置密码验证码图片
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.IsSend">
+            <summary>
+                相同邮箱地址发送邮件时间间隔KEY
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.RegCaptcha">
+            <summary>
+                邮箱注册验证码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UID">
+            <summary>
+                缓存SessionId列表
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.RegImage">
+            <summary>
+                邮箱注册验证码图片
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.RegCount">
+            <summary>
+                邮箱注册册数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UserShopOrder">
+            <summary>
+                用户店铺维度统计
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UserCarrierOrder">
+            <summary>
+                用户运输商维度统计
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UserCountryOrder">
+            <summary>
+                用户国家维度统计
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UserLastAna">
+            <summary>
+                最近30天统计关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.UserParcelOrder">
+            <summary>
+                用户(买家)订单数量统计
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.ShopKey">
+            <summary>
+                店铺关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.CountryKey">
+            <summary>
+                国家关键字
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalCacheKey.CarrierKey">
+            <summary>
+                运输商关键字
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine">
+            <summary>
+              User 中心的字符串常量定义
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.CookieDomain">
+            <summary>
+                cookie域
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.HostUrl">
+            <summary>
+                用户中心域名
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.CarrierUrl">
+            <summary>
+                运输商域名
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.BuyerUrl">
+            <summary>
+                买家域名
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.SellerUrl">
+            <summary>
+                卖家域名
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.CookiePath">
+            <summary>
+                cookie虚拟路径
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.SessionName">
+            <summary>
+                客户端session名称
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.Encoding">
+            <summary>
+                字符集
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.EN">
+            <summary>
+                英文区域代码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.ZHcn">
+            <summary>
+                中文区域代码
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.Culture">
+            <summary>
+                多语言cookie标识
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.Slogan">
+            <summary>
+            邮件中使用slogan
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.IPSendEmailCodeNum">
+            <summary>
+            IP发送邮箱验证码的次数
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.IPSendEmailCodeExpires">
+            <summary>
+            IP发送邮箱验证码缓存时间 小时
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.IPSendCodeTimeInterval">
+            <summary>
+            IP地址发送邮件验证码的时间间隔60s
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.CodeEmailExpires">
+            <summary>
+            发送邮件Code的过期时间 30 分钟
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.LoginCookieExpires_App">
+            <summary>
+             登录Cookie过期时间App登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.LoginCookieExpires_Web">
+            <summary>
+              登录Cookie过期时间Web登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.LoginCookieExpires_MiniProgram">
+            <summary>
+              登录Cookie过期时间Web登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.MaxEmailLength">
+            <summary>
+            邮件最大的长度
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.MinPasswordLength">
+            <summary>
+            密码长度最小值
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.MaxPasswordLength">
+            <summary>
+            密码长度最大值
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.DIDCookieName">
+            <summary>
+            设备信息ID，Cookie Name
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.ShowCapCookieName">
+            <summary>
+            是否显示验证码信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.YQIDCookieName">
+            <summary>
+            yq cookie name 表示是否登录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.YQRCCookieName">
+            <summary>
+             _yq_rc_ 登陆后的用户标识信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.YQBIDCookieName">
+            <summary>
+             _yq_bid 用于浏览器标识ID
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.YQReqesetParam">
+            <summary>
+             YQReqesetParam 用户提交参数对象处理
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.UIDCacheExpiresHour_App">
+            <summary>
+             登录UID的缓存过期时间。按小时计算App 90*24 小时
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.UIDCacheExpiresHour_Web">
+            <summary>
+              登录UID的缓存过期时间。按小时计算Web 1 小时
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.GlobalDefinitions.UCGlobalDefine.UIDCacheExpiresHour_MiniProgram">
+            <summary>
+              登录UID的缓存过期时间。按小时计算MiniProgram 30 * 24;
+            </summary>
+        </member>
+    </members>
+</doc>

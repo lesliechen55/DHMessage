@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Configuration</name>
+    </assembly>
+    <members>
+        <member name="M:YQTrack.Configuration.ConfigManager.Initialize``1">
+            <summary>
+            初始化配置,同时返回对应的配置结果
+            </summary>
+            <typeparam name="T">配置对象类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.Initialize(System.Type[])">
+            <summary>
+            初始化类型对应的配置对象实例
+            </summary>
+            <param name="types">需要初始化的配置类类型集合</param>
+            <remarks>types是所有需要获取配置的类的类型，可以多次初始化，相同类型的不重复加载，优先DB加载，异常后本地加载，再异常就挂掉</remarks>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.GetConfig``1">
+            <summary>
+            获取对应配置类的实例
+            </summary>
+            <typeparam name="T">配置类的类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.Subscribe``1(System.Func{System.Object,System.Object,System.Boolean})">
+            <summary>
+            如果有订阅，就会启动定时器定时更新
+            </summary>
+            <typeparam name="T">订阅的类型</typeparam>
+            <param name="func">订阅触发委托</param>
+            <remarks>
+            这个只有在配置数据发生变化时才会触发，
+            默认会直接更换掉之前实例的引用,一般这种情况应该很少用到，
+            目前如果需要刷新的话，可以定时加载，有变更则更新
+            </remarks>
+        </member>
+        <member name="F:YQTrack.Configuration.ConfigManager._configItems">
+            <summary>
+            所有的配置项汇总
+            </summary>
+        </member>
+        <member name="F:YQTrack.Configuration.ConfigManager._reloadTimer">
+            <summary>
+            定时加载配置定时器
+            </summary>
+        </member>
+        <member name="F:YQTrack.Configuration.ConfigManager._TIMER_INTERVAL">
+            <summary>
+            定时刷新配置间隔(毫秒)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Configuration.ConfigManager._configTypeList">
+            <summary>
+            类型配置集合管理类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.ReloadTimer(System.Object)">
+            <summary>
+            定时更新
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.BuildInstance(System.Type[],System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            构造实例
+            </summary>
+            <param name="types">待构造实例的类型集合</param>
+            <param name="configs">实例类型的配置参数集合</param>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.BuildInstance(System.Type,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            构造单个实例
+            </summary>
+            <param name="type">实例类型</param>
+            <param name="configs">参数项</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.GetConfigItems(System.Type)">
+            <summary>
+            获取每一个类型所需要读取的DB配置Key
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.LoadConfig(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            加载设置,方法会抛出异常
+            </summary>
+            <param name="configKeys">需要加载的配置Key集合</param>
+            <returns>加载结果</returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.LoadFromDB(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            从DB加载配置
+            </summary>
+            <param name="configKeys">配置所需的KEY集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.LoadFromLocal(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            从文件加载配置
+            </summary>
+            <param name="configKeys">配置所需的KEY集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Configuration.ConfigManager.SaveToLocal(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            将从DB得到的最新配置更新到本地
+            </summary>
+            <param name="configs">配置项信息</param>
+        </member>
+        <member name="T:YQTrack.Configuration.Config">
+            <summary>
+            内部管理类,主要用户管理配置相关数据
+            </summary>
+        </member>
+        <member name="T:YQTrack.Configuration.GlobalDefine">
+            <summary>
+            全局定义
+            </summary>
+        </member>
+        <member name="T:YQTrack.Configuration.Helper.DBHelper">
+            <summary>
+            数据库辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Configuration.Helper.DBHelper.GetConfigValues(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)">
+            <summary>
+            从数据库读取对应设置名的值
+            </summary>
+            <param name="configKeys">所有要读取的配置键名称</param>
+            <returns>设置值</returns>
+        </member>
+    </members>
+</doc>

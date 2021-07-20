@@ -1,0 +1,20 @@
+﻿2021-07-08 17:13:29,799 [10] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734633333","FShopName":"romanticism_yx","BeforeDays":365,"itemId":"558456886"},"methodName":"GetProduct","errorMsg":"OK"}
+System.Exception: OK
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetProductLoop>d__21.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 1128
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass20_0.<<GetProductResult>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 1096
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Policy.<>c__DisplayClass120_0`1.<<ExecuteAsync>b__0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()

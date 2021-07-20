@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Exceptions</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Exceptions.ExceptionTypes.BackendParamException">
+            <summary>
+            参数异常
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Exceptions.ExceptionTypes.BackendParamException.#ctor(System.String,System.Int32)">
+            <summary>
+            参数异常
+            </summary>
+            <param name="msg"></param>
+            <param name="code"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Exceptions.ExceptionTypes.BackendParamException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>
+            API过期异常
+            </summary>
+            <param name="msg"></param>
+            <param name="code"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Exceptions.ExceptionTypes.ObsoleteException">
+            <summary>
+            API过期异常
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Exceptions.ExceptionTypes.ObsoleteException.#ctor(System.String,System.Int32)">
+            <summary>
+            API过期异常
+            </summary>
+            <param name="msg"></param>
+            <param name="code"></param>
+        </member>
+    </members>
+</doc>

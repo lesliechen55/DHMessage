@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.RabbitMQ</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.RabbitMQ.Model.QueueInfo">
+            <summary>
+            消息队列定义
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Model.QueueInfo.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Model.QueueInfo.#ctor(System.String,System.String)">
+            <summary>
+            必选参数构造函数
+            </summary>
+            <param name="exchName">交换机名称</param>
+            <param name="queueName">队列名称</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Model.QueueInfo.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            参数构造函数
+            </summary>
+            <param name="exchName">交换机名称</param>
+            <param name="queueName">队列名称</param>
+            <param name="autoAck">是否自动确认</param>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.ExchName">
+            <summary>
+            交换机名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.QueueName">
+            <summary>
+            队列名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.AutoAck">
+            <summary>
+            是否自动确认(默认不自动确认)
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.MaxConsumer">
+            <summary>
+            同时开启消费者数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.ExpireTime">
+            <summary>
+            过期时间(默认永不过期)
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.QueueInfo.DeadQueueName">
+            <summary>
+            过期后投递的死信队列名称
+            </summary>
+        </member>
+        <member name="T:YQTrack.RabbitMQ.Model.RabbitConfig">
+            <summary>
+            RMQ消息队列服务连接配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.Hosts">
+            <summary>
+            主机地址(IP地址:端口,默认端口可以不加)
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.HeartBeat">
+            <summary>
+            心跳间隔(秒)
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.AutomaticRecoveryEnabled">
+            <summary>
+            自动重连
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.NetworkRecoveryInterval">
+            <summary>
+            重连间隔时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.VirtualHost">
+            <summary>
+            虚拟主机
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Model.RabbitConfig.ApplicationName">
+            <summary>
+            当前应用的名称（自己定义，用于计数和监控）
+            </summary>
+        </member>
+        <member name="T:YQTrack.RabbitMQ.Queue.RabbitQueue`1">
+            <summary>
+            RabbitMQ消息队列
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._ExistsQueue">
+            <summary>
+            已经创建的队列集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.CreateQueue(RabbitMQ.Client.IConnection,YQTrack.RabbitMQ.Model.QueueInfo)">
+            <summary>
+            创建队列
+            </summary>
+            <param name="connection">队列连接</param>
+            <param name="queueInfo">队列定义</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.DeclareQueue(RabbitMQ.Client.IModel,YQTrack.RabbitMQ.Model.QueueInfo)">
+            <summary>
+            定义队列并绑定到交换机
+            </summary>
+            <param name="model">通道接口模型</param>
+            <param name="queueInfo">队列信息</param>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._Connection">
+             <summary>
+            连接对象 
+             </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._Model">
+            <summary>
+            AMQP接口模型
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._QueueInfo">
+            <summary>
+            队列定义信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._Func">
+            <summary>
+            订阅消息处理的Function
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._consumerModels">
+            <summary>
+            消费者列表集合
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1.LockObj">
+            <summary>
+            防止重复订阅或取消订阅锁
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Queue.RabbitQueue`1._IsSubscribed">
+            <summary>
+            是否已订阅
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.#ctor(RabbitMQ.Client.IConnection,RabbitMQ.Client.IModel,YQTrack.RabbitMQ.Model.QueueInfo)">
+            <summary>
+            RabbitQueue构造函数
+            </summary>
+            <param name="connection">RMQ连接</param>
+            <param name="model">RMQ模型</param>
+            <param name="queueInfo">队列定义信息</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Publish(`0)">
+            <summary>
+            发布消息(需要不需要服务端确认)
+            </summary>
+            <param name="t">消息体对象</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Publish(`0,System.Boolean)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="t">消息体对象</param>
+            <param name="confirm">是否需要确认发布</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Subscribe(System.Func{`0,System.Boolean})">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="func">订阅委托方法</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.UnSubscribe">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Subscribe(System.Func{`0,System.Boolean},System.UInt16)">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="func">订阅委托方法</param>
+            <param name="maxNoAckCount">最大未确认消息数量(并发数量,默认为1)</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Queue.RabbitQueue`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Model.RpcParameterWrapper.Version">
+            <summary>
+            参数包装器版本
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Rpc.Model.RpcParameterWrapper.MethodName">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Rpc.Model.RpcParameterWrapper.Timeout">
+            <summary>
+            执行超时
+            </summary>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Rpc.Model.RpcParameterWrapper.Parameters">
+            <summary>
+            方法参数集合
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Model.ResultType.Succeed">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Model.ResultType.Failure">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Client.RabbitClientProxy.#ctor(RabbitMQ.Client.IConnection,System.String,System.Int32)">
+            <summary>
+            实例化Rpc客户端代理
+            </summary>
+            <param name="connection">连接对象</param>
+            <param name="rpcQueueName">RPC队列名称</param>
+            <param name="timeout">超时时间(默认30秒)</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Client.RabbitClientProxy.CallAsync(YQTrack.RabbitMQ.Rpc.Model.RpcParameterWrapper,System.Threading.CancellationToken)">
+            <summary>
+            RPCk客户端异步调用
+            </summary>
+            <param name="rpcParameterWrapper">rpc参数对象</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="P:YQTrack.RabbitMQ.Rpc.Service.RabbitServiceProxy`1.Instance">
+            <summary>
+            RPC服务对象实例
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Service.RabbitServiceProxy`1.#ctor(RabbitMQ.Client.IConnection,System.String,`0)">
+            <summary>
+            RPC服务端实例构造
+            </summary>
+            <param name="connection">RabbitMQ连接对象</param>
+            <param name="rpcQueueName">RPC队列名称</param>
+            <param name="instance">服务实例对象</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Service.RabbitServiceProxy`1.#ctor(RabbitMQ.Client.IConnection,System.String,`0,System.UInt16)">
+            <summary>
+            RPC服务端实例构造
+            </summary>
+            <param name="connection">RabbitMQ连接对象</param>
+            <param name="rpcQueueName">RPC队列名称</param>
+            <param name="instance">服务实例对象</param>
+            <param name="maxConcurrent">最大支持并发</param>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.ZipKind.None">
+            <summary>
+            没有任何压缩
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.ZipKind.GZip">
+            <summary>
+            GZIP方式压缩和解压
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.MIN_ZIP_LENGTH">
+            <summary>
+            开启压缩的最小流长度
+            </summary>
+        </member>
+        <member name="F:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.ZIP_FLAG">
+            <summary>
+            流压缩标记, gzip:GZIP压缩, zip:DEFLATE压缩
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.Compress(System.Byte[],RabbitMQ.Client.IBasicProperties)">
+            <summary>
+            字节流压缩
+            </summary>
+            <param name="input">输入待压缩的字节流</param>
+            <param name="properties">消息属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.DeCompress(System.Byte[],RabbitMQ.Client.IBasicProperties)">
+            <summary>
+            字节流解压缩
+            </summary>
+            <param name="input">输入待解压缩的字节流</param>
+            <param name="properties">消息属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.GZipCompress(System.Byte[])">
+            <summary>
+             GZip压缩
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.Rpc.Util.ZipHelper.GZipDeCompress(System.Byte[])">
+            <summary>
+             GZip解压
+            </summary>
+            <param name="zipStream"></param>
+        </member>
+        <member name="T:YQTrack.RabbitMQ.RabbitMQManager">
+            <summary>
+            RMG连接/队列管理对象
+            </summary>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.#ctor(YQTrack.RabbitMQ.Model.RabbitConfig)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="rabbitMqConfig">RabbitMQ配置实例</param>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateRpcService``1(``0,System.UInt16)">
+            <summary>
+            提供服务的对象实例
+            </summary>
+            <typeparam name="TService">实例类型</typeparam>
+            <param name="instance">对象实例</param>
+            <param name="maxConcurrent">最大并发处理数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateRpcService``1(``0)">
+            <summary>
+            提供服务的对象实例(多并发需要自己进行处理)
+            </summary>
+            <typeparam name="TService">实例类型</typeparam>
+            <param name="instance">对象实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateRpcClient``1">
+            <summary>
+            创建代理客户端,默认30秒超时
+            </summary>
+            <typeparam name="TService">实例类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateRpcClient``1(System.Int32)">
+            <summary>
+            创建代理客户端
+            </summary>
+            <typeparam name="TService">实例类型</typeparam>
+            <param name="timeout">超时时间(毫秒,默认30秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateQueue``1(YQTrack.RabbitMQ.Model.QueueInfo)">
+            <summary>
+            定义队列信息
+            </summary>
+            <typeparam name="T">消息实体类型</typeparam>
+            <param name="queueInfo">队列信息定义</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.CreateQueue``1(YQTrack.RabbitMQ.Model.QueueInfo,System.Func{``0,System.Boolean})">
+            <summary>
+            定义队列信息
+            </summary>
+            <typeparam name="T">消息实体类型</typeparam>
+            <param name="queueInfo">队列信息定义</param>
+            <param name="func">消息订阅委托</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.RabbitMQ.RabbitMQManager.Dispose">
+            <summary>
+            释放连接对象
+            </summary>
+        </member>
+        <member name="T:System.Reflection.IMethodInvoker">
+            <summary>
+            IMethodInvoker
+            </summary>
+        </member>
+        <member name="M:System.Reflection.IMethodInvoker.Invoke(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            Invoke
+            </summary>
+            <param name="targetMethod"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Reflection.IMethodInvoker.InvokeAsync(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            InvokeAsync
+            </summary>
+            <param name="targetMethod"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Reflection.IMethodInvoker.InvokeAsyncT``1(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            InvokeAsyncT
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="targetMethod"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

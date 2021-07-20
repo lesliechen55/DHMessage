@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Models</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Models.Attributes.QueueConfigAttribute">
+            <summary>
+            队列配置属性标记。
+            标记在传输对象Model上，根据配置自动加载创建对象信息
+            拼接队列：{queuename}.{enunName}
+            拼接队列：{queuename}.{dbNo}.{tableNo}
+            拼接队列：{queuename}.{enumName}.{dbNo}.{tableNo}
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.#ctor(System.String,System.String)">
+            <summary>
+             构造 传递队列的交换机名称和队列名称
+             标记在传输对象Model上，根据配置自动加载创建对象信息
+            拼接队列：{queuename}.{enunName}
+            拼接队列：{queuename}.{dbNo}.{tableNo}
+            拼接队列：{queuename}.{enumName}.{dbNo}.{tableNo}  
+            </summary>
+            <param name="exchName">交换机</param>
+            <param name="queueName">队列名称</param>
+        </member>
+        <member name="M:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.#ctor(System.String,System.String,System.Type)">
+            <summary>
+            构造 传递队列的交换机名称和队列名称，和按枚举类型分开创建队列
+            拼接队列：{queuename}.{enunName}
+            拼接队列：{queuename}.{dbNo}.{tableNo}
+            拼接队列：{queuename}.{enumName}.{dbNo}.{tableNo}
+            </summary>
+            <param name="exchName">交换机</param>
+            <param name="queueName">队列名称</param>
+            <param name="enumType">枚举类型</param>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.ExchName">
+            <summary>
+            交换机
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.QueueName">
+            <summary>
+            队列名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.AutoAck">
+            <summary>
+            是否自动确认
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.DeadQueueName">
+            <summary>
+            死信队列
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.ExpireTimeMinute">
+            <summary>
+            过期时间 分钟计算
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.MaxConsumer">
+            <summary>
+             最大消费
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.Attributes.QueueConfigAttribute.EnumType">
+            <summary>
+            枚举类型，用户在服务端 通过发射枚举类型值后进行处理。
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.BusinessOperationModel`1">
+            <summary>
+            业务操作模型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.BusinessOperationModel`1.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.BusinessOperationModel`1.RouteModel">
+            <summary>
+            路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.BusinessOperationModel`1.BusinessData">
+            <summary>
+            业务数据
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.DataRouteModel">
+            <summary>
+            路由实体
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.UserRole">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.NodeId">
+            <summary>
+            节点Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.DbNo">
+            <summary>
+            数据编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.TableNo">
+            <summary>
+            表编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.IsArchived">
+            <summary>
+            是否归档库
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.DataRouteModel.IsWrite">
+            <summary>
+            是否指定读库
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Models.DataRouteModel.GetPropertyValueKey">
+            <summary>
+             获取属性值的Key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Models.Enums.YQDbType">
+            <summary>
+            分库类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.User">
+            <summary>
+            用户库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Seller">
+            <summary>
+            Seller库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Buyer">
+            <summary>
+            Buyer库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Log">
+            <summary>
+            日志库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Carrier">
+            <summary>
+            运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.BBL">
+            <summary>
+            买家黑名单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.SellerMessage">
+            <summary>
+            卖家消息数据库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.SellerRes">
+            <summary>
+            卖家资源数据库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Msg">
+            <summary>
+            消息系统
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Analytics">
+            <summary>
+            Analytics数据分析库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.ApiTrack">
+            <summary>
+            API用户后台ApiTrack库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.ApiUser">
+            <summary>
+            API用户后台ApiUser库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.CarrierTrack">
+            <summary>
+            运输商的单号查询库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Dict">
+            <summary>
+            基础数据字典库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Pay">
+            <summary>
+            Pay支付库
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Enums.YQDbType.Deals">
+            <summary>
+            Deals数据库
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.IDependency">
+            <summary>
+                依赖注入接口
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.Operate">
+            <summary>
+                操作类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Operate.Add">
+            <summary>
+                新增
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Operate.Edit">
+            <summary>
+                修改
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Operate.Delete">
+            <summary>
+                删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Operate.Command">
+            <summary>
+                SQL命令
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Models.Operate.ExecCommand">
+            <summary>
+                执行命令，Update exec 存储过程等
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.RequestParam">
+            <summary>
+            api请求信息正文
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Version">
+            <summary>
+            Method 版本
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Method">
+            <summary>
+            Method 名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Cookies">
+            <summary>
+            登录后的cookie信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.SourceType">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Param">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Sequence">
+            <summary>
+            App 请求序号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.TimeZoneOffset">
+            <summary>
+            UTC时区的偏移量
+            默认0，就不用处理。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.RequestParam.Gb">
+            <summary>
+             登出回调地址
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.ResultBase">
+            <summary>
+            所有API返回值基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.ResultBase.Code">
+            <summary>
+                结果代码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.ResultBase.Message">
+            <summary>
+                 默认code的资源消息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.ResultBase.Cookies">
+            <summary>
+            Cookies  Key1=Value1;Key2=Value2
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Models.ResultBase.AddCookie(System.String,System.String)">
+            <summary>
+            AddCookie操作
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Models.ResultInfo`1">
+            <summary>
+            自定义信息返回对象
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:YQTrack.Backend.Models.ResultInfo`1.Json">
+            <summary>
+                结果实体
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.PageInfo">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.PageInfo.Page">
+            <summary>
+                当前页
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.PageInfo.PerPage">
+            <summary>
+                每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Models.PageInfo.TotalCount">
+            <summary>
+                总记录数
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Models.ResultPageInfo`1">
+            <summary>
+            分页信息返回值
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:YQTrack.Backend.Models.ResultPageInfo`1.pageInfo">
+            <summary>
+                分页信息
+            </summary>
+        </member>
+    </members>
+</doc>

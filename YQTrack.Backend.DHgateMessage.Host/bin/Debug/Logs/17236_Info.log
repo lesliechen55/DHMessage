@@ -1,0 +1,74 @@
+﻿2021-07-19 15:20:45,906 [1] INFO  seller.dhgatemessage - 日志, 初始化LoggerSystem成功
+2021-07-19 15:20:45,915 [1] INFO  seller.dhgatemessage - 日志, 没有初始化LoggerRecordData, 调用记录日志将忽略
+2021-07-19 15:20:45,915 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSchedule
+2021-07-19 15:20:45,915 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnCount, Type:NumberOfItems64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessCount, Type:NumberOfItems64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailDelta, Type:CounterDelta64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessDelta, Type:CounterDelta64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailCount, Type:NumberOfItems64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnDelta, Type:CounterDelta64
+2021-07-19 15:20:45,916 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSchedule, IsSingle:False
+2021-07-19 15:20:51,031 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-19 15:20:51,035 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller"]
+2021-07-19 15:20:51,035 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-19 15:20:51,035 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-19 15:20:51,035 [1] INFO  seller.dhgatemessage - ScheduleInitialized:"DBShardingRouteFactory"
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSync
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateCount, Type:NumberOfItems64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateDelta, Type:CounterDelta64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateDelta, Type:CounterDelta64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateCount, Type:NumberOfItems64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewDelta, Type:CounterDelta64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewCount, Type:NumberOfItems64
+2021-07-19 15:20:51,042 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSync, IsSingle:True
+2021-07-19 15:20:51,059 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-19 15:20:51,060 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-19 15:20:51,061 [1] INFO  seller.dhgatemessage - TaskInitialized:"DBShardingRouteFactory"
+2021-07-19 15:20:51,073 [1] INFO  seller.dhgatemessage - InitNode:{"nodeId":"192.168.1.158_17236"}
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SqlExecError, Type:NumberOfItems64
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Reassigned, Type:NumberOfItems64
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:ProcessError, Type:NumberOfItems64
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Assigned, Type:NumberOfItems64
+2021-07-19 15:20:51,077 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Canceled, Type:NumberOfItems64
+2021-07-19 15:20:51,078 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Heartbeat, Type:NumberOfItems64
+2021-07-19 15:20:51,078 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync, IsSingle:True
+2021-07-19 15:20:53,897 [1] INFO  seller.dhgatemessage - Register:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_17236","taskList":["1.11.0","1.14.0","1.13.0","1.12.0"]}
+2021-07-19 15:20:53,899 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_17236"}
+2021-07-19 15:20:53,912 [1] INFO  seller.dhgatemessage - NodeChanged:{"current":1,"lastest":0}
+2021-07-19 15:20:54,949 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.11.0"}
+2021-07-19 15:20:54,959 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.11.0"}
+2021-07-19 15:20:54,959 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_17236"}
+2021-07-19 15:20:55,887 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.12.0"}
+2021-07-19 15:20:55,887 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.12.0"}
+2021-07-19 15:21:19,770 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-19 15:21:19,771 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-19 15:22:35,097 [12] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_17236"}
+2021-07-19 15:22:35,099 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-19 15:22:35,100 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-19 15:22:35,103 [11] INFO  seller.dhgatemessage - NodeChanged:{"current":0,"lastest":1}
+2021-07-19 15:22:35,109 [11] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.11.0"}
+2021-07-19 15:22:35,127 [11] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.12.0"}
+2021-07-19 15:23:54,457 [16] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_17236"}
+2021-07-19 15:23:56,470 [16] INFO  seller.dhgatemessage - NodeChanged:{"current":1,"lastest":0}
+2021-07-19 15:23:58,740 [16] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.11.0"}
+2021-07-19 15:24:03,723 [16] INFO  seller.dhgatemessage - NodeChanged:{"current":0,"lastest":1}
+2021-07-19 15:24:03,784 [16] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.11.0"}

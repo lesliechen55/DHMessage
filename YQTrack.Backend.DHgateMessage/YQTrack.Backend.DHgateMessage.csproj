@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0889CE59-4BE3-4DC2-82AD-ED45FB3C958E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YQTrack.Backend.DHgateMessage</RootNamespace>
+    <AssemblyName>YQTrack.Backend.DHgateMessage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentScheduler">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\FluentScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YQTrack.Backend.BaseBLL">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.BaseBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.BaseModel">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.BaseModel.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.Enums">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.Factory">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.Models">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.RabbitMQ.ConfigSetting">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.RabbitMQ.ConfigSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.RedisCache">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.RedisCache.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.Seller.TrackInfo.ESHelper">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.Seller.TrackInfo.ESHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.Sharding">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Backend.Sharding.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Backend.ThirdPlatform">
+      <HintPath>..\..\0.1-Core\YQTrack.Backend.ThirdPlatform\bin\Debug\YQTrack.Backend.ThirdPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Configuration">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrack.Schedule">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrack.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrackV6.Common">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrackV6.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrackV6.Log">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrackV6.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrackV6.PerfCounter">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrackV6.PerfCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="YQTrackV6.RabbitMQ">
+      <HintPath>..\..\..\..\..\YQTrack.Backend.Release\_Common\YQTrackV6.RabbitMQ.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllMessageScheduleHelper.cs" />
+    <Compile Include="DefaultConfig.cs" />
+    <Compile Include="DHgateMessageScheduleHelper.cs" />
+    <Compile Include="DHgateMessageTaskHelper.cs" />
+    <Compile Include="JobEventArgs.cs" />
+    <Compile Include="LogDefine.cs" />
+    <Compile Include="Model\JobInfo.cs" />
+    <Compile Include="Model\OrderProductModel.cs" />
+    <Compile Include="Model\ScheduleTask.cs" />
+    <Compile Include="Model\SyncContext.cs" />
+    <Compile Include="PerfCounter\PerfCounterSchedule.cs" />
+    <Compile Include="PerfCounter\PerfCounterSync.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\0.1-Core\YQTrack.Backend.ThridPartOrderSyncService.DTO\YQTrack.Backend.ThirdPlatform.DTO.csproj">
+      <Project>{40ce40e7-36c6-448d-8f76-db55006eb179}</Project>
+      <Name>YQTrack.Backend.ThirdPlatform.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.2-DAL\YQTrack.Backend.ThirdPlatform.Entity\YQTrack.Backend.ThirdPlatform.Entity.csproj">
+      <Project>{b7bcc827-bf6d-4b62-9800-c5e8d039a0e8}</Project>
+      <Name>YQTrack.Backend.ThirdPlatform.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.3-BLL\YQTrack.Backend.ThirdPlatform.IBLL\YQTrack.Backend.ThirdPlatform.IBll.csproj">
+      <Project>{1c9edf2d-1ca5-444d-8f42-2e367813f7ca}</Project>
+      <Name>YQTrack.Backend.ThirdPlatform.IBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\0.5-ThirdParty\YQTrack.Backend.DHgate\YQTrack.Backend.DHgate.csproj">
+      <Project>{b5e7060b-3c91-46c8-98a2-d0279fc01f5a}</Project>
+      <Name>YQTrack.Backend.DHgate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

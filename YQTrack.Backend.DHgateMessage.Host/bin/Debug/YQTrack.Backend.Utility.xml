@@ -1,0 +1,1032 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Utility.DrawValidationCode">
+            <summary>
+            验证码生成类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.ValidationCode">
+            <summary>
+            获取系统生成的随机验证码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.ValidationCodeCount">
+            <summary>
+            获取和设置验证码字符串的长度
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.Width">
+            <summary>
+            验证码的宽度，默认为80
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.Height">
+            <summary>
+            验证码的高度，默认为40
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.FontMinSize">
+            <summary>
+            验证码字体的最小值，默认为15,建议不小于15像素
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.FontMaxSize">
+            <summary>
+            验证码字体的最大值，默认为20
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.FontColor">
+            <summary>
+            验证码字体的颜色，默认为系统自动生成字体颜色
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.BackgroundColor">
+            <summary>
+            验证码的背景色，默认为Color.FromArgb(243, 251, 254)
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.BezierCount">
+            <summary>
+            贝塞尔曲线的条数,默认为3条
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.LineCount">
+            <summary>
+            直线条数，默认为3条
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.CharCollection">
+            <summary>
+            随机字符串列表，请使用英文状态下的逗号分隔。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.IntCount">
+            <summary>
+            验证码字符串个数，默认为4个字符
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.IsPixel">
+            <summary>
+            是否添加噪点，默认添加，噪点颜色为系统随机生成。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.IsRandString">
+            <summary>
+            是否添加随机噪点字符串，默认添加
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.RandomStringCount">
+            <summary>
+            随机背景字符串的个数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.RandomStringFontSize">
+            <summary>
+            随机背景字符串的大小
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.IsTwist">
+            <summary>
+            是否对图片进行扭曲
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.DrawValidationCode.BorderStyle">
+            <summary>
+            边框样式
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.DrawValidationCode.BorderStyle.None">
+            <summary>
+            无边框
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.DrawValidationCode.BorderStyle.Rectangle">
+            <summary>
+            矩形边框
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.DrawValidationCode.BorderStyle.RoundRectangle">
+            <summary>
+            圆角边框
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.RotationAngle">
+            <summary>
+            验证码字符串随机转动的角度的最大值
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.Border">
+            <summary>
+            设置或获取边框样式
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.GaussianDeviation">
+            <summary>
+            对验证码图片进行高斯模糊的阀值，如果设置为0，则不对图片进行高斯模糊，该设置可能会对图片处理的性能有较大影响
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.DrawValidationCode.BrightnessValue">
+            <summary>
+            对图片进行暗度和亮度的调整，如果该值为0，则不调整。该设置会对图片处理性能有较大影响
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.#ctor">
+            <summary>
+            构造函数，用于初始化常用变量
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.CreateImage(System.IO.Stream)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="target">用于存储图片的一般字节序列</param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawBackground">
+            <summary>
+            画验证码背景，例如，增加早点，添加曲线和直线等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.TwistImage(System.Drawing.Bitmap,System.Boolean,System.Double,System.Double)">
+            <summary>
+            正弦曲线Wave扭曲图片
+            </summary>
+            <param name="srcBmp">图片路径</param>
+            <param name="bXDir">如果扭曲则选择为True</param>
+            <param name="dMultValue">波形的幅度倍数，越大扭曲的程度越高，一般为3</param>
+            <param name="dPhase">波形的起始相位，取值区间[0-2*PI)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.KiRotate(System.Drawing.Bitmap,System.Single,System.Drawing.Color)">
+            <summary>
+            图片任意角度旋转
+            </summary>
+            <param name="bmp">原始图Bitmap</param>
+            <param name="angle">旋转角度</param>
+            <param name="bkColor">背景色</param>
+            <returns>输出Bitmap</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRandomBezier(System.Int32)">
+            <summary>
+            随机生成贝塞尔曲线
+            </summary>
+            <param name="lineNum">线条数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRandomLine(System.Int32)">
+            <summary>
+            画直线
+            </summary>
+            <param name="lineNum">线条个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRandomPixel(System.Int32)">
+            <summary>
+            画随机噪点
+            </summary>
+            <param name="pixNum">噪点的百分比</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawStringline">
+            <summary>
+            画随机字符串中间连线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRandomString">
+            <summary>
+            写入验证码的字符串
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRandBgString">
+            <summary>
+            画背景干扰文字
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomString(System.Int32)">
+            <summary>
+            生成随机字符串    
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.Next(System.Int32)">
+            <summary>
+            根据指定长度，返回随机验证码
+            </summary>
+            <param >制定长度</param>
+            <returns>随即验证码</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomCode(System.Int32)">
+            <summary>
+            根据指定大小返回随机验证码
+            </summary>
+            <param >字符串长度</param>
+            <returns>随机字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.RandomAZ09">
+            <summary>
+            产生0-9A-Z的随机字符代码
+            </summary>
+            <returns>字符代码</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.RandomPoint">
+            <summary>
+            返回一个随机点，该随机点范围在验证码背景大小范围内
+            </summary>
+            <returns>Point对象</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomDeepColor">
+            <summary>
+            生成随机深颜色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomLightColor">
+            <summary>
+            生成随机浅颜色
+            </summary>
+            <returns>randomColor</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomColor">
+            <summary>
+            生成随机颜色值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetLightColor(System.Drawing.Color,System.Int32)">
+            <summary>
+            获取与当前颜色值相加后的颜色
+            </summary>
+            <param name="c"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.MergerImg(System.Drawing.Bitmap[])">
+            <summary>       
+            合并图片        
+            </summary>        
+            <param name="maps"></param>        
+            <returns></returns>        
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.GetRandomSeed">
+            <summary>
+            生成不重复的随机数，该函数会消耗大量系统资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.KiResizeImage(System.Drawing.Bitmap,System.Int32,System.Int32,System.Drawing.Drawing2D.InterpolationMode)">
+            <summary>
+            缩放图片
+            </summary>
+            <param name="bmp">原始Bitmap</param>
+            <param name="newW">新的宽度</param>
+            <param name="newH">新的高度</param>
+            <param name="Mode">缩放质量</param>
+            <returns>处理以后的图片</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.DrawRoundRectangle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Single,System.Int32)">
+            <summary>
+            C# GDI+ 绘制圆角矩形
+            </summary>
+            <param name="g">Graphics 对象</param>
+            <param name="rectangle">Rectangle 对象，圆角矩形区域</param>
+            <param name="borderColor">边框颜色</param>
+            <param name="borderWidth">边框宽度</param>
+            <param name="r">圆角半径</param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.getRoundRectangle(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            根据普通矩形得到圆角矩形的路径
+            </summary>
+            <param name="rectangle">原始矩形</param>
+            <param name="r">半径</param>
+            <returns>图形路径</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.KiBlur(System.Drawing.Bitmap)">
+            <summary>
+             柔化
+             </summary>
+             <param name="b">原始图</param>
+             <returns>输出图</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustToRed(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            红色滤镜
+            </summary>
+            <param name="bitmap">Bitmap</param>
+            <param name="threshold">阀值 -255~255</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustToGreen(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            绿色滤镜
+            </summary>
+            <param name="bitmap">一个图片实例</param>
+            <param name="threshold">阀值 -255~+255</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustToBlue(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            蓝色滤镜
+            </summary>
+            <param name="bitmap">一个图片实例</param>
+            <param name="threshold">阀值 -255~255</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustToCustomColor(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            调整 RGB 色调
+            </summary>
+            <param name="bitmap"></param>
+            <param name="thresholdRed">红色阀值</param>
+            <param name="thresholdBlue">蓝色阀值</param>
+            <param name="thresholdGreen">绿色阀值</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.MakeGrayscale(System.Drawing.Bitmap)">
+            <summary>
+            图片去色（图片黑白化）
+            </summary>
+            <param name="original">一个需要处理的图片</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustBrightness(System.Drawing.Image,System.Int32)">
+            <summary>
+            增加或減少亮度
+            </summary>
+            <param name="img">System.Drawing.Image Source </param>
+            <param name="valBrightness">0~255</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustToStone(System.Drawing.Bitmap)">
+            <summary>
+            浮雕效果
+            </summary>
+            <param name="src">一个图片实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustRippleEffect(System.Drawing.Bitmap,System.Int16)">
+            <summary>
+            水波纹效果
+            </summary>
+            <param name="src"></param>
+            <param name="nWave">坡度</param>
+            www.it165.net
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.AdjustGamma(System.Drawing.Bitmap,System.Double,System.Double,System.Double)">
+            <summary>
+            调整曝光度值
+            </summary>
+            <param name="src">原图</param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.Contrast(System.Drawing.Bitmap,System.Single)">
+            <summary>
+            高对比,对过深的颜色调浅，过浅的颜色调深。
+            </summary>
+            <param name="src"></param>
+            <param name="effectThreshold"> 高对比程度 -100~100</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.DrawValidationCode.Atomization(System.Drawing.Bitmap)">
+            <summary>
+            对图片进行雾化效果
+            </summary>
+            <param name="bmp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.Gaussian">
+            <summary>
+            高斯模糊算法
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.Gaussian.grayscale(System.Drawing.Color)">
+            <summary>
+            对颜色值进行灰色处理
+            </summary>
+            <param name="cr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.Gaussian.FilterProcessImage(System.Double,System.Drawing.Bitmap)">
+            <summary>
+            对图片进行高斯模糊
+            </summary>
+            <param name="d">模糊数值，数值越大模糊越很</param>
+            <param name="image">一个需要处理的图片</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.ModuleCast">
+            <summary>
+                属性转换类，将一个类的属性值转换给另外一个类的同名属性，注意该类使用的是浅表复制。
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.#ctor(System.Type)">
+            <summary>
+                以两个要转换的类型作为构造函数，构造一个对应的转换类
+            </summary>
+            <param name="targetType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.#ctor(System.Type,System.Type)">
+            <summary>
+                以两个要转换的类型作为构造函数，构造一个对应的转换类
+            </summary>
+            <param name="sourceType"></param>
+            <param name="targetType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.GetCast(System.Type,System.Type)">
+            <summary>
+                获取要转换的当前转换类实例
+            </summary>
+            <param name="sourceType">要转换的源类型</param>
+            <param name="targetType">目标类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.Cast(System.Data.DataRow,System.Object)">
+            <summary>
+                将源类型的属性值转换给目标类型同名的属性
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.Cast(System.Object,System.Data.DataRow)">
+            <summary>
+                将源类型的属性值转换给目标类型同名的属性
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.Cast(System.Object,System.Object)">
+            <summary>
+                将源类型的属性值转换给目标类型同名的属性
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.CastObject``2(``0,``1)">
+            <summary>
+                转换对象
+            </summary>
+            <typeparam name="TSource">源类型</typeparam>
+            <typeparam name="TTarget">目标类型</typeparam>
+            <param name="source">源对象</param>
+            <param name="target">目标对象</param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ModuleCast.GetRealType(System.Type)">
+            <summary>
+                得到一个实际的类型（排除Nullable类型的影响）。比如：int? 最后将得到int
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.ModuleCast.CastProperty">
+            <summary>
+                转换属性对象
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.ModuleCast.PropertyAccessorHandler">
+            <summary>
+                属性访问器
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.ModuleCast.PropertyAccessorHandler.PropertyName">
+            <summary>
+                字段名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.ModuleCast.PropertyAccessorHandler.Getter">
+            <summary>
+                GET访问器
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.ModuleCast.PropertyAccessorHandler.Setter">
+            <summary>
+                SET访问器
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.EntityExt">
+            <summary>
+                对象转换扩展
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.EntityExt.FastCopy``1(System.Object,``0)">
+            <summary>
+                将当前对象的属性值复制到目标对象
+            </summary>
+            <typeparam name="T">目标对象类型</typeparam>
+            <param name="source">源对象</param>
+            <param name="target">目标对象，如果为空，将生成一个</param>
+            <returns>复制过后的目标对象</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.EntityExt.FastCopys``2(System.Collections.Generic.List{``0},System.Collections.Generic.List{``1})">
+            <summary>
+                将当前对象的属性值复制到目标对象
+            </summary>
+            <typeparam name="T">源对象类型</typeparam>
+            <typeparam name="TK">目标对象类型</typeparam>
+            <param name="source">源对象</param>
+            <param name="target">目标对象，如果为空，将生成一个</param>
+            <returns>复制过后的目标对象</returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.FunHelper">
+            <summary>
+            通用功能处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.GetPasswordLevel(System.String)">
+            <summary>
+                验证码密码强度等级
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.ReadIPAddressCore(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                获取登录的IP地址
+            </summary>
+            <param name="request"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.ReadIPAddress(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                获取登录的IP地址
+            </summary>
+            <param name="request"></param>
+            <returns>IP地址</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.GetInternalIp">
+            <summary>
+            获取IP(如果取到外网IP，则用外网，否则取局域网IP)
+            建议直接使用  YQTrackV6.Common.Utils.NetExtend.GetInternetAddress()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.FunHelper.GetGuid">
+            <summary>
+                获取一个GUID 大写有中杠
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.FunHelper.GetNGuid">
+            <summary>
+                获取一个GUID 大写无中杠
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.GetMarkByUserId(System.Int64)">
+            <summary>
+            获取用户Id的特殊标记值
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.GetUserIdByMark(System.String)">
+            <summary>
+            根据Mark获取UserId
+            </summary>
+            <param name="mark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.GetUserIdMod(System.Int64)">
+            <summary>
+            获取UserId%17的余数
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.SetTimeZoneOffsetToDateTime(System.Int32,System.DateTime)">
+            <summary>
+            设置UTC时间偏移量，给当前时间，并返回设置了UTC时间偏移量的新时间
+            </summary>
+            <param name="timeZoneOffset">时区偏移量</param>
+            <param name="time"></param>
+            <returns>设置了UTC时间偏移量的新时间</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.SetTimeZoneOffsetToDate(System.Int32,System.DateTime,System.Boolean)">
+            <summary>
+            设置UTC时间偏移量给当前时间，并返回设置了UTC时间偏移量的新时间,只包含日期的时间
+            </summary>
+            <param name="timeZoneOffset">时区偏移量</param>
+            <param name="time">转换时间</param>
+            <param name="isAddOneDay">true:搜索结束时间，转换后增加一天时间。小于结束时间</param>
+            <returns>设置了UTC时间偏移量的新时间</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.ConvertJavaScriptTimeStampToDateTime(System.String)">
+            <summary>
+            转换javascript的时间戳 为日志格式
+            </summary>
+            <param name="timeStamp">时间戳</param>
+            <returns>转换失败，返回Null</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.ConvertDateTimeToJavaScriptTimeStamp(System.DateTime)">
+            <summary>
+            转换时间为javascript的时间戳
+            </summary>
+            <param name="time">日志时间</param>
+            <returns>返回javascript的时间戳 </returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.SplitParamTime(System.String)">
+            <summary>
+              分割请求参数的时间格式：固定是："2019-07-01|2019-07-01"
+            </summary>
+            <param name="strTime"></param>
+            <returns>返回item1：开始时间（2019-07-01）；item2：结束时间（2019-07-01）</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.SplitParamTime(System.String,System.Char[])">
+            <summary>
+            分割请求参数的时间格式：固定是："2019-07-01|2019-07-01"
+            </summary>
+            <param name="strTime">时间格式；如："2019-07-01|2019-07-01"</param>
+            <param name="separator">分隔符：| </param>
+            <returns>返回item1：开始时间（2019-07-01）；item2：结束时间（2019-07-01）</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.FunHelper.SplitList``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            分割List集合为多个集合数组
+            </summary>
+            <typeparam name="T">集合里的类型</typeparam>
+            <param name="sourceList">原集合数据源</param>
+            <param name="arraySize">分割大小</param>
+            <returns>返回集合数组</returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.HtmlHelper">
+            <summary>
+            针对Html操作类处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.HtmlHelper.FormatHtmlString(System.String,System.Boolean)">
+            <summary>
+            格式化输出到页面的字符串，包括转换回车符
+            </summary>
+            <param name="htmlstr">要格式化的字符串</param>
+            <param name="replace">是否替换换行符</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.HtmlHelper.FormatHtmlString(System.String)">
+            <summary>
+            格式化输出到页面的字符串
+            </summary>
+            <param name="htmlstr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.HtmlHelper.ClearAllHtml(System.String)">
+            <summary>
+            返回过滤掉所有的Html标签后的字符串
+            </summary>
+            <param name="html">Html源码</param>
+            <returns>过滤Html标签后的字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.HtmlHelper.CheckHtml(System.String)">
+            <summary>
+            检查是否有Html标签
+            </summary>
+            <param name="html">Html源码</param>
+            <returns>存在为True</returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.JsonContentNegotiator">
+            <summary>
+                重输出json的类型，并自定义时间数据输出格式
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.JsonContentNegotiator.#ctor(System.Net.Http.Formatting.JsonMediaTypeFormatter)">
+            <summary>
+            
+            </summary>
+            <param name="formatter"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.JsonContentNegotiator.Negotiate(System.Type,System.Net.Http.HttpRequestMessage,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+            <summary>
+            自定义时间格式，序列化
+            </summary>
+            <param name="type"></param>
+            <param name="request"></param>
+            <param name="formatters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.JsonExt">
+            <summary>
+            扩展Json
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.JsonExt.IsJson(System.String)">
+            <summary>
+            是否json 格式
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.LongToStringConverter">
+            <summary>
+                将长整形数据输出json时换成字符串,避免js脚本无法识别截断的问题
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.LongToStringConverter.CanConvert(System.Type)">
+            <summary>
+            是否能转换
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.LongToStringConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            获取Josn
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.LongToStringConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            写json
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.ObjextExt">
+            <summary>
+            对象扩展方法
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ObjextExt.GetPropertyName``1(System.Object,System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            获取属性名称，如何有JsonPropertyAttribute，优先获取 JsonPropertyAttribute 的 PropertyName 返回
+            </summary>
+            <typeparam name="TValue">属性返回的类型</typeparam>
+            <param name="object">对象</param>
+            <param name="propertyId">属性Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.ParamHelper">
+            <summary>
+            上下文参数获取帮助
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.ParamHelper.ToParam(System.String)">
+            <summary>
+            参数转实体
+            </summary>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.RequestHelper">
+            <summary>
+            上下文帮助库
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetSesstionID(System.Net.Http.HttpRequestMessage,YQTrack.Backend.Models.RequestParam)">
+            <summary>
+                SesstionID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetUserId(System.Net.Http.HttpRequestMessage,YQTrack.Backend.Models.RequestParam)">
+            <summary>
+                当前登录的用户ID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetSesstionID(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                SesstionID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetCookieDID(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            获取App的设备Id
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetCookieDID(System.Net.Http.HttpRequestMessage,YQTrack.Backend.Models.RequestParam)">
+            <summary>
+                SesstionID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetUserId(System.String,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+                当前登录的用户ID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetUserId(System.String,YQTrack.Backend.Enums.SourceType,System.String)">
+            <summary>
+             当前登录的用户ID
+            </summary>
+            <param name="sessionId"></param>
+            <param name="sourceType"></param>
+            <param name="did"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetSesstionIDAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                SesstionID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetUserIdAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                当前登录的用户ID
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetRequestParam(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            获取请求参数
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.RequestHelper.GetCookieValue(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+            回去CookieValue
+            </summary>
+            <param name="request">当前请求对象</param>
+            <param name="cookieName">cookie名称</param>
+            <returns>返回字符串的Value。如果没有返回empty</returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeDTO">
+            <summary>
+            验证码信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeDTO.Code">
+            <summary>
+            邮件码
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckDTO">
+            <summary>
+            Code检查DTO
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckDTO.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckDTO.Code">
+            <summary>
+            邮件码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckDTO.CodeType">
+            <summary>
+            发送验证码类型
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult">
+            <summary>
+            Code 检查结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult.Success">
+            <summary>
+            Ok 
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult.CodeIsNull">
+            <summary>
+            Code为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult.CodeLengthError">
+            <summary>
+            Code长度错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult.CodeExpired">
+            <summary>
+            Code 过期
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckResult.CodeError">
+            <summary>
+            Code 错误
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper">
+            <summary>
+            发送验证码的缓存操作
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.SetIPSendCodeCount(System.String)">
+            <summary>
+             控制ip访问次数,设置Ip发送验证码的次数
+            </summary>
+            <param name="ip"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.GetIPSendCodeCount(System.String)">
+            <summary>
+            获取Ip发送验证码的次数
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.BuildIPSendCodeCountKey(System.String)">
+            <summary>
+            构造ip发送验证码缓存Key
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.DelSendCodeEmail(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            删除邮箱对应的验证码信息
+            </summary>
+            <param name="email"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.BuildSendEmailCodeLimitKey(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            构造发送邮件验证码60秒的限制缓存Key
+            </summary>
+            <param name="email"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.GetSendCodeTime(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            获取发送验证码时间，倒计时60秒用
+            </summary>
+            <param name="stremail">邮箱</param>
+             <param name="codeType">邮箱</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.SetSendCodeEmail(System.String,YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeDTO,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            设置邮箱地址对应的验证码
+            </summary>
+            <param name="email"></param>
+            <param name="codeDto"></param>
+            <param name="codeType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.BuildSendCodeEmailKey(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            构造发送验证码缓存Key
+            </summary>
+            <param name="email"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaCacheHelper.GetSendCodeEmail(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            获取邮箱对应的验证码信息
+            </summary>
+            <param name="email"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper">
+            <summary>
+            发送验证码帮助
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper.ValidateEmailSpend(System.String,System.Int32)">
+            <summary>
+            验证邮件发送是否超过限制次数
+            </summary>
+            <param name="ip">ip</param>
+            <param name="max">超过多少次返回太频繁</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper.ValidateEmailDomainIsNotSupport(System.String,System.String)">
+            <summary>
+            判断邮件域名是否支持
+            </summary>
+            <param name="email">验证邮箱</param>
+            <param name="strNotSupports">不知的邮件域名，格式： qq.com,17track.cn </param>
+            <returns>是否支持：true:不支持，false：支持</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper.IsSendEmailCodeLimit(System.String,YQTrack.Backend.Enums.SendCodeType,System.Int32,System.Int32)">
+            <summary>
+            发送邮件Code限制处理
+            </summary>
+            <param name="email">邮箱</param>
+            <param name="codeType">类型</param>
+            <param name="second">限制时间,秒单位</param>
+            <param name="max">最大限制，默认1次</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper.CreateSendEmailNumberCode(System.String,YQTrack.Backend.Enums.SendCodeType)">
+            <summary>
+            创建缓存发送邮箱的数字验证码
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="sendCodeType">发送验证码类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Utility.SendCaptcha.SendCaptchaHelper.CheckCaptchaCode(YQTrack.Backend.Utility.SendCaptcha.CaptchaCodeCheckDTO)">
+            <summary>
+            验证验证码是否有效
+            </summary>
+            <param name="code">校验代码</param>
+            <returns> CaptchaCodeCheckResult
+            </returns>
+        </member>
+    </members>
+</doc>

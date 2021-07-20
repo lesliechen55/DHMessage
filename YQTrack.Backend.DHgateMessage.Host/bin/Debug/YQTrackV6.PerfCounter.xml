@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.PerfCounter</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.PerfCounter.GlobalDefine">
+            <summary>
+            全局定义类
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.PerfCounter.GlobalDefine.MutexNameFormat">
+            <summary>
+            互斥量名称
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.LogDefine">
+            <summary>
+            日志定义类
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterBase">
+            <summary>
+            计数器包装(基类,外部无法使用)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterBase.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterBase.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterBase.Counter">
+            <summary>
+            计数器
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterBase.Name">
+            <summary>
+            计数器名称
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1">
+            <summary>
+            计数器类别(基类,外部无法使用)
+            </summary>
+            <typeparam name="T">计数器包装类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.IsSingle">
+            <summary>
+            是否单例
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.Name">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.Item(System.String)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterName">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="F:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1._CreationDataList">
+            <summary>
+            计数器信息列表
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1._CounterList">
+            <summary>
+            计数器实例列表
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.AddCreationData(System.String,System.Diagnostics.PerformanceCounterType)">
+            <summary>
+            添加计数器信息
+            </summary>
+            <param name="counterName">计数器名称</param>
+            <param name="counterType">计数器类型</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.AddCreationData(System.Collections.Generic.IEnumerable{System.String},System.Diagnostics.PerformanceCounterType)">
+            <summary>
+            添加计数器信息
+            </summary>
+            <param name="counterNameList">计数器名称列表</param>
+            <param name="counterType">计数器类型</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryBase`1.Init">
+            <summary>
+            初始化计数器
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMulti">
+            <summary>
+            计数器类别(多例)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMulti.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMulti`1">
+            <summary>
+            计数器类别(多例)
+            </summary>
+            <typeparam name="T">计数器包装类型(多例)</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMulti`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExt`1">
+            <summary>
+            计数器类别(多例扩展)
+            </summary>
+            <typeparam name="TExt">实例类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExt`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExt`2">
+            <summary>
+            计数器类别(多例扩展)
+            </summary>
+            <typeparam name="T">计数器包装类型(多例扩展)</typeparam>
+            <typeparam name="TExt">实例类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExt`2.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExtSimple`2">
+            <summary>
+            计数器类别(多例扩展)
+            </summary>
+            <typeparam name="T">计数器枚举类型</typeparam>
+            <typeparam name="TExt">实例类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExtSimple`2.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExtSimple`2.Item(`0)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterEnum">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryMultiExtSimple`2.Item(System.String)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterName">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategoryMultiSimple`1">
+            <summary>
+            计数器类别(多例)
+            </summary>
+            <typeparam name="T">计数器枚举类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategoryMultiSimple`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryMultiSimple`1.Item(`0)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterEnum">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategoryMultiSimple`1.Item(System.String)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterName">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategorySingle">
+            <summary>
+            计数器类别(单例)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategorySingle.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategorySingle`1">
+            <summary>
+            计数器类别(单例)
+            </summary>
+            <typeparam name="T">计数器包装类型(单例)</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategorySingle`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterCategorySingleSimple`1">
+            <summary>
+            计数器类别(单例)
+            </summary>
+            <typeparam name="T">计数器枚举类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterCategorySingleSimple`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类别名称</param>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategorySingleSimple`1.Item(`0)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterEnum">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="P:YQTrackV6.PerfCounter.PerfCounterCategorySingleSimple`1.Item(System.String)">
+            <summary>
+            获取计数器
+            </summary>
+            <param name="counterName">计数器名称</param>
+            <returns>计数器</returns>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterMulti">
+            <summary>
+            计数器包装(多例)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.Decrement(System.String)">
+            <summary>
+            减一
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.Increment(System.String)">
+            <summary>
+            加一
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <returns>增加后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.IncrementBy(System.String,System.Int64)">
+            <summary>
+            加减指定值
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <param name="value">值</param>
+            <returns>加减后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.NextSample(System.String)">
+            <summary>
+            获取原始样本
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.NextValue(System.String)">
+            <summary>
+            获取计算样本
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <returns>计算值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.ReadRawValue(System.String)">
+            <summary>
+            读取原始值
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.WriteRawValue(System.String,System.Boolean)">
+            <summary>
+            写入原始值
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <param name="value">原始值</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.WriteRawValue(System.String,System.Int64)">
+            <summary>
+            写入原始值
+            </summary>
+            <param name="instanceName">实例名称</param>
+            <param name="value">原始值</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMulti.ResetRawValue(System.String)">
+            <summary>
+            重置原始值
+            </summary>
+            <param name="instanceName">实例名称</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterMultiExt`1">
+            <summary>
+            计数器包装(多例扩展),使用ToString作为实例名称
+            </summary>
+            <typeparam name="T">实例类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.Decrement(`0)">
+            <summary>
+            减一
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.Increment(`0)">
+            <summary>
+            加一
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <returns>增加后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.IncrementBy(`0,System.Int64)">
+            <summary>
+            加减指定值
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <param name="value">值</param>
+            <returns>加减后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.NextSample(`0)">
+            <summary>
+            获取原始样本
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.NextValue(`0)">
+            <summary>
+            获取计算样本
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <returns>计算值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.ReadRawValue(`0)">
+            <summary>
+            读取原始值
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.WriteRawValue(`0,System.Int64)">
+            <summary>
+            写入原始值
+            </summary>
+            <param name="instanceObject">实例对象</param>
+            <param name="value">原始值</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterMultiExt`1.ResetRawValue(`0)">
+            <summary>
+            重置原始值
+            </summary>
+            <param name="instanceObject">实例对象</param>
+        </member>
+        <member name="T:YQTrackV6.PerfCounter.PerfCounterSingle">
+            <summary>
+            计数器包装(单例)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.Decrement">
+            <summary>
+            减一
+            </summary>
+            <returns>减少后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.Increment">
+            <summary>
+            加一
+            </summary>
+            <returns>增加后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.IncrementBy(System.Int64)">
+            <summary>
+            加减指定值
+            </summary>
+            <param name="value">值</param>
+            <returns>加减后的值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.NextSample">
+            <summary>
+            获取原始样本
+            </summary>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.NextValue">
+            <summary>
+            获取计算样本
+            </summary>
+            <returns>计算值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.ReadRawValue">
+            <summary>
+            读取原始值
+            </summary>
+            <returns>原始值</returns>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.WriteRawValue(System.Boolean)">
+            <summary>
+            写入原始值
+            </summary>
+            <param name="value">原始值</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.WriteRawValue(System.Int64)">
+            <summary>
+            写入原始值
+            </summary>
+            <param name="value">原始值</param>
+        </member>
+        <member name="M:YQTrackV6.PerfCounter.PerfCounterSingle.ResetRawValue">
+            <summary>
+            重置原始值
+            </summary>
+        </member>
+    </members>
+</doc>

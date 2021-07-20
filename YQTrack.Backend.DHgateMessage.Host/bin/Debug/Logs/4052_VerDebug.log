@@ -1,0 +1,17 @@
+2021-07-19 13:56:43,233 [1] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_15488","1.13.0":null,"1.14.0":null}
+2021-07-19 13:56:43,237 [1] DEBUG seller.dhgatemessage - TaskCoordinator_OnTaskAssigned:{"TaskInfo":{"NodeId":"192.168.1.158_4052","TaskId":"1.11.0","TaskExtra":"[]"}}
+2021-07-19 13:56:43,343 [1] DEBUG seller.dhgatemessage - AddJob:{"EventName":"JobManager_AddJob","EventDesc":"1.11.0"}
+2021-07-19 13:56:43,347 [1] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":null,"1.14.0":null}
+2021-07-19 13:56:43,349 [1] DEBUG seller.dhgatemessage - TaskCoordinator_OnTaskAssigned:{"TaskInfo":{"NodeId":"192.168.1.158_4052","TaskId":"1.12.0","TaskExtra":"[]"}}
+2021-07-19 13:56:43,354 [1] DEBUG seller.dhgatemessage - AddJob:{"EventName":"JobManager_AddJob","EventDesc":"1.12.0"}
+2021-07-19 13:57:13,366 [11] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":null,"1.14.0":null}
+2021-07-19 13:57:13,368 [11] VERBOSE seller.dhgatemessage - Heartbeat:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_4052","taskId":"1.11.0","taskExtra":"[]"}
+2021-07-19 13:57:13,372 [11] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":null,"1.14.0":null}
+2021-07-19 13:57:13,372 [11] VERBOSE seller.dhgatemessage - Heartbeat:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_4052","taskId":"1.12.0","taskExtra":"[]"}
+2021-07-19 13:57:48,599 [12] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":"192.168.1.158_4052","1.14.0":null}
+2021-07-19 13:57:48,599 [12] DEBUG seller.dhgatemessage - TaskCoordinator_OnTaskAssigned:{"TaskInfo":{"NodeId":"192.168.1.158_4052","TaskId":"1.13.0","TaskExtra":"[]"}}
+2021-07-19 13:57:48,604 [12] DEBUG seller.dhgatemessage - AddJob:{"EventName":"JobManager_AddJob","EventDesc":"1.13.0"}
+2021-07-19 13:57:48,813 [13] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":"192.168.1.158_4052","1.14.0":null}
+2021-07-19 13:57:48,813 [13] VERBOSE seller.dhgatemessage - Heartbeat:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_4052","taskId":"1.11.0","taskExtra":"[]"}
+2021-07-19 13:57:48,822 [13] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_4052","1.12.0":"192.168.1.158_4052","1.13.0":"192.168.1.158_4052","1.14.0":null}
+2021-07-19 13:57:48,822 [13] VERBOSE seller.dhgatemessage - Heartbeat:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.158_4052","taskId":"1.12.0","taskExtra":"[]"}

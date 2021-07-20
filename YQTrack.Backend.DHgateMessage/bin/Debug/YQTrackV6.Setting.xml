@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.Setting</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.Setting.Args.Base.BoolArgs">
+            <summary>
+            布尔型字符串参数值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.BoolArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.BoolArgs.op_Implicit(YQTrackV6.Setting.Args.Base.BoolArgs)~System.Boolean">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="value">BoolArgs</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.Base.BoolArgs.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.BoolArgs.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.BoolArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.BoolArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.Int0Args">
+            <summary>
+            整型字符串参数值,最少为0
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int0Args.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int0Args.op_Implicit(YQTrackV6.Setting.Args.Base.Int0Args)~System.Int32">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="value">Int0Args</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.Base.Int0Args.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int0Args.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int0Args.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int0Args.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.Int1Args">
+            <summary>
+            整型字符串参数值,最少为1
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int1Args.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int1Args.op_Implicit(YQTrackV6.Setting.Args.Base.Int1Args)~System.Int32">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="value">Int1Args</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.Base.Int1Args.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int1Args.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int1Args.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.Int1Args.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.IntArgs">
+            <summary>
+            整型字符串参数值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntArgs.op_Implicit(YQTrackV6.Setting.Args.Base.IntArgs)~System.Int32">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="value">IntArgs</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.Base.IntArgs.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntArgs.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.IntStringDictionaryArgs">
+            <summary>
+            数值/字符串字典
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntStringDictionaryArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntStringDictionaryArgs.#ctor(System.Collections.Generic.IDictionary{System.Int32,System.String})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntStringDictionaryArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntStringDictionaryArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.StringArgs">
+            <summary>
+            字符串参数值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringArgs.op_Implicit(YQTrackV6.Setting.Args.Base.StringArgs)~System.String">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="value">StringArgs</param>
+            <returns>值</returns>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.Base.StringArgs.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringArgs.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.IntListArgs">
+            <summary>
+            整型集合
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntListArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntListArgs.#ctor(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntListArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntListArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.IntIntDictionaryArgs">
+            <summary>
+            数值/数值字典
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntIntDictionaryArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntIntDictionaryArgs.#ctor(System.Collections.Generic.IDictionary{System.Int32,System.Int32})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntIntDictionaryArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.IntIntDictionaryArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.StringStringDictionaryArgs">
+            <summary>
+            字符串/字符串字典
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringStringDictionaryArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringStringDictionaryArgs.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringStringDictionaryArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringStringDictionaryArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.StringIntDictionaryArgs">
+            <summary>
+            字符串/数值字典
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringIntDictionaryArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringIntDictionaryArgs.#ctor(System.Collections.Generic.IDictionary{System.String,System.Int32})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringIntDictionaryArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringIntDictionaryArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.Base.StringListArgs">
+            <summary>
+            字符串集合
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringListArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringListArgs.#ctor(System.Collections.Generic.IList{System.String})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list">要包装的列表</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringListArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.Base.StringListArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.CredentialsArgs">
+            <summary>
+            用户认证参数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.CredentialsArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.CredentialsArgs.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.CredentialsArgs.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.CredentialsArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.CredentialsArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.NoticeLimitArgs">
+            <summary>
+            监控,邮件发送默认限制
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeLimitArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeLimitArgs.SendCount">
+            <summary>
+            最多发送数量,最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeLimitArgs.SendMinutes">
+            <summary>
+            配合SendMinutes,设置一定时间内最多发送通知数量,最小为1
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeLimitArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeLimitArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.NoticeMailArgs">
+            <summary>
+            监控,邮件发送服务器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeMailArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailServer">
+            <summary>
+            邮件服务器
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailPort">
+            <summary>
+            邮件服务器端口
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailSsl">
+            <summary>
+            是否SSL
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailUser">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailPassword">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailFrom">
+            <summary>
+            来自
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.NoticeMailArgs.MailTo">
+            <summary>
+            发往
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeMailArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.NoticeMailArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Args.WebProxyArgs">
+            <summary>
+            代理测试参数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.WebProxyArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.WebProxyArgs.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.WebProxyArgs.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.WebProxyArgs.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.Args.WebProxyArgs.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.WebProxyArgs.CreateSample">
+            <summary>
+            创建示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Args.WebProxyArgs.Validate">
+            <summary>
+            验证数据
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.GlobalDefine">
+            <summary>
+            全局定义
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.Helper.DBHelper">
+            <summary>
+            数据库辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Helper.DBHelper.ReadSettingValueList(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            从数据库读取对应设置名的值
+            </summary>
+            <param name="settingNameList">所有要读取的设置名</param>
+            <returns>设置值</returns>
+        </member>
+        <member name="T:YQTrackV6.Setting.Helper.JsonHelper">
+            <summary>
+            Json序列化辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Helper.JsonHelper.Deserialize(System.String,System.Type)">
+            <summary>
+            反序列化对象
+            </summary>
+            <param name="json">Json</param>
+            <param name="type">类型</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Helper.JsonHelper.Serialize(System.Object)">
+             <summary>
+            序列化对象
+             </summary>
+             <param name="value">对象</param>
+             <returns>Json</returns>
+        </member>
+        <member name="T:YQTrackV6.Setting.Helper.LocalHelper">
+            <summary>
+            本地设置辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.Helper.LocalHelper.ReadSettingValueList(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            从本地读取对应设置名的值
+            </summary>
+            <param name="settingNameList">所有要读取的设置名</param>
+            <returns>设置值</returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.Helper.LocalHelper.SaveSettingList(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            保存设置到本地
+            </summary>
+            <param name="settingValueList">设置值</param>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingEventArgs">
+            <summary>
+            设置事件模型
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingEventArgs.#ctor(YQTrackV6.Setting.SettingBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="setting">设置模型</param>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingEventArgs.Setting">
+            <summary>
+            设置模型
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingInfo">
+            <summary>
+            设置信息
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingInfo.#ctor(System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="type">设置类型</param>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingInfo.Type">
+            <summary>
+            设置类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingInfo.PropertyInfoList">
+            <summary>
+            属性信息集合
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingInfo.Setting">
+            <summary>
+            设置对象
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingInfo.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingInfo.ReadSample">
+            <summary>
+            读取示例设置
+            </summary>
+            <returns>示例设置</returns>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingLoadResult">
+            <summary>
+            设置读取返回结果
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingLoadResult.#ctor(YQTrackV6.Setting.SettingLoadResultType,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="resultType">设置读取返回结果</param>
+            <param name="exception">读取发生的异常</param>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingLoadResult.ResultType">
+            <summary>
+            设置读取返回结果
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingLoadResult.Exception">
+            <summary>
+            读取发生的异常
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingLoadResultType">
+            <summary>
+            设置读取返回结果
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Setting.SettingLoadResultType.LoadFromNone">
+            <summary>
+            空设置
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Setting.SettingLoadResultType.LoadFromDB">
+            <summary>
+            从数据库读取设置成功
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Setting.SettingLoadResultType.LoadFromLocal">
+            <summary>
+            从本地读取设置成功
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Setting.SettingLoadResultType.LoadError">
+            <summary>
+            读取设置失败
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingBase">
+            <summary>
+            设置对象基类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingBase.Validate">
+            <summary>
+            验证数据,如果数据错误抛出异常
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingBase.AddSettingJson(System.String,System.String)">
+            <summary>
+            添加一个设置值
+            </summary>
+            <param name="settingName">设置名称</param>
+            <param name="settingJson">设置值</param>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingBase.EqualsSettingJson(YQTrackV6.Setting.SettingBase)">
+            <summary>
+            对比设置对象是否相同
+            </summary>
+            <param name="value">要对比的设置对象</param>
+            <returns>是否相同</returns>
+        </member>
+        <member name="T:YQTrackV6.Setting.ISettingItem">
+            <summary>
+            设置项基接口
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.ISettingItem.CreateSample">
+            <summary>
+            创建设置示例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.ISettingItem.Validate">
+            <summary>
+            验证数据,如果数据错误抛出异常
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingManager">
+            <summary>
+            配置管理器,使用时候需要读取系统环境变量,具体查看各个属性说明
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingManager.SettingDB">
+            <summary>
+            设置数据库连接,将从'系统'环境变量YQTrackV6_SettingDB中读取
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingManager.GroupName">
+            <summary>
+            分组名称,建议使用IP段(如:192.168.1.0), 将从'系统'环境变量YQTrackV6_GroupName中读取
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingManager.HostName">
+            <summary>
+            主机名称,建议使用IP地址(如:192.168.1.100), 将从'系统'环境变量YQTrackV6_HostName中读取
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingManager.InstanceName">
+            <summary>
+            实例名称,建议使用程序名称+序号
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingManager.Loaded">
+            <summary>
+            是否执行了第一次加载配置
+            </summary>
+        </member>
+        <member name="E:YQTrackV6.Setting.SettingManager.Update">
+            <summary>
+            设置更新事件,必须在事件中捕捉异常,否则将引发程序崩溃
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.Register``1">
+            <summary>
+            注册一个设置类型
+            </summary>
+            <typeparam name="T">设置类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.Read``1">
+            <summary>
+            读取一个设置对象
+            </summary>
+            <typeparam name="T">设置类型</typeparam>
+            <returns>设置对象</returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">当前类型没有注册</exception>
+            <exception cref="T:System.NullReferenceException">当前类型尚未加载配置</exception>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.ReadSample``1">
+            <summary>
+            读取一个示例设置,仅调试时候使用
+            </summary>
+            <typeparam name="T">设置类型</typeparam>
+            <returns>示例设置</returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">当前类型没有注册</exception>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.Load">
+            <summary>
+            加载设置,方法不会抛出异常,默认从数据库加载
+            </summary>
+            <returns>加载结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.Load(System.Boolean)">
+            <summary>
+            加载设置,方法不会抛出异常
+            </summary>
+            <param name="loadForLocal">是否从本地加载</param>
+            <returns>加载结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.LoadAsync">
+            <summary>
+            加载设置,方法不会抛出异常,默认从数据库加载
+            </summary>
+            <returns>加载结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingManager.LoadAsync(System.Boolean)">
+            <summary>
+            加载设置,方法不会抛出异常
+            </summary>
+            <param name="loadForLocal">是否从本地加载</param>
+            <returns>加载结果</returns>
+        </member>
+        <member name="T:YQTrackV6.Setting.SettingNameAttribute">
+            <summary>
+            设置名
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Setting.SettingNameAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">设置名</param>
+            <exception cref="T:System.ArgumentNullException">名称为空</exception>
+        </member>
+        <member name="P:YQTrackV6.Setting.SettingNameAttribute.Name">
+            <summary>
+            设置名
+            </summary>
+        </member>
+    </members>
+</doc>

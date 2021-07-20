@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Sharding</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Sharding.Config.DBConfig">
+            <summary>
+            DBConfig
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.DBType">
+            <summary>
+                数据库类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.DBNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.IsSubmeter">
+            <summary>
+                是否分表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.ConnStrs">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.ArchivedDBNo">
+            <summary>
+                备份数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.IsArchived">
+            <summary>
+                是否归档数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.TableConfigs">
+            <summary>
+                表配置列表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConfig.AllowReadOnly">
+            <summary>
+            允许只读库，配置了读取分离；true：连接字符串追加 ApplicationIntent=ReadOnly ；连接只读库
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Config.DBConnStr">
+            <summary>
+            连接字符串配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConnStr.ConnStr">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBConnStr.IsMaster">
+            <summary>
+            是否主（写）服务器
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Config.DBEntityConfig">
+            <summary>
+                数据库实体
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBEntityConfig.DBEntityName">
+            <summary>
+                数据库实体名称
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Config.DBShardingConfig">
+            <summary>
+            默认的配置实体信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBShardingConfig.NodeConfigs">
+            <summary>
+                机房数据库配置列表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBShardingConfig.DBEntitys">
+            <summary>
+                数据库实体列表
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Config.DBShardingConfig.CreateSample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Config.DBShardingConfig.Validate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.DBShardingConfig.DBType">
+            <summary>
+                数据库类型,必须跟
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Config.NodeConfig">
+            <summary>
+            节点配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.NodeConfig.NodeId">
+            <summary>
+                机房编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.NodeConfig.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.NodeConfig.DBConfigs">
+            <summary>
+                数据连接配置列表
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Config.TableConfig">
+            <summary>
+                表配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.TableConfig.TableNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Config.TableConfig.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.DBShardingCore">
+            <summary>
+            分片的核心操作
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetDBType(System.Type,System.String)">
+            <summary>
+            获取DbType信息，根据属性标记DBShardingAttribute
+            标签找到具体的 DBType
+            </summary>
+            <param name="type"></param>
+            <param name="strBaseType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetDBType(System.Type)">
+            <summary>
+            获取DbType信息，根据属性标记DBShardingAttribute
+            标签找到具体的 DBType
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetTableData(System.String,YQTrack.Backend.Models.Operate,YQTrack.Backend.Models.DataRouteModel,System.Boolean,System.Int64)">
+            <summary>
+            定位当前的DBType对应的连接字符串
+            </summary>
+            <param name="dbType">DBType</param>
+            <param name="operateType">操作类型</param>
+            <param name="routeModel">路由信息</param>
+            <param name="isWrite">是否强制指定写库</param>
+            <param name="hashValue">hashValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.CheckIsWrite(YQTrack.Backend.Models.Operate,System.Boolean)">
+            <summary>
+            检查是否读库
+            </summary>
+            <param name="operateType"></param>
+            <param name="isWrite"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetCacheTableData(System.String,YQTrack.Backend.Models.Operate,YQTrack.Backend.Models.DataRouteModel,System.Boolean)">
+            <summary>
+            获取缓存中的TableData ，我要知道DB库 是否分表处理
+            </summary>
+            <param name="dbType"></param>
+            <param name="operateType"></param>
+            <param name="routeModel"></param>
+            <param name="isWrite"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetDBRouteInfo(YQTrack.Backend.Models.DataRouteModel,YQTrack.Backend.Sharding.Router.NodeRoute)">
+            <summary>
+            根据节点信息获取DB路由信息
+            </summary>
+            <param name="routeModel"></param>
+            <param name="nodeRoute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetConnStr(YQTrack.Backend.Sharding.Router.DBRoute,YQTrack.Backend.Models.Operate,System.Boolean)">
+            <summary>
+            获取连接字符串信息
+            </summary>
+            <param name="dbRoute">路由信息</param>
+            <param name="operateType">操作类型</param>
+            <param name="isWrite">是否写库</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetDataRouteModel(System.String)">
+            <summary>
+            获取默认的DataRoute信息
+            </summary>
+            <param name="dbType">DbType信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetDataRouteModel(YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+             获取默认的DataRoute信息
+            </summary>
+            <param name="dbType">DBType枚举</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetTableNoSuffix(System.String,System.Boolean,System.Byte)">
+            <summary>
+            返回按照顺序编号的表名后缀
+            </summary>
+            <param name="tableName"></param>
+            <param name="isSubmeter"></param>
+            <param name="tableNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingCore.GetSQLBySubmeter(System.String,System.Byte)">
+            <summary>
+            分片SQL处理
+            </summary>
+            <param name="sql"></param>
+            <param name="tableNo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.DBShardingRouteFactory">
+            <summary>
+            数据库分库配置信息
+            1.配置信息解析
+            2.解析DbType对应的路由信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Sharding.DBShardingRouteFactory._dicDBTypeNodes">
+            <summary>
+            DBType 节点信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Sharding.DBShardingRouteFactory._dicRoleTypeDBType">
+            <summary>
+            角色对应的DBType信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Sharding.DBShardingRouteFactory._dbEntitys">
+            <summary>
+            实体集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.DBShardingRouteFactory.DicDBTypeNodes">
+            <summary>
+            DbType对应的路由信息集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.DBShardingRouteFactory.DBEntitys">
+            <summary>
+            表，试图，存储过程名称分表集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingRouteFactory.InitDBShardingConfig(YQTrack.Backend.Sharding.Config.DBShardingConfig)">
+            <summary>
+            初始化数据库分片配置信息
+            </summary>
+            <param name="dbShardingConfig"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingRouteFactory.BuilderRule(YQTrack.Backend.Sharding.Config.DBShardingConfig)">
+            <summary>
+            解析配置文件，拆分成key-value的形式的值
+            </summary>
+            <param name="dbShardingConfig"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingRouteFactory.GetDBTypeRule(System.String)">
+            <summary>
+            获取DBType的路由信息
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingRouteFactory.GetDBRules(System.String,System.Int32)">
+            <summary>
+            获取DBType与节点下的数据库路由信息
+            </summary>
+            <param name="dbType"></param>
+            <param name="nodeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingRouteFactory.GetDataRouteModels(System.String,System.Boolean)">
+            <summary>
+            获取数据库类型的所有路由信息
+            </summary>
+            <param name="dbType">数据类型 DBType</param>
+            <param name="includeArchived">是否包含归档库 Seller</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.DBShardingSettingBase">
+            <summary>
+            配置基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.DBShardingSettingBase.DBShardingConfig">
+            <summary>
+            DB配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.DBShardingSettingHelper">
+            <summary>
+            DB分片帮助配置处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingSettingHelper.Register">
+            <summary>
+            初始化读取设置
+            </summary>
+            <returns>是否读取成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingSettingHelper.Register(System.String)">
+            <summary>
+            注册默认的DB配置信息
+            </summary>
+            <param name="instanceName"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.DBShardingSettingHelper.Register``1(System.String)">
+            <summary>
+            注册自定义实体类的配置信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instanceName"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Exception.ShardingRouteException">
+            <summary>
+            分片异常信息处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Exception.ShardingRouteException.#ctor(System.String)">
+            <summary>
+            分片异常信息处理
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Exception.ShardingRouteException.#ctor(System.String,YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            分片异常信息处理
+            </summary>
+            <param name="message"></param>
+            <param name="routeModel"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.DBRoute">
+            <summary>
+            数据库路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.DBNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.IsSubmeter">
+            <summary>
+                是否分表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.ConnStrs">
+            <summary>
+            连接字符串集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.ArchivedDBNo">
+            <summary>
+                备份数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.IsArchived">
+            <summary>
+                是否归档数据
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Sharding.Router.DBRoute._writeConStr">
+            <summary>
+            写数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.WriteConStr">
+            <summary>
+                写数据连接字符串
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.TableRoutes">
+            <summary>
+                表配置列表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBRoute.AllowReadOnly">
+            <summary>
+            允许只读库，配置了读取分离；true：连接字符串追加 ApplicationIntent=ReadOnly ；连接只读库
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.DBRouteDictionary">
+            <summary>
+            数据路由集合信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.DBShardingAttribute">
+            <summary>
+                数据库分库
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.DBShardingAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dbType"></param>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBShardingAttribute.DBType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.DBTypeRoute">
+            <summary>
+            DbType路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBTypeRoute.NodeRoutes">
+            <summary>
+            NodeId集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBTypeRoute.IsNodeSharding">
+            <summary>
+                是否节点分片
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.DBTypeRoute.DBType">
+            <summary>
+                数据库类型
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.DBTypeRoute.GetDefaultNodeRoute">
+            <summary>
+            获取默认的路由信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.DBTypeRoute.GetRandomDBRoute">
+            <summary>
+            随机获取路由信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.NodeRouteDictionary">
+            <summary>
+            节点路由信息集合
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.NodeRoute">
+            <summary>
+            节点路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.NodeRoute.NodeId">
+            <summary>
+                机房编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.NodeRoute.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.NodeRoute.DBRules">
+            <summary>
+            Db路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.NodeRoute.IsDBSharding">
+            <summary>
+            是否分片
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.NodeRoute.GetDefaultDBRoute">
+            <summary>
+            获取默认第一个路由信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.NodeRoute.GetRandomDBRoute">
+            <summary>
+            随机获取DB路由信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.NodeRoute.ArchivedDBRules">
+            <summary>
+            归档库的路由信息集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.NodeRoute.AddDBRule(YQTrack.Backend.Sharding.Router.DBRoute)">
+            <summary>
+            增加DB路由数据
+            </summary>
+            <param name="dbRule"></param>
+        </member>
+        <member name="M:YQTrack.Backend.Sharding.Router.NodeRoute.ContainsDBRoute(YQTrack.Backend.Sharding.Router.DBRoute)">
+            <summary>
+            是否存在DBRoute配置，按DBNo作为Key存储
+            </summary>
+            <param name="dbRule"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.Router.TableRoute">
+            <summary>
+            表路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.TableRoute.TableNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.Router.TableRoute.CanAdd">
+            <summary>
+                是否允许新增数据
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Sharding.TableData">
+            <summary>
+            定位到的表数据信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.TableData.ConStr">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.TableData.IsSubmeter">
+            <summary>
+            是否分表
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.TableData.TableNo">
+            <summary>
+            数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Sharding.TableData.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+    </members>
+</doc>

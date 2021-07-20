@@ -1,0 +1,6002 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.WebLib.Model</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.DestinationAttribute">
+            <summary>
+            目的国家属性类,用于描述目的国家对应的邮政
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.DestinationAttribute.#ctor(YQTrackV6.WebLib.Model.Enums.CountryType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="countryType">国家</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.DestinationAttribute.#ctor(YQTrackV6.WebLib.Model.Enums.CountryType,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="countryType">国家</param>
+            <param name="isDefault">是否默认</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.DestinationAttribute.CountryType">
+            <summary>
+            国家
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.DestinationAttribute.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.IsSearchCountryBeLikeAttribute">
+            <summary>
+            查找国家是否模糊搜索
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.IsSearchCountryBeLikeAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.IsSearchCountryBeLikeAttribute.Value">
+            <summary>
+            是或否
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.LanguageAttribute">
+            <summary>
+            网站语言属性类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.LanguageAttribute.#ctor(YQTrackV6.WebLib.Model.Enums.LanguageType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="language">语言</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.LanguageAttribute.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.LanguageCodeAttribute">
+            <summary>
+            语言名称属性类,对应Bing的提交参数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.LanguageCodeAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="languageCode">语言代码</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.LanguageCodeAttribute.LanguageCode">
+            <summary>
+            语言代码
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.NeedTestAttribute">
+            <summary>
+            是否需要测试
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.NeedTestAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.NeedTestAttribute.Value">
+            <summary>
+            是或否
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.NotNeedCarrierSecondAttribute">
+            <summary>
+            标记为无需第二运输商, 也同时表示为OnlySend
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.NotNeedCarrierSecondAttribute.#ctor">
+            <summary>
+            /构造函数
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.OnlySendAttribute">
+            <summary>
+            标记为只发出
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.OnlySendAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.OtherAttribute">
+            <summary>
+            其它信息属性类,描述运输商对应的网址,查询结果方式
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.OtherAttribute.#ctor(System.String,YQTrackV6.WebLib.Model.Enums.ResultType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="url">查询地址</param>
+            <param name="resultType">查询结果方式</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.OtherAttribute.#ctor(System.String,YQTrackV6.WebLib.Model.Enums.ResultType,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="url">查询地址</param>
+            <param name="resultType">查询结果方式</param>
+            <param name="level">星级</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">level不在范围内</exception>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.OtherAttribute.Url">
+            <summary>
+            查询地址
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.OtherAttribute.ResultType">
+            <summary>
+            查询结果方式
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.OtherAttribute.Level">
+            <summary>
+            星级，0-5，0为未评级，5为最高
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.PrefixAttribute">
+            <summary>
+            单号前缀,每一位代表一个前缀
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.PrefixAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="prefixes">前缀集合</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.PrefixAttribute.Prefixes">
+            <summary>
+            前缀集合
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.RecordChildMaybeHasAttribute">
+            <summary>
+            是否记录子站运输商可能存在
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.RecordChildMaybeHasAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RecordChildMaybeHasAttribute.Value">
+            <summary>
+            是或否
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.RecordNumberAttribute">
+            <summary>
+            是否记录主站运输商与用户指定不一致
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.RecordNumberAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RecordNumberAttribute.Value">
+            <summary>
+            是或否
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.RuleAttribute">
+            <summary>
+            特殊单号匹配规则,存放正则表达式
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.#ctor(System.String,System.Int32[],YQTrackV6.WebLib.Model.Enums.CountryType[])">
+            <summary>
+            构造函数, 默认非确定的单号规则
+            </summary>
+            <param name="ruleText">规则文本</param>
+            <param name="numberLength">对应正则的单号长度</param>
+            <param name="notRecordCountry">不记录找不到第二运输商错误的运输商</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.#ctor(System.Boolean,System.String,System.Int32[],YQTrackV6.WebLib.Model.Enums.CountryType[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="isSure">是否确定的单号规则</param>
+            <param name="ruleText">规则文本</param>
+            <param name="numberLength">对应正则的单号长度</param>
+            <param name="notRecordCountry">不记录找不到第二运输商错误的运输商</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.RuleText">
+            <summary>
+            规则文本
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.RuleRegex">
+            <summary>
+            规则正值表达式
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.NumberLength">
+            <summary>
+            对应正则的单号长度
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.NotRecordCountry">
+            <summary>
+            不记录找不到第二运输商错误的运输商
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.RuleAttribute.IsSure">
+            <summary>
+            是否确定的单号规则
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.SuffixAttribute">
+            <summary>
+            单号后缀,代表国家代码
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.SuffixAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="suffix">后缀缩写</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.SuffixAttribute.Suffix">
+            <summary>
+            后缀缩写
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Attributes.YQAttribute">
+            <summary>
+            标记是否YQ运输商（默认都是对接尾程的）
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Attributes.YQAttribute.Version">
+            <summary>
+            对接的版本
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.YQAttribute.AdapterMode(System.String)">
+            <summary>
+            对接模式
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.YQAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.YQAttribute.#ctor(System.String,System.String)">
+            <summary>
+            构造函数(YQ规则下的部分号段划分)
+            </summary>
+            <param name="fullSegmentRule">全程对接号段规则</param>
+            <param name="snailSegmentRule">平邮对接号段规则</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Attributes.YQAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数(完全自定义的单号规则)
+            </summary>
+            <param name="firstNumberRule">头程对接完整单号规则</param>
+            <param name="fullNumberRule">全程对接完整单号规则</param>
+            <param name="snailNumberRule">平邮对接完整单号规则</param>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.CarrierType">
+            <summary>
+            运输商类型
+            邮政类型(枚举值1-99999)
+            跨国国际快递类型(100001-190000)
+            中国国际快递190001-199999
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Afghan">
+            <summary>
+            阿富汗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Albania">
+            <summary>
+            阿尔巴尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Algeria">
+            <summary>
+            阿尔及利亚(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AlgeriaE">
+            <summary>
+            阿尔及利亚(大包,EMS)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AndorraS">
+            <summary>
+            安道尔(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Angola">
+            <summary>
+            安哥拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Antarctica">
+            <summary>
+            南极洲
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AntiguaAndBarbuda">
+            <summary>
+            安提瓜和巴布达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Argentina">
+            <summary>
+            阿根廷
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Armenia">
+            <summary>
+            亚美尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Australia">
+            <summary>
+            澳大利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Austria">
+            <summary>
+            奥地利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Azerbaijan">
+            <summary>
+            阿塞拜疆
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bahamas">
+            <summary>
+            巴哈马
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BahrainS">
+            <summary>
+            巴林(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BangladeshSB">
+            <summary>
+            孟加拉国(小包,大包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Barbados">
+            <summary>
+            巴巴多斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Belarus">
+            <summary>
+            白俄罗斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BelgiumS">
+            <summary>
+            比利时(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BelgiumBE">
+            <summary>
+            比利时
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Belize">
+            <summary>
+            伯利兹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Benin">
+            <summary>
+            贝宁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bhutan">
+            <summary>
+            不丹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bolivia">
+            <summary>
+            玻利维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bosnia">
+            <summary>
+            波黑
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Botswana">
+            <summary>
+            博茨瓦纳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Brazil">
+            <summary>
+            巴西
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Brunei">
+            <summary>
+            文莱
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bulgaria">
+            <summary>
+            保加利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BurkinaFaso">
+            <summary>
+            布基纳法索
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Burundi">
+            <summary>
+            布隆迪
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ChinaSB">
+            <summary>
+            中国(小包,大包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ChinaE">
+            <summary>
+            中国(EMS)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cambodia">
+            <summary>
+            柬埔寨
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cameroon">
+            <summary>
+            喀麦隆
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Canada">
+            <summary>
+            加拿大
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CapeVerde">
+            <summary>
+            佛得角
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CentralAfricanRepublic">
+            <summary>
+            中非共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Chile">
+            <summary>
+            智利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Coast">
+            <summary>
+            科特迪瓦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Colombia">
+            <summary>
+            哥伦比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Comoros">
+            <summary>
+            科摩罗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Congo">
+            <summary>
+            刚果共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CongoDR">
+            <summary>
+            刚果民主共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CookIslands">
+            <summary>
+            库克群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CostaRica">
+            <summary>
+            哥斯达黎加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Croatia">
+            <summary>
+            克罗地亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cuba">
+            <summary>
+            古巴
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cyprus">
+            <summary>
+            塞浦路斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Czech">
+            <summary>
+            捷克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Chad">
+            <summary>
+            乍得
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Denmark">
+            <summary>
+            丹麦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Djibouti">
+            <summary>
+            吉布提
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Dominica">
+            <summary>
+            多米尼克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Dominican">
+            <summary>
+            多米尼加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ecuador">
+            <summary>
+            厄瓜多尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Egypt">
+            <summary>
+            埃及
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Emirates">
+            <summary>
+            阿联酋
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Estonia">
+            <summary>
+            爱沙尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EstoniaWorkTrace">
+            <summary>
+            爱沙尼亚(Post11)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ethiopia">
+            <summary>
+            埃塞俄比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Eritrea">
+            <summary>
+            厄立特里亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EquatorialGuinea">
+            <summary>
+            赤道几内亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EastTimor">
+            <summary>
+            东帝汶
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Fiji">
+            <summary>
+            斐济
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Finland">
+            <summary>
+            芬兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FranceS">
+            <summary>
+            法国(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Gabon">
+            <summary>
+            加蓬
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Gambia">
+            <summary>
+            冈比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Georgia">
+            <summary>
+            格鲁吉亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Germany">
+            <summary>
+            德国(Nolp)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GermanyGdsk">
+            <summary>
+            德国(GDSK)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GermanyGlobalMailUS">
+            <summary>
+            德国(GlobalMail US)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GermanyGlobalMailAS">
+            <summary>
+            德国(GlobalMail ASIA)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ghana">
+            <summary>
+            加纳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Greece">
+            <summary>
+            希腊
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Grenada">
+            <summary>
+            格林纳达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Guatemala">
+            <summary>
+            危地马拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Guinea">
+            <summary>
+            几内亚共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Guyana">
+            <summary>
+            圭亚那
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GuineaBissau">
+            <summary>
+            几内亚比绍
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HongKong">
+            <summary>
+            香港
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Haiti">
+            <summary>
+            海地
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Honduras">
+            <summary>
+            洪都拉斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Hungary">
+            <summary>
+            匈牙利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Iceland">
+            <summary>
+            冰岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.India">
+            <summary>
+            印度
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Indonesia">
+            <summary>
+            印度尼西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Iran">
+            <summary>
+            伊朗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ireland">
+            <summary>
+            爱尔兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Israel">
+            <summary>
+            以色列
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Italy">
+            <summary>
+            意大利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Iraq">
+            <summary>
+            伊拉克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Jamaica">
+            <summary>
+            牙买加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Japan">
+            <summary>
+            日本
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Jordan">
+            <summary>
+            约旦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kazakhstan">
+            <summary>
+            哈萨克斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kenya">
+            <summary>
+            肯尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KingdomS">
+            <summary>
+            英国(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KingdomBE">
+            <summary>
+            英国(大包,EMS)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kiribati">
+            <summary>
+            基里巴斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Korea">
+            <summary>
+            韩国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KoreaDomestic">
+            <summary>
+            韩国(国内)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KoreaDPR">
+            <summary>
+            朝鲜
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kosovo">
+            <summary>
+            科索沃
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kuwait">
+            <summary>
+            科威特
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Kyrgyzstan">
+            <summary>
+            吉尔吉斯斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KyrgyzstanEP">
+            <summary>
+            吉尔吉斯斯坦快递邮政(Express Post)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Lao">
+            <summary>
+            老挝
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LaoAPL">
+            <summary>
+            老挝(APL)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Latvia">
+            <summary>
+            拉脱维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Lebanon">
+            <summary>
+            黎巴嫩
+            </summary>        
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Lesotho">
+            <summary>
+            莱索托
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Liberia">
+            <summary>
+            利比里亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Libya">
+            <summary>
+            利比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Liechtenstein">
+            <summary>
+            列支敦士登
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Lithuania">
+            <summary>
+            立陶宛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LithuaniaPostPlus">
+            <summary>
+            立陶宛(PostPlus)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Lucia">
+            <summary>
+            圣卢西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Luxembourg">
+            <summary>
+            卢森堡
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Macau">
+            <summary>
+            澳门
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Macedonia">
+            <summary>
+            马其顿
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Madagascar">
+            <summary>
+            马达加斯加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Malawi">
+            <summary>
+            马拉维
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Malaysia">
+            <summary>
+            马来西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Maldives">
+            <summary>
+            马尔代夫
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mali">
+            <summary>
+            马里
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Malta">
+            <summary>
+            马耳他
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Marshall">
+            <summary>
+            马绍尔群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mauritania">
+            <summary>
+            毛里塔尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mauritius">
+            <summary>
+            毛里求斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MauritiusMA">
+            <summary>
+            毛里求斯(MailAmericas)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mexico">
+            <summary>
+            墨西哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Micronesia">
+            <summary>
+            密克罗尼西亚联邦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Moldova">
+            <summary>
+            摩尔多瓦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MonacoSB">
+            <summary>
+            摩纳哥(小包,大包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mongolia">
+            <summary>
+            蒙古
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Montenegro">
+            <summary>
+            黑山
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Morocco">
+            <summary>
+            摩洛哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Mozambique">
+            <summary>
+            莫桑比克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Myanmar">
+            <summary>
+            缅甸
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Namibia">
+            <summary>
+            纳米比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Nauru">
+            <summary>
+            瑙鲁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Nepal">
+            <summary>
+            尼泊尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Netherlands">
+            <summary>
+            荷兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NetherlandsPostNL">
+            <summary>
+            荷兰(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NewZealand">
+            <summary>
+            新西兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Nicaragua">
+            <summary>
+            尼加拉瓜
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Norway">
+            <summary>
+            挪威
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Niger">
+            <summary>
+            尼日尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Nigeria">
+            <summary>
+            尼日利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Oman">
+            <summary>
+            阿曼
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Pakistan">
+            <summary>
+            巴基斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Palestine">
+            <summary>
+            巴勒斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Panama">
+            <summary>
+            巴拿马
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PapuaNewGuinea">
+            <summary>
+            巴布亚新几内亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Paraguay">
+            <summary>
+            巴拉圭
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Peru">
+            <summary>
+            秘鲁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Philippines">
+            <summary>
+            菲律宾
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Poland">
+            <summary>
+            波兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Portugal">
+            <summary>
+            葡萄牙
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Palau">
+            <summary>
+            帕劳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Qatar">
+            <summary>
+            卡塔尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Romania">
+            <summary>
+            罗马尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Russia">
+            <summary>
+            俄罗斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Rwanda">
+            <summary>
+            卢旺达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SaintVincentAndTheGrenadines">
+            <summary>
+            圣文森特和格林纳丁斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Salvador">
+            <summary>
+            萨尔瓦多
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SanMarino">
+            <summary>
+            圣马力诺
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SaoTomePrincipe">
+            <summary>
+            圣多美和普林西比
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SaudiArabia">
+            <summary>
+            沙特阿拉伯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Senegal">
+            <summary>
+            塞内加尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Serbia">
+            <summary>
+            塞尔维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Seychelles">
+            <summary>
+            塞舌尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SierraLeone">
+            <summary>
+            塞拉利昂
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SingaporeS">
+            <summary>
+            新加坡(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Slovakia">
+            <summary>
+            斯洛伐克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Slovenia">
+            <summary>
+            斯洛文尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SolomonIslands">
+            <summary>
+            所罗门群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SouthAfrica">
+            <summary>
+            南非
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Spain">
+            <summary>
+            西班牙
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SprLanka">
+            <summary>
+            斯里兰卡
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Sudan">
+            <summary>
+            苏丹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Suriname">
+            <summary>
+            苏里南
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Swaziland">
+            <summary>
+            斯威士兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Sweden">
+            <summary>
+            瑞典
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SwedenDirectLink">
+            <summary>
+            瑞典(DirectLink)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Switzerland">
+            <summary>
+            瑞士
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Syrian">
+            <summary>
+            叙利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SaintKittsNevis">
+            <summary>
+            圣基茨和尼维斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SamoaWestern">
+            <summary>
+            西萨摩亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Somali">
+            <summary>
+            索马里
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Scotland">
+            <summary>
+            苏格兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SouthOssetia">
+            <summary>
+            南奥塞梯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TaiwanS">
+            <summary>
+            台湾(小包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Tajikistan">
+            <summary>
+            塔吉克斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Tanzania">
+            <summary>
+            坦桑尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Thailand">
+            <summary>
+            泰国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Togo">
+            <summary>
+            多哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TonGa">
+            <summary>
+            汤加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TrinidadAndTobago">
+            <summary>
+            特立尼达和多巴哥
+            只有一个单子可查EA099847749HK
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Tuvalu">
+            <summary>
+            图瓦卢
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Tunisia">
+            <summary>
+            突尼斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Turkey">
+            <summary>
+            土耳其
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Turkmenistan">
+            <summary>
+            土库曼斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Uganda">
+            <summary>
+            乌干达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UkraineSB">
+            <summary>
+            乌克兰(小包,大包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UzbekistanSB">
+            <summary>
+            乌兹别克斯坦(小包,大包)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Uruguay">
+            <summary>
+            乌拉圭
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Usa">
+            <summary>
+            美国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Vanuatu">
+            <summary>
+            瓦努阿图
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Venezuela">
+            <summary>
+            委内瑞拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.VietNam">
+            <summary>
+            越南
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.VietNamE">
+            <summary>
+            越南(EMS)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Vatican">
+            <summary>
+            梵蒂冈
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WesternSahara">
+            <summary>
+            西撒哈拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Yemen">
+            <summary>
+            也门
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Zambia">
+            <summary>
+            赞比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Zimbabwe">
+            <summary>
+            津巴布韦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryES">
+            <summary>
+            海外领地[西班牙]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryGB">
+            <summary>
+            海外领地[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Anguilla">
+            <summary>
+            安圭拉[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ascension">
+            <summary>
+            阿森松岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bermuda">
+            <summary>
+            百慕达[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cayman">
+            <summary>
+            开曼群岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Gibraltar">
+            <summary>
+            直布罗陀[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Guernsey">
+            <summary>
+            根西岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SaintHelena">
+            <summary>
+            圣赫勒拿岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Jersey">
+            <summary>
+            泽西岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryFI">
+            <summary>
+            海外领地[芬兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Aland">
+            <summary>
+            奥兰群岛[芬兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryNL">
+            <summary>
+            海外领地[荷兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Antilles">
+            <summary>
+            荷属安的列斯[荷兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Aruba">
+            <summary>
+            阿鲁巴[荷兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryPT">
+            <summary>
+            海外领地[葡萄牙]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryNO">
+            <summary>
+            海外领地[挪威]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryAU">
+            <summary>
+            海外领地[澳大利亚]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NorfolkIslands">
+            <summary>
+            诺福克岛[澳大利亚]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryDK">
+            <summary>
+            海外领地[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FaroeIslands">
+            <summary>
+            法罗群岛[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Greenland">
+            <summary>
+            格陵兰[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryFR">
+            <summary>
+            海外领地[法国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NewCaledonia">
+            <summary>
+            新喀里多尼亚[法国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryUS">
+            <summary>
+            海外领地[美国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OverseasTerritoryNZ">
+            <summary>
+            海外领地[新西兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DHL">
+            <summary>
+            DHL
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UPS">
+            <summary>
+            UPS
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Fedex">
+            <summary>
+            Fedex
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TNT">
+            <summary>
+            TNT
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GLS">
+            <summary>
+            GLS
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Aramex">
+            <summary>
+            Aramex
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPD">
+            <summary>
+            DPD
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Toll">
+            <summary>
+            Toll
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPDUK">
+            <summary>
+            DPD(UK)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OneWorld">
+            <summary>
+            OneWorld
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SFB2C">
+            <summary>
+            顺丰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPEX">
+            <summary>
+            DPEX
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.IParcel">
+            <summary>
+            IParcel
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AsendiaUsa">
+            <summary>
+            Asendia USA
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Yodel">
+            <summary>
+            Yodel
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Hermes">
+            <summary>
+            Hermes
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SDA">
+            <summary>
+            SDA
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LWE">
+            <summary>
+            LWE
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LandmarkGlobal">
+            <summary>
+            Landmark Global
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Meest">
+            <summary>
+            Meest Group
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GLSIT">
+            <summary>
+            GLS(IT)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Skynet">
+            <summary>
+            Skynet
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BRT">
+            <summary>
+            BRT Corriere Espresso
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ColisPrive">
+            <summary>
+            Colis Prive
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RRDonnelley">
+            <summary>
+            RR Donnelley
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CDEK">
+            <summary>
+            CDEK
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HermesDE">
+            <summary>
+            Hermes(DE)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Exelot">
+            <summary>
+            Exelot
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RoyalShipments">
+            <summary>
+            Royal Shipments
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SmsaExpress">
+            <summary>
+            SMSA Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PitneyBowes">
+            <summary>
+            Pitney Bowes
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PonyExpress">
+            <summary>
+            Pony Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZPY">
+            <summary>
+            Zinc
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.IML">
+            <summary>
+            IML
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Sagawa">
+            <summary>
+            Sagawa, 佐川
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SagawaGlobal">
+            <summary>
+            Sagawa Global
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Purolator">
+            <summary>
+            Purolator
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.InpostPL">
+            <summary>
+            Inpost(PL)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FastwayAU">
+            <summary>
+            Fastway(AU)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CacesaPostal">
+            <summary>
+            Cacesa Postal
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Parcel2go">
+            <summary>
+            Parcel2go
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DHLParcelNL">
+            <summary>
+            DHL Parcel(NL)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CorreosExpress">
+            <summary>
+            Correos Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OnTrac">
+            <summary>
+            OnTrac
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UKMail">
+            <summary>
+            UK Mail
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SailPost">
+            <summary>
+            SailPost
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LaserShip">
+            <summary>
+            LaserShip
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bluecare">
+            <summary>
+            Bluecare
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.P2PMailing">
+            <summary>
+            P2P Mailing
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bluedart">
+            <summary>
+            Bluedart
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Ekart">
+            <summary>
+            Ekart
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PostaPlus">
+            <summary>
+            Posta Plus
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Intelcom">
+            <summary>
+            Intelcom
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Delhivery">
+            <summary>
+            Delhivery
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TForce">
+            <summary>
+            TForce (DYNAMEX)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Yamato">
+            <summary>
+            Yamato
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TMGGroup">
+            <summary>
+            TMG
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ABXExpress">
+            <summary>
+            ABX Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TNTIT">
+            <summary>
+            TNT(IT)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FastwayZA">
+            <summary>
+            Fastway(ZA)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FastwayNZ">
+            <summary>
+            Fastway(NZ)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FastwayIE">
+            <summary>
+            Fastway(IE)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DTDC">
+            <summary>
+            DTDC
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ASCCourier">
+            <summary>
+            ASCCourier
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPDRU">
+            <summary>
+            DPD(RU)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPDFR">
+            <summary>
+            DPD(FR)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SGTIT">
+            <summary>
+            SGT
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JETID">
+            <summary>
+            J&lt;T Express (ID)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EAS">
+            <summary>
+            Easy Way
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GTS">
+            <summary>
+            GTS Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PAL">
+            <summary>
+            PAL Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CAR">
+            <summary>
+            Caribou
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JETMY">
+            <summary>
+            J&lt;T Express (MY)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CityLink">
+            <summary>
+            City Link
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Fetchr">
+            <summary>
+            Fetchr
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YEX">
+            <summary>
+            Yona Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KSK">
+            <summary>
+            K-mestu
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JNEExpress">
+            <summary>
+            JNE Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Nexive">
+            <summary>
+            Nexive
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Airpak">
+            <summary>
+            Airpak Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Naqel">
+            <summary>
+            Naqel
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AQU">
+            <summary>
+            Aquiline
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HermesBorderguru">
+            <summary>
+            Hermes Borderguru
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TmmExpress">
+            <summary>
+            Tmm Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CseExpress">
+            <summary>
+            CSE
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FLP">
+            <summary>
+            FlipPost
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EZG">
+            <summary>
+            EasyGet
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DDUExpress">
+            <summary>
+            DDU
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BlueEx">
+            <summary>
+            BlueEx
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EcomExpress">
+            <summary>
+            Ecom Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Wing">
+            <summary>
+            Wing
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Xpressbees">
+            <summary>
+            Xpressbees
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Shadowfax">
+            <summary>
+            Shadowfax
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EsnadExpress">
+            <summary>
+            Esnad Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.IDS">
+            <summary>
+            IDS Logistics
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Grastin">
+            <summary>
+            Grastin
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NEX">
+            <summary>
+            PFLogistics
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Dellin">
+            <summary>
+            Dellin
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Quantium">
+            <summary>
+            Quantium
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPDPL">
+            <summary>
+            DPD(PL)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SCMExpress">
+            <summary>
+            SCM
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WBC">
+            <summary>
+            West Bank Courier
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CTTExpress">
+            <summary>
+            CTTExpress
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JAP">
+            <summary>
+            JAPO Transport
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CJLogisticsKorea">
+            <summary>
+            CJ Korea Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CJCentury">
+            <summary>
+            CJ Century
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GTDExpress">
+            <summary>
+            GTD
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PTSExpress">
+            <summary>
+            PTS Worldwide Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JDEExpress">
+            <summary>
+            JDE
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.APCPostalLogistics">
+            <summary>
+            APC Postal Logistics
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CouriersPlease">
+            <summary>
+            CouriersPlease
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Sendle">
+            <summary>
+            Sendle
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanSG">
+            <summary>
+            Ninjavan (SG)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanID">
+            <summary>
+            Ninjavan (ID)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanPH">
+            <summary>
+            Ninjavan (PH)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanMY">
+            <summary>
+            Ninjavan (MY)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanTH">
+            <summary>
+            Ninjavan (TH)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NinjavanVN">
+            <summary>
+            Ninjavan (VN)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Beone">
+            <summary>
+            Beone
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CourierPlusNigeria">
+            <summary>
+            CourierPlus Nigeria
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Packeta">
+            <summary>
+            Packeta
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GPD">
+            <summary>
+            GPD Service
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UNI">
+            <summary>
+            Uni Express Inc.
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FivePost">
+            <summary>
+            5Post
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Vestovoy">
+            <summary>
+            Vestovoy
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ChronoPost">
+            <summary>
+            Chronopost
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Redpack">
+            <summary>
+            Redpack
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Estafeta">
+            <summary>
+            Estafeta 
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JanioAsia">
+            <summary>
+            Janio
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Geis">
+            <summary>
+            Geis 
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DPDIE">
+            <summary>
+            DPD(IE)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Swiship">
+            <summary>
+            Swiship, 亚马逊
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Zeleris">
+            <summary>
+            Zeleris
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Gaash">
+            <summary>
+            Gaash
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Canpar">
+            <summary>
+            Canpar
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Paquetexpress">
+            <summary>
+            Paquetexpress
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DAO365">
+            <summary>
+            DAO365
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SkyPostal">
+            <summary>
+            SkyPostal
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GDEX">
+            <summary>
+            GDEX
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RINCOS">
+            <summary>
+            RINCOS
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DHLParcelUK">
+            <summary>
+            DHL Parcel(UK)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.QualityPost">
+            <summary>
+            QualityPost
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Vova">
+            <summary>
+            Vova
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CommonlineExpress">
+            <summary>
+            Commonline Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GrandSlamExpress">
+            <summary>
+            Grand Slam Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Boxberry">
+            <summary>
+            Boxberry
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FDL">
+            <summary>
+            Fast Despatch
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Whistl">
+            <summary>
+            Whistl
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RedBox">
+            <summary>
+            Redbox
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Matkahuolto">
+            <summary>
+            Matkahuolto
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NovaPoshta">
+            <summary>
+            NovaPoshta
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Tonami">
+            <summary>
+            tonami
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KuehneNagel">
+            <summary>
+            Kuehne+Nagel
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Saee">
+            <summary>
+            Saee
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BringerAirCargo">
+            <summary>
+            Bringer Air Cargo
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.XDPExpress">
+            <summary>
+            XDP Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Packlink">
+            <summary>
+            Packlink
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Dostavka">
+            <summary>
+            Dostavka"
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SmartPost">
+            <summary>
+            SMART Post Global
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Seino">
+            <summary>
+            Seino
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SprintStar">
+            <summary>
+            SprintStar
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GCeXpress">
+            <summary>
+            GCeXpress
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cargus">
+            <summary>
+            Cargus
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MRW">
+            <summary>
+            MRW 西班牙
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FeiTe">
+            <summary>
+            飞特
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HuaHan">
+            <summary>
+            华翰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YunPost">
+            <summary>
+            云途
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BQC">
+            <summary>
+            百千诚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YanWen">
+            <summary>
+            燕文
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ETS">
+            <summary>
+            俄通收
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BUY">
+            <summary>
+            捷买送
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JSH">
+            <summary>
+            嘉盛物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EWS">
+            <summary>
+            易华商物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MXA">
+            <summary>
+            淼信国际
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EPS">
+            <summary>
+            易达全球专线
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HRD">
+            <summary>
+            韩润物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MXE">
+            <summary>
+            上海淼信
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ANJ">
+            <summary>
+            安骏
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KWT">
+            <summary>
+            京华达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SprintPack">
+            <summary>
+            欧速通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MZF">
+            <summary>
+            铭志国际
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SunYou">
+            <summary>
+            顺友
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TYZ">
+            <summary>
+            深圳市通邮物流科技（集团）有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZES">
+            <summary>
+            俄顺国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BAB">
+            <summary>
+            北北国际
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BNE">
+            <summary>
+            香港邦纳 商盟
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.XYG">
+            <summary>
+            兴源供应链
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JNT">
+            <summary>
+            捷网
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Wise">
+            <summary>
+            万色
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WNB">
+            <summary>
+            万邦速达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SJT">
+            <summary>
+            森捷通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BSL">
+            <summary>
+            飞鸟国际
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.USP">
+            <summary>
+            优时派
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FPX">
+            <summary>
+            4PX
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YMY">
+            <summary>
+            深圳永满溢
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WHT">
+            <summary>
+            五和通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZJT">
+            <summary>
+            杭州嘉腾
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YJI">
+            <summary>
+            广州延锦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BEL">
+            <summary>
+            深圳北俄
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UTE">
+            <summary>
+            深圳瞬移达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CK1">
+            <summary>
+            出口易
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UBIExpress">
+            <summary>
+            UBI
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SFCExpress">
+            <summary>
+            三态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YHT">
+            <summary>
+            海通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Gati">
+            <summary>
+            上海迦递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JCEX">
+            <summary>
+            杭州佳成
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.USK">
+            <summary>
+            全酋通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NUO">
+            <summary>
+            沈诺
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OTN">
+            <summary>
+            139快递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EQK">
+            <summary>
+            网易速达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Sinoair">
+            <summary>
+            中外运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cosco">
+            <summary>
+            中远
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TSL">
+            <summary>
+            泰嘉物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AUS">
+            <summary>
+            莆田启航
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FAR">
+            <summary>
+            杭州泛远
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HKD">
+            <summary>
+            青岛昊坤达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YTO">
+            <summary>
+            圆通速递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ALJ">
+            <summary>
+            深圳全和悦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FEI">
+            <summary>
+            上海宏杉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WishPost">
+            <summary>
+            Wish邮
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.XYL">
+            <summary>
+            广州兴远
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ECMS">
+            <summary>
+            天津易客满
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WEL">
+            <summary>
+            深圳世航
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.STL">
+            <summary>
+            广州三通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LTE">
+            <summary>
+            上海乐天速递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HEL">
+            <summary>
+            深圳惠恩
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Deppon">
+            <summary>
+            上海德邦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZTO">
+            <summary>
+            中通快递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WSH">
+            <summary>
+            深圳纬狮
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GXA">
+            <summary>
+            广州高翔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EQT">
+            <summary>
+            一起投
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ECE">
+            <summary>
+            上海东擎速递有限公司深圳分公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YLD">
+            <summary>
+            深圳优兰达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TZT">
+            <summary>
+            中山天正
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TDQ">
+            <summary>
+            青岛通达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TOP">
+            <summary>
+            广州卓志
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZXG">
+            <summary>
+            深圳众兴
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JSE">
+            <summary>
+            苏州急速
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YDH">
+            <summary>
+            上海义达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.QWL">
+            <summary>
+            上海瞬程
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Orange">
+            <summary>
+            橙联
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EZE">
+            <summary>
+            深圳轻松速达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CNEEps">
+            <summary>
+            上海CNE
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ETotal">
+            <summary>
+            香港eTotal
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CGS">
+            <summary>
+            深圳超光速
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TZX">
+            <summary>
+            深圳市天子国际货运代理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YHR">
+            <summary>
+            内蒙古元昊
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SPS">
+            <summary>
+            成都中达-YQ, 原SPS改SPE
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JBT">
+            <summary>
+            深圳全易跨境供应链有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SYD">
+            <summary>
+            深圳速邮达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LEX">
+            <summary>
+            上海乐翔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Times">
+            <summary>
+            香港TIMES
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BUF">
+            <summary>
+            上海旨福
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HJY">
+            <summary>
+            深圳恒捷宇通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GBL">
+            <summary>
+            香港环球易寄
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YBE">
+            <summary>
+            深圳亦邦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UVA">
+            <summary>
+            深圳宇环
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YJL">
+            <summary>
+            香港5U物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ESE">
+            <summary>
+            广州俄速易
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YDS">
+            <summary>
+            上海羿德
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HTF">
+            <summary>
+            深圳昊通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.UXT">
+            <summary>
+            深圳邮行天下
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YUD">
+            <summary>
+            杭州宇地
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YLE">
+            <summary>
+            上海颐龙
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZCE">
+            <summary>
+            上海翼速
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Bestex">
+            <summary>
+            杭州百世
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Cainiao">
+            <summary>
+            菜鸟网络
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YTZ">
+            <summary>
+            深圳印态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GCX">
+            <summary>
+            前海光驰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ESX">
+            <summary>
+            深圳八星
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SBE">
+            <summary>
+            深圳跨境翼
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SZC">
+            <summary>
+            东莞神州集运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MCT">
+            <summary>
+            香港马可达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YTG">
+            <summary>
+            上海彧腾
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SDK">
+            <summary>
+            深圳斯德克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PFC">
+            <summary>
+            深圳皇家物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CJP">
+            <summary>
+            义乌促佳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Winit">
+            <summary>
+            深圳万邑通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQLDE">
+            <summary>
+            广州立德-YQ
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQEWS">
+            <summary>
+            易华商物流-YQ
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LBR">
+            <summary>
+            北京联博瑞翔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BSI">
+            <summary>
+            深圳佰事达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YID">
+            <summary>
+            深圳一代
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YYG">
+            <summary>
+            上海一沅
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YHA">
+            <summary>
+            深圳越航
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQTFS">
+            <summary>
+            北京天府盛-YQ
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HDL">
+            <summary>
+            广州恒递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JDGlobal">
+            <summary>
+            京东
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YXE">
+            <summary>
+            上海亚翔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQBTY">
+            <summary>
+            深圳斑头雁-YQ
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQGCT">
+            <summary>
+            哈尔滨国翠
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYQLDY">
+            <summary>
+            深圳全球立达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SIN">
+            <summary>
+            中外运香港
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WWE">
+            <summary>
+            We World Express
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FCE">
+            <summary>
+            深圳飞驰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YFH">
+            <summary>
+            义乌翼梵
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.STO">
+            <summary>
+            申通国际
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RED">
+            <summary>
+            深圳红盒子
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TDE">
+            <summary>
+            深圳通达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OYX">
+            <summary>
+            广州欧亚兴
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EPP">
+            <summary>
+            易达全球小包
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SJS">
+            <summary>
+            四季正扬
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.TZZ">
+            <summary>
+            深圳天纵
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.STOChina">
+            <summary>
+            申通速递
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZSE">
+            <summary>
+            霍尔果斯中速
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SBD">
+            <summary>
+            深圳势必达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SHT">
+            <summary>
+            郑州速汇通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HHE">
+            <summary>
+            广州华航吉运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.EAC">
+            <summary>
+            深圳富皇美运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GYL">
+            <summary>
+            深圳国洋运通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BTD">
+            <summary>
+            深圳宝通达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JDY">
+            <summary>
+            深圳金斗云
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CND">
+            <summary>
+            深圳辰诺达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CTS">
+            <summary>
+            深圳魔速达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BRE">
+            <summary>
+            深圳巴通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZLX">
+            <summary>
+            杭州蓬达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FBB">
+            <summary>
+            摆渡一下
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZNT">
+            <summary>
+            中天运通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RUE">
+            <summary>
+            深圳如易
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.XYY">
+            <summary>
+            广州行运易
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.Yunda">
+            <summary>
+            上海韵达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.OJI">
+            <summary>
+            中山欧捷
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SCG">
+            <summary>
+            深圳拾诚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SGF">
+            <summary>
+            广州航星
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HZB">
+            <summary>
+            河南正博
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YEE">
+            <summary>
+            深圳易达联运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YTB">
+            <summary>
+            深圳一通
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ATW">
+            <summary>
+            深圳在窗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DID">
+            <summary>
+            深圳格兰思迪
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HSD">
+            <summary>
+            广州寰世达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FUJ">
+            <summary>
+            上海孚界
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LHG">
+            <summary>
+            深圳联赫
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.BSC">
+            <summary>
+            深圳德启
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MAD">
+            <summary>
+            上海翼瀚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JHL">
+            <summary>
+            深圳杰航
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DWE">
+            <summary>
+            浙江多维
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HME">
+            <summary>
+            上海黑猫
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LXL">
+            <summary>
+            深圳领讯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GTF">
+            <summary>
+            深圳柏威
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LYE">
+            <summary>
+            深圳龙缘
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.XRZ">
+            <summary>
+            星锐国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CDX">
+            <summary>
+            广州成达国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JYF">
+            <summary>
+            广州佳赢国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.KOM">
+            <summary>
+            深圳可蒙国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YYT">
+            <summary>
+            厦门易达美速运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PGA">
+            <summary>
+            深圳市派格通运货运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HNC">
+            <summary>
+            河南航投物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AOY">
+            <summary>
+            澳门澳运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FSG">
+            <summary>
+            浙江飞速
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HMG">
+            <summary>
+            福建黄马褂
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.STA">
+            <summary>
+            广州世通国际货运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.QYE">
+            <summary>
+            上海前雨货运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RBL">
+            <summary>
+            深圳润百国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YDP">
+            <summary>
+            深圳易德供应链
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.STT">
+            <summary>
+            杭州施塔特国际货运
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.THG">
+            <summary>
+            深圳挺好物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JBF">
+            <summary>
+            飞盒跨境（杭州）
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.LME">
+            <summary>
+            六脉速运跨境物流（深圳）
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.GAE">
+            <summary>
+            深圳盖亚国际物流
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HSI">
+            <summary>
+            广州华昇国际供应链
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.QYN">
+            <summary>
+            深圳市青云物流供应链
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JXC">
+            <summary>
+            上海驹隙国际物流有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.RHM">
+            <summary>
+            深圳卉马国际货运代理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CHE">
+            <summary>
+            深圳市琪悦物流科技有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.NBT">
+            <summary>
+            深圳市南北通国际货运代理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.HQE">
+            <summary>
+            深圳市航球国际货运代理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FHE">
+            <summary>
+            深圳市原飞航物流有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.CBO">
+            <summary>
+            广东跨境在线供应链管理有限公司	
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.AML">
+            <summary>
+            艾姆勒国际物流（深圳）有限责任公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ELX">
+            <summary>
+            郑州一来国际物流有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.ZYC">
+            <summary>
+            中国快递服务有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YFM">
+            <summary>
+            义乌泛美供应链管理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SAF">
+            <summary>
+            义乌市吉飞国际货运代理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.PSJ">
+            <summary>
+            广州派速捷信息科技有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DYE">
+            <summary>
+            深圳前海德远现代物流有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.JMW">
+            <summary>
+            深圳市巨门跨境物流科技有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.FAH">
+            <summary>
+            深圳市发个货物流科技有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.DTD">
+            <summary>
+            深圳一站到岸供应链管理有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.MYD">
+            <summary>
+            广州满壹滴快递供应链有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.SST">
+            <summary>
+            深圳市速宝通科技有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.WMB">
+            <summary>
+            深圳市万盟云仓仓储服务有限公司
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YQTest3">
+            <summary>
+            17模拟运输商，YQ运输商
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YQTest2">
+            <summary>
+            17模拟运输商，发入
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierType.YQTest">
+            <summary>
+            17模拟运输商，发出
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.AdapterMode">
+            <summary>
+            对接类型
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.AdapterMode.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.AdapterMode.First">
+            <summary>
+            尾程对接模式
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.AdapterMode.Full">
+            <summary>
+            全程对接
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.AdapterMode.Snail">
+            <summary>
+            普通平邮
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.CountryType">
+            <summary>
+            国家类型
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Afghan">
+            <summary>
+            阿富汗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Albania">
+            <summary>
+            阿尔巴尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Algeria">
+            <summary>
+            阿尔及利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Andorra">
+            <summary>
+            安道尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Angola">
+            <summary>
+            安哥拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Antarctica">
+            <summary>
+            南极洲
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.AntiguaAndBarbuda">
+            <summary>
+            安提瓜和巴布达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Argentina">
+            <summary>
+            阿根廷
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Armenia">
+            <summary>
+            亚美尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Australia">
+            <summary>
+            澳大利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Austria">
+            <summary>
+            奥地利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Azerbaijan">
+            <summary>
+            阿塞拜疆
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bahamas">
+            <summary>
+            巴哈马
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bahrain">
+            <summary>
+            巴林
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bangladesh">
+            <summary>
+            孟加拉国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Barbados">
+            <summary>
+            巴巴多斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Belarus">
+            <summary>
+            白俄罗斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Belgium">
+            <summary>
+            比利时
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Belize">
+            <summary>
+            伯利兹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Benin">
+            <summary>
+            贝宁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bhutan">
+            <summary>
+            不丹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bolivia">
+            <summary>
+            玻利维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bosnia">
+            <summary>
+            波黑
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Botswana">
+            <summary>
+            博茨瓦纳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Brazil">
+            <summary>
+            巴西
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Brunei">
+            <summary>
+            文莱
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bulgaria">
+            <summary>
+            保加利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.BurkinaFaso">
+            <summary>
+            布基纳法索
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Burundi">
+            <summary>
+            布隆迪
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.China">
+            <summary>
+            中国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Cambodia">
+            <summary>
+            柬埔寨
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Cameroon">
+            <summary>
+            喀麦隆
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Canada">
+            <summary>
+            加拿大
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.CapeVerde">
+            <summary>
+            佛得角
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.CentralAfricanRepublic">
+            <summary>
+            中非共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Chile">
+            <summary>
+            智利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Coast">
+            <summary>
+            科特迪瓦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Colombia">
+            <summary>
+            哥伦比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Comoros">
+            <summary>
+            科摩罗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Congo">
+            <summary>
+            刚果共和国,刚果,刚果布
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.CongoDR">
+            <summary>
+            刚果民主共和国,刚果金
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.CookIslands">
+            <summary>
+            库克群岛[新西兰],纽埃
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.CostaRica">
+            <summary>
+            哥斯达黎加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Croatia">
+            <summary>
+            克罗地亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Cuba">
+            <summary>
+            古巴
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Cyprus">
+            <summary>
+            塞浦路斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Czech">
+            <summary>
+            捷克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Chad">
+            <summary>
+            乍得
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Denmark">
+            <summary>
+            丹麦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Djibouti">
+            <summary>
+            吉布提
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Dominica">
+            <summary>
+            多米尼克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Dominican">
+            <summary>
+            多米尼加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ecuador">
+            <summary>
+            厄瓜多尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Egypt">
+            <summary>
+            埃及
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Emirates">
+            <summary>
+            阿联酋
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Estonia">
+            <summary>
+            爱沙尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ethiopia">
+            <summary>
+            埃塞俄比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Eritrea">
+            <summary>
+            厄立特里亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.EquatorialGuinea">
+            <summary>
+            赤道几内亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.EastTimor">
+            <summary>
+            东帝汶
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Fiji">
+            <summary>
+            斐济
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Finland">
+            <summary>
+            芬兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.France">
+            <summary>
+            法国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Gabon">
+            <summary>
+            加蓬
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Gambia">
+            <summary>
+            冈比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Georgia">
+            <summary>
+            格鲁吉亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Germany">
+            <summary>
+            德国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ghana">
+            <summary>
+            加纳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Greece">
+            <summary>
+            希腊
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Grenada">
+            <summary>
+            格林纳达[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Guatemala">
+            <summary>
+            危地马拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Guinea">
+            <summary>
+            几内亚共和国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Guyana">
+            <summary>
+            圭亚那
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.GuineaBissau">
+            <summary>
+            几内亚比绍
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.HongKong">
+            <summary>
+            香港
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Haiti">
+            <summary>
+            海地
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Honduras">
+            <summary>
+            洪都拉斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Hungary">
+            <summary>
+            匈牙利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Iceland">
+            <summary>
+            冰岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.India">
+            <summary>
+            印度
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Indonesia">
+            <summary>
+            印度尼西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Iran">
+            <summary>
+            伊朗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ireland">
+            <summary>
+            爱尔兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Israel">
+            <summary>
+            以色列
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Italy">
+            <summary>
+            意大利
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Iraq">
+            <summary>
+            伊拉克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Jamaica">
+            <summary>
+            牙买加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Japan">
+            <summary>
+            日本
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Jordan">
+            <summary>
+            约旦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kazakhstan">
+            <summary>
+            哈萨克斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kenya">
+            <summary>
+            肯尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kingdom">
+            <summary>
+            英国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kiribati">
+            <summary>
+            基里巴斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Korea">
+            <summary>
+            韩国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.KoreaDPR">
+            <summary>
+            朝鲜
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kosovo">
+            <summary>
+            科索沃
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kuwait">
+            <summary>
+            科威特
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Kyrgyzstan">
+            <summary>
+            吉尔吉斯斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Lao">
+            <summary>
+            老挝
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Latvia">
+            <summary>
+            拉脱维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Lebanon">
+            <summary>
+            黎巴嫩
+            </summary>        
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Lesotho">
+            <summary>
+            莱索托
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Liberia">
+            <summary>
+            利比里亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Libya">
+            <summary>
+            利比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Liechtenstein">
+            <summary>
+            列支敦士登
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Lithuania">
+            <summary>
+            立陶宛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Lucia">
+            <summary>
+            圣卢西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Luxembourg">
+            <summary>
+            卢森堡
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Macau">
+            <summary>
+            澳门
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Macedonia">
+            <summary>
+            马其顿
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Madagascar">
+            <summary>
+            马达加斯加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Malawi">
+            <summary>
+            马拉维
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Malaysia">
+            <summary>
+            马来西亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Maldives">
+            <summary>
+            马尔代夫
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mali">
+            <summary>
+            马里
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Malta">
+            <summary>
+            马耳他
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Marshall">
+            <summary>
+            马绍尔群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mauritania">
+            <summary>
+            毛里塔尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mauritius">
+            <summary>
+            毛里求斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mexico">
+            <summary>
+            墨西哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Micronesia">
+            <summary>
+            密克罗尼西亚联邦,加罗林群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Moldova">
+            <summary>
+            摩尔多瓦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Monaco">
+            <summary>
+            摩纳哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mongolia">
+            <summary>
+            蒙古
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Montenegro">
+            <summary>
+            黑山
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Morocco">
+            <summary>
+            摩洛哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Mozambique">
+            <summary>
+            莫桑比克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Myanmar">
+            <summary>
+            缅甸
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Namibia">
+            <summary>
+            纳米比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Nauru">
+            <summary>
+            瑙鲁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Nepal">
+            <summary>
+            尼泊尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Netherlands">
+            <summary>
+            荷兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.NewZealand">
+            <summary>
+            新西兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Nicaragua">
+            <summary>
+            尼加拉瓜
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Norway">
+            <summary>
+            挪威
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Niger">
+            <summary>
+            尼日尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Nigeria">
+            <summary>
+            尼日利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Oman">
+            <summary>
+            阿曼
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Pakistan">
+            <summary>
+            巴基斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Palestine">
+            <summary>
+            巴勒斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Panama">
+            <summary>
+            巴拿马
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.PapuaNewGuinea">
+            <summary>
+            巴布亚新几内亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Paraguay">
+            <summary>
+            巴拉圭
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Peru">
+            <summary>
+            秘鲁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Philippines">
+            <summary>
+            菲律宾
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Poland">
+            <summary>
+            波兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Portugal">
+            <summary>
+            葡萄牙
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Palau">
+            <summary>
+            帕劳
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Qatar">
+            <summary>
+            卡塔尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Romania">
+            <summary>
+            罗马尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Russia">
+            <summary>
+            俄罗斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Rwanda">
+            <summary>
+            卢旺达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SaintVincentAndTheGrenadines">
+            <summary>
+            圣文森特和格林纳丁斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Salvador">
+            <summary>
+            萨尔瓦多
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SanMarino">
+            <summary>
+            圣马力诺
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SaoTomePrincipe">
+            <summary>
+            圣多美和普林西比
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SaudiArabia">
+            <summary>
+            沙特阿拉伯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Senegal">
+            <summary>
+            塞内加尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Serbia">
+            <summary>
+            塞尔维亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Seychelles">
+            <summary>
+            塞舌尔
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SierraLeone">
+            <summary>
+            塞拉利昂
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Singapore">
+            <summary>
+            新加坡
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Slovakia">
+            <summary>
+            斯洛伐克
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Slovenia">
+            <summary>
+            斯洛文尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SolomonIslands">
+            <summary>
+            所罗门群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SouthAfrica">
+            <summary>
+            南非
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Spain">
+            <summary>
+            西班牙,加那利群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SprLanka">
+            <summary>
+            斯里兰卡
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Sudan">
+            <summary>
+            苏丹
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Suriname">
+            <summary>
+            苏里南
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Swaziland">
+            <summary>
+            斯威士兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Sweden">
+            <summary>
+            瑞典
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Switzerland">
+            <summary>
+            瑞士
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Syrian">
+            <summary>
+            叙利亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SaintKittsNevis">
+            <summary>
+            圣基茨和尼维斯,圣克里斯托弗
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SamoaWestern">
+            <summary>
+            西萨摩亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Somali">
+            <summary>
+            索马里
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Scotland">
+            <summary>
+            苏格兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SouthOssetia">
+            <summary>
+            南奥塞梯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Taiwan">
+            <summary>
+            台湾
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Tajikistan">
+            <summary>
+            塔吉克斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Tanzania">
+            <summary>
+            坦桑尼亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Thailand">
+            <summary>
+            泰国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Togo">
+            <summary>
+            多哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.TonGa">
+            <summary>
+            汤加
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.TrinidadAndTobago">
+            <summary>
+            特立尼达和多巴哥
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Tuvalu">
+            <summary>
+            图瓦卢
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Tunisia">
+            <summary>
+            突尼斯
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Turkey">
+            <summary>
+            土耳其
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Turkmenistan">
+            <summary>
+            土库曼斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Uganda">
+            <summary>
+            乌干达
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ukraine">
+            <summary>
+            乌克兰
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Uzbekistan">
+            <summary>
+            乌兹别克斯坦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Uruguay">
+            <summary>
+            乌拉圭
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Usa">
+            <summary>
+            美国
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Vanuatu">
+            <summary>
+            瓦努阿图
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Venezuela">
+            <summary>
+            委内瑞拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.VietNam">
+            <summary>
+            越南
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Vatican">
+            <summary>
+            梵蒂冈
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.WesternSahara">
+            <summary>
+            西撒哈拉
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Yemen">
+            <summary>
+            也门
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Zambia">
+            <summary>
+            赞比亚
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Zimbabwe">
+            <summary>
+            津巴布韦
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryES">
+            <summary>
+            海外领地[西班牙],巴利阿里群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryGB">
+            <summary>
+            海外领地[英国],福克兰群岛,马尔维纳斯群岛,马恩岛,蒙特塞拉特,皮特凯恩群岛,南乔治亚岛,南桑威奇群岛,特里斯坦-达库尼亚群岛,特克斯和凯科斯群岛,英属维尔京群岛,海峡群岛,金杰岛,托托拉岛,奥尔德尼岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Anguilla">
+            <summary>
+            安圭拉[英国],松布雷罗岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Ascension">
+            <summary>
+            阿森松岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Bermuda">
+            <summary>
+            百慕达[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Cayman">
+            <summary>
+            开曼群岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Gibraltar">
+            <summary>
+            直布罗陀[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Guernsey">
+            <summary>
+            根西岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.SaintHelena">
+            <summary>
+            圣赫勒拿岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Jersey">
+            <summary>
+            泽西岛[英国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryFI">
+            <summary>
+            海外领地[芬兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Aland">
+            <summary>
+            奥兰群岛[芬兰],阿赫韦南马群岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryNL">
+            <summary>
+            海外领地[荷兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Antilles">
+            <summary>
+            荷属安的列斯[荷兰],很乱
+            岛屿包括: 
+            圣尤斯特歇斯
+            圣马丁(圣马尔滕)
+            萨巴
+            博奈尔(波内赫)
+            库拉索
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Aruba">
+            <summary>
+            阿鲁巴[荷兰]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryPT">
+            <summary>
+            海外领地[葡萄牙],亚速尔,马德拉,波尔图.桑塔岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryNO">
+            <summary>
+            海外领地[挪威],布维岛,斯瓦尔巴特岛,扬马延岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryAU">
+            <summary>
+            海外领地[澳大利亚],圣诞岛,科科斯群岛,赫德岛,麦克唐纳群岛,洛德豪岛
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.NorfolkIslands">
+            <summary>
+            诺福克岛[澳大利亚]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryDK">
+            <summary>
+            海外领地[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.FaroeIslands">
+            <summary>
+            法罗群岛[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.Greenland">
+            <summary>
+            格陵兰[丹麦]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryFR">
+            <summary>
+            海外领地[法国],法属圭亚那,瓜德罗普岛,马提尼克,马约特岛,法属波利尼西亚,圣皮埃尔和密克隆,留尼汪岛,瓦利斯和富图纳群岛,科西嘉岛,法属几内亚,留尼旺,圣巴泰勒米岛,法属圣马丁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.NewCaledonia">
+            <summary>
+            新喀里多尼亚[法国]
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryUS">
+            <summary>
+            海外领地[美国],关岛,马里亚纳群岛,塞班岛,天宁岛,罗塔岛,波多黎各,美属萨摩亚群岛,美属维尔京群岛,夏威夷
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CountryType.OverseasTerritoryNZ">
+            <summary>
+            海外领地[新西兰],托克劳群岛
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.GatherState">
+            <summary>
+            采集状态
+            作者：Demon  2015/03/24
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherState.Success">
+            <summary>
+            采集成功
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherState.Error">
+            <summary>
+            采集错误,无需重试
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherState.ErrorAgain">
+            <summary>
+            采集错误,可以重试
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.GatherChannel">
+            <summary>
+            采集渠道
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Web1">
+            <summary>
+            Web1
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Web2">
+            <summary>
+            Web2
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Web3">
+            <summary>
+            Web3
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.App1">
+            <summary>
+            App1
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.App2">
+            <summary>
+            App2
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.App3">
+            <summary>
+            App3
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.App4">
+            <summary>
+            App4
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.App5">
+            <summary>
+            App5
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Api1">
+            <summary>
+            Api1
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Api2">
+            <summary>
+            Api2
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.GatherChannel.Api3">
+            <summary>
+            Api3
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.InfoState">
+            <summary>
+            信息状态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.None">
+            <summary>
+            无法识别,无法跟踪
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.Normal">
+            <summary>
+            正常查有信息
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.Null">
+            <summary>
+            尚无信息
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.WebError">
+            <summary>
+            网站错误(网络访问方面错误)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.ProcessError">
+            <summary>
+            处理错误(程序编码错误)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.ServiceError">
+            <summary>
+            查询错误(可以正常访问网站,但无法查询)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.CacheWebError">
+            <summary>
+            使用缓存对象(对应WebError)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.CacheProcessError">
+            <summary>
+            使用缓存对象(对应ProcessError)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.InfoState.CacheServiceError">
+            <summary>
+            使用缓存对象(对应ServiceError)
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.CarrierSourceType">
+            <summary>
+            运输商来源
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierSourceType.None">
+            <summary>
+            未匹配到运输商
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierSourceType.FromRules">
+            <summary>
+            根据规则分析得到
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.CarrierSourceType.FromUserSpecify">
+            <summary>
+            用户指定运输商
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.LanguageType">
+            <summary>
+            语言枚举
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.None">
+            <summary>
+            自动或不翻译
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ar">
+            <summary>
+            阿拉伯语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Bg">
+            <summary>
+            保加利亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ca">
+            <summary>
+            加泰罗尼亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Zh_Chs">
+            <summary>
+            简体中文
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Zh_Cht">
+            <summary>
+            繁体中文
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Cs">
+            <summary>
+            捷克语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Da">
+            <summary>
+            丹麦语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Nl">
+            <summary>
+            荷兰语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.En">
+            <summary>
+            英语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Et">
+            <summary>
+            爱沙尼亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Fi">
+            <summary>
+            芬兰语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Fr">
+            <summary>
+            法语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.De">
+            <summary>
+            德语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.El">
+            <summary>
+            希腊语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ht">
+            <summary>
+            海地克里奥尔语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.He">
+            <summary>
+            希伯来语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Hi">
+            <summary>
+            印地语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Hu">
+            <summary>
+            匈牙利语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Id">
+            <summary>
+            印度尼西亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.It">
+            <summary>
+            意大利语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ja">
+            <summary>
+            日语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ko">
+            <summary>
+            韩语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Lv">
+            <summary>
+            拉脱维亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Lt">
+            <summary>
+            立陶宛语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.No">
+            <summary>
+            挪威语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Pl">
+            <summary>
+            波兰语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Pt">
+            <summary>
+            葡萄牙语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ro">
+            <summary>
+            罗马尼亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ru">
+            <summary>
+            俄语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sk">
+            <summary>
+            斯洛伐克语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sl">
+            <summary>
+            斯洛文尼亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Es">
+            <summary>
+            西班牙语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sv">
+            <summary>
+            瑞典语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Th">
+            <summary>
+            泰语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Tr">
+            <summary>
+            土耳其语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Uk">
+            <summary>
+            乌克兰语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Vi">
+            <summary>
+            越南语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Mww">
+            <summary>
+            白苗文
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Tlh">
+            <summary>
+            克林贡语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ms">
+            <summary>
+            马来语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Mt">
+            <summary>
+            马耳他语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Fa">
+            <summary>
+            波斯语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ur">
+            <summary>
+            乌尔都语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Cy">
+            <summary>
+            威尔士语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Bs">
+            <summary>
+            波斯尼亚语(拉丁语)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Hr">
+            <summary>
+            克罗地亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sr_Cyrl">
+            <summary>
+            塞尔维亚语(西里尔文)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sr_Latn">
+            <summary>
+            塞尔维亚语(拉丁文)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Af">
+            <summary>
+            南非语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Bn">
+            <summary>
+            孟加拉语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Fj">
+            <summary>
+            斐济语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Fil">
+            <summary>
+            菲律宾语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Is">
+            <summary>
+            冰岛语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sw">
+            <summary>
+            斯瓦希里语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Mg">
+            <summary>
+            马达加斯加语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Yua">
+            <summary>
+            尤卡坦玛雅语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Otq">
+            <summary>
+            克雷塔罗奥托米语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Sm">
+            <summary>
+            萨摩亚语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ty">
+            <summary>
+            大溪地语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Ta">
+            <summary>
+            泰米尔语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.Te">
+            <summary>
+            泰卢固语
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.LanguageType.To">
+            <summary>
+            汤加语
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.NeedParmType">
+            <summary>
+            需要单号参数类型
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.NeedParmType.Multiple">
+            <summary>
+            存在多种可能
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.PackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.None">
+            <summary>
+            查询不到
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.Shipment">
+            <summary>
+            运输途中
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.Warn">
+            <summary>
+            危险
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.NoticeLeft">
+            <summary>
+            到达待取
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.DeliveryFailure">
+            <summary>
+            投递失败
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.Delivered">
+            <summary>
+            成功签收
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.PackageState.Returned">
+            <summary>
+            退件
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.ResultType">
+            <summary>
+            查询结果方式
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.ResultType.None">
+            <summary>
+            不能查询
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.ResultType.Unknow">
+            <summary>
+            可以查询,未知是否有妥投状态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.ResultType.HasDelivered">
+            <summary>
+            可以查询,有妥投状态
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.ResultType.NoDelivered">
+            <summary>
+            可以查询,无妥投状态
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Enums.WebErrorType">
+            <summary>
+            采集库错误类型
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.Other">
+            <summary>
+            其它错误
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.ReadHtmlError">
+            <summary>
+            采集错误
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.ProcessError">
+            <summary>
+            分割错误
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.DateTimeError">
+            <summary>
+            日期错误
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NoData">
+            <summary>
+            分割不到数据
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NoStartDate">
+            <summary>
+            没有收寄时间
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NoCountry">
+            <summary>
+            查找不到国家
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NoCarrier">
+            <summary>
+            查找不到第二运输商
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NoIncludeMultiple">
+            <summary>
+            指定的不存在于目前任何一种可能
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.UnknownWebType">
+            <summary>
+            未知单号规则对应的网站
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.NotEqualCheck">
+            <summary>
+            指定的网站类型和判断的不相同
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.ChildMaybeError">
+            <summary>
+            子站可能识别错误
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.ChildMaybeHas">
+            <summary>
+            子站识别不到
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.EventNullData">
+            <summary>
+            事件没有数据
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Enums.WebErrorType.YQCarrier">
+            <summary>
+            YQ运输商没有按照约定
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.EventItem">
+            <summary>
+            单事件项模型
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dateTime">发生时间</param>
+            <param name="content">事件内容</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dateTime">发生时间</param>
+            <param name="location">发生地点</param>
+            <param name="content">事件内容</param>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dateTime">发生时间</param>
+            <param name="location">发生地点</param>
+            <param name="locationEx">发生地点扩展</param>
+            <param name="content">事件内容</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Index">
+            <summary>
+            事件索引
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.DateTime">
+            <summary>
+            发生时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Coordinate">
+            <summary>
+            发生坐标(为地图预留)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Location">
+            <summary>
+            发生地点
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.LocationEx">
+            <summary>
+            发生地点扩展
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Content">
+            <summary>
+            事件内容
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Tag">
+            <summary>
+            分割时候临时存放
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.Hash">
+            <summary>
+            事件哈希, 暂不启用预留先写逻辑
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.State">
+            <summary>
+            事件状态, 暂不启用预留先写逻辑
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.IsDomain">
+            <summary>
+            是否在国内, 0国内, 1国外, -1不确定
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.IsExport">
+            <summary>
+            是否出口或国内, 0进口/国外, 1出口/国内, -1不确定
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.EventItem.StateValue">
+            <summary>
+            事件状态值, 原始字符串用于检查状态
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.ToDateTime">
+            <summary>
+            获取发生时间
+            </summary>
+            <returns>发生时间</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.EventItem.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.GContext">
+            <summary>
+            采集上下文
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GContext.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.Number">
+            <summary>
+            单号
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.Parm">
+            <summary>
+            单号参数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.IsSend">
+            <summary>
+            是否为发件运输商
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.MainStartDate">
+            <summary>
+            发件国家起始时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.FullNumber">
+            <summary>
+            完全单号,包含单号参数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.Proxy">
+            <summary>
+            使用的代理(默认不使用代理)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.UseMultiProxy">
+            <summary>
+            使用多代理模式(默认false)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.Timeout">
+            <summary>
+            查询超时(毫秒,默认45秒)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.IsMultiProxyTest">
+            <summary>
+            是否多代理测试(默认false)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GContext.Channel">
+            <summary>
+            采集渠道(默认Default)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GContext.CreateWebProxy">
+            <summary>
+            创建代理
+            </summary>
+            <returns>代理对象</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GContext.ToDataString">
+            <summary>
+            转换为文本数据
+            </summary>
+            <returns>文本数据</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GContext.FromDataString(System.String[])">
+            <summary>
+            将文本数据导入到对象
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.GResult">
+            <summary>
+            采集处理状态结果,两个步骤使用到
+            1是采集完成后无异常返回,此时将有Html
+            2是分割完成后无异常返回,此时将有Html,并且有TrackResultSingle
+            作者：Demon  2015/03/24
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.GatherState">
+            <summary>
+            采集状态
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.InfoState">
+            <summary>
+            信息状态
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.TipObj">
+            <summary>
+            前台提示对象
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.Html">
+            <summary>
+            采集到的Html
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.Exception">
+            <summary>
+            采集到的网络异常, 没有异常为Null
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.GResult.TrackResult">
+            <summary>
+            处理完的结果
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.CreateFromResult(YQTrackV6.WebLib.Model.Models.TrackResultSingle,YQTrackV6.WebLib.Model.Enums.InfoState,System.String)">
+            <summary>
+            创建对象,用于已经分割成功,得到结果
+            </summary>
+            <param name="trackResult">处理完的结果</param>
+            <param name="infoState">信息状态</param>
+            <param name="html">采集到的Html</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.CreateFromState(YQTrackV6.WebLib.Model.Enums.GatherState,YQTrackV6.WebLib.Model.Enums.InfoState)">
+            <summary>
+            创建对象,用于中间各种异常返回
+            </summary>
+            <param name="gatherState">采集状态</param>
+            <param name="infoState">信息状态</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.CreateFromWebError(YQTrackV6.WebLib.Model.Enums.GatherState,System.Exception)">
+            <summary>
+            创建对象,用于网络异常返回
+            </summary>
+            <param name="gatherState">采集状态</param>
+            <param name="ex">异常对象</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.CreateFromTipObj(System.String)">
+            <summary>
+            创建对象,用于有需要参数异常
+            </summary>
+            <param name="tipObj">前台提示对象</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.GResult.CreateFromHtml(System.String)">
+            <summary>
+            创建对象,用于第一步采集完成
+            </summary>
+            <param name="html">采集到的Html</param>
+            <returns>对象</returns>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.TrackExtInfo">
+            <summary>
+            单号扩展信息, 所有时间均不使用序列化为本地时间
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.TrackExtInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.PackageStateEx">
+            <summary>
+            包裹扩展状态
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TranNumber">
+            <summary>
+            原始单号
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TranCarrier">
+            <summary>
+            原始运输商
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TranHide">
+            <summary>
+            原始运输商是否隐藏
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFFirstTime">
+            <summary>
+            第一事件时间, 第一条事件的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFPreTime">
+            <summary>
+            预录入时间, 第一条明确为预录入的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFPostTime">
+            <summary>
+            收寄时间, 第一条明确为收寄的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFCStartTime">
+            <summary>
+            (计算)单号起始时间, 单号起始时间, 用于计算与统计
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFCStorageTime">
+            <summary>
+            (计算)数据库入库时间, 用于数据库分区, 可代表单是哪个月份
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFRStartTimeRight">
+            <summary>
+            (计算)单号起始时间是否正确, 预录入时间是否小于等于收寄时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFRFirstTimeRight">
+            <summary>
+            (计算)第一事件时间是否正确, 要么等于预录入时间, 要么等于收寄时间, 如果不正确意味着入库时间也不正确
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TFREventInfoRight">
+            <summary>
+            (计算)事件是否错误, 如果第一事件距离预录入或揽收太久, 或距离最后事件太久
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TDLastTime">
+            <summary>
+            最后事件时间, 最后一条事件的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TDFirstPickupTime">
+            <summary>
+            第一试投时间, 第一条试投事件的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TDDeliveredTime">
+            <summary>
+            妥投时间, 妥投事件的事件时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TDRFirstPickupTime">
+            <summary>
+            (计算)第一试投时间是否正确
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.TDRDeliveredTime">
+            <summary>
+            (计算)妥投时间是否正确
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.EventHashList">
+            <summary>
+            事件哈希列表
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackExtInfo.EventStateList">
+            <summary>
+            事件状态列表
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.TrackResultSingle">
+            <summary>
+            单站查询结果
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.WebLib.Model.Models.TrackResultSingle.MaxDateTimeValue">
+            <summary>
+            最大日期值,为了避免数据库错误
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.TrackResultSingle.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.PackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.LanguageCode">
+            <summary>
+            语言类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.CountryMain">
+            <summary>
+            发件国家描述
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.CountryChild">
+            <summary>
+            目的国家描述
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.CarrierSecond">
+            <summary>
+            第二运输商描述
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.Events">
+            <summary>
+            事件集合,顺序全部以降序存放
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.TrackResultSingle.ExtInfo">
+            <summary>
+            单号扩展信息
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.TrackResultSingle.ToDataString">
+            <summary>
+            转换为文本数据
+            </summary>
+            <returns>文本数据</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.TrackResultSingle.GetHashCode">
+            <summary>
+            重写该类的HanshCode,用来进行比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.TrackResultSingle.EqualsData(YQTrackV6.WebLib.Model.Models.TrackResultSingle)">
+            <summary>
+            确定指定的对象是否等于当前对象
+            </summary>
+            <param name="objB">要与当前对象进行比较的对象</param>
+            <returns>是否相等</returns>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.Models.ProxyModel">
+            <summary>
+            代理模型
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.ProxyModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.ProxyModel.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="proxyAddress">代理地址</param>
+            <param name="proxyPort">代理端口</param>
+            <param name="proxyUser">代理用户</param>
+            <param name="proxyPassword">代理密码</param>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.ProxyModel.ProxyAddress">
+            <summary>
+            代理地址
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.ProxyModel.ProxyPort">
+            <summary>
+            代理端口
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.ProxyModel.ProxyUser">
+            <summary>
+            代理用户
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.ProxyModel.ProxyPassword">
+            <summary>
+            代理密码
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.Models.ProxyModel.FullAddress">
+            <summary>
+            完整信息
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.Models.ProxyModel.Parse(System.String)">
+            <summary>
+            将字符串粘贴为代理对象(格式:"地址,端口,用户,密码")
+            </summary>
+            <param name="str">格式字符串</param>
+            <returns>代理对象</returns>
+        </member>
+        <member name="T:YQTrackV6.WebLib.Model.WebLibExtension">
+            <summary>
+            枚举扩展方法
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropCode(YQTrackV6.WebLib.Model.Enums.LanguageType)">
+            <summary>
+            Bing提交参数
+            </summary>
+            <param name="value">LanguageType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropSuffix(YQTrackV6.WebLib.Model.Enums.CountryType)">
+            <summary>
+            后缀
+            </summary>
+            <param name="value">CountryType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropIsImplement(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            是否实现查询
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropResultType(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            查询结果方式
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropUrl(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            查询地址
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropLevel(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            星级
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropLanguageCode(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            语言
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropNeedTest(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            需要测试
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropIsSearchCountryBeLike(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            查找国家是否模糊搜索
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropRecordNumber(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            是否记录主站运输商与用户指定不一致
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropRecordChildMaybeHas(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            是否记录子站运输商可能存在
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropOnlySend(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            是否只发出
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropNotNeedCarrierSecond(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            是否不需要第二运输商
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropPrefix(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            运输商前缀集合
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropYQ(YQTrackV6.WebLib.Model.Enums.CarrierType,System.String)">
+            <summary>
+            是否YQ运输商
+            </summary>
+            <param name="value">物流商类型</param>
+            <param name="number">单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropAdapterMode(YQTrackV6.WebLib.Model.Enums.CarrierType,System.String)">
+            <summary>
+            对接模式
+            </summary>
+            <param name="value">物流商类型</param>
+            <param name="number">单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropRule(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            单号规则集合
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropDestination(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            目的国家集合
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropOriginDefault(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            默认发件国家
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropDestinationDefault(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            默认目的国家
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropSuffixDefault(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            默认后缀
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.PropSuffix(YQTrackV6.WebLib.Model.Enums.CarrierType)">
+            <summary>
+            后缀集合
+            </summary>
+            <param name="value">CarrierType</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.ReadEnum``1">
+            <summary>
+            读取枚举值
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>值集合</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.ReadDictProp``3(System.Action{System.Collections.Generic.Dictionary{``0,``2},``0,``1})">
+            <summary>
+            读取枚举属性值
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <typeparam name="TAttr">属性类型</typeparam>
+            <typeparam name="TValue">值类型</typeparam>
+            <param name="action">执行添加方法</param>
+            <returns>值集合</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.ReadAttr``2">
+            <summary>
+            读取枚举属性类, 如果不存在值将为Null
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <typeparam name="TAttr">属性类型</typeparam>
+            <returns>属性对象集合</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.ReadDictProps``2">
+            <summary>
+            读取枚举属性值
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <typeparam name="TAttr">属性类型</typeparam>
+            <returns>值集合</returns>
+        </member>
+        <member name="M:YQTrackV6.WebLib.Model.WebLibExtension.ReadAttrs``2">
+            <summary>
+            读取枚举属性类, 如果不存在值将为空集合
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <typeparam name="TAttr">属性类型</typeparam>
+            <returns>属性对象集合</returns>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.WebLibExtension.DictCarrier">
+            <summary>
+            运输商集合, None除外
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.WebLibExtension.DictPropRule">
+            <summary>
+            单号规则集合
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.WebLibExtension.DictPropRuleForNumberLength">
+            <summary>
+            单号规则集合, 单号长度为字典
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.WebLibExtension.DictPropDestination">
+            <summary>
+            目的国家集合
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.WebLib.Model.WebLibExtension.DictPropCarrierSuffix">
+            <summary>
+            后缀集合
+            </summary>
+        </member>
+    </members>
+</doc>

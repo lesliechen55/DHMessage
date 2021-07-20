@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.UserSecurity</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld">
+            <summary>
+            旧的用户缓存帮助
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.GetUid(System.String)">
+            <summary>
+            获取用户Id
+            </summary>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.GetUid(System.String,System.Boolean@)">
+            <summary>
+            获取用户Id
+            </summary>
+            <param name="sessionId"></param>
+            <param name="isExist">是否存在UserId，如果缓存存在userId，但值为0时，当作不存在</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.SetUid(System.String,System.Int64,System.Boolean)">
+            <summary>
+            缓存用户ID
+            </summary>
+            <param name="sessionId"></param>
+            <param name="userId"></param>
+            <param name="isApp"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.SetUid(System.String,System.Int64)">
+            <summary>
+            缓存用户ID
+            </summary>
+            <param name="sessionId"></param>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.SetAnonymousUid(System.String)">
+            <summary>
+            缓存匿名用户ID
+            </summary>
+            <param name="sessionId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.DelUid(System.String)">
+            <summary>
+            删除SessionId
+            </summary>
+            <param name="sessionId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.SetLoginUserInfo(YQTrack.Backend.BaseModel.UserInfoDTO,System.Boolean)">
+            <summary>
+            缓存登录的用户信息
+            </summary>
+            <param name="dto">用户信息Dto</param>
+            <param name="isApp">是否是手机端</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.SetLoginUserInfo(System.Int64,YQTrack.Backend.BaseModel.UserInfoDTO)">
+            <summary>
+            缓存登录的用户信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="dto">用户信息Dto</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.GetLoginUserInfo(System.Int64)">
+            <summary>
+            获取登录用户信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.GetLoginUserInfoBySessionId(System.String)">
+            <summary>
+            /获取登录用户信息
+            </summary>
+            <param name="sessionId">回话Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahceOld.ConvertUserInfo(YQTrack.Backend.BaseModel.UserInfoDTO)">
+            <summary>
+            转换新Userinfo为旧的UserInfo，没有用简短（JsonProperty）key代替
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce">
+            <summary>
+            新的用户缓存帮助
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUid(System.String)">
+            <summary>
+            获取用户Id
+            </summary>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUid(System.String,System.Boolean@)">
+            <summary>
+            获取用户Id
+            </summary>
+            <param name="sessionId"></param>
+            <param name="isExist">是否存在UserId，如果缓存存在userId，但值为0时，当作不存在</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.SetUid(System.String,System.Int64,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            缓存用户ID
+            </summary>
+            <param name="sessionId"></param>
+            <param name="userId"></param>
+            <param name="sourceType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.SetAnonymousUid(System.String)">
+            <summary>
+            缓存匿名用户ID
+            </summary>
+            <param name="sessionId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.DelUid(System.String)">
+            <summary>
+            删除SessionId
+            </summary>
+            <param name="sessionId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.DelUserInfoCache(System.Int64)">
+            <summary>
+            删除UserInfo的缓存
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.SetLoginUserInfo(YQTrack.Backend.BaseModel.UserInfoDTO,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            缓存登录的用户信息
+            </summary>
+            <param name="dto">用户信息Dto</param>
+            <param name="sourceType">sourceType</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetLoginUserInfo(System.Int64)">
+            <summary>
+            获取登录用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetLoginUserInfoBySessionId(System.String)">
+            <summary>
+            /获取登录用户信息
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <returns>用户信息</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.BuildSessionKey(System.String)">
+            <summary>
+            构建SessionKey
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <returns>SessionKey</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.BuildUserIdKey(System.Int64)">
+            <summary>
+            构建UserIdKey
+            </summary>
+            <param name="userId">userId</param>
+            <returns>UserIdKey</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUserPropertyNameValue(System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取User指定属性的值
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="fields">UserInfoDTO属性字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUserPropertyNameValueDic(System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取User指定属性的值
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="fields">UserInfoDTO属性字段</param>
+            <returns>返回的字典集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.SetUserPropertyNameValue(System.Int64,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            设置用户单个属性的缓存信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="keyValues">设置的 UserInfoDTO属性字段和值</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.SetUidCacheTime(System.String,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            设置Uid的缓存时间，延长过期时间
+            </summary>
+            <param name="sessionId"></param>
+            <param name="sourceType"></param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUidCacheTimeHour(YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            根据不同来源，获取UID的缓存时间 Hour
+            小时计算
+            </summary>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUidCacheTime(YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            获取会员Id缓存时间
+            </summary>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUidCookieExpires(YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            根据不同来源，返回Cookie的过期时间（天数）
+            </summary>
+            <param name="sourceType">来源</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.Cache.UserInfoCahce.GetUserLoginCache(YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            根据来源，获取用户信息的缓存时间
+            </summary>
+            <param name="sourceType">来源</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository">
+            <summary>
+            User数据操作层
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository.GetUserInfoByUserId(System.Int64)">
+            <summary>
+            根据UserId获取用户信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns>用户信息</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository.GetUserIdBySessinId(System.String,System.DateTime)">
+            <summary>
+            通过SessionId获取UserId
+            </summary>
+            <param name="sessionId">客户端ID</param>
+            <param name="expiresTime">缓存计划过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository.GetUserIdBySessinId(System.String,System.DateTime,System.Int64)">
+            <summary>
+            通过SessionId获取UserId
+            </summary>
+            <param name="sessionId">客户端ID</param>
+            <param name="expiresTime">缓存计划过期时间</param>
+            <param name="did">设备Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository.UpdateUserMemberLevel(System.Int64,System.Int32,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            更新用户会员等级信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="memberLevel">等级信息</param>
+            <param name="startTime">会员开始时间</param>
+            <param name="expiresTime">会员过期时间</param>
+            <param name="memberType">会员过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.DAL.UserInfoRepository.GetUserMemberInfoByUserId(System.Int64)">
+            <summary>
+            根据UserId 获取会员等级信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns>会员等级集合信息，没有返回Null</returns>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto">
+            <summary>
+                用户信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FUserId">
+            <summary>
+                ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FNodeId">
+            <summary>
+                服务器节点编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FDbNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FTableNo">
+            <summary>
+                表编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FUserRole">
+            <summary>
+                角色
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FNickname">
+            <summary>
+                昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FEmail">
+            <summary>
+                邮箱
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FState">
+            <summary>
+                注册状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FIsPay">
+            <summary>
+                是否付费
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FLanguage">
+            <summary>
+                语言
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FCountry">
+            <summary>
+                国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FPhoto">
+            <summary>
+                用户头像图片
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.DTO.UserInfoOldDto.FPasswordLevel">
+            <summary>
+                用户密码等级
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.UserSecuritySettingsHelper">
+            <summary>
+            Helper
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.UserSecuritySettingsHelper.SettingsDefault">
+            <summary>
+            User安全配置信息
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserSecuritySettingsHelper.Register">
+            <summary>
+            注册配置
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserSecuritySettingsHelper.InitUserSecurityDbConfig(YQTrack.Backend.UserSecurity.UserSecurityDBConfig)">
+            <summary>
+            初始化连接字符串配置信息
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.UserSecurityCacheBase">
+            <summary>
+            配置基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.UserSecurityCacheBase.UserSecurityDBConfig">
+            <summary>
+            用户数据库配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.UserSecurityDBConfig">
+            <summary>
+            用户数据库配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.UserSecurity.UserSecurityDBConfig.ConnectionString">
+            <summary>
+            Redis配置
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserSecurityDBConfig.CreateSample">
+            <summary>
+            创建简单数据
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserSecurityDBConfig.Validate">
+            <summary>
+            校验数据
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.UserInfoService">
+            <summary>
+            用户服务类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.IsLogin(System.String,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            是否登录
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <param name="sourceType">请求来源，默认web</param>
+            <returns>登录：true，未登录：false</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetUserId(System.String,YQTrack.Backend.Enums.SourceType,System.String)">
+            <summary>
+            通过sessionid获取UserId
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <param name="sourceType">sessionId</param>
+            <param name="did">设备Id</param>
+            <returns>UserId，未取到UserId则返回0</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetUserInfo(System.Int64,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            通过用户ID获取用户信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="sourceType">请求来源，根据不同来源，设置不同缓存天数</param>
+            <returns>用户信息，未取到用户信息则返回null</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetLoginUserInfoBySessionId(System.String,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            /获取登录用户信息
+            </summary>
+            <param name="sessionId">会话Id</param>
+            <param name="sourceType">sourceType</param>
+            <returns>用户信息</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.SetUserInfo(System.String,YQTrack.Backend.BaseModel.UserInfoDTO,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            存储Uid和UserInfoDTO
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <param name="dto">UserInfoDTO</param>
+            <param name="sourceType">请求来源</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.SetUid(System.String,System.Int64,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            缓存用户ID
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <param name="userId">用户Id</param>
+            <param name="sourceType">请求来源</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.SetLoginUserInfo(YQTrack.Backend.BaseModel.UserInfoDTO,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            缓存登录的用户信息
+            </summary>
+            <param name="dto">用户Id</param>
+            <param name="sourceType">用户信息Dto</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.DelUid(System.String)">
+            <summary>
+            删除SessionId
+            </summary>
+            <param name="sessionId">sessionId</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.DelUserInfoCache(System.Int64)">
+            <summary>
+            删除SessionId
+            </summary>
+            <param name="userId">userId</param>
+            <returns>是否删除成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.BuildUserIdKey(System.Int64)">
+            <summary>
+            构建用户缓存Key
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns>返回缓存Key</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetUserPropertyNameValue(System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取User指定属性的值
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="fields">UserInfoDTO属性字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetUserPropertyNameValueDic(System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取User指定属性的值
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="fields">UserInfoDTO属性字段</param>
+            <returns>返回的字典集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.SetUserPropertyNameValue(System.Int64,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            设置用户单个属性的缓存信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="keyValues">设置的 UserInfoDTO属性字段和值</param>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.UpdateUserMemberLevel(System.Int64,YQTrack.Backend.Enums.UserMemberLevel,System.DateTime,System.DateTime)">
+            <summary>
+            更新用户会员等级信息
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="memberLevel">等级信息</param>
+            <param name="startTime">会员开始时间</param>
+            <param name="expiresTime">会员过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.SetUidCacheTime(System.String,YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            设置Uid的缓存时间，延长过期时间
+            </summary>
+            <param name="sessionId">需要延长的回话Id</param>
+            <param name="sourceType">来源类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.UserInfoService.GetCookieUidExpires(YQTrack.Backend.Enums.SourceType)">
+            <summary>
+            根据不同来源， 获取UID的Cookie过期时间（天数）
+            </summary>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.UserSecurity.ObjextExt">
+            <summary>
+            对象扩展方法
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.UserSecurity.ObjextExt.GetPropertyName``1(System.Object,System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            获取属性名称，如何有JsonPropertyAttribute，优先获取 JsonPropertyAttribute 的 PropertyName 返回
+            </summary>
+            <typeparam name="TValue">属性返回的类型</typeparam>
+            <param name="object">对象</param>
+            <param name="propertyId">属性Id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

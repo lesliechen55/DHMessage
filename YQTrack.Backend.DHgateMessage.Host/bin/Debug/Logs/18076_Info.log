@@ -1,0 +1,140 @@
+﻿2021-07-08 17:12:47,826 [1] INFO  seller.dhgatemessage - 日志, 初始化LoggerSystem成功
+2021-07-08 17:12:47,833 [1] INFO  seller.dhgatemessage - 日志, 没有初始化LoggerRecordData, 调用记录日志将忽略
+2021-07-08 17:12:47,833 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSchedule
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnCount, Type:NumberOfItems64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessCount, Type:NumberOfItems64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailDelta, Type:CounterDelta64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessDelta, Type:CounterDelta64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailCount, Type:NumberOfItems64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnDelta, Type:CounterDelta64
+2021-07-08 17:12:47,834 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSchedule, IsSingle:False
+2021-07-08 17:12:47,960 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-08 17:12:47,965 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller"]
+2021-07-08 17:12:47,965 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-08 17:12:47,965 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-08 17:12:47,965 [1] INFO  seller.dhgatemessage - ScheduleInitialized:"DBShardingRouteFactory"
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSync
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateCount, Type:NumberOfItems64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateDelta, Type:CounterDelta64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateDelta, Type:CounterDelta64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateCount, Type:NumberOfItems64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewDelta, Type:CounterDelta64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewCount, Type:NumberOfItems64
+2021-07-08 17:12:47,971 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSync, IsSingle:True
+2021-07-08 17:12:47,985 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-08 17:12:47,986 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-08 17:12:47,987 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-08 17:12:47,989 [1] INFO  seller.dhgatemessage - TaskInitialized:"DBShardingRouteFactory"
+2021-07-08 17:12:47,999 [1] INFO  seller.dhgatemessage - InitNode:{"nodeId":"192.168.1.68_18076"}
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SqlExecError, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Reassigned, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:ProcessError, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Assigned, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Canceled, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Heartbeat, Type:NumberOfItems64
+2021-07-08 17:12:48,004 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync, IsSingle:True
+2021-07-08 17:12:48,023 [1] INFO  seller.dhgatemessage - Register:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076","taskList":["1.11.0","1.14.0","1.13.0","1.12.0"]}
+2021-07-08 17:12:48,024 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:12:48,032 [1] INFO  seller.dhgatemessage - NodeChanged:{"current":1,"lastest":0}
+2021-07-08 17:12:48,116 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.11.0"}
+2021-07-08 17:12:48,124 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.11.0"}
+2021-07-08 17:12:48,124 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:12:48,130 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.13.0"}
+2021-07-08 17:12:48,131 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.13.0"}
+2021-07-08 17:12:48,276 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:12:48,277 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:13:01,005 [10] INFO  seller.dhgatemessage - 连接建立:[{"HostName":"192.168.1.214","Port":5672,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}},{"HostName":"192.168.1.214","Port":5673,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}},{"HostName":"192.168.1.214","Port":5671,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}}]
+2021-07-08 17:13:01,093 [7] INFO  seller.dhgatemessage - 获取连接通道:1
+2021-07-08 17:13:01,108 [7] INFO  seller.dhgatemessage - 声明队列完成:{"ExchName":"seller.message.dhgate","QueueName":"seller.message.dhgate.es.11.0","AutoAck":false,"MaxConsumer":2,"ExpireTime":"01:00:00","DeadQueueName":null}
+2021-07-08 17:13:48,137 [6] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:13:48,141 [6] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.12.0"}
+2021-07-08 17:13:48,141 [6] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.12.0"}
+2021-07-08 17:13:48,153 [5] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:13:48,309 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:13:48,309 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:14:48,142 [9] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:14:48,148 [9] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.14.0"}
+2021-07-08 17:14:48,149 [9] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.14.0"}
+2021-07-08 17:14:48,162 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:14:48,167 [5] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:14:48,325 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:14:48,327 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:15:48,158 [9] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:15:48,175 [10] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:15:48,176 [5] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:15:48,336 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:15:48,338 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:16:48,192 [10] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:16:48,193 [9] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:16:48,376 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:16:48,382 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:17:48,209 [9] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:17:48,209 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:17:48,381 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:17:48,399 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:18:48,225 [16] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:18:48,225 [9] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:18:48,402 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:18:48,418 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:19:48,241 [16] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:19:48,242 [21] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:19:48,416 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:19:48,429 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:20:48,255 [10] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:20:48,256 [11] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:20:48,433 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:20:48,443 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:21:48,272 [16] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:21:48,276 [21] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:21:48,443 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:21:48,461 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:22:48,290 [10] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:22:48,290 [11] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:22:48,458 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:22:48,485 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:23:48,300 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:23:48,301 [21] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:23:48,473 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:23:48,489 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:24:48,317 [22] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:24:48,328 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:24:48,488 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:24:48,513 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:25:48,321 [3] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:25:48,334 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:25:48,505 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:25:48,526 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:26:48,332 [6] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:26:48,351 [11] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:26:48,523 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:26:48,541 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:27:48,357 [11] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:27:48,374 [10] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":14,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:27:48,548 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":13,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:27:48,559 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-08 17:28:27,039 [1] INFO  seller.dhgatemessage - NodeChanged:{"current":0,"lastest":1}
+2021-07-08 17:28:27,060 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.11.0"}
+2021-07-08 17:28:27,079 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.13.0"}
+2021-07-08 17:28:27,096 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.12.0"}
+2021-07-08 17:28:27,111 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.14.0"}
+2021-07-08 17:28:27,111 [1] INFO  seller.dhgatemessage - UnRegister:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.68_18076"}
+2021-07-08 17:28:27,111 [1] INFO  seller.dhgatemessage - ServerStopping:"DHgateMessageTaskHelper"
+2021-07-08 17:28:27,112 [1] INFO  seller.dhgatemessage - ServerStopped:"DHgateMessageTaskHelper"

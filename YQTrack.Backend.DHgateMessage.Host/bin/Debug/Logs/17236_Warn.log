@@ -1,0 +1,112 @@
+﻿2021-07-19 15:22:35,463 [7] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734622222","FShopName":"bejersey","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:22:35,463 [5] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734633333","FShopName":"romanticism_yx","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:22:35,463 [8] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734611111","FShopName":"laidadan2018","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:22:35,463 [11] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734644444","FShopName":"macabaka","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:22:35,463 [12] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734655555","FShopName":"buganbuxing","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:24:03,889 [5] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734633333","FShopName":"romanticism_yx","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()
+2021-07-19 15:24:03,913 [12] WARN  seller.dhgatemessage - SyncWarn:{"task":{"FUserId":"6572369283081568257","FShopId":"6559624990734611111","FShopName":"laidadan2018","BeforeDays":365},"methodName":"GetMessageListLoop","errorMsg":"令牌Access Token过期或不存在"}
+System.Exception: 令牌Access Token过期或不存在
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<GetMessageListLoop>d__7.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 359
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 YQTrack.Backend.DHgateMessage.DHgateMessageTaskHelper.<>c__DisplayClass6_0.<<GetMessageList>b__1>d.MoveNext() 位置 D:\Work\YQTrack.Backend.ThridPartOrderSyncService\YQTrack.Backend.ThirdPlatform\0-Src\0.4-Service\YQTrack.Backend.DHgateMessage\DHgateMessageTaskHelper.cs:行号 332
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.RetrySyntaxAsync.<>c__DisplayClass9_0.<<RetryAsync>b__1>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Polly.Retry.RetryEngine.<ImplementationAsync>d__1`1.MoveNext()

@@ -1,0 +1,3253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Seller.Model</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.BatchTask.ExportTrackBusinessDataDTO">
+            <summary>
+             导出单号任务业务数据对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.BatchTask.ExportTrackBusinessDataDTO.FileName">
+            <summary>
+             文件名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.BatchTask.ExportTrackBusinessDataDTO.FileSource">
+            <summary>
+            文件来源
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO">
+            <summary>
+            订单自动完成天数的信息配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.InvalidTime">
+            <summary>
+                无效追踪，不修改追踪号或运输商，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.NoChangeTime">
+            <summary>
+                追踪信息未发生变化，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.SuccessTime">
+            <summary>
+                成功签收的订单，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.FinishedTime">
+            <summary>
+                已完成的订单，系统将自动归档
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.PlatformOrderCompleteTime">
+            <summary>
+                平台订单完成设置，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.CompleteOrderConfigDTO.PackageLastEventDay">
+            <summary>
+                最后事件至今仍然没有任何更新，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto">
+            <summary>
+             查询DHagate平台消息记录对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.PerPage">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FShopIds">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FolderId">
+            <summary>
+            消息文件夹Id 
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.MsgTypes">
+            <summary>
+            消息类型s
+            按|分割
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.ReceiveDate">
+            <summary>
+             接收时间："2019-07-01|2019-07-01"
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.StartReceiveDate">
+            <summary>
+            开始接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.EndReceiveDate">
+            <summary>
+            结束接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.IsRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.IsFlag">
+            <summary>
+            是否标识
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.IsReplied">
+            <summary>
+            是否回复
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.IsResponseEnabled">
+            <summary>
+            是否可以回复
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.HasOrderInfo">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FUserID">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FShopAllId">
+            <summary>
+            所有有效店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgatePlatMsgRecordDto.FSubjectIds">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO">
+            <summary>
+            查询历史记录
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FUserID">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FShopAllId">
+            <summary>
+            所有有效店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FRecordIds">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.PerPage">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.SendType">
+            <summary>
+            发送标记.0：手动发送；1：自动发送
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.StartSendTime">
+            <summary>
+            消息时间开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.EndSendTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.FShopIds">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.MsgSendStatus">
+            <summary>
+            单号消息发信状态（站内信[0-未发送 1:发送中 2-发送成功 3-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.HasOrderInfo">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.DHgate.SearchDHgateHistoryMsgRecordDTO.IsDesc">
+            <summary>
+             是否降序
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.EbayMediaInfoDTO">
+            <summary>
+            Ebay图片地址
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbayMediaInfoDTO.Url">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbayMediaInfoDTO.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.EbayMediaInfoHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySendSiteMsgResultModel.MessageItemRes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySendSiteMsgResultModel.SuccessNum">
+            <summary>
+             发送成功数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySendSiteMsgResultModel.SendResult">
+            <summary>
+            发送结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySiteMsgResultItemModel.FMessageRecordID">
+            <summary>
+            消息记录ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySiteMsgResultItemModel.MessageStatus">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.EbaySiteMsgResultItemModel.FPlatformResult">
+            <summary>
+            平台发送结果
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO">
+            <summary>
+            回复消息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.MessageId">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.TemplateId">
+            <summary>
+            模板Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.MessageContent">
+            <summary>
+            自定义发送站内信内容
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.SendMsgType">
+            <summary>
+            发送类型；0：模板发送；1：自定义内容发送 content
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.DataRouteModel">
+            <summary>
+            路由信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.ReplySiteMessageDTO.SendPlatformType">
+            <summary>
+            发送平台来源
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto">
+            <summary>
+             查询Ebay平台消息记录对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.PerPage">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FShopIds">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FolderId">
+            <summary>
+            文件夹Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.MessageSource">
+            <summary>
+            来源字段
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.ReceiveDate">
+            <summary>
+             接收时间："2019-07-01|2019-07-01"
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.StartReceiveDate">
+            <summary>
+            开始接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.EndReceiveDate">
+            <summary>
+            结束接收时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.IsRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.IsFlag">
+            <summary>
+            是否标识
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.IsReplied">
+            <summary>
+            是否回复
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.IsResponseEnabled">
+            <summary>
+            是否可以回复
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.HasOrderInfo">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FUserID">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FShopAllId">
+            <summary>
+            所有有效店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayPlatMsgRecordDto.FEbayMessageIds">
+            <summary>
+            消息Id
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO">
+            <summary>
+            查询历史记录
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FUserID">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FShopAllId">
+            <summary>
+            所有有效店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FRecordIds">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.PerPage">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.SendType">
+            <summary>
+            发送标记.0：手动发送；1：自动发送
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.StartSendTime">
+            <summary>
+            消息时间开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.EndSendTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FShopIds">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.MsgSendStatus">
+            <summary>
+            单号消息发信状态（站内信[0-未发送 1:发送中 2-发送成功 3-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.HasOrderInfo">
+            <summary>
+            是否关联订单
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.IsDesc">
+            <summary>
+             是否降序
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.OrderByField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.SearchEbayHistoryMsgRecordDTO.FIsWaitSend">
+            <summary>
+            是否等待发送记录
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.MsgRecordOrderByField">
+            <summary>
+            消息记录排序字段
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.MsgRecordOrderByField.FCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.DTO.Message.Ebay.MsgRecordOrderByField.FWaitSendTime">
+            <summary>
+            等待时间排序
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO">
+            <summary>
+            Ebay文件夹信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO.FolderId">
+            <summary>
+            FormUser
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO.FolderName">
+            <summary>
+            FormUser
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO.ShopId">
+            <summary>
+            店铺Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO.ShopName">
+            <summary>
+            店铺名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.EbayFolderInfoDTO.PlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.RuleInfoDTO">
+            <summary>
+            规则信息的存储对象
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleInfoDTO.Platform">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleInfoDTO.CommonRule">
+            <summary>
+            公共的规则信息定义
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleInfoDTO.PlatformRule">
+            <summary>
+            平台规则信息定义
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO">
+            <summary>
+            公共的规则信息定义
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FFirstCarrierList">
+            <summary>
+            第一运输商Json集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FSecondCountryList">
+            <summary>
+            目的国家Json集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FShopIdList">
+            <summary>
+            店铺IDJson集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FInTransitDay">
+            <summary>
+            运输多少天
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FOrder_Total">
+            <summary>
+            最小订单总金额
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.MaxOrder_Total">
+            <summary>
+            最大金额 与 FOrder_Total（oprice）保存区间关系判断
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.CommonRuleInfoDTO.FEventKeys">
+            <summary>
+            事件关键字集合，用户判断事件信息中是否包含关键字，触发发送规则
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.PlatformRuleInfoDTO">
+            <summary>
+            平台规则信息定义
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.EbayPlatformRuleInfoDTO">
+            <summary>
+            Ebay的平台规则信息定义
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.RuleContentConfigDTO">
+            <summary>
+            规则内容配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleContentConfigDTO.TriggerTimeConfig">
+            <summary>
+            规则触发时间配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigDTO">
+            <summary>
+            规则 触发时间配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigDTO.DayTime">
+            <summary>
+            触发时间 天数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigDTO.TemplateId">
+            <summary>
+            对应模板Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigDTO.IsDefault">
+            <summary>
+            默认配置，必须校验存在一个：true，第一个
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigViewModel">
+            <summary>
+            规则触发配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Rule.RuleTriggerTimeConfigViewModel.FTemplateName">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.PerPage">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderBy">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FArchivedState">
+            <summary>
+            是否归档,0:未完成查询；1：已完成查询，2：已归档查询
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.TrackNos">
+            <summary>
+            搜索单号前缀
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FPackageState">
+            <summary>
+            包裹状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FTrackStateType">
+            <summary>
+            状态类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FPlatformType">
+            <summary>
+            平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ShopIds">
+            <summary>
+             店铺ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.MarkIds">
+            <summary>
+             标签Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.CreateTime">
+            <summary>
+             创建开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.CreateStartTime">
+            <summary>
+             创建开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.CreateEndTime">
+            <summary>
+             创建结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderTime">
+            <summary>
+             order时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderStartTime">
+            <summary>
+             order开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderEndTime">
+            <summary>
+             order结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ShipTime">
+            <summary>
+            ship时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ShipStartTime">
+            <summary>
+             ship 开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ShipEndTime">
+            <summary>
+            ship 结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.HasRemark">
+            <summary>
+            是否有备注
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.HasMark">
+            <summary>
+            是否有标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.StayTime">
+            <summary>
+            停留时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FFirstCarriers">
+            <summary>
+            第一运输商
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FSecondCountrys">
+            <summary>
+            目的国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.MsgSendStatus">
+            <summary>
+            单号消息发信状态（站内信[0-未发送 2-发送成功 3-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.EmailSendStatus">
+            <summary>
+            单号消息邮件发信状态（邮件[10-未发送 12-发送成功 13-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.MsgIsSupperSend">
+            <summary>
+            是否支持发送消息（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FMessageIsRead">
+            <summary>
+            消息是否已读（0:否未读;1:是已读;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.EmailSupportSend">
+            <summary>
+            是否支持发送邮件（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ExtendTimeIsSupport">
+            <summary>
+            是否支持延长收货（0:否[不支持];1:是【支持】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FAEExtendStatus">
+            <summary>
+            延长时间状态（邮件[10-未发送 12-发送成功 13-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ApplyMoneyIsSupport">
+            <summary>
+            是否支持请款（0:否[不支持];1:是【支持】）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.FDHApplyStatus">
+            <summary>
+            请款结果成功、失败
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ReShipIsSupport">
+            <summary>
+            是否支持重新发货（0:否[不支持];1:是【支持】）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.ReShipStatus">
+            <summary>
+            重新发货状态 1：重新发货；0：未重新发货
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.InTransitDay">
+            <summary>
+            运输多少天
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderPrice">
+            <summary>
+            订单金额开始|订单金额结束
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderPriceStart">
+            <summary>
+            订单金额开始
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OrderPriceEnd">
+            <summary>
+            订单金额结束
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.OnlineToDate">
+            <summary>
+            上网至今
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.LastEventToDate">
+            <summary>
+            最后事件时间至今
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.EbayMsgSendStatus">
+            <summary>
+            Ebay单号消息发信状态（站内信[0-未发送 2-发送成功 3-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.EbayMsgIsSupperSend">
+            <summary>
+            Ebay是否支持发送消息（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.DHgateMsgSendStatus">
+            <summary>
+            DHgate单号消息发信状态（站内信[0-未发送 2-发送成功 3-发送失败]）
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.Track.SearchTrackInfoV2DTO.DHgateMsgIsSupperSend">
+            <summary>
+            DHgate是否支持发送消息（0:否[不支持发送];1:是【支持发送】;）
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.DTO.WarnConfigDTO">
+            <summary>
+            是否提醒设置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.WarnConfigDTO.IsWarnComplete">
+            <summary>
+                是否开启自动完成提醒
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.WarnConfigDTO.IsWarnNum">
+            <summary>
+                是否提醒点数不足
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.DTO.WarnConfigDTO.NumWarnPer">
+            <summary>
+                不足点数百分比
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO">
+            <summary>
+            平台订单搜索
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FArchivedState">
+            <summary>
+             归档状态,0:未完成查询；1：已完成查询，2：已归档查询
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FPlatformType">
+            <summary>
+            查询平台类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FShopIds">
+            <summary>
+            店铺Ids
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FUserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.TrackNos">
+            <summary>
+            搜索单号前缀
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FOrderIds">
+            <summary>
+            搜索OrderIds
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FTrackInfoIds">
+            <summary>
+            搜索TrackInfoIds
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.CreateStartTime">
+            <summary>
+             创建开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.CreateEndTime">
+            <summary>
+             创建结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.OrderStartTime">
+            <summary>
+             order开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.OrderEndTime">
+            <summary>
+             order结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.ShipStartTime">
+            <summary>
+             ship 开始时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.ShipEndTime">
+            <summary>
+            ship 结束时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FMarkIds">
+            <summary>
+            搜索标记Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.Page">
+            <summary>
+            当前分页数
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.PerPage">
+            <summary>
+            每页数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.OrderBy">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.Desc">
+            <summary>
+            是否降序排序
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.HasRemark">
+            <summary>
+            是否有备注
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.HasMark">
+            <summary>
+            是否有标记
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.OrderPriceStart">
+            <summary>
+            订单金额开始
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.OrderPriceEnd">
+            <summary>
+            订单金额结束
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.TimeZoneOffset">
+            <summary>
+            时区偏移量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FOrderCarriers">
+            <summary>
+            第一运输商
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FOrderCountrys">
+            <summary>
+            目的国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.PlatformOrder.PtOrderSearchDTO.FShopAllId">
+            <summary>
+            所有有效店铺Id
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendRecordStatus">
+            <summary>
+            Email 等待发送记录状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendRecordStatus.WaitSend">
+            <summary>
+            等待发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendRecordStatus.SendOut">
+            <summary>
+            已经发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendRecordStatus.UserCancel">
+            <summary>
+            用户取消
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendRecordStatus.SystemCancel">
+            <summary>
+            系统取消
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason">
+            <summary>
+            Email 消息等待发送取消消息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason.None">
+            <summary>
+             无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason.UserCancel">
+            <summary>
+             用户手动取消
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason.SystemCancelPackageStatusChange">
+            <summary>
+             系统取消，包裹状态发送变化
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason.SystemCancelEmailSendNumLimit">
+            <summary>
+             系统取消，邮件额度不足
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailWaitSendMsgCancelReason.SystemCancelEmailSendTrackNumLimit">
+            <summary>
+             系统取消，查询额度不足
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Email.EmailHistoryMessageTypeSource">
+            <summary>
+            Email历史消息类型来源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailHistoryMessageTypeSource.SendRecord">
+            <summary>
+            发送记录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Email.EmailHistoryMessageTypeSource.WaitSendCancelRecord">
+            <summary>
+            等待发送取消记录
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageFolder">
+            <summary>
+            Ebay消息系统文件夹
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageFolder.Inbox">
+            <summary>
+            收件箱
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageFolder.Sent">
+            <summary>
+            发件箱
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageFolder.Trash">
+            <summary>
+            垃圾箱
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageFolder.Archive">
+            <summary>
+            归档
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult">
+            <summary>
+            Ebay消息发送结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.PlatSendError">
+            <summary>
+            平台发送失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.PlatNotSupport">
+            <summary>
+            平台不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.MsgNotSupportSendBuyerIdIsNull">
+            <summary>
+            消息不支持发送,BuyerId为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayMessageSiteSendResult.MsgPackageStateDifferent">
+            <summary>
+            包裹状态发生了变化，不能发送
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendRecordStatus">
+            <summary>
+            eBay 等待发送记录状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendRecordStatus.WaitSend">
+            <summary>
+            等待发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendRecordStatus.SendOut">
+            <summary>
+            已经发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendRecordStatus.UserCancel">
+            <summary>
+            用户取消
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendRecordStatus.SystemCancle">
+            <summary>
+            系统取消
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendMsgCancelReason">
+            <summary>
+            eBay消息等待发送取消消息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendMsgCancelReason.None">
+            <summary>
+             无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendMsgCancelReason.UserCancel">
+            <summary>
+             用户手动取消
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.EbayWaitSendMsgCancelReason.SystemCancelPackageStatusChange">
+            <summary>
+             系统取消，包裹状态发送变化
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EbayMessage.HistoryMessageTypeSource">
+            <summary>
+            历史消息类型来源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.HistoryMessageTypeSource.SendRecord">
+            <summary>
+            发送记录
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EbayMessage.HistoryMessageTypeSource.WaitSendCancelRecord">
+            <summary>
+            等待发送取消记录
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EmailConsumeRemarkEnum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailConsumeRemarkEnum.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailConsumeRemarkEnum.Consume">
+            <summary>
+            消耗
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailConsumeRemarkEnum.Expire">
+            <summary>
+            过期
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EmailSendStatusEnum">
+            <summary>
+            邮件发送状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSendStatusEnum.UnSend">
+            <summary>
+            未发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSendStatusEnum.Sending">
+            <summary>
+            发送中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSendStatusEnum.SendSuccess">
+            <summary>
+            发送成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSendStatusEnum.SendFailed">
+            <summary>
+            发送失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.GivingSourceType">
+            <summary>
+            赠送来源类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.GivingSourceType.Register">
+            <summary>
+            注册
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.GivingSourceType.BindShop">
+            <summary>
+            绑定店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.GivingSourceType.UnBindShop">
+            <summary>
+            解绑店铺
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag">
+            <summary>
+            标记的颜色枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color0">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color10">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color11">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color12">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color13">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color14">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MarkColorFlag.Color15">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult">
+            <summary>
+            站内信消息结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.PlatSendError">
+            <summary>
+            平台发送失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.PlatNotSupport">
+            <summary>
+            平台不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.MsgNotSupportSendBuyerIdIsNull">
+            <summary>
+            消息不支持发送,BuyerId为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSiteSendResult.MsgPackageStateDifferent">
+            <summary>
+            包裹状态发生了变化，不能发送
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.MessageSendStatus">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSendStatus.UnSend">
+            <summary>
+            未发送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSendStatus.Sending">
+            <summary>
+            发送中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSendStatus.SendSuccess">
+            <summary>
+            发送成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MessageSendStatus.SendFailed">
+            <summary>
+            发送失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult">
+            <summary>
+            DHgate消息发送结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.PlatSendError">
+            <summary>
+            平台发送失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.PlatNotSupport">
+            <summary>
+            平台不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.MsgNotSupportSendBuyerIdIsNull">
+            <summary>
+            消息不支持发送,BuyerId为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSiteSendResult.MsgPackageStateDifferent">
+            <summary>
+            包裹状态发生了变化，不能发送
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSource">
+            <summary>
+            DHgate消息来源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSource.My">
+            <summary>
+             发送者
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageSource.Member">
+            <summary>
+             用户
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult">
+            <summary>
+            DHgate平台接口请求的错误结果枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult.WebError">
+            <summary>
+            网络异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult.ApiRequestError">
+            <summary>
+            平台接口请求失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.DHgate.DHgateMessageOperationResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageSource">
+            <summary>
+            Ebay消息来源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageSource.My">
+            <summary>
+             发送者
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageSource.Member">
+            <summary>
+             用户
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageSource.Ebay">
+            <summary>
+             Ebay
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult">
+            <summary>
+            Ebay平台接口请求的错误结果枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult.WebError">
+            <summary>
+            网络异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult.EbayMessageApiError">
+            <summary>
+            平台接口请求失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Message.EbayMessageOperationResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.MsgTemplateType">
+            <summary>
+            消息模板类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MsgTemplateType.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MsgTemplateType.Message">
+            <summary>
+            站内信模板
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.MsgTemplateType.Email">
+            <summary>
+            邮箱模板
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType">
+            <summary>
+            订单操作日志类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType.OrderReShip">
+            <summary>
+            订单重新发货，单号{0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType.AEExtendTimeSuccess">
+            <summary>
+            速卖通延长收货时间成功,延长{0}天
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType.AEExtendTimeError">
+            <summary>
+            速卖通延长收货时间失败,失败原因{0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType.DHApplyMoneySuccess">
+            <summary>
+            敦煌请款成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderLogOperateType.DHApplyMoneyError">
+            <summary>
+            敦煌请款失败,失败原因{0}
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.OrderSortType">
+            <summary>
+                订单排序类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.DefaultCreateTime">
+            <summary>
+             默认只按创建时间排序
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.CreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.UpdateTime">
+            <summary>
+                更新时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.OrderShipTime">
+            <summary>
+            订单发货时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.OrderCreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.OrderArchivedTime">
+            <summary>
+            订单归档时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.PackageStartTime">
+            <summary>
+            包裹开始时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.PackageLastTime">
+            <summary>
+            包裹最后事件时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.LastEventTime">
+            <summary>
+            最后查询到的事件时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.OrderSortType.OrderTotal">
+            <summary>
+            订单集合
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType">
+            <summary>
+            批量设置类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.None">
+            <summary>
+             无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.SetTrackNoComplete">
+            <summary>
+            设置完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.SetTrackNoCarrier">
+            <summary>
+            设置运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.SetTrackNoActivate">
+            <summary>
+            设置激活
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.SetTrackNoArchived">
+            <summary>
+            设置归档
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.BatchSetTrackInfoType.DelTrackNo">
+            <summary>
+            删除对应的单号信息，只能删除自定义店铺的
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus">
+            <summary>
+            订单信息状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Other">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Pending">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Processing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Shipped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Completed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Cancelled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderInfoStatus.Refunded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Order.OrderShipMethods">
+            <summary>
+             店铺发货方式
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderShipMethods.Other">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderShipMethods.FreeShipping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderShipMethods.StandardShipping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Order.OrderShipMethods.ExpressShipping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.Package.TrackInfoState">
+            <summary>
+            单号查询状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Package.TrackInfoState.None">
+            <summary>
+             无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Package.TrackInfoState.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.Package.TrackInfoState.Error">
+            <summary>
+             错误
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PayOAuthStatus">
+            <summary>
+             Pay的授权状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PayOAuthStatus.Expires">
+            <summary>
+            过期
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PayOAuthStatus.Valid">
+            <summary>
+            有效
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PayOAuthStatus.Invalid">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult">
+            <summary>
+            延长收货时间结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.PlatNotSupport">
+            <summary>
+            平台不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.NoOrderId">
+            <summary>
+            订单Id不存在
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.WebError">
+            <summary>
+            网络异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.ExtendTimeError">
+            <summary>
+            延长时间必须是1-60
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.NoOrder">
+            <summary>
+            查询无此订单ID
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.NoBussData">
+            <summary>
+            业务数据错误，无对应的业务数据(延长天数有误或者未填)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.OverdueTime">
+            <summary>
+            延长时间超过了系统允许时间
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.UnableOperation">
+            <summary>
+            业务数据错误 无法执行此操作(订单号不能延长，比如已结束的订单)
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeResult.NoPermission">
+            <summary>
+            查询该帐号无权限进行数据修改
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus">
+            <summary>
+            延长收货时间状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus.UnExtend">
+            <summary>
+            未延长
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus.Extending">
+            <summary>
+            延长执行中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus.ExtendSuccess">
+            <summary>
+            延长成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.AliExpressExtendTimeStatus.ExtendFailed">
+            <summary>
+            延长失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult">
+            <summary>
+            敦煌请款结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.TokenError">
+            <summary>
+            Token为空或者错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.PlatNotSupport">
+            <summary>
+            平台不支持
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.NoOrderId">
+            <summary>
+            订单Id不存在
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.WebError">
+            <summary>
+            网络异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.OrderNull">
+            <summary>
+            订单号不能为空
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.SupplierIdNull">
+            <summary>
+            supplierId不能为空	
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.Ineligible">
+            <summary>
+            该订单不符合请款条件
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyResult.NoOrder">
+            <summary>
+            数据库中不存在该订单
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus">
+            <summary>
+            请款
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus.UnApply">
+            <summary>
+            未请款
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus.Applying">
+            <summary>
+            请款执行中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus.ApplySuccess">
+            <summary>
+            请款成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.DHgateApplyMoneyStatus.ApplyFailed">
+            <summary>
+            请款失败
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.OrderLogAttribute">
+            <summary>
+            是否记录订单日志
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.Enums.PlatformActions.OrderLogAttribute.IsOrderLog">
+            <summary>
+            是否记录订单日志
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.Enums.PlatformActions.OrderLogAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="isOrderLog"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult">
+            <summary>
+            Paypal 推送单号结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.NoError">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.TokenError">
+            <summary>
+            Token为空或者错误,Paypal授权过期
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.WebError">
+            <summary>
+            网络异常
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PlatReturnDataError">
+            <summary>
+            平台返回数据解析失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackPackageStateNotSupper">
+            <summary>
+            不支持推送:推送单号的包裹状态不支持推送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackPlatformTypeNotSupper">
+            <summary>
+            不支持推送:店铺平台不支持推送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackNotPaypalOrder">
+            <summary>
+            不支持推送，不是Paypal支付的订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackNotOrderTranscationId">
+            <summary>
+            不支持推送，没有关联的交易Id
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackShopIdNotBindPaypal">
+            <summary>
+            不支持推送，当前店铺没有关联Paypal账号
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.PaypalPushTrackPaypalAccessNotDifferent">
+            <summary>
+            不支持推送，Paypal的交易账号与关联的店铺paypal账号不一致
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.INPUT_VALIDATION_ERROR">
+            <summary>
+            指定的交易编号无效。重新检查交易ID。
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.INTERNAL_SERVER_ERROR">
+            <summary>
+            内部服务器错误。请检查日志以获取更多详细信息。内部服务器错误阻止了请求的处理。稍后再试。
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.NOT_AUTHORIZED">
+            <summary>
+            由于权限不足，授权失败。呼叫者没有授权付款的正确权限。
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackResult.RESOURCE_NOT_FOUND">
+            <summary>
+             指定的资源不存在。资源不存在。
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackStatus">
+            <summary>
+            Paypal的 推送单号状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackStatus.UnPush">
+            <summary>
+            未推送单号
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackStatus.Pushing">
+            <summary>
+            推送中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackStatus.PushSuccess">
+            <summary>
+            推送失败
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PaypalPushTrackStatus.PushFailed">
+            <summary>
+            推送成功
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatCodeAttribute">
+            <summary>
+            平台Code
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatCodeAttribute.PlatCode">
+            <summary>
+            是否记录订单日志
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatCodeAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="platCode"></param>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatformAttributeHelper">
+            <summary>
+            平台功能错误描述枚举帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatformAttributeHelper.IsHaveOrderLog(System.Enum)">
+            <summary>
+            获取记录日志属性
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.Enums.PlatformActions.PlatformAttributeHelper.GetPlatCode(System.Type,System.String)">
+            <summary>
+            获取平台错误码
+            </summary>
+            <param name="enumType"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PlatformActions.ReShipStatus">
+            <summary>
+            重新发货状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.ReShipStatus.NotReshipped">
+            <summary>
+            未重新发货
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PlatformActions.ReShipStatus.Resupplied">
+            <summary>
+            重新发货
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.PayPlatformType">
+            <summary>
+             支付平台服务
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PayPlatformType.Default">
+            <summary>
+             default
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.PayPlatformType.Paypal">
+            <summary>
+            Paypay 支付平台
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.RuleActiveEnum">
+            <summary>
+            规则状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.RuleActiveEnum.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.RuleActiveEnum.Open">
+            <summary>
+            开启
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType">
+            <summary>
+            店铺操作日志类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.SysExpiresCloseSync">
+            <summary>
+            授权失效关闭同步
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserBindShop">
+            <summary>
+            绑定店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserUnbindShop">
+            <summary>
+            用户解绑店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserCreateCustomShop">
+            <summary>
+            用户创建自定义店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserDeleteShop">
+            <summary>
+            用户删除自定义店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserCloseSync">
+            <summary>
+            用户关闭同步
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserOpenSync">
+            <summary>
+            用户开启同步
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserReAuthorization">
+            <summary>
+            用户重新授权
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserSetExcludeCarrier">
+            <summary>
+            用户设置排除运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserSetSyncTimespan">
+            <summary>
+            用户设置时间间隔
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserSetTrackCarrier">
+            <summary>
+            用户设置查询运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.AmazonUploadTrackInfo">
+            <summary>
+            亚马逊导入单号信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopLogOperateType.UserUploadTrackInfo">
+            <summary>
+            用户导入单号信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.ShopStateType">
+            <summary>
+            用户店铺状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopStateType.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopStateType.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopStateType.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ShopStateType.Expire">
+            <summary>
+            授权失效（包括过期）
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType">
+            <summary>
+            单号任务类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.InpmortTrackNo">
+            <summary>
+            导入单号
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.ExportTrackNo">
+            <summary>
+            导出单号，这里不控制最大导出数量
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SetTrackNoComplete">
+            <summary>
+            设置完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SetTrackNoCarrier">
+            <summary>
+            设置运输商
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SetTrackNoActivate">
+            <summary>
+            设置激活
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SetTrackNoArchived">
+            <summary>
+            设置归档
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.DelTrackNo">
+            <summary>
+            删除对应的单号信息，只能删除自定义店铺的
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.DHApply">
+            <summary>
+            敦煌请款
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.AEExtend">
+            <summary>
+            速卖通延长收货
+            reqParam:{"d":20}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SendSiteMsg">
+            <summary>
+            发送站内信
+            reqParam: {"templateId":"1231231","content":"hi content","sendt":0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SendSiteMsgEbay">
+            <summary>
+            Ebay发送站内信
+            reqParam: {"templateId":"1231231","content":"hi content","sendt":0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SendSiteMsgDHgate">
+            <summary>
+            DHgate发送站内信
+            reqParam: {"templateId":"1231231","content":"hi content","sendt":0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskType.SendEmail">
+            <summary>
+            发送邮件
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskStatus">
+            <summary>
+            单号批量处理任务状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskStatus.Begin">
+            <summary>
+            开始处理
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskStatus.Processing">
+            <summary>
+            处理中
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackBatchTaskStatus.Finish">
+            <summary>
+            处理完成
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackBatchCountAttribute">
+            <summary>
+            单号批量处理数量
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.Enums.TrackBatchCountAttribute.#ctor(System.Int32)">
+            <summary>
+            单号批量处理数量
+            </summary>
+            <param name="batchTotal"></param>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.Enums.TrackBatchCountAttribute.BatchTotal">
+            <summary>
+            批量处理数量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.Enums.TrackBatchCountAttribute.BatchPageSize">
+            <summary>
+            每次批量处理数量
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.ArchivedState">
+            <summary>
+            单号完成状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ArchivedState.UnComplete">
+            <summary>
+            未完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ArchivedState.Complete">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.ArchivedState.Archived">
+            <summary>
+            归档状态
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackConsumeRemarkEnum">
+            <summary>
+            跟踪消费备注枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackConsumeRemarkEnum.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackConsumeRemarkEnum.Consume">
+            <summary>
+            消耗
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackConsumeRemarkEnum.Expire">
+            <summary>
+            过期
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType">
+            <summary>
+            Seller 总操作日志枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTrackBatchSet">
+            <summary>
+            用户单号批量设置
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTrackDelete">
+            <summary>
+            用户删除单号
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseShopCustomerDelete">
+            <summary>
+            用户自定义店铺删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseShopUnbind">
+            <summary>
+            用户平台店铺解绑
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSettingTrackRule">
+            <summary>
+            用户设置自动完成规则
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSettingEmailWarn">
+            <summary>
+            用户设置提醒
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSettingUserCarrier">
+            <summary>
+            用户常用运输商设置
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTempleteEmailEdit">
+            <summary>
+            用户邮件模板编辑
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTempleteEmailDelete">
+            <summary>
+            用户邮件模板删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSendEmailRuleEdit">
+            <summary>
+            用户邮件规则编辑
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSendEmailRuleDelete">
+            <summary>
+            用户邮件规则删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTempleteMsgEdit">
+            <summary>
+            用户站内信模板编辑
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseTempleteMsgDelete">
+            <summary>
+            用户站内信模板删除
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSendMsgRuleEdit">
+            <summary>
+            用户站内信规则编辑
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.SellerLogOpreateType.UseSendMsgRuleDelete">
+            <summary>
+            用户站内信规则删除
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType">
+            <summary>
+            单号操作日志枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoCreateTrackNo">
+            <summary>
+            自动第一次单号同步
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderComplete">
+            <summary>
+            自动设置单号完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderArchived">
+            <summary>
+            自动设置单号归档
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderArchivedFormat">
+            <summary>
+            自动设置单号归档，新的占位符处理
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompleteInvalidTimeFormat">
+            <summary>
+            无效追踪，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompleteNoChangeTimeFormat">
+             <summary>
+            追踪信息未发生变化，系统将自动标记为已完成订单
+             </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompleteSuccessTimeFormat">
+            <summary>
+             成功签收的订单，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompleteSuccess">
+            <summary>
+             成功签收的订单，系统将自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSyncSetExcludedTrack">
+            <summary>
+             自动设置排除查询
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSyncSetOrderComplete">
+            <summary>
+             该记录被自动标记为“已完成”，因为订单状态已变更为“{0}”
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSyncSetOrderCompleteTimeFormat">
+            <summary>
+             该记录被自动标记为“已完成”，因为订单状态已变更为“{0}”，超过了{1}天。
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompletePackageLastTimeFormat">
+            <summary>
+             包裹最后事件时间超过了{0}天没有更新，系统自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderCompletePackageOnlineTimeFormat">
+            <summary>
+             包裹上网至今超过了{0}天没有更新，系统自动标记为已完成订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSetOrderArchivedPlatform">
+            <summary>
+            自动设置单号归档,固定按平台（订单时间）和自定义店铺（创建时间）180天计算
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendMsg">
+            <summary>
+             系统, 发送站内信, 发信记录日志描述内容, 占位符依次: 包裹状态, 模板名词，规则名词
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendEmail">
+            <summary>
+             系统, 发送邮件, 发信记录日志描述内容, 占位符依次: 包裹状态, 模板名词，规则名词
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendMsgSuccess">
+            <summary>
+            系统, 发送站内信成功  包裹状态, 模板名词，规则名词
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendMsgFail">
+            <summary>
+            系统, 发送站内信失败 包裹状态, 模板名词，规则名词 , 失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendEbayMsgSuccess">
+            <summary>
+            系统,发送Ebay消息成功  包裹状态, 模板名称,规则名称  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendEbayMsgFail">
+            <summary>
+            系统,发送Ebay消息失败  包裹状态, 模板名称,规则名称 ,失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendDHgateMsgSuccess">
+            <summary>
+            系统,发送DHgate消息成功  包裹状态, 模板名称,规则名称  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AutoSendDHgateMsgFail">
+            <summary>
+            系统,发送DHgate消息失败  包裹状态, 模板名称,规则名称 ,失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetUploadTrackNo">
+            <summary>
+            用户, 通过上传添加订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetAddTrackNo">
+            <summary>
+            用户, 通过输入添加订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetEditTrackNo">
+            <summary>
+            用户, 通过输入添加订单
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetTrackInfoRemark">
+            <summary>
+            设置单号备注
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetTrackInfoMark">
+            <summary>
+            设置单号的标记
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetOrderFirstCarrier">
+            <summary>
+            设置单号第一运输商从{0}修改为{1}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetOrderSecondCarrier">
+            <summary>
+            设置单号第二运输商从{0}修改为{1}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetEditOrderInfo">
+            <summary>
+            编辑单号信息
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetOrderComplete">
+            <summary>
+            设置单号完成
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetOrderNotComplete">
+            <summary>
+            设置单号激活
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetOrderArchived">
+            <summary>
+            设置单号归档
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendMsg">
+            <summary>
+            发送消息; {0}=包裹状态,{1}=模板名称,{2}=发送类型,{3}=自动或手动
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendMsg">
+            <summary>
+            用户, 发送站内信, 发信记录日志描述内容, 占位符依次:包裹状态, 模板名词 {0}=包裹状态,{1}=模板名称
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendEmail">
+            <summary>
+            用户, 发送邮件, 发信记录日志描述内容, 占位符依次:包裹状态, 模板名词 {0}=包裹状态,{1}=模板名称
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendMsgSuccess">
+            <summary>
+            用户, 发送站内信成功, 发信记录日志描述内容, 占位符依次:包裹状态, 模板名词 {0}=包裹状态,{1}=模板名称
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendMsgFail">
+            <summary>
+            用户, 发送站内信失败, 发信记录日志描述内容, 占位符依次:包裹状态, 模板名词 {0}=包裹状态,{1}=模板名称 {2}=失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendMsgCustomSuccess">
+            <summary>
+            用户自定义, 发送站内信成功  发信记录日志描述内容, 占位符依次:包裹状态, {0}=包裹状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SetSendMsgCustomFail">
+            <summary>
+            用户自定义, 发送站内信失败, 发信记录日志描述内容, 占位符依次:包裹状态, {0}=包裹状态,{1}=失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.OrderReShip">
+            <summary>
+            订单重新发货，单号{0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AEExtendTimeSuccess">
+            <summary>
+            速卖通延长收货时间成功,延长{0}天
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.AEExtendTimeError">
+            <summary>
+            速卖通延长收货时间失败,失败原因{0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.DHApplyMoneySuccess">
+            <summary>
+            敦煌请款成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.DHApplyMoneyError">
+            <summary>
+            敦煌请款失败,失败原因{0}
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendDHgateMsgSuccess">
+            <summary>
+            用户,发送DHgate消息成功  包裹状态, 模板名称  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendDHgateMsgFail">
+            <summary>
+            用户,发送DHgate消息失败  包裹状态, 模板名称 ,失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendDHgateMsgCustomSuccess">
+            <summary>
+            用户,发送DHgate自定义消息成功  包裹状态, 模板名称,  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendDHgateMsgCustomFail">
+            <summary>
+            用户,发送DHgate自定义消息失败  包裹状态, 模板名称 ,失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendEbayMsgSuccess">
+            <summary>
+            用户,发送Ebay消息成功  包裹状态, 模板名称  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendEbayMsgFail">
+            <summary>
+            用户,发送Ebay消息失败  包裹状态, 模板名称 ,失败原因
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendEbayMsgCustomSuccess">
+            <summary>
+            用户,发送Ebay自定义消息成功  包裹状态, 模板名称,  
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackLogOpreateType.SendEbayMsgCustomFail">
+            <summary>
+            用户,发送Ebay自定义消息失败  包裹状态, 模板名称 ,失败原因
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.QuotaSourceType">
+            <summary>
+            查询额度类型
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaSourceType.Free">
+            <summary>
+            免费
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaSourceType.Buy">
+            <summary>
+            购买
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.QuotaInvalidReason">
+            <summary>
+            额度
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaInvalidReason.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaInvalidReason.Refund">
+            <summary>
+            退款
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaInvalidReason.Expire">
+            <summary>
+            过期
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.QuotaStatus">
+            <summary>
+             额度的状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaStatus.Invalid">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.QuotaStatus.Valid">
+            <summary>
+            有效
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackSoureType">
+            <summary>
+            Seller 单号来源资源
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.CustomerAdd">
+            <summary>
+            手动增加
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.CustomerImportAdd">
+             <summary>
+            手动导入增加
+             </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.AmazonImportAdd">
+            <summary>
+            手动增加
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.ReShipAdd">
+            <summary>
+            重新发货增加
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.SyncAdd">
+            <summary>
+            平台同步增加
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSoureType.SyncEmptyAdd">
+            <summary>
+            平台同步的空单号添加
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackStateType">
+            <summary>
+                运单号跟踪状态
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackStateType.UnTransferTrack">
+            <summary>
+                等待转移状态，初始化值。
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackStateType.Invalid">
+            <summary>
+                无效查询
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackStateType.Waitfor">
+            <summary>
+                查询额度不足（等待追踪）
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackStateType.Tracking">
+            <summary>
+                有效查询
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackStateType.ExcludedTrack">
+            <summary>
+            排除查询
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.EmailSystemRemarkEnum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSystemRemarkEnum.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.EmailSystemRemarkEnum.SystemInit">
+            <summary>
+            系统初始化
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.TrackSystemRemarkEnum">
+            <summary>
+            跟总数系统记录备注枚举
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSystemRemarkEnum.Register">
+            <summary>
+            注册赠送
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSystemRemarkEnum.Bind">
+            <summary>
+            绑定店铺
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.TrackSystemRemarkEnum.Unbind">
+            <summary>
+            解绑店铺
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult">
+            <summary>
+             上传单号的Row上传结果
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.None">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.TrackNoLengthError">
+            <summary>
+            单号存在非法字符，长度常务
+            -99010103
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.TrackNoFormatError">
+            <summary>
+            单号存在非法字符，必须为字母或数字组成
+            -99010102
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.TrackNoExsitError">
+            <summary>
+            单号已经存在的
+            -12010201
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderNoLengthError">
+            <summary>
+            订单号无效，仅支持长度为4-50位的订单号
+            -12010706
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderNoFormatError">
+            <summary>
+            仅支持字母数组和英文字符组合的单号
+            -12010707
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderRemarkLengthError">
+             <summary>
+            请输入1-200个字符的备注
+             -12010717
+             </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderOrderTimeFormatError">
+            <summary>
+            支持{0}的时间格式,yyyy/MM/dd
+            -12010712
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderShipTimeFormatError">
+            <summary>
+            支持{0}的时间格式,yyyy/MM/dd
+            -12010712
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.BuyerEmailFormatError">
+            <summary>
+            导入的邮件格式错误
+            -12010713
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.BuyerNicknameLengthError">
+            <summary>
+            请输入1-20个字符的昵称
+            -12010714
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.ProduceNameLengthError">
+            <summary>
+            请输入1-200个字符的商品名称
+            -12010715
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.ProductSKULengthError">
+            <summary>
+            请输入1-50个字符的商品SKU编码
+            -12010716
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderNotExsit">
+            <summary>
+            订单号不存在
+            -12010708
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.Enums.UploadTrackNoRowResult.OrderNotExport">
+            <summary>
+            该订单不支持导入
+            -12010709
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel">
+            <summary>
+            站内信模板变量Model
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.Platform">
+            <summary>
+            平台名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.Carrier">
+            <summary>
+            第一运输商
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.TrackNo">
+            <summary>
+            物流单号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.OrderId">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.Product">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.BuyerName">
+            <summary>
+            收件人名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.TrackLink">
+            <summary>
+            追踪单号链接
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.CurrentTime">
+            <summary>
+            当前时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.ProductLink">
+            <summary>
+            产品链接
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.OrderAmount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.ShippedTime">
+            <summary>
+            发货时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.BuyerNick">
+            <summary>
+            买家昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.MsgTemplateVariableModel.BuyerAddress">
+            <summary>
+            买家地址信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.EbayMsgTemplateVariableModel">
+            <summary>
+            eBay的特定模板变量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.EbayMsgTemplateVariableModel.SellerEmail">
+            <summary>
+            卖家邮箱
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.AmzEmailTemplateVariableModel">
+            <summary>
+            邮件的亚马逊 的特定模板变量
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.AmzEmailTemplateVariableModel.Feedback">
+            <summary>
+            反馈
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.Seller.Model.AmzEmailTemplateVariableModel.Review">
+            <summary>
+            反馈
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper">
+            <summary>
+            平台订单状态映射
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._EbayOrderstatusMapping">
+            <summary>
+            Ebay
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._DHgateOrderstatusMapping">
+            <summary>
+            DHgate
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._WishOrderstatusMapping">
+            <summary>
+            Wish
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._AmazonOrderstatusMapping">
+            <summary>
+            Amazon
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._AliExpressOrderstatusMapping">
+            <summary>
+            AliExpress
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._LazadaOrderstatusMapping">
+            <summary>
+            Lazada
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._ShopifyOrderstatusMapping">
+            <summary>
+            Shopify
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._ShopeeOrderstatusMapping">
+            <summary>
+            Shopee
+            </summary>
+        </member>
+        <member name="F:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper._JoomOrderstatusMapping">
+            <summary>
+            Joom
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper.GetPtOrderStates">
+            <summary>
+            获取平台对应的订单状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper.GetOrderStatusMapping(YQTrack.Backend.ThridPartOrderSyncService.Model.Enums.PlatformType,System.String)">
+            <summary>
+            平台订单状态映射
+            </summary>
+            <param name="platformType">平台枚举</param>
+            <param name="order_state">平台原始状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper.LoadDictionary">
+            <summary>
+            LoadDictionary
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper.ExistCustomerOrderState(System.String)">
+            <summary>
+            判断自定义店铺状态，是否存在定义
+            </summary>
+            <param name="orderState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.Model.OrderStatusMappingHelper.ExistCustomerOrderShipMethods(System.String)">
+            <summary>
+            判断发货方式，是否存在定义
+            </summary>
+            <param name="shipMethods"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

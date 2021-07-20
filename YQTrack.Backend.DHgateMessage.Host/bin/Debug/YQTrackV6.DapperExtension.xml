@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.DapperExtension</name>
+    </assembly>
+    <members>
+        <member name="T:Dapper.ComputedAttribute">
+            <summary>
+                标明是否计算字段，新增、修改时不包含
+            </summary>
+        </member>
+        <member name="T:Dapper.ExplicitKeyAttribute">
+            <summary>
+                表明联合主键
+            </summary>
+        </member>
+        <member name="T:Dapper.KeyAttribute">
+            <summary>
+                标明主键
+            </summary>
+        </member>
+        <member name="T:Dapper.TableAttribute">
+            <summary>
+                标明表名
+            </summary>
+        </member>
+        <member name="M:Dapper.TableAttribute.#ctor(System.String)">
+            <summary>
+                构造函数
+            </summary>
+            <param name="tableName"></param>
+        </member>
+        <member name="P:Dapper.TableAttribute.Name">
+            <summary>
+                表名
+            </summary>
+        </member>
+        <member name="T:Dapper.WriteAttribute">
+            <summary>
+                标明是否持久化
+            </summary>
+        </member>
+        <member name="M:Dapper.WriteAttribute.#ctor(System.Boolean)">
+            <summary>
+                构造函数
+            </summary>
+            <param name="write"></param>
+        </member>
+        <member name="P:Dapper.WriteAttribute.Write">
+            <summary>
+                是否持久化
+            </summary>
+        </member>
+        <member name="T:Dapper.SqlMapperExtensions">
+            <summary>
+                Dapper扩展
+            </summary>
+        </member>
+        <member name="F:Dapper.SqlMapperExtensions.TableNameMapper">
+            <summary>
+                Specify a custom table name mapper based on the POCO type name
+            </summary>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetBySQL``1(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="sql">查询语句</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetBySQLAsync``1(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步获取实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="sql">查询语句</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByStoredProcedure``1(System.Data.IDbConnection,System.String,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                从存储过程获取实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据练级</param>
+            <param name="name">过程名称</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByStoredProcedureAsync``1(System.Data.IDbConnection,System.String,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步从存储过程获取实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据练级</param>
+            <param name="name">过程名称</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetAll``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取所有实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetAllAsync``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步获取实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetAllCount``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取所有实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体数量</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetAllCountAsync``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步获取实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体数量</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByCondition``1(System.Data.IDbConnection,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="conditionExp">查询条件表达式</param>
+            <param name="orderbyExp">排序表达式</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionAsync``1(System.Data.IDbConnection,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="conditionExp">查询条件表达式</param>
+            <param name="orderbyExp">排序表达式</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionCount``1(System.Data.IDbConnection,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="conditionExp">查询条件表达式</param>
+            <param name="orderbyExp">排序表达式</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionCountAsync``1(System.Data.IDbConnection,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="conditionExp">查询条件表达式</param>
+            <param name="orderbyExp">排序表达式</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByCondition``1(System.Data.IDbConnection,System.String,System.String,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="condition">查询条件，如a = 1 and b = 2</param>
+            <param name="orderby">排序条件，如 a desc, b asc</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionAsync``1(System.Data.IDbConnection,System.String,System.String,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步获取符合条件的实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="condition">查询条件，如a = 1 and b = 2</param>
+            <param name="orderby">排序条件，如 a desc, b asc</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionCount``1(System.Data.IDbConnection,System.String,System.String,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                获取符合条件的实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="condition">查询条件，如a = 1 and b = 2</param>
+            <param name="orderby">排序条件，如 a desc, b asc</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体数量</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByConditionCountAsync``1(System.Data.IDbConnection,System.String,System.String,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步获取符合条件的实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="condition">查询条件，如a = 1 and b = 2</param>
+            <param name="orderby">排序条件，如 a desc, b asc</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体数量</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByID``1(System.Data.IDbConnection,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                根据主键获取实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetByIDAsync``1(System.Data.IDbConnection,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                根据主键异步获取实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Insert(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                新增实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToInsert">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>新增实体的id</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Insert``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                新增实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToInsert">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>新增实体的id</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.InsertAsync(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步新增实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToInsert">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>新增实体的id</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.InsertAsync``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步新增实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToInsert">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>新增实体的id</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Update(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                更新实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToUpdate">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <param name="ignoreNullValue">忽略Null的值属性，默认值tue</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Update``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                更新实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToUpdate">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <param name="ignoreNullValue">忽略Null的值属性，默认值tue</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.UpdateAsync(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                异步更新实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToUpdate">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <param name="ignoreNullValue">忽略Null的值属性，默认值tue</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.UpdateAsync``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                异步更新实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToUpdate">实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <param name="ignoreNullValue">忽略Null的值属性，默认值tue</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Delete(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.Delete``1(System.Data.IDbConnection,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAsync(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAsync``1(System.Data.IDbConnection,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="id">主键值</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteObject(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToDelete">要删除的实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteObject``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToDelete">要删除的实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <param name="isSubmeter"></param>
+            <param name="tableNo"></param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteObjectAsync(System.Data.IDbConnection,System.Type,System.Object,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="entityToDelete">要删除的实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteObjectAsync``1(System.Data.IDbConnection,``0,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="entityToDelete">要删除的实体</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAll(System.Data.IDbConnection,System.Type,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除所有实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAll``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                删除所有实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAllAsync(System.Data.IDbConnection,System.Type,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除所有实体
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="type">实体类型</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.DeleteAllAsync``1(System.Data.IDbConnection,System.Byte,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步删除所有实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="connection">数据连接</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.ExcuteSQL(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
+            <summary>
+                执行SQL
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="sql">执行语句</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.ExcuteSQLAsync(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
+            <summary>
+                异步执行SQL
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="sql">执行语句</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.ExcuteStoredProcedure(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                执行存储过程
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="name">过程名称</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.ExcuteStoredProcedureAsync(System.Data.IDbConnection,System.String,System.Object,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>
+                异步执行存储过程
+            </summary>
+            <param name="connection">数据连接</param>
+            <param name="name">过程名称</param>
+            <param name="param">参数</param>
+            <param name="transaction">数据事务</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetFormatter(System.Data.IDbConnection)">
+            <summary>
+                返回数据连接的数据库类型
+            </summary>
+            <param name="connection">数据连接</param>
+            <returns>数据库适配器，默认为SQLServer</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.GetTableNoSuffix(System.Byte)">
+            <summary>
+            返回按照顺序编号的表名后缀
+            </summary>
+            <param name="tableNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.BuildUpdateSql``1(``0,System.Byte,System.Boolean,System.Boolean)">
+            <summary>
+                构建Update的SQL语句
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entityToUpdate">实体</param>
+            <param name="tableNo">表编号</param>
+            <param name="isSubmeter">是否分表</param>
+            <param name="ignoreNullValue">是否忽略空值,默认true</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.BuildInsertSql``1(``0,System.Byte,System.Boolean)">
+            <summary>
+               构建Insert的SQL语句
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entityToInsert">实体</param>
+            <returns>新增实体的id</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.BuildDeleteSql``1(``0,System.Byte,System.Boolean)">
+            <summary>
+               构建Delete的SQL语句
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="entityToDelete">主键值</param>
+            <param name="isSubmeter">是否分表</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.NowInsertBatch``1(System.Data.IDbConnection,System.Collections.Generic.IEnumerable{``0},System.Byte,System.Boolean,System.Data.IDbTransaction)">
+            <summary>  
+            批量插入功能  
+            </summary>  
+        </member>
+        <member name="M:Dapper.SqlMapperExtensions.NowInsertBatchAsync``1(System.Data.IDbConnection,System.Collections.Generic.IEnumerable{``0},System.Byte,System.Boolean,System.Data.IDbTransaction)">
+            <summary>  
+            批量插入功能  
+            </summary>  
+        </member>
+    </members>
+</doc>

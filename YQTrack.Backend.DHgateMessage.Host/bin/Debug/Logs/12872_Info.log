@@ -1,0 +1,72 @@
+﻿2021-07-20 09:57:41,483 [1] INFO  seller.dhgatemessage - 日志, 初始化LoggerSystem成功
+2021-07-20 09:57:41,490 [1] INFO  seller.dhgatemessage - 日志, 没有初始化LoggerRecordData, 调用记录日志将忽略
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSchedule
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnCount, Type:NumberOfItems64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessCount, Type:NumberOfItems64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailDelta, Type:CounterDelta64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SuccessDelta, Type:CounterDelta64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:FailCount, Type:NumberOfItems64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:WarnDelta, Type:CounterDelta64
+2021-07-20 09:57:41,491 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSchedule, IsSingle:False
+2021-07-20 09:57:41,620 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-20 09:57:41,624 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller"]
+2021-07-20 09:57:41,624 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-20 09:57:41,624 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-20 09:57:41,624 [1] INFO  seller.dhgatemessage - ScheduleInitialized:"DBShardingRouteFactory"
+2021-07-20 09:57:41,629 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Track.BackendServer.DHgateMessageSync
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateCount, Type:NumberOfItems64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NoUpdateDelta, Type:CounterDelta64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateDelta, Type:CounterDelta64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllDelta, Type:CounterDelta64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:UpdateCount, Type:NumberOfItems64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewDelta, Type:CounterDelta64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:AllCount, Type:NumberOfItems64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:NewCount, Type:NumberOfItems64
+2021-07-20 09:57:41,630 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Track.BackendServer.DHgateMessageSync, IsSingle:True
+2021-07-20 09:57:41,642 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":8,"entityCount":0}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - InitDBShardingConfigBegin:{"DBType":null,"nodeCount":1,"dbCount":4,"entityCount":0}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":11,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":12,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":13,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - DBShardingAddDBRule:DBNo已经存在:{"DBNo":14,"CanAdd":true}
+2021-07-20 09:57:41,643 [1] INFO  seller.dhgatemessage - InitDBShardingConfigEnd:["seller","sellermessage"]
+2021-07-20 09:57:41,645 [1] INFO  seller.dhgatemessage - TaskInitialized:"DBShardingRouteFactory"
+2021-07-20 09:57:41,658 [1] INFO  seller.dhgatemessage - InitNode:{"nodeId":"192.168.1.66_12872"}
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 已存在计数器类别无需创建, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:SqlExecError, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Reassigned, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:ProcessError, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Assigned, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Canceled, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 创建计数器对象, Name:Heartbeat, Type:NumberOfItems64
+2021-07-20 09:57:41,669 [1] INFO  seller.dhgatemessage - 初始化计数器类别完成, Name:YQ-Schedule.TaskCoordinator.seller.dhgate.message.sync, IsSingle:True
+2021-07-20 09:57:41,789 [1] INFO  seller.dhgatemessage - Register:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.66_12872","taskList":["1.11.0","1.14.0","1.13.0","1.12.0"]}
+2021-07-20 09:57:41,790 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.66_12872"}
+2021-07-20 09:57:41,798 [1] INFO  seller.dhgatemessage - NodeChanged:{"current":1,"lastest":0}
+2021-07-20 09:57:41,874 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.11.0"}
+2021-07-20 09:57:41,883 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.11.0"}
+2021-07-20 09:57:41,883 [1] INFO  seller.dhgatemessage - DoAssign:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.66_12872"}
+2021-07-20 09:57:41,888 [1] INFO  seller.dhgatemessage - ServerStarted:{"EventName":"TaskCoordinator_OnTaskAssigned","EventDesc":"1.12.0"}
+2021-07-20 09:57:41,889 [1] INFO  seller.dhgatemessage - TaskAssigned:{"TaskId":"1.12.0"}
+2021-07-20 09:57:41,914 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":12,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-20 09:57:42,042 [1] INFO  seller.dhgatemessage - WaitNextSchedule:{"UserRole":2,"NodeId":1,"DbNo":11,"TableNo":0,"IsArchived":false,"IsWrite":false}
+2021-07-20 09:57:54,597 [7] INFO  seller.dhgatemessage - 连接建立:[{"HostName":"192.168.1.214","Port":5672,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}},{"HostName":"192.168.1.214","Port":5673,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}},{"HostName":"192.168.1.214","Port":5671,"Protocol":{"Capabilities":{"publisher_confirms":true,"exchange_exchange_bindings":true,"basic.nack":true,"consumer_cancel_notify":true,"connection.blocked":true,"authentication_failure_close":true},"MajorVersion":0,"MinorVersion":9,"Revision":1,"ApiName":":AMQP_0_9_1","DefaultPort":5672,"Version":{"Major":0,"Minor":9}},"Ssl":{"AcceptablePolicyErrors":0,"CertPassphrase":null,"CertPath":"","CertificateSelectionCallback":null,"CertificateValidationCallback":null,"Certs":null,"Enabled":false,"ServerName":"","Version":192}}]
+2021-07-20 09:57:54,711 [7] INFO  seller.dhgatemessage - 获取连接通道:1
+2021-07-20 09:57:54,742 [7] INFO  seller.dhgatemessage - 声明队列完成:{"ExchName":"seller.message.dhgate","QueueName":"seller.message.dhgate.es.11.0","AutoAck":false,"MaxConsumer":2,"ExpireTime":"01:00:00","DeadQueueName":null}
+2021-07-20 09:58:10,572 [1] INFO  seller.dhgatemessage - NodeChanged:{"current":0,"lastest":1}
+2021-07-20 09:58:10,585 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.11.0"}
+2021-07-20 09:58:10,598 [1] INFO  seller.dhgatemessage - TaskCanceled:{"TaskId":"1.12.0"}
+2021-07-20 09:58:10,598 [1] INFO  seller.dhgatemessage - UnRegister:{"Name":"seller.dhgate.message.sync","nodeId":"192.168.1.66_12872"}
+2021-07-20 09:58:10,598 [1] INFO  seller.dhgatemessage - ServerStopping:"DHgateMessageTaskHelper"
+2021-07-20 09:58:10,599 [1] INFO  seller.dhgatemessage - ServerStopped:"DHgateMessageTaskHelper"

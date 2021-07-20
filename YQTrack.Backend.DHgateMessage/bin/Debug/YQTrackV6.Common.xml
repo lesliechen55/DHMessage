@@ -1,0 +1,1820 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.Common</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.Common.Http.SimpleHttpClientSync">
+            <summary>
+            简单的Http同步客户端,非线程安全
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.#ctor(System.Int32,System.Net.WebProxy)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeout">超时时间</param>
+            <param name="proxy">代理</param>
+        </member>
+        <member name="F:YQTrackV6.Common.Http.SimpleHttpClientSync._DefCachePolicy">
+            <summary>
+            CachePolicy定义
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Http.SimpleHttpClientSync._BufferManager">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.CanThrowException">
+            <summary>
+            是否允许抛出异常
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.AllowAutoRedirect">
+            <summary>
+            是跟随重定向
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.LastStatusCode">
+            <summary>
+            最后访问状态码
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.Timeout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.Proxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientSync.BufferManager">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadStringFromPost(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadStringFromPost(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadBytesFromPost(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回数据流
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadBytesFromPost(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回数据流
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadStringFromGet(System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadStringFromGet(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadBytesFromGet(System.String)">
+            <summary>
+            Get请求,返回数据流
+            </summary>
+            <param name="address">请求地址</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientSync.ReadBytesFromGet(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Get请求,返回数据流
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Http.SimpleHttpClientAsync">
+            <summary>
+            简单Http异步客户端,非线程安全
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.#ctor(System.Int32,System.Net.WebProxy)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeout">超时时间</param>
+            <param name="proxy">代理</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientAsync.CanThrowException">
+            <summary>
+            是否允许抛出异常
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientAsync.LastStatusCode">
+            <summary>
+            最后访问状态码
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientAsync.Timeout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Http.SimpleHttpClientAsync.Proxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromPostAndDispose(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromPostAndDispose(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromPost(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromPost(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadBytesFromPost(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回数据流
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromGetAndDispose(System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromGetAndDispose(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromGet(System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadStringFromGet(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Text.Encoding)">
+            <summary>
+            Get请求,返回字符串
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadBytesFromGet(System.String)">
+            <summary>
+            Get请求,返回数据流
+            </summary>
+            <param name="address">请求地址</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadBytesFromPost(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            Post请求,返回数据流
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <param name="contentType">ContentType类型字符串</param>
+            <param name="postValue">Post内容</param>
+            <param name="encoding">编码</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Http.SimpleHttpClientAsync.ReadBytesFromGet(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Get请求,返回数据流
+            </summary>
+            <param name="headers">Http头</param>
+            <param name="address">请求地址</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Other.MBufferManager">
+            <summary>
+            缓冲管理器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.MBufferManager.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="blockSize">缓冲块大小</param>
+            <param name="maxBlocks">最大块数量</param>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.MBufferManager.BlockSize">
+            <summary>
+            缓冲块大小
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.MBufferManager.MaxBlockCount">
+            <summary>
+            最大块数量
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.MBufferManager.BlockCount">
+            <summary>
+            当前可用块数量
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.MBufferManager.HitCount">
+            <summary>
+            缓冲命中次数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.MBufferManager.MissCount">
+            <summary>
+            缓冲未命中次数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.MBufferManager.ClearCounter">
+            <summary>
+            清除计数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.MBufferManager.ReturnBuffer(System.Byte[])">
+            <summary>
+            返回缓冲区
+            </summary>
+            <param name="buffer">缓冲块</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.MBufferManager.TakeBuffer">
+            <summary>
+            从缓冲区中获取块
+            </summary>
+            <returns>缓冲块</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Other.NoticeControler">
+            <summary>
+            错误通知控制器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.NoticeControler.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.NoticeControler.MaxUnSuccessCount">
+            <summary>
+            最多失败数量,最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.NoticeControler.LimitSendCount">
+            <summary>
+            最多发送数量,最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.NoticeControler.LimitSendMinutes">
+            <summary>
+            配合LimitSendCount,设置一定时间内最多发送邮件数量,最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Other.NoticeControler.Disable">
+            <summary>
+            停止发送
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Other.NoticeControler._UnSuccessCount">
+            <summary>
+            累计失败数量
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Other.NoticeControler._SendCount">
+            <summary>
+            累计发送数量
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Other.NoticeControler._LastSendTimeTick">
+            <summary>
+            最后发送时间
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.NoticeControler.Success">
+            <summary>
+            执行成功
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.NoticeControler.UnSuccess">
+            <summary>
+            执行失败
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.NoticeControler.Exchange(System.Boolean)">
+            <summary>
+            执行状态
+            </summary>
+            <param name="success">是否成功</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Other.NoticeControler.SendNoticeAction(System.Boolean)">
+            <summary>
+            发送通知
+            </summary>
+            <param name="isLastSend">是否最后一次发送</param>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DIntTaskPool">
+            <summary>
+            整型任务池
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Get">
+            <summary>
+            获取一个任务
+            </summary>
+            <returns>任务值</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Set(System.Int32)">
+            <summary>
+            放入一个任务
+            </summary>
+            <param name="value">任务值</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Count">
+            <summary>
+            当前任务总数
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DIntTaskPool.Exists(System.Int32)">
+            <summary>
+            检测任务是否存在,当调用Set时,任务存在将不会再次进入任务池
+            </summary>
+            <param name="value">任务值</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DObjectPool`1">
+            <summary>
+            对象池
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="maxCount">对象池最大个数</param>
+            <exception cref="T:System.ArgumentException">MaxCount不能小于1</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="maxCount">对象池最大个数</param>
+            <param name="waitingTimeout">获取对象超时时间</param>
+            <exception cref="T:System.ArgumentException">MaxCount不能小于1</exception>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.DObjectPool`1.MaxCount">
+            <summary>
+            对象池最大个数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.DObjectPool`1.WaitingTimeout">
+            <summary>
+            获取对象超时时间,默认-1无限等待.(单位毫秒)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.Get">
+            <summary>
+            获取一个对象进行使用,如果等待超时将返回null
+            </summary>
+            <returns>T</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.Set(`0)">
+            <summary>
+            将对象归还对象池
+            </summary>
+            <param name="value">T</param>
+            <exception cref="T:System.Threading.SemaphoreFullException">对象池对象出现溢出,这是外部构造了对象传入导致</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.GetCount">
+            <summary>
+            获取池中剩余数量,测试/监测用
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DObjectPool`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DStrTaskPool">
+            <summary>
+            字符串任务池
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Get">
+            <summary>
+            获取一个任务
+            </summary>
+            <returns>任务值</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Set(System.String)">
+            <summary>
+            放入一个任务
+            </summary>
+            <param name="value">任务值</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Count">
+            <summary>
+            当前任务总数
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DStrTaskPool.Exists(System.String)">
+            <summary>
+            检测任务是否存在,当调用Set时,任务存在将不会再次进入任务池
+            </summary>
+            <param name="value">任务值</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DTaskPool`1">
+            <summary>
+            任务池
+            </summary>
+            <typeparam name="T">任务参数类</typeparam>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Get">
+            <summary>
+            获取一个任务
+            </summary>
+            <returns>T</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Set(`0)">
+            <summary>
+            放入一个任务
+            </summary>
+            <param name="value">T</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Count">
+            <summary>
+            当前任务总数
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPool`1.Exists(`0)">
+            <summary>
+            检测任务是否存在,当调用Set时,任务存在将不会再次进入任务池
+            </summary>
+            <param name="value">T</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1">
+            <summary>
+            任务池,不检测对象相同
+            </summary>
+            <typeparam name="T">任务参数类</typeparam>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.Get">
+            <summary>
+            获取一个任务
+            </summary>
+            <returns>T</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.Set(`0)">
+            <summary>
+            放入一个任务
+            </summary>
+            <param name="value">T</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DTaskPoolNotCheck`1.Count">
+            <summary>
+            当前任务总数
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DThread">
+            <summary>
+            线程操作类,实现的DoWork方法中必须捕捉异常
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThread.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="E:YQTrackV6.Common.Threading.DThread.ThreadGiveBack">
+            <summary>
+            归还线程事件
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThread.Run">
+            <summary>
+            运行线程
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThread.DoWork">
+            <summary>
+            线程工作方法,根据具体需要在继承的类中重载
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThread.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThread.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.DThreadPool`1">
+            <summary>
+            线程池,用于运行相同工作的多线程处理
+            </summary>
+            <typeparam name="T">为继承DThread的类,并需要空构造函数,以便线程池创建</typeparam>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThreadPool`1.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="threadCount">线程池中的线程数量</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThreadPool`1.Get">
+            <summary>
+            获取一个线程进行工作
+            </summary>
+            <returns>T</returns>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.DThreadPool`1.GetT">
+            <summary>
+            可用线程
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThreadPool`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.DThreadPool`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.ParalleControler">
+            <summary>
+            并发控制器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Threading.ParalleControler._ParalleCount">
+            <summary>
+            初始化信号数量
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Threading.ParalleControler._Sem">
+            <summary>
+            信号量
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.ParalleControler.ParalleCount">
+            <summary>
+            并发数量
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.ParalleControler.CurrentCount">
+            <summary>
+            当前可用信号
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Setting(System.Int32)">
+            <summary>
+            设置并发
+            </summary>
+            <param name="paralleCount">并发数量</param>
+            <returns>是否发生改变</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Setting(System.Int32,System.Boolean)">
+            <summary>
+            设置并发
+            </summary>
+            <param name="paralleCount">并发数量</param>
+            <param name="changeThreadPoolMin">同时改变线程池最小线程数量,默认为true</param>
+            <returns>是否发生改变</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Wait">
+            <summary>
+            等待一个可用信号
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.ParalleControler.Release">
+            <summary>
+            释放一个可用信号
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.PeriodService">
+            <summary>
+            定时服务基类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="periodSeconds">定时间隔(秒)</param>
+            <param name="errorPeriodSeconds">发生错误时候定时间隔(秒)</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Threading.PeriodService._WaitHandle">
+            <summary>
+            用于控制同一时间只可以执行一个任务
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.PeriodService.PeriodSeconds">
+            <summary>
+            定时间隔(秒),最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.PeriodService.ErrorPeriodSeconds">
+            <summary>
+            发生错误时候定时间隔(秒),最小为1
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.PeriodService.LastRunTime">
+            <summary>
+            最后执行时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.PeriodService.LastSuccess">
+            <summary>
+            最后执行是否成功
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Threading.PeriodService.IsRunning">
+            <summary>
+            正在执行
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.Start">
+            <summary>
+            启动服务
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.RunNow">
+            <summary>
+            立即执行定时任务
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.Run(System.Object)">
+            <summary>
+            异步手动执行任务
+            </summary>
+            <param name="state">执行参数</param>
+            <returns>是否成功执行</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.DoWork">
+            <summary>
+            工作方法
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.PeriodService.DoRun(System.Object)">
+            <summary>
+            执行方法,此方法需保证不抛出异常
+            </summary>
+            <param name="state">执行参数</param>
+            <returns>返回是否成功</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Threading.WaitControler">
+            <summary>
+            等待控制器
+            一般用于控制所有并发任务结束,每个任务结束时候调用一次Release,循环任务总数调用Wait,达到控制效果
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.WaitControler.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.WaitControler.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.WaitControler.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.WaitControler.Wait">
+            <summary>
+            等待一个信号释放
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Threading.WaitControler.Release">
+            <summary>
+            释放一个信号
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.UtilsEnum.EnumDisplay">
+            <summary>
+            获取枚举显示相关的属性
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumDisplay.GetDisplayName``1(``0)">
+            <summary>
+            根据DisplayAttribute获取显示名称
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举值</param>
+            <returns>返回显示属性，若不存在则返回枚举定义字符串格式</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumDisplay.GetDisplayOrder``1(``0)">
+            <summary>
+            获取排序值
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举值</param>
+            <returns>返回排序值，若不存在则返回0</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.UtilsEnum.EnumItem`1">
+            <summary>
+            枚举字段描述
+            </summary>
+            <typeparam name="TType">枚举值类型</typeparam>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItem`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.UtilsEnum.EnumItem`1.EnumName">
+            <summary>
+            枚举字段名
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.UtilsEnum.EnumItem`1.EnumValue">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.UtilsEnum.EnumItem`1.EnumDesc">
+            <summary>
+            枚举描述,如果枚举存在描述,此属性值将为描述信息,否则为字段名称
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItem`1.GetEnumItemList``1">
+            <summary>
+            获取枚举类型的所有字段描述
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>字段描述集合</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItem`1.GetEnumItemList``1(System.Resources.ResourceManager)">
+            <summary>
+            获取枚举类型的所有字段描述,从资源文件中读取
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>字段描述集合</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.UtilsEnum.EnumItemInt">
+            <summary>
+            int枚举字段描述
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemInt.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemInt.PropName(System.Linq.Expressions.Expression{System.Func{YQTrackV6.Common.UtilsEnum.EnumItemInt,System.Object}})">
+            <summary>
+            获取对象属性名称
+            </summary>
+            <param name="keySelector">表达式</param>
+            <returns>属性名称</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.UtilsEnum.EnumItemLong">
+            <summary>
+            long枚举字段描述
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemLong.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemLong.PropName(System.Linq.Expressions.Expression{System.Func{YQTrackV6.Common.UtilsEnum.EnumItemInt,System.Object}})">
+            <summary>
+            获取对象属性名称
+            </summary>
+            <param name="keySelector">表达式</param>
+            <returns>属性名称</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.UtilsEnum.EnumItemShort">
+            <summary>
+            short枚举字段描述
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemShort.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.UtilsEnum.EnumItemShort.PropName(System.Linq.Expressions.Expression{System.Func{YQTrackV6.Common.UtilsEnum.EnumItemShort,System.Object}})">
+            <summary>
+            获取对象属性名称
+            </summary>
+            <param name="keySelector">表达式</param>
+            <returns>属性名称</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.FileExtend">
+            <summary>
+            文件操作辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllBytes(System.String,System.Byte[])">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllLines(System.String,System.Collections.Generic.IEnumerable{System.String},System.Text.Encoding)">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllText(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllBytesAsync(System.String,System.Byte[])">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllLinesAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Text.Encoding)">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.FileExtend.MyFileWriteAllTextAsync(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            写入文件
+            </summary>
+            <param name="path">要写入的文件</param>
+            <param name="contents">文件内容</param>
+            <param name="encoding">编码</param>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.NetExtend">
+            <summary>
+            网络辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.ReadNetInfo">
+            <summary>
+            获取NetStat命令行内容
+            </summary>
+            <returns>分享后内容</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.ReadNetStat">
+            <summary>
+            获取NetStat命令行内容
+            </summary>
+            <returns>NetStat命令行内容</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.AnalysisNetStat(System.String)">
+            <summary>
+            分析NetStat命令行内容
+            </summary>
+            <param name="text">NetStat命令行内容</param>
+            <returns>分享后内容</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.GetEthernetAddress">
+            <summary>
+            获取本机的所有网络IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.GetInternetAddress">
+            <summary>
+            获取本机的外网网络IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.NetExtend.InitServicePoint">
+            <summary>
+            <para>初始化网络参数</para>
+            <para>ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;</para>
+            <para>ServicePointManager.CheckCertificateRevocationList = false;</para>
+            <para>ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;</para>
+            <para>ServicePointManager.Expect100Continue = false;</para>
+            <para>ServicePointManager.DefaultConnectionLimit = 1024;</para>
+            <para>ServicePointManager.MaxServicePointIdleTime = 150000;</para>
+            <para>ServicePointManager.UseNagleAlgorithm = false;</para>
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.NetIPAddressType">
+            <summary>
+            网络IP地址类型
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Utils.NetIPAddressType.Internet">
+            <summary>
+            因特网（公网IP地址）
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Utils.NetIPAddressType.Intranet">
+            <summary>
+            内网（私有网络IP地址）
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.EthernetAddress">
+            <summary>
+            网络接口地址类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.EthernetAddress.AddressType">
+            <summary>
+            地址类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.EthernetAddress.Address">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.EthernetAddress.#ctor(YQTrackV6.Common.Utils.NetIPAddressType,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="addressType">地址类型</param>
+            <param name="address">IP地址</param>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.PasswordExtend">
+            <summary>
+            密码辅助类
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Utils.PasswordExtend.PasswordFormatRegexPattern">
+            <summary>
+            密码格式正则表达式, "^([0-9]|[a-zA-Z]|((?=[\x21-\x7e]+)[^A-Za-z0-9])){6,16}$"
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.IsValidPasswordFormat(System.String)">
+            <summary>
+            验证密码是否符合格式
+            </summary>
+            <param name="password">密码</param>
+            <returns>是否符合</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.GetPasswordStrength(System.String)">
+            <summary>
+            验证码密码强度等级, 1-低, 2-中, 3-高
+            </summary>
+            <param name="password">密码</param>
+            <returns>强度等级</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.GeneratePasswordPair(System.String)">
+            <summary>
+            根据密码明文生成随机Salt和加密密文
+            </summary>
+            <param name="password">密码</param>
+            <returns>密码对模型</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.IsPasswordMatch(System.String,YQTrackV6.Common.Utils.PasswordPair)">
+            <summary>
+            检查用户密码和系统密码是否匹配
+            </summary>
+            <param name="password">密码</param>
+            <param name="pair">密码对模型</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.GenerateSalt">
+            <summary>
+            生成随机Salt
+            </summary>
+            <returns>随机Salt</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordExtend.GeneratePasswordHash(System.String,System.Byte[])">
+            <summary>
+            将密码明文和Salt合并后加密
+            </summary>
+            <param name="password">密码</param>
+            <param name="salt">Salt</param>
+            <returns>加密后文本</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.PasswordPair">
+            <summary>
+            密码对模型，保存密码Hash和Salt
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PasswordPair.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="hash">密码Hash</param>
+            <param name="salt">密码Salt</param>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.PasswordPair.Hash">
+            <summary>
+            密码Hash
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.PasswordPair.Salt">
+            <summary>
+            密码Salt
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.PathExtend">
+            <summary>
+            路径操作辅助类
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.PathExtend.MyApplicationPath">
+            <summary>
+            得到当前目录(Winform使用)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyApplicationFold(System.String)">
+            <summary>
+            获取系统应用程序目录下的一个文件夹路径,如果文件夹不存在将自动创建.
+            </summary>
+            <param name="foldName">文件夹名称</param>
+            <returns>路径</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyApplicationFile(System.String)">
+            <summary>
+            获取系统应用程序目录下的一个文件路径,如果文件夹不存在将自动创建.
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns>路径</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyApplicationRunLibPath(System.String)">
+            <summary>
+            获取进程运行模块所在文件夹的位置
+            </summary>
+            <param name="assemblyFileName">程序集文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyApplicationRunWin32DllReleaseFile(System.String,System.String)">
+            <summary>
+            获取需要释放Win32 dll的目标文件名称
+            </summary>
+            <param name="assemblyFileName">程序集文件名称</param>
+            <param name="fileName">目标dll库文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:YQTrackV6.Common.Utils.PathExtend.MyTempPath">
+            <summary>
+            获取程序临时文件夹
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyCombinePath(System.String,System.String)">
+            <summary>
+            合并目录路径,如果目录不存在自动创建
+            </summary>
+            <param name="path1">第一个路径</param>
+            <param name="path2">第二个路径</param>
+            <returns>合并后路径</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.PathExtend.MyCombineFile(System.String,System.String)">
+            <summary>
+            合并文件路径,如果目录不存在自动创建
+            </summary>
+            <param name="path1">第一个路径</param>
+            <param name="path2">第二个路径</param>
+            <returns>合并后路径</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.ReflectionExtend">
+            <summary>
+            反射辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.ReflectionExtend.MyDescriptionValue(System.Enum)">
+            <summary>
+            获取枚举值对应的描述信息,如果没有描述将返回值对应的名称
+            </summary>
+            <param name="value">枚举值</param>
+            <returns>描述信息</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.ReflectionExtend.MyPropName``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            获取属性名
+            </summary>
+            <typeparam name="TSource">实体类型</typeparam>
+            <param name="keySelector">表达式,如:f=>f.FId</param>
+            <returns>属性名</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.SecurityExtend">
+            <summary>
+            加密辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.RsaEncrypt(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            加密流
+            </summary>
+            <param name="stream">流</param>
+            <param name="publicKeyXml">公钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>加密后的流</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.RsaEncrypt(System.String,System.String,System.Int32)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="text">字符串</param>
+            <param name="publicKeyXml">公钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.RsaDecrypt(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            解密流
+            </summary>
+            <param name="stream">流</param>
+            <param name="privateKeyXml">私钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>解密后的流</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.RsaDecrypt(System.String,System.String,System.Int32)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="text">字符串</param>
+            <param name="privateKeyXml">私钥</param>
+            <param name="keySize">密钥大小</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.DesEncrypt(System.String,System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="text">要加密的文本</param> 
+            <param name="sKey">密钥</param>
+            <param name="sIV">向量</param>
+            <returns>加密后文本</returns> 
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.DesDecrypt(System.String,System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="text">要解密的文本</param> 
+            <param name="sKey">密钥</param> 
+            <param name="sIV">向量</param>
+            <returns>解密后文本</returns> 
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.TripleDesEncrypt(System.String,System.String,System.String)">
+            <summary>
+            3DES加密
+            </summary>
+            <param name="text">要加密的文本</param>
+            <param name="sKey">秘钥</param>
+            <param name="sIV">向量</param>
+            <returns>加密后文本</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.TripleDesDecrypt(System.String,System.String,System.String)">
+            <summary>
+            3Des解密
+            </summary>
+            <param name="text">要解密的文本</param>
+            <param name="sKey">秘钥</param>
+            <param name="sIV">向量</param>
+            <returns>解密后文本</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.MD5Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="text">要加密的文本</param>
+            <returns>加密后的文本</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SecurityExtend.MD5Encrypt(System.Byte[])">
+            <summary>
+            加密
+            </summary>
+            <param name="value">要加密的内容本</param>
+            <returns>加密后的文本</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.SerializeExtend">
+            <summary>
+            序列化辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MySerializeToBinary(System.Object,System.IO.Stream)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="entity">可序列化的对象</param>
+            <param name="stream">序列化到的目标流</param>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MySerializeToBinary(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="entity">可序列化的对象</param>
+            <returns>序列化后的字节数组</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromBinary``1(System.IO.Stream)">
+            <summary>
+            反序列化对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="stream">要反序列化的流</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromBinary(System.IO.Stream)">
+            <summary>
+            反序列化对象
+            </summary>
+            <param name="stream">要反序列化的流</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromBinary``1(System.Byte[])">
+            <summary>
+            反序列化对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="data">要反序列化的字节数组</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromBinary(System.Byte[])">
+            <summary>
+            反序列化对象
+            </summary>
+            <param name="data">要反序列化的字节数组</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MySerializeToXml(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="entity">可序列化的对象</param>
+            <returns>序列化后的xml文档</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromXml``1(System.String)">
+            <summary>
+            反序列化对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="xml">要反序列化的xml文档</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromXml(System.String,System.Type)">
+            <summary>
+            反序列化对象
+            </summary>
+            <param name="xml">要反序列化的xml文档</param>
+            <param name="type">对象类型</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MySerializeToJson(System.Object)">
+            <summary>
+            序列化对象,如果需要自定义序列化,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="entity">可序列化的对象</param>
+            <returns>序列化后的Json格式字符串</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromJson``1(System.String)">
+            <summary>
+            反序列化对象,如果需要自定义序列化,使用Newtonsoft.Json序列化
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="data">要反序列化的Json格式字符串</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromJson(System.String,System.Type)">
+            <summary>
+            反序列化对象,如果需要自定义序列化,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="data">要反序列化的Json格式字符串</param>
+            <param name="type">对象类型</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromJson``1(System.Byte[])">
+            <summary>
+            反序列化对象,如果需要自定义序列化,使用Newtonsoft.Json序列化
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="data">要反序列化的Json格式字符串</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SerializeExtend.MyDeserializeFromJson(System.Byte[],System.Type)">
+            <summary>
+            反序列化对象,如果需要自定义序列化,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="data">要反序列化的Json格式字符串</param>
+            <param name="type">对象类型</param>
+            <returns>对象实例</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空</exception>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.SystemExtend">
+            <summary>
+            系统辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.SystemExtend.GetHashCode(System.String)">
+            <summary>
+            生成字符串固定的Hash代码
+            </summary>
+            <param name="value">需要生成Hash的字符串</param>
+            <returns>Hash代码</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Utils.ThreadExtend">
+            <summary>
+            线程辅助类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.ThreadExtend.SetMinThreads(System.Int32,System.Int32)">
+            <summary>
+            设置最小线程
+            </summary>
+            <param name="workerThreads">工作线程,-1为不进行设置</param>
+            <param name="completionPortThreads">IO线程,-1为不进行设置</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Utils.ThreadExtend.GetThreadInfo">
+            <summary>
+            获取线程信息
+            </summary>
+            <returns>线程信息</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BaseHttpServiceObject">
+            <summary>
+            服务对象
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BaseHttpServiceObject.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BaseHttpServiceObject.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BaseHttpServiceObject.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BaseHttpServiceObject.InitializeLifetimeService">
+            <summary>
+            返回对象生命周期,无限
+            </summary>
+            <returns>null</returns>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BasicHttpBaseConfig">
+            <summary>
+            基础配置
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.HostAddressFormat">
+            <summary>
+            主机地址格式(http://{0:address}:{1:port}/{2:interface})
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.ServerAddress">
+            <summary>
+            服务地址
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.ServerPort">
+            <summary>
+            服务端口
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.MaxBufferPoolSize">
+            <summary>
+            最大缓冲池大小(字节)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.MaxReceivedMessageSize">
+            <summary>
+            最大消息大小(字节)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.SendTimeout">
+            <summary>
+            发送超时(秒)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.ReceiveTimeout">
+            <summary>
+            接收超时(秒)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpBaseConfig.OpenCloseTimeout">
+            <summary>
+            打开连接超时(秒)
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BasicHttpClient`1">
+            <summary>
+            客户端
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BasicHttpClient`1.#ctor(YQTrackV6.Common.Wcf.BasicHttpClientConfig)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="config">主机配置,配置传入之后修改无效,如果要重新配置,需重新创建对象</param>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BasicHttpClientConfig">
+            <summary>
+            客户端配置
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BasicHttpClientConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpClientConfig.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpClientConfig.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BasicHttpService`2">
+            <summary>
+            服务端
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BasicHttpService`2.#ctor(YQTrackV6.Common.Wcf.BasicHttpServiceConfig)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="config">主机配置,配置传入之后修改无效,如果要重新配置,需重新创建对象</param>
+        </member>
+        <member name="T:YQTrackV6.Common.Wcf.BasicHttpServiceConfig">
+            <summary>
+            服务端配置
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Wcf.BasicHttpServiceConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpServiceConfig.MaxConcurrentCalls">
+            <summary>
+            最大并行处理消息数
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Wcf.BasicHttpServiceConfig.MaxConcurrentSessions">
+            <summary>
+            最大并行处理会话数
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Windows.FrameForm">
+            <summary>
+            应用程序主窗体基类
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Windows.FrameForm.ActionItem">
+            <summary>
+            命令定义
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.ActionItem.#ctor">
+            <summary>
+            构造函数,定义分割线
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.ActionItem.#ctor(System.String,System.Action)">
+            <summary>
+            构造函数,定义命令
+            </summary>
+            <param name="actionName">命令名称</param>
+            <param name="action">命令委托</param>
+        </member>
+        <member name="P:YQTrackV6.Common.Windows.FrameForm.ActionItem.ActionName">
+            <summary>
+            命令名称
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Common.Windows.FrameForm.ActionItem.Action">
+            <summary>
+            命令委托
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyExitCore">
+            <summary>
+            执行退出
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyReadParmsInfoCore">
+            <summary>
+            执行读取参数信息
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyDockFillInfo">
+            <summary>
+            最大化参数信息框
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyExit">
+            <summary>
+            退出事件实现方法
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyReadParmsInfo">
+            <summary>
+            读取参数信息实现方法
+            </summary>
+            <returns>参数信息</returns>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.MyActionItemList">
+            <summary>
+            定义程序命令列表
+            </summary>
+            <returns>命令集合</returns>
+        </member>
+        <member name="F:YQTrackV6.Common.Windows.FrameForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.FrameForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Common.Windows.PrintMessageForm">
+            <summary>
+            可用于输出消息的主窗体基类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.PrintMessageForm.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.PrintMessageForm.MyPrintMessage(System.String)">
+            <summary>
+            输出消息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="F:YQTrackV6.Common.Windows.PrintMessageForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.PrintMessageForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:YQTrackV6.Common.Windows.PrintMessageForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

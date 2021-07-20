@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.BaseModel</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.BaseModel.BaseEntity">
+            <summary>
+                数据库实体的基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.BaseEntity.FCreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.BaseEntity.FCreateBy">
+            <summary>
+                创建人
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.BaseEntity.FUpdateTime">
+            <summary>
+                更新时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.BaseEntity.FUpdateBy">
+            <summary>
+                更新人
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseModel.BaseEntity.SetCreateInfo(System.Int64)">
+            <summary>
+                设置创建者信息
+            </summary>
+            <param name="createBy"></param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseModel.BaseEntity.SetUpdateInfo(System.Int64)">
+            <summary>
+                设置更新信息
+            </summary>
+            <param name="updateBy"></param>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.Model">
+            <summary>
+                所有实体类的基类
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.BaseArgsViewModel">
+            <summary>
+            Args 响应基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.BaseArgsViewModel.Args">
+            <summary>
+            code占位符的响应参数信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.Validation.EmailExpressionAttribute">
+            <summary>
+            Email正则验证 Attribute
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseModel.Validation.EmailExpressionAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.Validation.OrderNoValidateAttribute">
+            <summary>
+            验证订单号是否合法
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseModel.Validation.OrderNoValidateAttribute.IsValid(System.Object)">
+            <summary>
+            验证单号是否合法
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.Validation.PasswordFormatExpressionAttribute">
+            <summary>
+            密码格式正则表达式验证属性
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseModel.Validation.PasswordFormatExpressionAttribute.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.UserInfoDTO">
+            <summary>
+                用户信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FUserId">
+            <summary>
+                ID
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FNodeId">
+            <summary>
+                服务器节点编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FDbNo">
+            <summary>
+                数据库编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FTableNo">
+            <summary>
+                表编号
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FUserRole">
+            <summary>
+                角色
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FNickname">
+            <summary>
+                昵称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FEmail">
+            <summary>
+                邮箱
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FState">
+            <summary>
+                注册状态
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FIsPay">
+            <summary>
+                是否付费
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FLanguage">
+            <summary>
+                语言
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FCountry">
+            <summary>
+                国家
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FPhoto">
+            <summary>
+                用户头像图片
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FPasswordLevel">
+            <summary>
+                用户密码等级
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.FCreateTime">
+            <summary>
+                用户创建时间
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.UserInfoDTO.MemberInfos">
+            <summary>
+            会员信息
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseModel.YQMemberInfoDTO">
+            <summary>
+            会员信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.YQMemberInfoDTO.MemberLevel">
+            <summary>
+            会员等级
+            根据过期时间计算，是否还是有效期内。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.YQMemberInfoDTO.ExpiresTime">
+            <summary>
+            结束时间
+            可能为null，免费会员，没有过期时间。
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.YQMemberInfoDTO.MemberType">
+            <summary>
+            会员类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseModel.YQMemberInfoDTO.StartTime">
+            <summary>
+            开始时间
+            可能为null，免费会员，没有时间。
+            </summary>
+        </member>
+    </members>
+</doc>

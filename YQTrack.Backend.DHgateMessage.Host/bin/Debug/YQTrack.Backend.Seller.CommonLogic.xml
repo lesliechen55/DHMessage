@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.Seller.CommonLogic</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.Seller.CommonLogic.EmailNumQuotaBusinessLogic">
+            <summary>
+            邮件数额度业务逻辑。
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.EmailNumQuotaBusinessLogic.CreateDefaultBusinessCtrl(System.Int64,System.Int64,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            创建默认的控制记录
+            </summary>
+            <param name="ctrlId">唯一控制Id</param>
+            <param name="userId">用户Id</param>
+            <param name="consumeType"></param>
+            <param name="businessCtrlType"></param>
+            <param name="serviceCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic">
+            <summary>
+            追踪数的限制处理
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic.CreateDefaultBusinessCtrl(System.Int64,System.Int64,System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            创建默认的控制记录和赠送记录
+            </summary>
+            <param name="ctrlId">唯一控制Id</param>
+            <param name="userId">用户Id</param>
+            <param name="consumeType"></param>
+            <param name="businessCtrlType"></param>
+            <param name="serviceCount"></param>
+            <param name="shopId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic.CreateGivingCurrentMonthBusinessCtrl(System.Int64,System.Int64)">
+            <summary>
+            创建赠送当月的赠送记录，防止在赠送后，有新注册的用户，没有赠送下个月的记录。
+            </summary>
+            <param name="ctrlId">唯一控制Id</param>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic.ShopBindOrUnBindGivingLogic(System.Int64,System.Int64,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            绑定和解绑店铺操作的赠送查询数处理。
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="shopId">店铺Id</param>
+            <param name="recordId">记录Id，根据Redis产生一个</param>
+            <param name="serviceCount">赠送服务数量</param>
+            <param name="sourceType">操作来源类型，见枚举定义GivingSourceType</param>
+            <param name="businessCtrlType">业务控制类型，见枚举定义</param>
+            <param name="maxServiceCount">赠送最大服务数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic.OrderUpdateStateWaitToTracking(System.Int64,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            更新单号状态，转移单号为追踪单号
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="isQueryCount">是否查询统计</param>
+            <param name="isNotify">额度不足是否通知</param>
+            <param name="trackInfoId">按单号Id消费转移，trackinfoId=0,转移所有的</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.Seller.CommonLogic.TrackNumQuotaBusinessLogic.OrderUpdateStateWaitToTracking(System.Int64,System.Int64)">
+            <summary>
+            更新单号状态，转移单号为追踪单号
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="trackInfoId">按单号Id消费转移，trackinfoId=0,转移所有的</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

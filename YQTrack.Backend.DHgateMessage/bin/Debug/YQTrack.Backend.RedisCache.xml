@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.RedisCache</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.RedisCache.BackendRedisControler">
+            <summary>
+            缓存扩展
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.#ctor(System.String)">
+            <summary>
+            缓存扩展
+            </summary>
+            <param name="servicePath"></param>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashDecrement(System.String,System.String,System.Int64)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashIncrement(System.String,System.String,System.Int64)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashDecrementAsync(System.String,System.String,System.Int64)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashIncrementAsync(System.String,System.String,System.Int64)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.StringDecrement(System.String,System.Int64,System.Nullable{System.TimeSpan})">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">递减值</param>
+             <param name="validFor">过期时间</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.StringIncrement(System.String,System.Int64,System.Nullable{System.TimeSpan})">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">递减值</param>
+            <param name="validFor">过期时间</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashDecrement(System.String,System.String,System.Double)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashIncremen(System.String,System.String,System.Double)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashDecrementAsync(System.String,System.String,System.Double)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.HashIncrementAsync(System.String,System.String,System.Double)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.SortedSetAdd(System.String,System.String,System.Double)">
+            <summary>
+            SortedSet 增加一个数据
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="score">权重数</param>
+            <returns>是否增加成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.SortedSetRangeByScore(System.String,System.Double,System.Double)">
+            <summary>
+            根据权重开始位置和结束位置查找Set里的Value
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="startScore">开始查询的权重数</param>
+            <param name="stopScore">结束查找的权重数</param>
+            <returns>查找到Value集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.SortedSetRemove(System.String,System.String[])">
+            <summary>
+            Redis Zrem 命令用于移除有序集中的一个或多个成员，不存在的成员将被忽略。
+            当 key 存在但不是有序集类型时，返回一个错误。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="values">集合成员值</param>
+            <returns>查找到Value集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.BackendRedisControler.KeyExists(System.String,StackExchange.Redis.CommandFlags)">
+            <summary>
+            判断Key是否已经存在
+            </summary>
+            <param name="key"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.CacheModel">
+            <summary>
+            缓存参数
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.CacheModel.#ctor">
+            <summary>
+            缓存model
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.CacheModel.#ctor(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.CacheModel.#ctor(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+            <param name="timeSpan">缓存时长,默认一小时</param>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.CacheModel.Key">
+            <summary>
+            key
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.CacheModel.Value">
+            <summary>
+            value
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.CacheModel.TimesSpan">
+            <summary>
+            缓存时长,默认一小时
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.KeyValueListConvert">
+            <summary>
+            Key-Value集合转换操作
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.KeyValueListConvert.ToKeyValueList``1(``0)">
+            <summary>
+            将对象转换为Key-Value List集合对象
+            </summary>
+            <typeparam name="T">实体对象</typeparam>
+            <param name="obj">实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.KeyValueListConvert.DictionaryToObject``1(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            字典对象Key-Value 转换为对象T
+            </summary>
+            <typeparam name="T">实体对象</typeparam>
+            <param name="dictionary">key-value实体属性集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.KeyValueListConvert.GetTypePropertieTypes(System.Type)">
+            <summary>
+             获取当前类型的属性类型
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisConfigs">
+            <summary>
+            Redis配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisConfigs.Keys">
+            <summary>
+            缓存Key集合
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisConfigs.Items">
+            <summary>
+            Items集合
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisConfigs.CreateSample">
+            <summary>
+            创建简单数据
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisConfigs.Validate">
+            <summary>
+            校验
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.KeyConfig">
+            <summary>
+            主键配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.KeyConfig.KeyPref">
+            <summary>
+            Key前缀
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.KeyConfig.Name">
+            <summary>
+            Redis名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.KeyConfig.Database">
+            <summary>
+            数据库编号
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisConfig">
+            <summary>
+            Redis配置
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisConfig.IsLocal">
+            <summary>
+                是否本地缓存
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisConfig.Service">
+            <summary>
+                缓存服务地址
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisConfig.Name">
+            <summary>
+                缓存服务名
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisService">
+            <summary>
+            Redis缓存服务
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.GetValue(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.GetValue``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SetValue(System.String,System.Object)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SetValue(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="validFor">过期时间</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.DelValue(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SetValue(System.String,System.Collections.Generic.IList{YQTrack.Backend.RedisCache.CacheModel})">
+            <summary>
+            设置多个缓存
+            </summary>
+            <param name="name">缓存服务节点名称</param>
+            <param name="listModel"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.GenerateId(System.String,System.Int32)">
+            <summary>
+            获取一个唯一ID
+            </summary>
+            <param name="name">缓存服务节点名称</param>
+            <param name="nodeId"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.GetCacheTimes(System.String)">
+            <summary>
+            获取缓存过期时间
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SetCacheTimes(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置缓存过期时间
+            </summary>
+            <param name="key"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashDecrement(System.String,System.String,System.Int64)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashIncremen(System.String,System.String,System.Int64)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.StringDecrement(System.String,System.Int64,System.Nullable{System.TimeSpan})">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">递减值</param>
+            <param name="validFor">过期时间</param>
+            <returns>递减后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.StringIncrement(System.String,System.Int64,System.Nullable{System.TimeSpan})">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">递减值</param>
+            <param name="validFor">过期时间</param>
+            <returns>递增后的新值</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashDecrement(System.String,System.String,System.Double)">
+            <summary>
+            递减
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递减后的新值</returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashIncremen(System.String,System.String,System.Double)">
+            <summary>
+            递增
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="hashField">哈希字段名称</param>
+            <param name="value">递减值</param>
+            <returns>递增后的新值</returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.GetLimitAccessResult(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取限制访问结果
+            </summary>
+            <param name="key"></param>
+            <param name="cacheTimeSeconds"></param>
+            <param name="limitCount"></param>
+            <returns>false:</returns>
+            <exception cref="T:System.ArgumentNullException">key is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashGet``1(System.String)">
+            <summary>
+            获取Hash缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashGet``1(System.String,System.String[])">
+            <summary>
+            获取Hash缓存，指定属性对象信息，key字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="fields">字段名集合</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashGet(System.String,System.String[])">
+            <summary>
+            获取Hash缓存，指定属性对象信息，key字段对应的值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="fields">字段名集合</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashSetValue(System.String,System.Object)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashSetValue(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="validFor">过期时间</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashDelValue(System.String,System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key"></param>
+            <param name="field"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashDelValue(System.String,System.String[])">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key"></param>
+            <param name="fields"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashSet(System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Hash设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.HashSet(System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.TimeSpan)">
+            <summary>
+            Hash设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="validFor">过期时间</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">redisList is null</exception>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SortedSetAdd(System.String,System.String,System.Double)">
+            <summary>
+            SortedSet 增加一个数据
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="score">权重数</param>
+            <returns>是否增加成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SortedSetRangeByScore(System.String,System.Double,System.Double)">
+            <summary>
+            根据权重开始位置和结束位置查找Set里的Value
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="startScore">开始查询的权重数</param>
+            <param name="stopScore">结束查找的权重数</param>
+            <returns>查找到Value集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.SortedSetRemove(System.String,System.String[])">
+            <summary>
+            Redis Zrem 命令用于移除有序集中的一个或多个成员，不存在的成员将被忽略。
+            当 key 存在但不是有序集类型时，返回一个错误。
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="values">集合成员值</param>
+            <returns>查找到Value集合</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisService.KeyExists(System.String)">
+            <summary>
+            判断Key是否已经存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisCacheBase">
+            <summary>
+            配置基类
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisCacheBase.EcommerceRedisCacheConfig">
+            <summary>
+            EcommerceRedisCache配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisCacheSettingsHelper">
+            <summary>
+            Redis配置信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.RedisCache.RedisCacheSettingsHelper.SettingsDefault">
+            <summary>
+            缓存配置
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisCacheSettingsHelper.Register">
+            <summary>
+            初始化读取设置
+            </summary>
+            <returns>是否读取成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.RedisCache.RedisCacheSettingsHelper.InitRedisConfig(YQTrack.Backend.RedisCache.RedisConfigs)">
+            <summary>
+            初始化配置
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.RedisCache.RedisConfigDefault">
+            <summary>
+            默认的Redis配置对象
+            </summary>
+        </member>
+    </members>
+</doc>

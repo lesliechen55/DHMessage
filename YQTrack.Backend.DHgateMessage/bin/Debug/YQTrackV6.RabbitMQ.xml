@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.RabbitMQ</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.RabbitMQ.Config.RabbitMqConfig">
+            <summary>
+            RMQ消息队列服务连接配置
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.Host">
+            <summary>
+            主机地址(IP地址)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.HeartBeat">
+            <summary>
+            心跳间隔(秒)
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.AutomaticRecoveryEnabled">
+            <summary>
+            自动重连
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.NetworkRecoveryInterval">
+            <summary>
+            重连间隔时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.Port">
+            <summary>
+            端口（0代表默认端口）
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.VirtualHost">
+            <summary>
+            虚拟主机
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.ServiceName">
+            <summary>
+            当前服务名称（自己定义，用于计数器）
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.CreateSample">
+            <summary>
+            构建样例配置数据
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.Config.RabbitMqConfig.Validate">
+            <summary>
+            校验配置是否有效
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.Config.HostInfo">
+            <summary>
+            消息队列主机信息
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.HostInfo.Host">
+            <summary>
+            ip:prot
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.Config.HostInfo.Key">
+            <summary>
+            节点名称(全局唯一)
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.LogDefine">
+            <summary>
+            日志定义类
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection">
+            <summary>
+            发送消息到队列成功失败计数器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.ConnectionUnblocked">
+            <summary>
+            解除阻塞
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.ConnectionBlocked">
+            <summary>
+            连接阻塞
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.CallbackException">
+            <summary>
+            回调异常
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.ConnectionShutdown">
+            <summary>
+            连接关闭
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.Default">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.Shutdown(System.String)">
+            <summary>
+            连接关闭
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.Exception(System.String)">
+            <summary>
+            回调异常
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.Blocked(System.String)">
+            <summary>
+            连接阻塞
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterConnection.Unblocked(System.String)">
+            <summary>
+            解除阻塞
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue">
+            <summary>
+            发送消息到队列成功失败计数器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.SendQueueSuccess">
+            <summary>
+            成功处理
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.SendQueueError">
+            <summary>
+            错误请求
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.Default">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.Success">
+            <summary>
+            发送消息到队列成功
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.PerfCounter.PerfCounterSendQueue.Error">
+            <summary>
+            发送消息到队列失败
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.QueueService">
+            <summary>
+            消息队列服务
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.QueueService._InitializedPerfCounter">
+            <summary>
+            计数器实例化标记,避免多次实例化异常
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.QueueService._PerfCounterLock">
+            <summary>
+            计数器实例化锁
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.Init(YQTrackV6.RabbitMQ.Config.RabbitMqConfig,System.String[])">
+            <summary>
+            消息队列服务
+            </summary>
+            <param name="config">初始化配置(必须设置)</param>
+            <param name="order">节点连接顺序（订阅者跟消费者的顺序保持一致 能大幅度提高性能，使用详情参见消息中心的消息队列初始化）</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.ExchangeDeclare(RabbitMQ.Client.IModel,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            交换器声明
+            </summary>
+            <param name="iModel"></param>
+            <param name="exchange">交换器</param>
+            <param name="type">交换器类型：
+            1、Direct Exchange – 处理路由键。需要将一个队列绑定到交换机上，要求该消息与一个特定的路由键完全
+            匹配。这是一个完整的匹配。如果一个队列绑定到该交换机上要求路由键 “dog”，则只有被标记为“dog”的
+            消息才被转发，不会转发dog.puppy，也不会转发dog.guard，只会转发dog
+            2、Fanout Exchange – 不处理路由键。你只需要简单的将队列绑定到交换机上。一个发送到交换机的消息都
+            会被转发到与该交换机绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。Fanout
+            交换机转发消息是最快的。
+            3、Topic Exchange – 将路由键和某模式进行匹配。此时队列需要绑定要一个模式上。符号“#”匹配一个或多
+            个词，符号“*”匹配不多不少一个词。因此“audit.#”能够匹配到“audit.irs.corporate”，但是“audit.*”
+            只会匹配到“audit.irs”。</param>
+            <param name="arguments">参数</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.QueueDeclare(RabbitMQ.Client.IModel,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            队列声明
+            </summary>
+            <param name="channel"></param>
+            <param name="queue">队列</param>
+            <param name="arguments">参数</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.GetModel(System.String,System.String,System.Nullable{System.TimeSpan},System.String)">
+            <summary>
+            获取Model
+            </summary>
+            <param name="exchange">交换机名称</param>
+            <param name="queue">队列名称</param>
+            <param name="expired">过期时间(秒)</param>
+            <param name="deadRouting">过期后的消息路由(没有则丢弃)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.GetModel(RabbitMQ.Client.IModel,System.String,System.String,System.Nullable{System.TimeSpan},System.String)">
+            <summary>
+            获取Model
+            </summary>
+            <param name="model"></param>
+            <param name="exchange">交换机名称</param>
+            <param name="queue">队列名称</param>
+            <param name="expired">过期时间(秒)</param>
+            <param name="deadRouting">死信路由队列(相同交换机)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.CreateQueue``1(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            创建发布消息对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="exchange">交换机</param>
+            <param name="qeueueName">队列名称</param>
+            <param name="expired">消息过期时间(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.CreateQueue``1(System.String,System.String,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            创建发布消息对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="exchange">交换机</param>
+            <param name="qeueueName">队列名称</param>
+            <param name="expired">消息过期时间(秒)</param>
+            <param name="autoAck">消息是否自动确认</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.QueueService.CreateQueue``1(System.String,System.String,System.Nullable{System.TimeSpan},System.Boolean,System.String)">
+            <summary>
+            创建发布消息对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="exchange">交换机</param>
+            <param name="qeueueName">队列名称</param>
+            <param name="expired">消息过期时间(秒)</param>
+            <param name="autoAck">消息是否自动确认</param>
+            <param name="deadRouting">死信队列设置</param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.RMQBase">
+            <summary>
+            RMQ基类,构造基础的类成员
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQBase.Queue">
+            <summary>
+            队列
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQBase.Exchange">
+            <summary>
+            交换机
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQBase.Expired">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQBase.Model">
+            <summary>
+            RabbitMQ模型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQBase.AutoAck">
+            <summary>
+            不要消息确认
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQBase.SetModel(RabbitMQ.Client.IModel)">
+            <summary>
+            设置使用的模型
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:YQTrackV6.RabbitMQ.RMQ`1">
+            <summary>
+            RabbitMQ消息队列
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._Func">
+            <summary>
+            订阅消息处理的Function
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._FuncExt">
+            <summary>
+            订阅处理回调,返回第一个bool,说明是否确认(对于自动确认的该返回值无效),第二bool个参数标志是否继续订阅(默认继续订阅)
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._Consumer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1.LockObj">
+            <summary>
+            防止重复订阅或取消订阅锁
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._IsSubscribed">
+            <summary>
+            是否已订阅
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._ActualConcurrency">
+            <summary>
+            实际并发量
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.RabbitMQ.RMQ`1._Max_Concurrency">
+            <summary>
+            最大并发处理,为0表示不进行并发控制
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.RabbitMQ.RMQ`1.IsSubscribed">
+            <summary>
+            当前订阅状态
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.TaskCompleted">
+            <summary>
+            处理任务数量完成
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.#ctor(RabbitMQ.Client.IModel,System.String,System.String,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            RabbitMQ消息队列构造
+            </summary>
+            <param name="model">RMQ模型</param>
+            <param name="exchange">交换机名称</param>
+            <param name="queue">队列名称</param>
+            <param name="expired">过期时间</param>
+            <param name="autoAck">是否自动确认</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Publish(`0)">
+            <summary>
+            发布消息(需要不需要服务端确认)
+            </summary>
+            <param name="t">消息体对象</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Publish(`0,System.Boolean)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="t">消息体对象</param>
+            <param name="confirm">是否需要确认发布</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.SetModel(RabbitMQ.Client.IModel)">
+            <summary>
+            重新设置IModel（一般连接断开时使用）
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Subscribe(System.Func{`0,System.Boolean})">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="func">订阅委托方法</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Subscribe(System.Func{`0,System.Boolean},System.UInt16)">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="func">订阅委托方法</param>
+            <param name="maxNoAckCount">最大未确认消息数量(默认为1)</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Subscribe(System.Func{`0,System.Boolean},System.UInt16,System.Int32)">
+            <summary>
+            订阅消息
+            </summary>
+            <param name="func">订阅委托方法</param>
+            <param name="maxNoAckCount">最大同时未确认消息数量(默认为1)</param>
+            <param name="maxConcurrency">最大异步处理任务数量，该值小于等于零被视为无效</param>
+            <remarks>如果设置了maxConcurrency,需要在异步/线程的任务完成后调用TaskCompleted()方法以减少并发计数</remarks>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.SubscribeExt(System.Func{`0,System.Tuple{System.Boolean,System.Boolean}})">
+            <summary>
+            限速订阅
+            </summary>
+            <param name="func"></param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.UnSubscribe">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.RabbitMQ.RMQ`1.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

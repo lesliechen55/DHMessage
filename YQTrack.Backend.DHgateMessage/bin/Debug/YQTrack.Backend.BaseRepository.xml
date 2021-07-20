@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.BaseRepository</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.BaseRepository.BaseRepository`1">
+            <summary>
+                仓储基类
+            </summary>
+            <typeparam name="T">实体</typeparam>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.#ctor">
+            <summary>
+                构造函数
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GeneratePrimaryKey(`0)">
+            <summary>
+                生成分布式主键
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.BaseRepository`1.DbType">
+            <summary>
+            指定当前操作的数据库配置名称
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.BaseRepository`1.Context">
+            <summary>
+                数据上下文
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetById(System.Int64)">
+            <summary>
+                根据主键查找实体
+            </summary>
+            <param name="id">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetByIdAsync(System.Int64)">
+            <summary>
+                根据主键异步查找实体
+            </summary>
+            <param name="id">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Get">
+            <summary>
+                查找所有实体
+            </summary>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetAsync">
+            <summary>
+                异步查找所有实体
+            </summary>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件查询实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件异步查询实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件查询排序实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件异步查询排序实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetByStoredProcedure``1(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                调用存储过程查询实体
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetByStoredProcedureAsync``1(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                异步调用存储过程查询实体
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Count">
+            <summary>
+                查询实体数量
+            </summary>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CountAsync">
+            <summary>
+                异步查询实体数量
+            </summary>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件异步查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件异步查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Query``1(Dapper.CommandDefinition)">
+            <summary>
+                查询实体列表
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.QueryAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步查询实体列表
+            </summary>
+            <typeparam name="TD">实体列表</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Execute``1(Dapper.CommandDefinition)">
+            <summary>
+                执行指定SQL
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="command">Command</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Insert(`0)">
+            <summary>
+                新增实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Update(`0,System.Boolean)">
+            <summary>
+                更新实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="ignoreNullValue">是否忽略空值,默认true:忽略</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.Delete(`0)">
+            <summary>
+                删除实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.QueryDataTable``1(System.String)">
+            <summary>
+                查询DataTable列表
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="sql">sql</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.QuerySingleOrDefaultAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步单行查询实体
+            </summary>
+            <typeparam name="TD">实体列表</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.QuerySingleOrDefaultAsync(System.Type,Dapper.CommandDefinition)">
+            <summary>
+                异步单行第一列数据
+            </summary>
+            <param name="type">指定返回的Type类型</param>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GenerateId(System.String)">
+            <summary>
+            通过Reids产生全局唯一Id
+            </summary>
+            <param name="redisName">配置的redis节点名称</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.ReaderFirstColumnDataAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步读取第一列的所有的数据
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.ReaderFirstColumnData``1(Dapper.CommandDefinition)">
+            <summary>
+                异步读取第一列的所有的数据
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommand(Dapper.CommandDefinition)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommandAsync(Dapper.CommandDefinition)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommand(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition})">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommandAsync(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition})">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">commands</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommand(Dapper.CommandDefinition[])">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">commands</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowExecuteCommandAsync(Dapper.CommandDefinition[])">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">commands</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CreateUpdateCommandDefinition``1(``0,System.Boolean)">
+            <summary>
+            创建 Update 语句的命令对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="ignoreNullValue">是否忽略空值,默认true：忽略</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CreateInsertCommandDefinition``1(``0)">
+            <summary>
+            创建 Insert 语句的命令对象
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.CreateDeleteCommandDefinition``1(``0)">
+            <summary>
+            创建 Delete 语句的命令对象
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowInsertBatch(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+             用 SqlBulkCopy 批量插入实体
+            </summary>
+            <param name="entityList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.NowInsertBatchAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+             用 SqlBulkCopy 批量插入实体
+            </summary>
+            <param name="entityList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetDBUTCDateTime">
+            <summary>
+            获取当前UTC时间 getutcdate()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.BaseRepository`1.GetDBDateTime">
+            <summary>
+            获取当前本地时间 getdate()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.BaseRepository.DBContext">
+            <summary>
+                数据上下文,使用Dapper操作数据库
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.#ctor(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+                构造函数
+            </summary>
+            <param name="model">数据路由参数</param>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.DBContext.EntityData.tableData">
+            <summary>
+            连接信息
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.DBContext.EntityData.UpdateIgnoreNullValueSql">
+            <summary>
+            Update操作是否忽略Null值的Sql处理
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.DBContext.DataRoute">
+            <summary>
+                数据路由
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.DBContext.SaveResults">
+            <summary>
+                SaveChanges执行结果,返回各实体影响行数
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetConn(YQTrack.Backend.Models.Enums.YQDbType,YQTrack.Backend.Models.Operate,System.String)">
+            <summary>
+                获取数据库连接字符串,从DataConfig配置文件中读取
+            </summary>
+            <param name="yqDbType">数据类型</param>
+            <param name="operateType">SQL操作类型</param>
+            <param name="sql">当前执行Sql</param>
+            <returns>数据库连接字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetConn(YQTrack.Backend.Models.Enums.YQDbType,YQTrack.Backend.Models.Operate)">
+            <summary>
+                获取数据库连接字符串,从DataConfig配置文件中读取
+            </summary>
+            <param name="yqDbType">数据类型</param>
+             <param name="operateType">SQL操作类型</param>
+            <returns>数据库连接字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetConn(System.String,YQTrack.Backend.Models.Operate,System.Boolean)">
+            <summary>
+                获取数据库连接字符串,从DataConfig配置文件中读取
+            </summary>
+            <param name="dbType">实体类型</param>
+            <param name="operateType">SQL操作类型</param>
+            <param name="isWrite">是否读写</param>
+            <returns>数据库连接字符串</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetById``1(System.Int64,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                根据主键查找实体
+            </summary>
+            <param name="id">主键</param>
+            <param name="yqdbTYpe">当前DB类型</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetByIdAsync``1(System.Int64,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                根据主键异步查找实体
+            </summary>
+            <param name="id">主键</param>
+            <param name="yqdbTYpe">当前DB类型</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Get``1(YQTrack.Backend.Models.Enums.YQDbType)">
+             <summary>
+                 查找所有实体
+             </summary>
+            <param name="yqdbTYpe">主键</param>
+             <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetAsync``1(YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                异步查找所有实体
+            </summary>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Get``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                按条件查询排序实体
+            </summary>
+            <param name="conditionExp">查询条件</param>
+            <param name="orderbyExp">排序条件</param>
+            <param name="yqdbTYpe">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                按条件异步查询排序实体
+            </summary>
+            <param name="conditionExp">查询条件</param>
+            <param name="orderbyExp">排序条件</param>
+            <param name="yqdbTYpe">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetByStoredProcedure``1(YQTrack.Backend.Models.Enums.YQDbType,System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                调用存储过程查询实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="yqdbTYpe">DBType</param>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.GetByStoredProcedureAsync``1(YQTrack.Backend.Models.Enums.YQDbType,System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                异步调用存储过程查询实体
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="yqdbTYpe">dbType</param>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Count``1(YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                查询实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.CountAsync``1(YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                异步查询实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Count``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                按条件查询实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="conditionExp">查询条件</param>
+            <param name="orderbyExp">排序条件</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.CountAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                按条件异步查询实体数量
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="conditionExp">查询条件</param>
+            <param name="orderbyExp">排序条件</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Query``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                查询实体列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.QueryAsync``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                异步查询实体列表
+            </summary>
+            <typeparam name="T">实体列表</typeparam>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Execute``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                执行指定SQL
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Insert``1(YQTrack.Backend.BaseModel.Model,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                新增实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="yqdbTYpe">实体</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Update``1(YQTrack.Backend.BaseModel.Model,YQTrack.Backend.Models.Enums.YQDbType,System.Boolean)">
+            <summary>
+                更新实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="yqdbTYpe">实体</param>
+            <param name="ignoreNullValue">是否忽略空值,默认true：忽略</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.Delete``1(YQTrack.Backend.BaseModel.Model,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                删除实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.SaveChangesAsync(System.Boolean)">
+            <summary>
+                实现UOW,一次异步提交增删改,提交之后清掉缓存
+            </summary>
+            <returns>提交是否成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.SaveChanges(System.Boolean)">
+            <summary>
+                实现UOW,一次同步提交增删改,提交之后清掉缓存
+            </summary>
+            <returns>提交是否成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.QueryDataTable``1(System.String,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                查询DataTable列表
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sql">sql</param>
+            <param name="yqdbType">yqdbType</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.QuerySingleOrDefaultAsync``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                异步单行查询实体
+            </summary>
+            <typeparam name="T">实体列表</typeparam>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.QuerySingleOrDefaultAsync(System.Type,Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                异步单行第一列数据
+            </summary>
+            <param name="type">指定返回的Type类型</param>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.ReaderFirstColumnDataAsync``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                获取查询的第一列数据
+            </summary>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.ReaderFirstColumnData``1(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+               获取查询的第一列数据
+            </summary>
+            <param name="command">Command</param>
+            <param name="yqdbTYpe">yqdbTYpe</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.NowExecuteCommand(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <param name="yqdbType">yqdbType</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.NowExecuteCommandAsync(Dapper.CommandDefinition,YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <param name="yqdbType">yqdbType</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.NowExecuteCommand(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="commands">Command</param>
+            <param name="yqdbType">yqdbType</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContext.NowExecuteCommandAsync(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition},YQTrack.Backend.Models.Enums.YQDbType)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="commands">Command</param>
+            <param name="yqdbType">yqdbType</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="T:YQTrack.Backend.BaseRepository.DBContextHelper">
+            <summary>
+            DBContext帮助类
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.DBContextHelper.IsWriteSql(System.String)">
+            <summary>
+            判断是否包含Write的Sql关键字
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.BaseRepository.IBaseRepository`1">
+            <summary>
+                仓储接口
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.IBaseRepository`1.Context">
+            <summary>
+                数据上下文
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetById(System.Int64)">
+            <summary>
+                根据主键查找实体
+            </summary>
+            <param name="id">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetByIdAsync(System.Int64)">
+            <summary>
+                根据主键异步查找实体
+            </summary>
+            <param name="id">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Get">
+            <summary>
+                查找所有实体
+            </summary>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetAsync">
+            <summary>
+                异步查找所有实体
+            </summary>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件查询实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件异步查询实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件查询排序实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件异步查询排序实体
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetByStoredProcedure``1(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                调用存储过程查询实体
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetByStoredProcedureAsync``1(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+                异步调用存储过程查询实体
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="name">存储过程名称</param>
+            <param name="param">存储过程参数</param>
+            <param name="commandTimeout">超时时间</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Count">
+            <summary>
+                查询实体数量
+            </summary>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CountAsync">
+            <summary>
+                异步查询实体数量
+            </summary>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                按条件异步查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+                按条件异步查询实体数量
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="sort">排序条件</param>
+            <returns>数量</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Query``1(Dapper.CommandDefinition)">
+            <summary>
+                查询实体列表
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.QueryAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步查询实体列表
+            </summary>
+            <typeparam name="TD">实体列表</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Execute``1(Dapper.CommandDefinition)">
+            <summary>
+                执行指定SQL
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="command">Command</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Insert(`0)">
+            <summary>
+                新增实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Update(`0,System.Boolean)">
+            <summary>
+                更新实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="ignoreNullValue">是否忽略空值,默认true：忽略</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.Delete(`0)">
+            <summary>
+                删除实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.QueryDataTable``1(System.String)">
+            <summary>
+                查询DataTable列表
+            </summary>
+            <typeparam name="TD">实体类型</typeparam>
+            <param name="sql">sql</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.QuerySingleOrDefaultAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步单行查询实体
+            </summary>
+            <typeparam name="TD">实体列表</typeparam>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.QuerySingleOrDefaultAsync(System.Type,Dapper.CommandDefinition)">
+            <summary>
+                异步单行第一列数据
+            </summary>
+            <param name="type">指定返回的Type类型</param>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GenerateId(System.String)">
+            <summary>
+            通过Reids产生全局唯一Id
+            </summary>
+            <param name="redisName">配置的redis节点名称</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.ReaderFirstColumnDataAsync``1(Dapper.CommandDefinition)">
+            <summary>
+                异步读取第一列的所有的数据
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.ReaderFirstColumnData``1(Dapper.CommandDefinition)">
+            <summary>
+                读取第一列的所有的数据
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommand(Dapper.CommandDefinition)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommandAsync(Dapper.CommandDefinition)">
+            <summary>
+                立即执行命令
+            </summary>
+            <param name="command">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommand(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition})">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommandAsync(System.Collections.Generic.IEnumerable{Dapper.CommandDefinition})">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">commands</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommand(Dapper.CommandDefinition[])">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">Command</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowExecuteCommandAsync(Dapper.CommandDefinition[])">
+            <summary>
+                立即执行多个命令
+            </summary>
+            <param name="commands">commands</param>
+            <returns>实体列表</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CreateUpdateCommandDefinition``1(``0,System.Boolean)">
+            <summary>
+            创建 Update 语句的命令对象
+            </summary>
+            <param name="entity"></param>
+            <param name="ignoreNullValue">是否忽略空值,默认true：忽略</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CreateInsertCommandDefinition``1(``0)">
+            <summary>
+            创建 Insert 语句的命令对象
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.CreateDeleteCommandDefinition``1(``0)">
+            <summary>
+            创建 Delete 语句的命令对象
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowInsertBatch(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+             用 SqlBulkCopy 批量插入实体
+            </summary>
+            <param name="entityList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.NowInsertBatchAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+             用 SqlBulkCopy 批量插入实体
+            </summary>
+            <param name="entityList"></param>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetDBUTCDateTime">
+            <summary>
+            获取当前UTC时间 getutcdate()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IBaseRepository`1.GetDBDateTime">
+            <summary>
+            获取当前本地时间 getdate()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YQTrack.Backend.BaseRepository.SaveResult">
+            <summary>
+                SaveChanges执行结果
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.SaveResult.SaveType">
+            <summary>
+                实体类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.SaveResult.Operate">
+            <summary>
+                操作类型
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.SaveResult.Count">
+            <summary>
+                影响行数
+            </summary>
+        </member>
+        <member name="T:YQTrack.Backend.BaseRepository.IContext">
+            <summary>
+                数据上下文接口
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.IContext.DataRoute">
+            <summary>
+                数据路由
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseRepository.IContext.SaveResults">
+            <summary>
+                SaveChanges执行结果,返回各实体影响行数
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IContext.SaveChanges(System.Boolean)">
+            <summary>
+                实现UOW,一次同步提交增删改,提交之后清掉缓存
+            </summary>
+            <returns>提交是否成功</returns>
+        </member>
+        <member name="M:YQTrack.Backend.BaseRepository.IContext.SaveChangesAsync(System.Boolean)">
+            <summary>
+                实现UOW,一次异步提交增删改,提交之后清掉缓存
+            </summary>
+            <returns>提交是否成功</returns>
+        </member>
+    </members>
+</doc>

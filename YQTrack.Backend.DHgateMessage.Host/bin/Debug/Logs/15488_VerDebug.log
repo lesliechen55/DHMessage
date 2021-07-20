@@ -1,0 +1,8 @@
+2021-07-19 13:55:33,918 [1] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_15488","1.12.0":null,"1.13.0":null,"1.14.0":null}
+2021-07-19 13:55:33,922 [1] DEBUG seller.dhgatemessage - TaskCoordinator_OnTaskAssigned:{"TaskInfo":{"NodeId":"192.168.1.158_15488","TaskId":"1.11.0","TaskExtra":"[]"}}
+2021-07-19 13:55:34,037 [1] DEBUG seller.dhgatemessage - AddJob:{"EventName":"JobManager_AddJob","EventDesc":"1.11.0"}
+2021-07-19 13:55:34,042 [1] VERBOSE seller.dhgatemessage - AssignedInfo:{"1.11.0":"192.168.1.158_15488","1.12.0":"192.168.1.158_15488","1.13.0":null,"1.14.0":null}
+2021-07-19 13:55:34,042 [1] DEBUG seller.dhgatemessage - TaskCoordinator_OnTaskAssigned:{"TaskInfo":{"NodeId":"192.168.1.158_15488","TaskId":"1.12.0","TaskExtra":"[]"}}
+2021-07-19 13:55:34,046 [1] DEBUG seller.dhgatemessage - AddJob:{"EventName":"JobManager_AddJob","EventDesc":"1.12.0"}
+2021-07-19 13:55:34,177 [7] DEBUG seller.dhgatemessage - SyncStart:{"taskName":"GetMessageList","FUserId":"6572369283081568257","FShopId":"6559624990734680099","FShopName":"seventeentrack","BeforeDays":1}
+2021-07-19 13:55:34,733 [10] DEBUG seller.dhgatemessage - SyncEnd:{"task":{"taskName":"GetMessageList","FUserId":"6572369283081568257","FShopId":"6559624990734680099","FShopName":"seventeentrack","BeforeDays":1},"syncResult":true}

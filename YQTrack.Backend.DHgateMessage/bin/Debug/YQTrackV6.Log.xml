@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.Log</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.Log.GlobalDefine">
+            <summary>
+            配置节常量定义类
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.GlobalDefine.Log4netFile">
+            <summary>
+            日志配置文件,放于程序根目录
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.GlobalDefine.PropertieInstanceName">
+            <summary>
+            进程ID参数
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.GlobalDefine.LoggerNameSystem">
+            <summary>
+            系统日志记录器
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.GlobalDefine.LoggerNameRecordData">
+            <summary>
+            查询业务日志记录器
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Log.LogDefinition">
+            <summary>
+            日志定义类
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogDefinition.#ctor(YQTrackV6.Log.LogLevel,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logLevel">日志级别</param>
+            <param name="logDesc">日志描述</param>
+        </member>
+        <member name="P:YQTrackV6.Log.LogDefinition.LogLevel">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogDefinition.LogDesc">
+            <summary>
+            日志描述
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Log.LogExt.RecordLayout">
+            <summary>
+            log4net日志html布局扩展,外部无需使用(不公开log4net无法反射)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogExt.RecordLayout.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Log.LogExt.RecordModel">
+            <summary>
+            日志数据记录模型,外部无需使用(不公开log4net无法反射)
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogExt.RecordModel.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="number">错误单号</param>
+            <param name="carrierType">运输商类型</param>
+            <param name="webErrorType">错误类型</param>
+            <param name="info">错误信息</param>
+            <param name="lastReadAddress">最后访问地址</param>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.Number">
+            <summary>
+            错误单号
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.CarrierType">
+            <summary>
+            运输商类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.WebErrorType">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.Info">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.LastReadAddress">
+            <summary>
+             最后访问地址
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Log.LogExt.RecordModel.ServerAddress">
+            <summary>
+             服务器地址
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogExt.RecordModel.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="T:YQTrackV6.Log.LoggerRecordData">
+            <summary>
+            日志记录器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.#ctor(System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="callerStackBoundaryDeclaringType">当前调用日志的类型</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.Log(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            记录错误日志到数据库
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <param name="webErrorType">错误类型</param>
+            <param name="number">单号</param>
+            <param name="info">错误信息</param>
+            <param name="lastReadAddress">最后访问地址</param>
+            <param name="html">页面内容,将存为文件</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.Log(System.String,System.Byte[])">
+            <summary>
+            保存错误的验证码,仅在需要的时候使用
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <param name="image">验证码图片</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.ReadFileNameHtml(System.String,System.String)">
+            <summary>
+            获取文件路径
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <param name="number">单号</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.ReadFileNameImage(System.String)">
+            <summary>
+            获取文件路径
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.WriteHtml(System.String,System.String)">
+            <summary>
+            写入Html文件
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="html">Html内容</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerRecordData.WriteImage(System.String,System.Byte[])">
+            <summary>
+            写入Image文件
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="image">Image内容</param>
+        </member>
+        <member name="T:YQTrackV6.Log.LoggerSystem">
+            <summary>
+            日志记录器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerSystem.#ctor(System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="callerStackBoundaryDeclaringType">当前调用日志的类型</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerSystem.LogCore(YQTrackV6.Log.LogLevel,System.Exception,System.String,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="logLevel">日志级别</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="message">日志信息</param>
+            <param name="args">格式化输出的实际参数</param>
+            <returns>返回日志内容</returns>
+        </member>
+        <member name="M:YQTrackV6.Log.LoggerSystem.LogObjCore(YQTrackV6.Log.LogLevel,System.Exception,System.String,System.Object)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="logLevel">日志级别</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="message">日志信息</param>
+            <param name="json">要序列化输出的参数</param>、
+            <returns>返回日志内容</returns>
+        </member>
+        <member name="T:YQTrackV6.Log.LongToStringConverter">
+            <summary>
+                将长整形数据输出json时换成字符串,避免js脚本无法识别截断的问题
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LongToStringConverter.CanConvert(System.Type)">
+            <summary>
+            是否能转换
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Log.LongToStringConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            获取Josn
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Log.LongToStringConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            写json
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:YQTrackV6.Log.LogHelper">
+            <summary>
+            程序日志包装类,提供统一的Log操作入口.
+            包含静态构造函数,用于初始化,可能抛出异常.
+            任何工程使用,都必须在进程启动时候,打出进程启动日志,以保证日志正常启动.
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.Log(System.Action{System.String},YQTrackV6.Log.LogDefinition,System.Exception,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="printAction">重定向输出委托</param>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="args">格式化输出的实际参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.Log(YQTrackV6.Log.LogDefinition,System.Exception,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="args">格式化输出的实际参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.Log(System.Action{System.String},YQTrackV6.Log.LogDefinition,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="printAction">重定向输出委托</param>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="args">格式化输出的实际参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.Log(YQTrackV6.Log.LogDefinition,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="args">格式化输出的实际参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogObj(System.Action{System.String},YQTrackV6.Log.LogDefinition,System.Exception,System.Object)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="printAction">重定向输出委托</param>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="json">要序列化输出的参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogObj(YQTrackV6.Log.LogDefinition,System.Exception,System.Object)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="exception">异常对象(如果有异常)</param>
+            <param name="json">要序列化输出的参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogObj(System.Action{System.String},YQTrackV6.Log.LogDefinition,System.Object)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="printAction">重定向输出委托</param>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="json">要序列化输出的参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogObj(YQTrackV6.Log.LogDefinition,System.Object)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="logDefinition">日志类型及消息定义</param>
+            <param name="json">要序列化输出的参数</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogObj(YQTrackV6.Log.LogDefinition)">
+            <summary>
+            记录日志,使用Newtonsoft.Json序列化
+            </summary>
+            <param name="logDefinition">日志类型及消息定义</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogRecordData(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            记录错误日志到数据库
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <param name="webErrorType">错误类型</param>
+            <param name="number">单号</param>
+            <param name="info">错误信息</param>
+            <param name="lastReadAddress">最后访问地址</param>
+            <param name="html">页面内容,将存为文件</param>
+        </member>
+        <member name="M:YQTrackV6.Log.LogHelper.LogRecordData(System.String,System.Byte[])">
+            <summary>
+            保存错误的验证码,仅在需要的时候使用
+            </summary>
+            <param name="carrierType">运输商类型</param>
+            <param name="image">验证码图片</param>
+        </member>
+        <member name="T:YQTrackV6.Log.LogLevel">
+            <summary>
+            日志级别,正式环境应该记录到Info
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Fatal">
+            <summary>
+            [1]致命错误, 属于完全崩溃, 不可预知的错误. 如:应用程序未捕获异常
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Error">
+            <summary>
+            [2]一般错误, 表示一些可预知的可能错误, 但是需要发生后才知道情况并进行修复
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Warn">
+            <summary>
+            [3]警告日志, 可预知发生但是还是存在风险的问题, 不影响整个系统运行. 如:网络访问失败/超时
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Notice">
+            <summary>
+            [4]分析日志, 需要用做数据分析的日志, 一般为对象型数据. 如:Json
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Info">
+            <summary>
+            [5]信息日志, 系统所有结构化流程节点以及模块出入口的日志, 正式环境开启到这个级别, 不可以有大量日志. 如:程序启动/推出/初始化开始/初始化完成等关键信息
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Debug">
+            <summary>
+            [6]调试日志, 普通调试信息, 观察到整个系统详细的运行过程, 用于查看系统问题. 如:业务服务程序的详细日志
+            </summary>
+        </member>
+        <member name="F:YQTrackV6.Log.LogLevel.Verbose">
+            <summary>
+            [7]详细日志, 最低级别, 一般情况下不会启用, 用于记录高频次大量日志, 一般为本地调试某个细化功能使用. 如:消息队列的通用库的发送/接收
+            </summary>
+        </member>
+        <member name="T:YQTrackV6.Log.LogLevelMapping">
+            <summary>
+            日志级别映射
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Log.LogLevelMapping.GetLevel(YQTrackV6.Log.LogLevel)">
+            <summary>
+            获取Log4net日志级别
+            </summary>
+            <param name="logLevel">日志级别</param>
+            <returns>Log4net日志级别</returns>
+        </member>
+    </members>
+</doc>

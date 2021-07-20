@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrack.Backend.BaseBLL</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrack.Backend.BaseBLL.BaseBll">
+            <summary>
+                基础业务
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseBLL.BaseBll.Context">
+            <summary>
+            DB数据上下文
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseBLL.BaseBll.SetDataRoute(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            设置用户数据库节点信息
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="T:YQTrack.Backend.BaseBLL.IBaseBll">
+            <summary>
+                基础业务接口
+            </summary>
+        </member>
+        <member name="P:YQTrack.Backend.BaseBLL.IBaseBll.Context">
+            <summary>
+            DB数据上下文
+            </summary>
+        </member>
+        <member name="M:YQTrack.Backend.BaseBLL.IBaseBll.SetDataRoute(YQTrack.Backend.Models.DataRouteModel)">
+            <summary>
+            设置用户数据库节点信息
+            </summary>
+            <param name="model"></param>
+        </member>
+    </members>
+</doc>

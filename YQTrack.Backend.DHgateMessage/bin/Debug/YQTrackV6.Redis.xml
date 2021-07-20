@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YQTrackV6.Redis</name>
+    </assembly>
+    <members>
+        <member name="T:YQTrackV6.Redis.RedisControler">
+            <summary>
+            Redis控制器
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration">连接字符串</param>
+            <exception cref="T:System.ArgumentNullException">configuration或key为空</exception>
+            <exception cref="T:System.ArgumentException">configuration is empty</exception>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing">为true则释放托管资源和非托管资源,为false则仅释放非托管资源.</param>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Redis.RedisControler.Configuration">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Redis.RedisControler.Connection">
+            <summary>
+            连接
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Redis.RedisControler.DefaultServer">
+            <summary>
+            默认服务器
+            </summary>
+        </member>
+        <member name="P:YQTrackV6.Redis.RedisControler.DefaultDataBase">
+            <summary>
+            默认数据库
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.Resetting(System.String)">
+            <summary>
+            重置连接
+            </summary>
+            <param name="configuration">连接字符串</param>
+            <exception cref="T:System.ArgumentNullException">configuration is null</exception>
+            <exception cref="T:System.ArgumentException">configuration is empty</exception>
+            <returns>是否重新连接</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.KeyDelete(System.String[])">
+            <summary>
+            删除指定的Key集合
+            </summary>
+            <param name="keys">待删除的键数组</param>
+            <returns>返回删除数量</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.KeyExpire(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置缓存Key的过期时间
+            </summary>
+            <param name="key">Key</param>
+            <param name="expiry">过期时间</param>
+            <returns>返回是否设置成功</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.KeyTTL(System.String)">
+            <summary>
+            获取缓存Key的剩余的过期时间(单位:秒)
+            </summary>
+            <param name="key">Key</param>
+            <returns>
+            0~:剩余过期时间
+            -1:无过期时间
+            -2:Key不存在
+            </returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.StringSet(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置String类型缓存
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="value">缓存值</param>
+            <param name="expiry">过期时间,无过期时间传入null</param>
+            <returns>设置是否成功</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.StringGet(System.String)">
+            <summary>
+            获取String类型缓存值
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>获取String对象key的缓存值</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.StringGet(System.String[])">
+            <summary>
+            获取String类型缓存值
+            </summary>
+            <param name="keys">缓存键</param>
+            <returns>获取String对象key的缓存值</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashGet(System.String,System.String[])">
+            <summary>
+            读取HashKey的指定字段的值
+            </summary>
+            <param name="hashKey">所需要操作的Hash Key</param>
+            <param name="fields">所取的Hash对象字段列表</param>
+            <returns>返回字典</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashGet(System.String)">
+            <summary>
+            读取HashKey的所有字段的值
+            </summary>
+            <param name="hashKey">所需要操作的Hash Key</param>
+            <returns>返回字典</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashSet(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Nullable{System.TimeSpan})">
+            <summary>
+            设置Redis Hash对象的字段值
+            </summary>
+            <param name="hashKey">所需要操作的Hash Key</param>
+            <param name="fieldValues">要写入的字段值映射表</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashSet(System.Tuple{System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}}[],System.Nullable{System.TimeSpan})">
+            <summary>
+            设置Redis Hash对象的字段值
+            </summary>
+            <param name="values">所需要操作的Hash Key和哈希表</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashDelete(System.String,System.String[])">
+            <summary>
+            删除Redis Hash对象的字段值
+            </summary>
+            <param name="hashKey">所需要操作的Hash Key</param>
+            <param name="fields">所需要操作的字段列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.HashDelete(System.String,System.String)">
+            <summary>
+            删除Redis Hash对象的字段值
+            </summary>
+            <param name="hashKey">所需要操作的Hash Key</param>
+            <param name="field">所需要操作的字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.ListDequeue(System.String)">
+            <summary>
+            移除并返回位于队列头部的对象
+            </summary>
+            <param name="key">队列的名称</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.ListEnqueue(System.String,System.String)">
+            <summary>
+            将对象添加到队列的尾部
+            </summary>
+            <param name="key">队列的名称</param>
+            <param name="value">String</param>
+            <returns>当前队列长度</returns>
+        </member>
+        <member name="F:YQTrackV6.Redis.RedisControler._DictScript">
+            <summary>
+            存放脚本Hash
+            </summary>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.ScriptPrepare(System.String)">
+            <summary>
+            编译脚本
+            </summary>
+            <param name="luaScript">脚本</param>
+            <returns>脚本Hash</returns>
+        </member>
+        <member name="M:YQTrackV6.Redis.RedisControler.ScriptEvaluate(System.String,StackExchange.Redis.RedisKey[],StackExchange.Redis.RedisValue[])">
+            <summary>
+            执行脚本
+            </summary>
+            <param name="luaScript">脚本</param>
+            <param name="keys">keys</param>
+            <param name="values">values</param>
+            <returns>返回执行结果</returns>
+        </member>
+    </members>
+</doc>
